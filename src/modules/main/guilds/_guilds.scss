@@ -49,13 +49,19 @@
     .wrapper__6e9f8{
         width: 44px !important; // Override inline
         height: 44px !important; // Override inline
-        border-radius: 4px;
-        background-color: transparent !important; // Prevent native Discord highlight overlap
+        border-radius: 4px !important;
+        background-color: var(--background-primary) !important; // Provide background since we hide the native squircle path
+        position: relative;
+        overflow: hidden !important; // Crop the 48x48 native icon perfectly into the 44x44 square!
+
         svg{
-            width: 44px;
-            height: 44px;
-            top: 0;
-            left: 0;
+            width: 48px !important;
+            height: 48px !important;
+            min-width: 48px !important;
+            min-height: 48px !important;
+            position: absolute !important;
+            top: -2px !important;
+            left: -2px !important;
 
             > path {
                 display: none !important; // Remove Discord native squircle background path
@@ -63,45 +69,12 @@
 
             foreignObject {
                 mask: none !important; // Remove Discord native squircle mask
-
-                // Discord wraps images in a div, so we make it a flex container to center the 36px image
-                > div:not(.childWrapper__6e9f8) {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 44px !important;
-                    height: 44px !important;
-                    background: transparent !important;
-                }
-
-                // Direct styling for the server image and acronyms
-                img, .childWrapper__6e9f8 {
-                    width: 36px !important;
-                    height: 36px !important;
-                    border-radius: 50% !important; // Perfectly circular!
-                    object-fit: cover;
-                }
-
-                // Center acronyms if they are direct children
-                > .childWrapper__6e9f8 {
-                    margin: 4px !important;
-                }
-            }
-
-            .icon__6e9f8{
-                display: none; // Unused
             }
         }
     }
-    // Guild with no icon
+    // Guild with no icon (native styling handled by wrapper crop now)
     .childWrapper__6e9f8 {
-        background-color: var(--background-primary) !important; // Restore background since we hid the native squircle path!
-        &:hover{
-            background-color: var(--background-primary) !important;
-        }
-    }
-    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8{
-        background-color: var(--background-primary) !important;
+        background-color: transparent !important; // Ensure internal wrappers don't double up backgrounds
     }
 
     // Guild interaction states
