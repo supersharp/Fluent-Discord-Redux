@@ -64,16 +64,32 @@
             foreignObject {
                 mask: none !important; // Remove Discord native squircle mask
 
-                > * {
+                // Discord wraps images in a div, so we make it a flex container to center the 36px image
+                > div:not(.childWrapper__6e9f8) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 44px !important;
+                    height: 44px !important;
+                    background: transparent !important;
+                }
+
+                // Direct styling for the server image and acronyms
+                img, .childWrapper__6e9f8 {
                     width: 36px !important;
                     height: 36px !important;
-                    margin: 4px !important; // Center the 36px icon inside the 44px container
-                    border-radius: 50% !important; // Make all server icons perfectly circular
+                    border-radius: 50% !important; // Perfectly circular!
+                    object-fit: cover;
+                }
+
+                // Center acronyms if they are direct children
+                > .childWrapper__6e9f8 {
+                    margin: 4px !important;
                 }
             }
 
             .icon__6e9f8{
-                display: none; // Handled by generic selector above
+                display: none; // Unused
             }
         }
     }
