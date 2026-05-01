@@ -1,37 +1,45 @@
-name: make-release
+name: Release
+
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version tag'
+        required: false
+        default: 'v1.0.0'
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout
-      - uses: actions/checkout@v2
-      
-      # Create dist directory
-      - name: Create /dist
-        run: mkdir dist
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # Build CSS
-      - name: Sass Build
-        uses: gha-utilities/sass-build@v0.4.8
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          source: src/fluent-build.scss
-          destination: dist/Fluent-Discord.css
-          outputStyle: expanded
-          
-      # Delete @charset
-      - name: Delete charset
-        run: sed -i '1d' dist/Fluent-Discord.css
+          node-version: '18'
 
-      # Deploy to gh-pages
-      - name: GitHub Pages action
-        uses: peaceiris/actions-gh-pages@v3.7.3
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build static theme
+        run: npm run build-static
+
+      - name: Build auto-updating theme
+        run: npm run build-auto
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./dist
-          keep_files: true
-          commit_message: Deployment from Action
+          tag_name: ${{ github.event.inputs.version || format('release-{0}', github.run_id) }}
+          name: Release ${{ github.event.inputs.version || format('release-{0}', github.run_id) }}
+          body: 'Automated release with built theme files.'
+          files: |
+            dist/Fluent-Discord-static.theme.css
+            dist/Fluent-Discord.theme.css
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
