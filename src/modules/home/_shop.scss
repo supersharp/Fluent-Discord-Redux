@@ -1,0 +1,109 @@
+// Shop page fixes
+// Fixes for Discord's updated shop UI elements:
+// 1. Wishlist button icon invisible
+// 2. Orb balance text being cut off
+// 3. Search bar rendered incorrectly
+
+.theme-dark {
+    .shop__6db1d {
+        .headerBar__80679 {
+            // Ensure the header bar doesn't clip overflowing
+            // elements like the orb balance pill
+            overflow: visible;
+
+            .upperContainer__9293f {
+                overflow: visible;
+            }
+
+            .toolbar__9293f {
+                overflow: visible;
+
+                // Search bar - uses new Mana component input classes
+                .searchBar__824d3 {
+                    overflow: visible;
+
+                    // The search bar container is a div[role="button"]
+                    // which may inherit unwanted sizing from theme rules
+                    > div[role="button"] {
+                        width: auto;
+                        height: auto;
+
+                        > svg {
+                            position: static;
+                            top: auto;
+                            left: auto;
+                            width: auto;
+                        }
+                    }
+
+                    .container__0f084 {
+                        background-color: $ControlFillColorDefault;
+                        border: 1px solid $ControlStrokeColorDefault;
+                        border-radius: 4px;
+
+                        .icon__0f084 svg {
+                            color: $TextFillColorSecondary;
+                        }
+
+                        .input__0f084 {
+                            @include TypeBody;
+                            color: $TextFillColorPrimary;
+                            background-color: transparent;
+
+                            &::placeholder {
+                                color: $TextFillColorSecondary;
+                            }
+                        }
+                    }
+                }
+
+                // Wishlist button - the heart SVG icon is invisible
+                // because currentColor inherits a dark value
+                .wishlistButton__80679 {
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        position: static;
+                        top: auto;
+                        left: auto;
+                        width: 16px;
+                        height: 16px;
+                        display: block;
+                        color: $TextFillColorSecondary;
+                    }
+
+                    &:hover svg {
+                        color: $TextFillColorPrimary;
+                    }
+                }
+            }
+        }
+    }
+    // Orb balance pill - GLOBAL fix (applies to Shop, Quests, etc.)
+    // The original theme's toolbar rule forces div[role=button] to 60px wide,
+    // which squeezes the balance widget on any page that shows it.
+    .toolbar__9293f {
+        .container__44ee9 {
+            overflow: visible;
+            flex-shrink: 0;
+        }
+        .clickable_a3e8db {
+            width: auto !important;
+            height: 32px !important;
+            overflow: visible;
+            display: flex !important;
+            align-items: center !important;
+        }
+        .container_a3e8db {
+            overflow: visible;
+            min-width: fit-content;
+        }
+        .balanceCounterText__98f64 {
+            overflow: visible;
+        }
+    }
+}
