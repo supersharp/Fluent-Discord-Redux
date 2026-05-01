@@ -1,15 +1,17 @@
 @if $isAutoFile {
-/**
+    /**
  * @name Fluent Discord Redux
- * @author supersharp
+ * @author supersharp & TakosThings
  * @version #{$version}
- * @description Fluent theme for Discord (🔄 Auto-updating)
+ * @description Fluent theme for Discord (🔄 Auto-updating) 
  * @source https://github.com/supersharp/Fluent-Discord-Redux
 */
-} @else{
-/**
+}
+
+@else {
+    /**
  * @name Fluent Discord Redux
- * @author supersharp
+ * @author supersharp & TakosThings
  * @version #{$version}
  * @description Fluent theme for Discord (⏹ Static)
  * @source https://github.com/supersharp/Fluent-Discord-Redux
