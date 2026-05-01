@@ -1,3 +1,4 @@
+.quickswitcher_ac6cb0,
 .theme-dark .quickswitcher_ac6cb0{
     height: 100%;
     background: linear-gradient(0deg, rgba(44, 44, 44, 0.15), rgba(44, 44, 44, 0.15)), rgba(44, 44, 44, 0.96) !important;
@@ -41,11 +42,16 @@
     }
 
     // Scroll content
+    .resultsArea_ac6cb0,
+    .scroller_ac6cb0,
+    .content_d125d2 {
+        background-color: transparent !important;
+    }
+
     .scroller_ac6cb0 {
         max-height: unset;
         margin-top: 12px;
         margin-right: -4px;
-        background-color: transparent;
         overflow-y: auto !important; // Override inline
     }
 
@@ -57,7 +63,7 @@
 
     .result__71961{
         &:hover,
-        &[aria-selected=true]{
+        &[aria-selected="true"]{
             background-color: $SubtleFillColorSecondary !important;
             &::before{
                 content: "";
