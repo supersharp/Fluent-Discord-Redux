@@ -63,24 +63,29 @@
 
             foreignObject {
                 mask: none !important; // Remove Discord native squircle mask
+
+                > * {
+                    width: 36px !important;
+                    height: 36px !important;
+                    margin: 4px !important; // Center the 36px icon inside the 44px container
+                    border-radius: 50% !important; // Make all server icons perfectly circular
+                }
             }
 
             .icon__6e9f8{
-                width: 36px;
-                height: auto;
-                border-radius: 50%;
+                display: none; // Handled by generic selector above
             }
         }
     }
     // Guild with no icon
     .childWrapper__6e9f8 {
-        background-color: transparent;
+        background-color: var(--background-primary) !important; // Restore background since we hid the native squircle path!
         &:hover{
-            background-color: transparent;
+            background-color: var(--background-primary) !important;
         }
     }
     .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8{
-        background-color: transparent;
+        background-color: var(--background-primary) !important;
     }
 
     // Guild interaction states
@@ -136,7 +141,7 @@
     .wrapper__6e9f8{
         &[data-list-item-id="guildsnav___home"]{
             .childWrapper__6e9f8 {
-                background-color: transparent;
+                background-color: transparent !important;
                 &::before{
                     content: "\E80F"; // Home
                     color: $TextFillColorPrimary;
