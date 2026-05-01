@@ -14,7 +14,7 @@ Changes from the original fork:
 * From [Releases](https://github.com/supersharp/Fluent-Discord-Redux/releases/latest)
   * `Fluent-Discord-Redux.theme.css` will automatically update with new releases
   * `Fluent-Discord-Redux-static.theme.css` if you prefer to manually update to each release
-* [Github.io link](https://takosthings.github.io/Fluent-Discord-Redux/Fluent-Discord-Redux.theme.css) (Right-click > Copy Link)
+* [Direct Auto-updating Link](https://github.com/supersharp/Fluent-Discord-Redux/releases/latest/download/Fluent-Discord-Redux.theme.css) (Right-click > Save link as...)
 
 ### Optional Extras
 * [EmojiReplace](https://betterdiscord.app/theme/EmojiReplace) theme by DevilBro to get Windows 11 emoji on Discord
