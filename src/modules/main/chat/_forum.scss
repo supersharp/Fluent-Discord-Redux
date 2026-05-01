@@ -1,31 +1,31 @@
-.theme-dark .f75fb00fb7356cbe-chat{
+.theme-dark .chat_f75fb0{
     background-color: transparent;
 }
 
-.theme-dark .f369dba7416c67f0-container{
+.theme-dark .container_f369db{
     background-color: $LayerFillColorDefault;
     border-top: 1px solid $CardStrokeColorDefault;
     border-left: 1px solid $CardStrokeColorDefault;
     border-radius: 8px 0 0 0;
 
     // Threads
-    .f369dba7416c67f0-mainCard{
+    .mainCard_f369db{
         background-color: $LayerFillColorAlt;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
 
-        &.faa96b2163f6a142-container:active,
-        &.faa96b2163f6a142-container:hover{
+        &.container_faa96b:active,
+        &.container_faa96b:hover{
             transform: none;
             box-shadow: none;
             border-color: $CardStrokeColorDefaultSolid;
         }
 
-        .faa96b2163f6a142-postTitleText{
+        .postTitleText_faa96b{
             color: $TextFillColorPrimary !important; // Override inline
             @include TypeBodyStrong;
         }
-        .faa96b2163f6a142-messageContent{
+        .messageContent_faa96b{
             @include TypeBody;
         }
     }

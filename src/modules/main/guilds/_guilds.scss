@@ -1,24 +1,24 @@
 .theme-dark{
-    ._5e434347c823b592-guilds{
+    .guilds__5e434{
         width: 60px;
         background-color: transparent;
         // box-shadow: inset 0 0 0 1px $Green;
     }
     // Increase bottom margin of guilds list so there is a consistent margin around the account box
-    .ef3116c2da186559-wrapper {
+    .wrapper_ef3116 {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + 16px);
     }
 
     // Reduce gap between guilds
-    .dbd2630aec71879b-stack{
+    .stack_dbd263{
         gap: 4px !important; // Override inline
     }
 
     // Pill
-    .e5445cbd3ad226f2-pill, // Normal guild
-    .ed9a5f50013e19ac-pill, // DM
-    ._1f388bcaa446c0c8-pill{ // Home
-        ._581051df43c5ebb6-item{
+    .pill_e5445c, // Normal guild
+    .pill_ed9a5f, // DM
+    .pill__1f388{ // Home
+        .item__58105{
             width: 3px;
             height: 16px !important; // Override inline
             margin-left: 0;
@@ -40,13 +40,13 @@
     }
 
     // Guild icon
-    ._650eb104245d257b-listItem{
+    .listItem__650eb{
         width: 44px;
         // height: 44px;
         margin-left: 8px;
         // box-shadow: inset 0 0 0 1px $Red;
     }
-    .cc5dd25190031396-wrapper{
+    .wrapper_cc5dd2{
         width: 44px !important; // Override inline
         height: 44px !important; // Override inline
         border-radius: 4px;
@@ -55,7 +55,7 @@
             height: 44px;
             top: 0;
             left: 0;
-            ._6e9f8dce4cc18de3-icon{
+            .icon__6e9f8{
                 width: 36px;
                 height: auto;
                 border-radius: 50%;
@@ -63,61 +63,61 @@
         }
     }
     // Guild with no icon
-    ._6e9f8dce4cc18de3-childWrapper {
+    .childWrapper__6e9f8 {
         background-color: transparent;
         &:hover{
             background-color: transparent;
         }
     }
-    ._6e9f8dce4cc18de3-wrapper._6e9f8dce4cc18de3-selected ._6e9f8dce4cc18de3-childWrapper{
+    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8{
         background-color: transparent;
     }
 
     // Guild interaction states
     // Guild is selected
-    .e5445cbd3ad226f2-blobContainer.e5445cbd3ad226f2-selected .cc5dd25190031396-wrapper{
+    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2{
         background-color: $ControlFillColorSecondary;
     }
     // Guild is selected and hovered
-    .e5445cbd3ad226f2-blobContainer.e5445cbd3ad226f2-selected:hover .cc5dd25190031396-wrapper{
+    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2{
         box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
     }
     // Guild is hovered
-    .e5445cbd3ad226f2-blobContainer:hover .cc5dd25190031396-wrapper{
+    .blobContainer_e5445c:hover .wrapper_cc5dd2{
         background-color: $ControlFillColorSecondary;
     }
     // Guild is clicked
-    .e5445cbd3ad226f2-blobContainer:active .cc5dd25190031396-wrapper{
+    .blobContainer_e5445c:active .wrapper_cc5dd2{
         background-color: $ControlFillColorTertiary;
     }
 
     // Guild badges
-    ._650eb104245d257b-iconBadge{
+    .iconBadge__650eb{
         background-color: $SystemFillColorSolidNeutral;
         svg{
             width: 12px;
             height: 12px;
             color: $TextOnAccentFillColorPrimary;
         }
-        &._650eb104245d257b-isCurrentUserConnected{
+        &.isCurrentUserConnected__650eb{
             background-color: $SystemFillColorSuccess;
         }
     }
-    .cc5dd25190031396-upperBadge,
-    .cc5dd25190031396-lowerBadge{
+    .upperBadge_cc5dd2,
+    .lowerBadge_cc5dd2{
         right: 2px;
     }
-    .cc5dd25190031396-upperBadge{
+    .upperBadge_cc5dd2{
         top: 2px;
     }
-    .cc5dd25190031396-lowerBadge{
+    .lowerBadge_cc5dd2{
         bottom: 2px;
     }
 
     // Home
-    ._6e9f8dce4cc18de3-wrapper{
+    .wrapper__6e9f8{
         &[data-list-item-id="guildsnav___home"]{
-            ._6e9f8dce4cc18de3-childWrapper {
+            .childWrapper__6e9f8 {
                 background-color: transparent;
                 &::before{
                     content: "\E80F"; // Home
@@ -132,16 +132,16 @@
         }
     }
     // Remove Home :active transform
-    ._918165dab2b1e10b-listItemWrapper:active{
+    .listItemWrapper__91816:active{
         transform: none;
     }
 
     // Separator
-    ._252b6afd49fda06f-guildSeparator{
+    .guildSeparator__252b6{
         display: none;
     }
     // Add server/Server Discovery icons
-    ._5bc7ed9d4097f6b5-circleIconButton {
+    .circleIconButton__5bc7e {
         background-color: transparent;
         color: #FFF;
         &:hover{
@@ -155,7 +155,7 @@
         }
     }
     // Offline
-    .e8d03f772dd98c5d-guildsError{
+    .guildsError_e8d03f{
         background-color: $SystemFillColorCritical;
         border: 0;
         border-radius: 0;
@@ -164,23 +164,23 @@
     }
 
     // Folders
-    ._48112cbe77dc5022-folderGroup{
+    .folderGroup__48112{
         width: 52px;
     }
-    ._48112cbe77dc5022-folderGroupBackground{
+    .folderGroupBackground__48112{
         width: 44px;
         left: 8px;
         border-radius: 4px;
         border: 0;
     }
-    .b18fe29d6fe8dd82-hiddenVisually, ._48112cbe77dc5022-folderPreviewWrapper{
+    .hiddenVisually__27f77, .folderPreviewWrapper__48112{
         // width: 44px;
         // height: 44px;
         border-radius: 4px;
     }
 
     // Open folder
-    ._48112cbe77dc5022-folderIcon{
+    .folderIcon__48112{
         &::before{
             content: "\E8B7"; // Folder Open
             @include FontIconFluent;
@@ -206,8 +206,8 @@
     }
 
     // Closed folder
-    ._48112cbe77dc5022-folderHeader{
-        .cc5dd25190031396-wrapper{
+    .folderHeader__48112{
+        .wrapper_cc5dd2{
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
@@ -220,39 +220,39 @@
             // mask: none;
         }
     }
-    ._48112cbe77dc5022-folderPreviewWrapper{
+    .folderPreviewWrapper__48112{
         // width: 44px;
         // height: 44px;
     }
-    ._48112cbe77dc5022-folderPreview{
+    .folderPreview__48112{
         width: 44px;
         height: 44px;
         gap: 1px;
     }
-    ._48112cbe77dc5022-folderPreviewGuildIcon{
+    .folderPreviewGuildIcon__48112{
         width: 18px;
         height: 18px;
         border-radius: 50% !important; // Override inline
     }
 
     // Fix folder icon height when folder is expanded
-    ._48112cbe77dc5022-isExpanded ._48112cbe77dc5022-folderHeader{
+    .isExpanded__48112 .folderHeader__48112{
         margin-bottom: 0;
-        .cc5dd25190031396-wrapper{
+        .wrapper_cc5dd2{
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
     }
     // Remove the background behind folder icon when hovering
-    .b18fe29d6fe8dd82-hiddenVisually.hover__48112 .expandedFolderIconWrapper__48112{
+    .hiddenVisually__27f77.hover__48112 .expandedFolderIconWrapper__48112{
         background-color: transparent;
     }
 
     // Unread notification bars
-    .ef3116c2da186559-unreadMentionsIndicatorBottom,
-    .ef3116c2da186559-unreadMentionsIndicatorTop{
+    .unreadMentionsIndicatorBottom_ef3116,
+    .unreadMentionsIndicatorTop_ef3116{
         width: 48px;
-        ._3b95d7d910416e54-bar{
+        .bar__3b95d{
             background-color: $SystemFillColorCriticalBackground;
         }
         span{
@@ -269,14 +269,14 @@
         }
     }
 
-    .ef3116c2da186559-unreadMentionsIndicatorBottom{
+    .unreadMentionsIndicatorBottom_ef3116{
         span{
             &::before{
                 content: "\EDDC"; // CaretDownSolid8
             }
         }
     }
-    .ef3116c2da186559-unreadMentionsIndicatorTop{
+    .unreadMentionsIndicatorTop_ef3116{
         span{
             &::before{
                 content: "\EDDB"; // CaretUpSolid8

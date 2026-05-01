@@ -1,6 +1,6 @@
 .theme-dark .userPopoutOuter_c69a7b{
     // Remove style from context menu in user popout
-    .c1e9c47c23f12ca3-menu.menu_ad5fac{
+    .menu_c1e9c4.menu_ad5fac{
         background-color: transparent;
         border: 0;
         box-shadow: none;
@@ -8,13 +8,13 @@
             content: unset;
         }
 
-        .c1e9c47c23f12ca3-separator{
+        .separator_c1e9c4{
             display: none;
         }
 
-        .c1e9c47c23f12ca3-item{
+        .item_c1e9c4{
             // Remove icon
-            .c1e9c47c23f12ca3-iconContainerLeft{
+            .iconContainerLeft_c1e9c4{
                 display: none;
             }
         }

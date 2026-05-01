@@ -1,11 +1,11 @@
-.theme-dark .d5f3cd116f175f35-wrapper{
+.theme-dark .wrapper_d5f3cd{
     width: 400px;
     background-color: $CardBackgroundFillColorDefault;
     border: 1px solid $SurfaceStrokeColorFlyout;
     border-radius: 8px;
 
     // Header
-    .d5f3cd116f175f35-header{
+    .header_d5f3cd{
         color: $TextFillColorPrimary;
         @include FontNormal;
         @include TypeBodyStrong;
@@ -13,12 +13,12 @@
     }
 
     // Icon
-    .d5f3cd116f175f35-guildIcon{
+    .guildIcon_d5f3cd{
         border-radius: 50%;
         align-self: center;
     }
     // Expired icon
-    .d5f3cd116f175f35-guildIconExpired{
+    .guildIconExpired_d5f3cd{
         background-color: transparent;
         background-image: none;
         &::before{
@@ -33,22 +33,22 @@
         }
     }
 
-    .d5f3cd116f175f35-statusCounts{
+    .statusCounts_d5f3cd{
         flex-direction: column;
         align-items: flex-start;
     }
 
     // Online users
-    i.d5f3cd116f175f35-status{
+    i.status_d5f3cd{
         display: none;
     }
-    .d5f3cd116f175f35-count{
+    .count_d5f3cd{
         padding-left: 12px;
         position: relative;
         @include TypeBody;
         flex-direction: row;
     }
-    i.d5f3cd116f175f35-statusOnline ~ span{
+    i.statusOnline_d5f3cd ~ span{
         &::before{
             content: "";
             width: 8px;
@@ -60,14 +60,14 @@
             border-radius: 4px;
         }
     }
-    i.d5f3cd116f175f35-statusOffline ~ span{
+    i.statusOffline_d5f3cd ~ span{
         &::before{
             background-color: #8a8886;
         }
     }
 
     // Button
-    .d5f3cd116f175f35-button.buttonSize_d5f3cd{
+    .button_d5f3cd.buttonSize_d5f3cd{
         height: 32px;
     }
 }

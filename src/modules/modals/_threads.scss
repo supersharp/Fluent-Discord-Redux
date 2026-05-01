@@ -4,43 +4,43 @@
         background-color: $SolidBackgroundFillColorBase !important; // Override inline
     }
 
-    .d9c8822889d1d4a1-container{
+    .container_d9c882{
         background-color: transparent;
     }
 
     // Header
-    .d9c8822889d1d4a1-header{
+    .header_d9c882{
         height: unset;
         min-height: unset;
         padding: 24px 24px 0 24px;
         background-color: transparent;
         // Remove icon
-        .d9c8822889d1d4a1-threadIcon{
+        .threadIcon_d9c882{
             display: none;
         }
         // Remove divider
-        .d9c8822889d1d4a1-divider{
+        .divider_d9c882{
             display: none;
         }
         // Remove spacer
-        .d9c8822889d1d4a1-spacer{
+        .spacer_d9c882{
             display: none;
         }
     }
 
     // Thread list
-    .c441f0072c3e8827-list{
+    .list_c441f0{
         padding: 0 24px;
         padding-right: 24px !important;
     }
     // Sub headers
-    .c441f0072c3e8827-sectionHeader{
+    .sectionHeader_c441f0{
         @include TypeBodyStrong;
         text-transform: none;
         margin-top: 24px;
     }
     // List item
-    ._6764bd76e0340219-container{
+    .container__6764b{
         height: auto;
         padding: 12px;
         background-color: $SubtleFillColorSecondary;
@@ -50,21 +50,21 @@
             background-color: $SubtleFillColorTertiary;
         }
         &:active{
-            ._6764bd76e0340219-threadNameLine span{
+            .threadNameLine__6764b span{
                 color: $TextFillColorSecondary;
             }
 
         }
 
         // Thread title
-        ._6764bd76e0340219-threadNameLine{
+        .threadNameLine__6764b{
             @include TypeBodyStrong;
             span{
                 color: $TextFillColorPrimary;
             }
         }
         // Subtext
-        ._6764bd76e0340219-subtext{
+        .subtext__6764b{
             margin-top: 8px;
             @include TypeCaption;
             color: $TextFillColorSecondary !important;

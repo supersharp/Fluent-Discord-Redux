@@ -1,4 +1,4 @@
-.theme-dark ._23e6b439306f125a-contentColumn{
+.theme-dark .contentColumn__23e6b{
     // Misc
     .notice-1Qe0b_{
         background-color: $SystemFillColorAttentionBackground;
@@ -12,19 +12,19 @@
         }
     }
     // Remove dividers
-    ._44f7f7e71cbca2e4-divider{
+    .divider__1de9c{
         display: none;
     }
 
     // My Account
-    ._1fed1dd06c7aabf7-accountProfileCard{
+    .accountProfileCard__1fed1{
         background-color: transparent;
         // Remove coloured banner
-        ._68edb95846a37624-mask{
+        .mask__68edb{
             display: none;
         }
 
-        ._1fed1dd06c7aabf7-userInfo{
+        .userInfo__1fed1{
             height: 68px;
             margin: 0 0 32px 0;
             padding: 0;
@@ -32,7 +32,7 @@
             gap: 16px;
             align-items: center;
             // Avatar
-            ._1fed1dd06c7aabf7-avatar{
+            .avatar__1fed1{
                 width: 64px !important; // Override inline
                 height: 64px !important; // Override inline
                 position: relative;
@@ -54,20 +54,20 @@
                     }
                 }
             }
-            ._201d5e8a3c09670a-button{
+            .button__201d5{
                 display: none;
             }
         }
 
         // Body
-        ._1fed1dd06c7aabf7-background{
+        .background__1fed1{
             margin: 0;
             padding: 0;
             background-color: transparent;
         }
-        ._1fed1dd06c7aabf7-fieldList{
+        .fieldList__1fed1{
             background-color: transparent;
-            ._1fed1dd06c7aabf7-field{
+            .field__1fed1{
                 min-height: 64px;
                 padding: 0 16px 0 48px;
                 margin: 0 0 4px 0;
@@ -75,11 +75,11 @@
                 border: 1px solid $CardStrokeColorDefault;
                 border-radius: 4px;
 
-                ._1fed1dd06c7aabf7-constrainedRow{
+                .constrainedRow__1fed1{
                     align-items: center;
                 }
 
-                ._1fed1dd06c7aabf7-fieldTitle{
+                .fieldTitle__1fed1{
                     margin-bottom: 0;
                     @include TypeBody;
                 }
@@ -89,12 +89,12 @@
                 }
 
                 // Override the reveal button
-                ._201d5e8a3c09670a-button._201d5e8a3c09670a-lookLink{
+                .button__201d5.lookLink__201d5{
                     min-width: unset;
                     padding: 0 0 0 4px;
                     background-color: unset;
                     border: unset;
-                    ._201d5e8a3c09670a-contents{
+                    .contents__201d5{
                         color: $AccentLight3;
                         &:hover{
                             text-decoration: underline;
@@ -104,7 +104,7 @@
             }
 
             // Icons
-            ._1fed1dd06c7aabf7-field{
+            .field__1fed1{
                 position: relative;
                 &::before{
                     position: absolute;
@@ -151,8 +151,8 @@
         }
     }
     // About me
-    ._740174f3d6a2c8fe-channelTextArea{
-        ._6a919231d4bdfd4f-bioTextArea{
+    .channelTextArea__74017{
+        .bioTextArea__6a919{
             height: auto;
             background-color: $ControlFillColorDefault;
             border: 1px solid;
@@ -160,7 +160,7 @@
             border-color: $ControlStrokeColorDefault;
             border-radius: 4px;
             // Set a static emoji icon
-            ._04eede68d145ae81-emojiButton{
+            .emojiButton__04eed{
                 margin: 0 4px 0 0;
                 &::before{
                     content: "\E76E"; //Emoji2
@@ -168,15 +168,15 @@
                     @include FontIconFluent;
                     font-size: 16px;
                 }
-                &._04eede68d145ae81-emojiButtonHovered::before{
+                &.emojiButtonHovered__04eed::before{
                     color: $TextFillColorPrimary;
                 }
-                ._201d5e8a3c09670a-contents{
+                .contents__201d5{
                     display: none;
                 }
             }
         }
-        ._795fb60671d128c1-characterCount{
+        .characterCount__795fb{
             top: -24px;
             bottom: unset;
         }
@@ -184,10 +184,10 @@
 
     // Authorised apps
     // Banner
-    .f43ba5b23c68a68f-formNotice{
+    .formNotice_f43ba5{
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
-        .ddd1814f7cd3e6fd-formText{
+        .formText_ddd181{
             @include TypeBody;
             color: $TextFillColorPrimary;
         }
@@ -196,8 +196,8 @@
     .authedApp__50a54{
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
-        ._50a5493e9d9cc496-permission{
-            ._50a5493e9d9cc496-permissionCheckmark{
+        .permission__50a54{
+            .permissionCheckmark__50a54{
                 width: 16px;
                 height: 16px;
                 margin-right: 8px;
@@ -230,7 +230,7 @@
             @include TypeBodyStrong;
         }
         // Account button
-        .c7f964e7e0fc8b47-accountButtonInner{
+        .accountButtonInner_c7f964{
             background-color: $ControlFillColorDefault;
             border: 1px solid $ControlStrokeColorDefault;
             &:hover{
@@ -243,20 +243,20 @@
     }
 
     // Connection
-    .c7f964e7e0fc8b47-connection{
+    .connection_c7f964{
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
-        .c7f964e7e0fc8b47-connectionHeader{
+        .connectionHeader_c7f964{
             padding: 16px;
             background-color: $SystemFillColorAttentionBackground;
             border-bottom: 1px solid $CardStrokeColorDefault;
             border-radius: 4px 4px 0 0;
-            .c7f964e7e0fc8b47-connectionAccountValue{
+            .connectionAccountValue_c7f964{
                 margin-left: 16px;
                 @include TypeBodyStrong;
             }
-            .c7f964e7e0fc8b47-connectionAccountLabel{
+            .connectionAccountLabel_c7f964{
                 margin-left: 16px;
                 @include TypeCaption;
             }
@@ -272,7 +272,7 @@
         .title__0d850{
             @include TypeBody;
         }
-        .c7f964e7e0fc8b47-integration{
+        .integration_c7f964{
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
@@ -291,7 +291,7 @@
             .title__0d850{
                 @include TypeBody;
             }
-            .ddd1814f7cd3e6fd-description {
+            .description_ddd181 {
                 @include TypeCaption;
                 color: $TextFillColorSecondary;
             }
@@ -304,37 +304,37 @@
     // Family Centre
     &#family-center-tab{
         // Activity tab boxes
-        ._5dbf818b58a61b59-container,
-        ._8cc9a9c411c88ba2-container,
-        ._5b32177e89c63961-container,
-        .d9914bd9cd9c033f-box {
+        .container__5dbf8,
+        .container__8cc9a,
+        .container__5b321,
+        .box_d9914b {
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
             box-shadow: none;
         }
         // Make the layout full-width
-        ._8e680ffe35110238-max-width,
-        ._5b32177e89c63961-max-width{
+        .max-width__8e680,
+        .max-width__5b321{
             max-width: unset;
         }
 
         // My family tab boxes
-        .d9914bd9cd9c033f-box {
+        .box_d9914b {
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
             box-shadow: none;
         }
         // Make the layout full-width
-        .d9914bd9cd9c033f-container{
+        .container_d9914b{
             max-width: unset;
         }
     }
 
     // Subscriptions
     &#subscriptions-tab{
-        .e335a78803b4d1df-sectionTitle{
+        .sectionTitle_e335a7{
             margin-bottom: 32px;
             @include TypeTitle;
         }
@@ -343,7 +343,7 @@
     // Billing
     &#billing-tab{
         // Only apply to the main header, not the secondary "Transaction History" header
-        .b717a15017b82443-title ._7c0bae9243151ddd-flex{
+        .title_b717a1 .flex__7c0ba{
             margin-bottom: 32px;
             @include TypeTitle;
             // Remove lock icon
@@ -355,7 +355,7 @@
 
     // Appearance
     // Chat preview
-    ._3e443c6b2569044a-preview{
+    .preview__3e443{
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
     }
@@ -365,25 +365,25 @@
         margin-bottom: 0;
 
     }
-    .fbfab602fa801e7a-basicThemeSelectorsfbfab6fbfab6fbfab6fbfab6::after{
+    .basicThemeSelectors_fbfab6fbfab6fbfab6fbfab6::after{
         content: "Fluent Discord - Select the \"Dark\" option";
         padding-left: 4px;
         color: $SystemFillColorCritical;
     }
     // Nitro themes
-    ._65c15724a894a2e0-premiumFeatureBorder{
+    .premiumFeatureBorder__65c15{
         margin: 0;
         background: transparent;
         border: 0;
-        ._67a117a74ffaf557-headings{
-            ._67a117a74ffaf557-title::after{
+        .headings__67a11{
+            .title__67a11::after{
                 content: "Fluent Discord - Colour themes are not supported";
                 padding-left: 4px;
                 color: $SystemFillColorCritical;
             }
         }
     }
-    .presets_a00e6e:has(._8a3d71a4c4dc2512-appIconSelectionContainer){
+    .presets_a00e6e:has(.appIconSelectionContainer__8a3d7){
         &::after{
         content: "Fluent Discord - In-app Icon is not supported. Select the \"Default\" option.";
         padding-left: 4px;
@@ -393,10 +393,10 @@
 
     // a11y
     // Custom colours preview
-    ._5d148ffac19e7fb1-preview{
+    .preview__5d148{
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
-        ._5d148ffac19e7fb1-previewMessage{
+        .previewMessage__5d148{
             background-color: $LayerFillColorDefault;
         }
     }
@@ -404,7 +404,7 @@
     // Voice & Video
     &#voice-\&-video-tab{
         // Fixes no spacing between video background and advanced sections
-        .b717a15017b82443-h1.b717a15017b82443-title{
+        .h1_b717a1.title_b717a1{
             margin-top: 24px;
         }
     }
@@ -439,12 +439,12 @@
         }
 
         // Align the Add keybind button with middle of warning
-        ~._7c0bae9243151ddd-flexChild{
+        ~.flexChild__7c0ba{
             align-self: center;
         }
     }
     // Default keybinds
-    ._740f25428e5fa983-defaultKeybindGroup{
+    .defaultKeybindGroup__740f2{
         border: 1px solid $CardStrokeColorDefault;
     }
     .defaultKeybindGroupHeader__740f2 {
@@ -463,7 +463,7 @@
         @include TypeCaption;
         color: $TextFillColorSecondary;
     }
-    ._740f25428e5fa983-defaultKeybind{
+    .defaultKeybind__740f2{
         height: 64px;
         padding: 0 16px;
         background-color: $CardBackgroundFillColorSecondary;
@@ -472,7 +472,7 @@
             @include TypeBody;
             color: $TextFillColorPrimary;
         }
-        ._740f25428e5fa983-defaultKeybindShortcutGroup span{
+        .defaultKeybindShortcutGroup__740f2 span{
             background-color: transparent;
             border: 1px solid $ControlStrokeColorDefault;
             box-shadow: inset 0 -4px 0 $ControlStrokeColorDefault;
@@ -480,7 +480,7 @@
         }
     }
     // Catches the first keybind
-    .children__7bffb > ._740f25428e5fa983-defaultKeybind{
+    .children__7bffb > .defaultKeybind__740f2{
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
     }
@@ -488,18 +488,18 @@
     // Registered games
     &#game-activity-tab{
         // Active game
-        .cc46f0f859f26200-activeGame{
-            &.cc46f0f859f26200-notDetected{
+        .activeGame_cc46f0{
+            &.notDetected_cc46f0{
                 background-color: $SystemFillColorAttentionBackground;
                 border: 1px solid $CardStrokeColorDefault;
                 border-radius: 4px;
             }
-            &.cc46f0f859f26200-nowPlayingAdd{
+            &.nowPlayingAdd_cc46f0{
                 background-color: $SystemFillColorSuccesBackground;
             }
         }
         // Add new game
-        .cc46f0f859f26200-nowPlayingAdd{
+        .nowPlayingAdd_cc46f0{
             width: 100%;
             padding: 8px 16px;
             background-color: $CardBackgroundFillColorDefault;
@@ -509,13 +509,13 @@
                 color: $TextFillColorPrimary;
                 line-height: 32px;
             }
-            ._201d5e8a3c09670a-button{
+            .button__201d5{
                 float: right;
             }
         }
 
         // The games list
-        .cc46f0f859f26200-game{
+        .game_cc46f0{
             padding: 12px 16px;
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
@@ -534,28 +534,28 @@
         }
 
         // App name
-        .cc46f0f859f26200-gameName{
+        .gameName_cc46f0{
             @include TypeBodyStrong;
         }
         // Last played
-        .cc46f0f859f26200-lastPlayed{
+        .lastPlayed_cc46f0{
             color: $TextFillColorSecondary;
-            ._0263c8321829b3e8-default{
+            .default__0263c{
                 @include TypeCaption;
                 strong{
                     font-weight: normal;
                 }
             }
-            ._0263c8321829b3e8-hovered{
+            .hovered__0263c{
                 @include FontMonospace;
                 @include TypeCaption;
             }
         }
-        .cc46f0f859f26200-toggleContainer{
+        .toggleContainer_cc46f0{
             margin-right: 8px;
         }
         // Remove button
-        .cc46f0f859f26200-removeGame{
+        .removeGame_cc46f0{
             position: relative;
             top: unset;
             right: unset;

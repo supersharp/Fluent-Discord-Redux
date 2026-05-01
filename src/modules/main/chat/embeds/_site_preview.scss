@@ -1,12 +1,12 @@
-.theme-dark ._623de82e76ad7f82-embedFull{
+.theme-dark .embedFull__623de{
     background-color: $CardBackgroundFillColorDefault;
-    ._623de82e76ad7f82-embedProvider{
+    .embedProvider__623de{
         @include TypeCaption;
     }
-    ._623de82e76ad7f82-embedAuthor{
+    .embedAuthor__623de{
         @include TypeBody;
     }
-    ._623de82e76ad7f82-embedTitle{
+    .embedTitle__623de{
         @include TypeBody;
     }
 }

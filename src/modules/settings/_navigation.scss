@@ -1,22 +1,22 @@
-.theme-dark ._23e6b439306f125a-sidebarRegion{
+.theme-dark .sidebarRegion__23e6b{
     flex: 0;
 }
 // Hide scrollbar when not required
-.theme-dark ._23e6b439306f125a-sidebarRegionScroller {
+.theme-dark .sidebarRegionScroller__23e6b {
     background-color: transparent;
 }
 
-.theme-dark ._23e6b439306f125a-sidebar{
+.theme-dark .sidebar__23e6b{
     // NOTE: 2023-06-13 - 6px to account for the scrollbar
     width: calc(320px - 6px);
     padding: 40px 4px;
 
-    .c7e9071ee8df9113-searchBar {
+    .searchBar_c7e907 {
         margin-left: 8px;
     }
 
     // Section header
-    .aa8da23faa27393c-side .cf48127484dbde85-eyebrow{
+    .side_aa8da2 .eyebrow_cf4812{
         padding: 0 0 0 8px;
         @include TypeBodyStrong;
         color: $TextFillColorPrimary;
@@ -25,12 +25,12 @@
         svg{
             display: none;
         }
-        ._3ddc0d8784daab3c-category{
+        .category__3ddc0{
             @include TypeCaption;
         }
     }
 
-    .aa8da23faa27393c-side .aa8da23faa27393c-item{
+    .side_aa8da2 .item_aa8da2{
         padding: 0 12px 0 16px;
         margin-bottom: 4px;
         border: 1px solid transparent;
@@ -58,7 +58,7 @@
             transition: transform 167ms Cubic-bezier(0,0,0,1),
                         opacity 167ms Cubic-bezier(0,0,0,1);
         }
-        &.aa8da23faa27393c-selected{
+        &.selected_aa8da2{
             background-color: $SubtleFillColorSecondary;
             &::before{
                 transform: scaleY(100%);
@@ -69,26 +69,26 @@
         }
         // Special cases
         // Remove right side Nitro icon (may differ in some regions)
-        .e681d139d22f277b-premiumLabel svg{
+        .premiumLabel_e681d1 svg{
             display: none;
         }
         // Remove background div from nitro option
-        .e681d139d22f277b-selectedBackground{
+        .selectedBackground_e681d1{
             display: none;
         }
         // Delete channel trash icon
-        .c7e9071ee8df9113-tabBarItemContainer{
+        .tabBarItemContainer_c7e907{
             svg{
                 display: none;
             }
         }
     }
     // Divider
-    .aa8da23faa27393c-side .aa8da23faa27393c-separator{
+    .side_aa8da2 .separator_aa8da2{
         margin: 0 -8px;
     }
 
-    ._2debea61131de3de-info{
+    .info__2debe{
         // Make all version info match colours
         span{
             color: $TextFillColorSecondary !important; // Override inline

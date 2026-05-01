@@ -1,4 +1,4 @@
-.theme-dark ._957962c2bd49881b-recentMentionsPopout{
+.theme-dark .recentMentionsPopout__95796{
     // NOTE - 2022-06-08: Calculation is based on: 100vh - titlebar - toolbar - (margin-top + margin-bottom)
     max-height: calc(100vh - 32px - 48px - 16px) !important;  // Override inline
     margin: 8px;
@@ -7,11 +7,11 @@
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
 
-    .ab66419eae73260f-header {
+    .header_ab6641 {
         background-color: transparent;
         // Tabs
-        .aa8da23faa27393c-topPill{
-            .ab66419eae73260f-tab {
+        .topPill_aa8da2{
+            .tab_ab6641 {
                 padding-left: 0;
                 padding-right: 0;
                 margin-right: 16px;
@@ -43,10 +43,10 @@
     }
 
     // No messages
-    .d404a36e7b59cdcf-iconContainer{
+    .iconContainer_d404a3{
         display: none;
     }
-    .d404a36e7b59cdcf-header{
+    .header_d404a3{
         margin-bottom: 24px;
         @include TypeBodyLarge;
     }
@@ -54,25 +54,25 @@
     // Results
     // Mentions
     // NOTE: 2023-01-04 - Mentions tab scroller uses a different class which doesn't have L/R padding
-    ._957962c2bd49881b-scroller {
+    .scroller__95796 {
         padding: 0 0 0 16px;
     }
 
-    ._957962c2bd49881b-container, // Mentions
-    ._427f0273a157ab7a-channel{ // Unreads
+    .container__95796, // Mentions
+    .channel__427f0{ // Unreads
         padding-bottom: 16px;
-        ._35a7ecf3aba351b2-channelHeader{
+        .channelHeader__35a7e{
             top: -1px;
             padding-right: 16px; // Fixes dismiss buttons butting up on right side
             background-color: $SolidBackgroundFillColorSecondary;
             border-radius: 4px 4px 0 0;
-            ._35a7ecf3aba351b2-guildIcon {
+            .guildIcon__35a7e {
                 background-color: transparent;
                 border-radius: 50%;
             }
         }
-        ._957962c2bd49881b-messageContainer, // Mentions
-        ._1ccd1ba5cb2270c2-messages{ // Unreads
+        .messageContainer__95796, // Mentions
+        .messages__1ccd1{ // Unreads
             margin-left: 0;
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
@@ -81,8 +81,8 @@
     }
 
     // Unread headers have a collapse button
-    ._427f0273a157ab7a-channel{
-        ._35a7ecf3aba351b2-channelHeader{
+    .channel__427f0{
+        .channelHeader__35a7e{
             padding-left: 48px;
         }
         .collapseButton__427f0{

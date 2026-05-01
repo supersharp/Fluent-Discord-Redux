@@ -1,11 +1,11 @@
 .theme-dark{
-    .b962dc319e969a3f-guildSidebar{
+    .guildSidebar_b962dc{
         background: $SolidBackgroundFillColorBase;
         .guildDescription_b962dc{
             color: $TextFillColorPrimary;
         }
     }
-    .b962dc319e969a3f-modal{
+    .modal_b962dc{
         background-color: $CardBackgroundFillColorDefault;
         border-radius: 0;
         // Remove waving hand GIF
@@ -13,25 +13,25 @@
             display: none;
         }
         // Headers
-        .b962dc319e969a3f-header{
+        .header_b962dc{
             @include TypeSubtitle;
             text-align: left;
         }
-        .subb962dc319e969a3f-header{
+        .subheader_b962dc{
             @include TypeBody;
             color: $TextFillColorPrimary;
             text-align: left;
         }
-        hr.b962dc319e969a3f-divider{
+        hr.divider_b962dc{
             display: none;
         }
 
-        .d48a5175a09205b7-termsFieldBody{
+        .termsFieldBody_d48a51{
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
         }
-        .d48a5175a09205b7-termsRowContent{
+        .termsRowContent_d48a51{
             @include TypeBody;
             color: $TextFillColorPrimary;
         }

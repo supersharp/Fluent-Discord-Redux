@@ -1,16 +1,16 @@
-.theme-dark ._55c999adcf6db265-container{
+.theme-dark .container__55c99{
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
 
-    ._56fec8e8b8048fe0-header{
+    .header__56fec{
         @include TypeBodyStrong;
         color: $TextFillColorPrimary;
         text-transform: none;
     }
 
-    ._56fec8e8b8048fe0-option{
+    .option__56fec{
         margin: 1px 10px;
         height: 32px;
         border: 1px solid transparent;
@@ -23,36 +23,36 @@
             display: none;
         }
 
-        ._56fec8e8b8048fe0-filter,
-        ._56fec8e8b8048fe0-answer,
-        ._56fec8e8b8048fe0-displayedNick,
-        ._56fec8e8b8048fe0-displayUsername,
-        ._56fec8e8b8048fe0-nonText,
+        .filter__56fec,
+        .answer__56fec,
+        .displayedNick__56fec,
+        .displayUsername__56fec,
+        .nonText__56fec,
         strong{
             @include TypeBody;
         }
 
-        ._56fec8e8b8048fe0-filter,
-        ._56fec8e8b8048fe0-displayedNick,
+        .filter__56fec,
+        .displayedNick__56fec,
         strong{
             color: $TextFillColorPrimary;
             @include TypeBody;
         }
-        ._56fec8e8b8048fe0-answer,
-        ._56fec8e8b8048fe0-displayUsername{
+        .answer__56fec,
+        .displayUsername__56fec{
             color: $TextFillColorSecondary;
             @include TypeBody;
         }
     }
-    ._56fec8e8b8048fe0-resultsGroup ._56fec8e8b8048fe0-resultsGroup,
-    ._56fec8e8b8048fe0-resultsGroup ._56fec8e8b8048fe0-searchLearnMore{
+    .resultsGroup__56fec .resultsGroup__56fec,
+    .resultsGroup__56fec .searchLearnMore__56fec{
         top: 16px;
     }
 
     // "Search for..." header
-    ._55c999adcf6db265-queryContainer{
+    .queryContainer__55c99{
         background-color: $CardStrokeColorDefault;
-        _55c999adcf6db265-queryText{
+        queryText__55c99{
             @include TypeBody;
             color: $TextFillColorPrimary;
             text-transform: none;

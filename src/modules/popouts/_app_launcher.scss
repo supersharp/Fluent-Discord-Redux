@@ -1,4 +1,4 @@
-.theme-dark ._9c62c6ed231468c4-contentWrapper{
+.theme-dark .contentWrapper__9c62c{
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     // Search
@@ -45,7 +45,7 @@
     }
 
     // Cards
-    .cb32c78a53f54371-container{
+    .container_cb32c7{
         background-color: $ControlFillColorDefault;
         border-width: 1px;
         border-style: outset;
@@ -57,30 +57,30 @@
     }
 
     // App "profile"
-    ._7bdb06a4e863b838-container{
+    .container__7bdb0{
 
         background-color: transparent;
         .profileAndVideoContainer_e80fe9{
             padding: 0 8px;
             border: 0;
         }
-        ._958562d63bb1e99d-overviewContainerNoVideo{
+        .overviewContainerNoVideo__95856{
             background-color: transparent;
             padding: 0;
         }
 
         // List of commands
-        .c94584907f9d5a22-contentContainer{
+        .contentContainer_c94584{
             padding: 0 24px;
         }
-        .c94584907f9d5a22-commandContainer{
+        .commandContainer_c94584{
             background-color: $ControlFillColorDefault;
             border-width: 1px;
             border-style: outset;
             border-color: $ControlElevationBorder;
             border-radius: 4px;
         }
-        .c94584907f9d5a22-command{
+        .command_c94584{
             background-color: transparent;
         }
     }

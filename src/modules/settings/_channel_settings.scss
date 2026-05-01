@@ -1,16 +1,16 @@
-.theme-dark ._23e6b439306f125a-contentColumn{
+.theme-dark .contentColumn__23e6b{
     // Permissions
     // Fix header
     &#permissions-tab{
-        .b717a15017b82443-title{
+        .title_b717a1{
             @include TypeTitle;
         }
 
         // Advanced permissions
         // Header
-        ._4914c777b1fd0f99-advancedModeDivider ~ ._201d5e8a3c09670a-button{
+        .advancedModeDivider__4914c ~ .button__201d5{
             margin-top: 32px;
-            ._201d5e8a3c09670a-contents{
+            .contents__201d5{
                 h2{
                     @include TypeBodyStrong;
                 }
@@ -30,8 +30,8 @@
         }
 
         // The permissions
-        ._0ab2c03be0b88164-permissionsForm{
-            ._7c0bae9243151ddd-flex.abf7060e6f2beabe-vertical{
+        .permissionsForm__0ab2c{
+            .flex__7c0ba.vertical_abf706{
                 margin-bottom: 8px;
                 padding: 8px 16px;
                 background-color: $CardBackgroundFillColorDefault;
@@ -41,7 +41,7 @@
                     @include TypeBody;
                     line-height: 32px;
                 }
-                .ddd1814f7cd3e6fd-description{
+                .description_ddd181{
                     margin-right: 100px;
                     @include TypeCaption;
                 }

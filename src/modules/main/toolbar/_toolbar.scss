@@ -1,43 +1,43 @@
-.theme-dark .f75fb00fb7356cbe-title, // Normal toolbar
-.theme-dark ._9293f6b2fc12398a-container{ // Browse channels toolbar
+.theme-dark .title_f75fb0, // Normal toolbar
+.theme-dark .container__9293f{ // Browse channels toolbar
     padding: 0 0 0 8px;
-    &._9293f6b2fc12398a-themed{
+    &.themed__9293f{
         background-color: transparent;
         border: 0;
     }
     // Channel & MOTD
     // Re-colour channel symbol
-    ._9293f6b2fc12398a-children{
+    .children__9293f{
         // Gradient at end of MOTD field
         &::after{
             display: none;
         }
-        ._9293f6b2fc12398a-iconWrapper svg{
+        .iconWrapper__9293f svg{
             color: $TextFillColorPrimary;
         }
     }
     // Channel name
-    ._9293f6b2fc12398a-title{
+    .title__9293f{
         @include TypeBodyStrong
     }
 
     // MOTD
-    ._9293f6b2fc12398a-dot{
+    .dot__9293f{
         color: $TextFillColorDisabled;
     }
-    ._6ec1a06139ec3b27-topic{
+    .topic__6ec1a{
         color: $TextFillColorPrimary;
         @include TypeBody;
     }
 
     // Add some margin to the caret when in fullscreen thread view
-    ._9293f6b2fc12398a-caret{
+    .caret__9293f{
         margin-right: 8px;
     }
 }
 
 // Toolbar
-.theme-dark ._9293f6b2fc12398a-toolbar{
+.theme-dark .toolbar__9293f{
     gap: 4px;
     margin-right: 4px;
     // Using these selectors so there are fewer conflicts in the voice screen
@@ -59,7 +59,7 @@
         }
 
         // Selected
-        &._9293f6b2fc12398a-selected{
+        &.selected__9293f{
             background-color: $AccentFillColorSecondary;
             &::before{
                 color: $TextOnAccentFillColorPrimary;
@@ -79,7 +79,7 @@
         left: 38px;
         @include TypeCaption;
     }
-    ._9293f6b2fc12398a-iconBadge{
+    .iconBadge__9293f{
         width: 16px;
         height: 3px;
         right: 22px;
@@ -91,8 +91,8 @@
 }
 
 // Icon replacements
-html[lang^="en-"].theme-dark ._9293f6b2fc12398a-toolbar{
-    ._9293f6b2fc12398a-iconWrapper{
+html[lang^="en-"].theme-dark .toolbar__9293f{
+    .iconWrapper__9293f{
         &::before{
             @include FontIconFluent;
             width: 60px;
@@ -103,7 +103,7 @@ html[lang^="en-"].theme-dark ._9293f6b2fc12398a-toolbar{
             display: block;
         }
         // Remove default icon
-        ._9293f6b2fc12398a-icon,
+        .icon__9293f,
         .controlIcon-35oS15{
             display: none;
         }
