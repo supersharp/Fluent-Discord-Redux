@@ -6,10 +6,13 @@
 
 .theme-dark {
     .shop__6db1d {
+        background-color: transparent !important;
+
         .headerBar__80679 {
             // Ensure the header bar doesn't clip overflowing
             // elements like the orb balance pill
             overflow: visible;
+            background-color: transparent !important;
 
             .upperContainer__9293f {
                 overflow: visible;
@@ -87,6 +90,7 @@
     // The original theme's toolbar rule forces div[role=button] to 60px wide,
     // which squeezes the balance widget on any page that shows it.
     .toolbar__9293f {
+        background-color: transparent !important;
         .container__44ee9 {
             overflow: visible;
             flex-shrink: 0;
