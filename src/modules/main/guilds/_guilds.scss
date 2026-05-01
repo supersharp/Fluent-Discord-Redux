@@ -46,15 +46,25 @@
         margin-left: 8px;
         // box-shadow: inset 0 0 0 1px $Red;
     }
-    .wrapper_cc5dd2{
+    .wrapper__6e9f8{
         width: 44px !important; // Override inline
         height: 44px !important; // Override inline
         border-radius: 4px;
+        background-color: transparent !important; // Prevent native Discord highlight overlap
         svg{
             width: 44px;
             height: 44px;
             top: 0;
             left: 0;
+
+            > path {
+                display: none !important; // Remove Discord native squircle background path
+            }
+
+            foreignObject {
+                mask: none !important; // Remove Discord native squircle mask
+            }
+
             .icon__6e9f8{
                 width: 36px;
                 height: auto;
@@ -75,20 +85,28 @@
 
     // Guild interaction states
     // Guild is selected
-    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2{
-        background-color: $ControlFillColorSecondary;
+    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2,
+    .blobContainer_e5445c.selected_e5445c .wrapper__6e9f8,
+    .wrapper__6e9f8.selected__6e9f8 {
+        background-color: $ControlFillColorSecondary !important;
     }
     // Guild is selected and hovered
-    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2{
-        box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
+    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2,
+    .blobContainer_e5445c.selected_e5445c:hover .wrapper__6e9f8,
+    .wrapper__6e9f8.selected__6e9f8:hover {
+        box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary !important;
     }
     // Guild is hovered
-    .blobContainer_e5445c:hover .wrapper_cc5dd2{
-        background-color: $ControlFillColorSecondary;
+    .blobContainer_e5445c:hover .wrapper_cc5dd2,
+    .blobContainer_e5445c:hover .wrapper__6e9f8,
+    .wrapper__6e9f8:hover {
+        background-color: $ControlFillColorSecondary !important;
     }
     // Guild is clicked
-    .blobContainer_e5445c:active .wrapper_cc5dd2{
-        background-color: $ControlFillColorTertiary;
+    .blobContainer_e5445c:active .wrapper_cc5dd2,
+    .blobContainer_e5445c:active .wrapper__6e9f8,
+    .wrapper__6e9f8:active {
+        background-color: $ControlFillColorTertiary !important;
     }
 
     // Guild badges
@@ -207,17 +225,22 @@
 
     // Closed folder
     .folderHeader__48112{
-        .wrapper_cc5dd2{
+        .wrapper_cc5dd2, .wrapper__6e9f8 {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
+            border-radius: 4px;
+            background-color: var(--background-secondary);
         }
         // Fix alignment
         svg{
             left: 2px;
+            > path {
+                display: none !important;
+            }
         }
         // Remove round mask
-        foreignobject{
-            // mask: none;
+        foreignObject{
+            mask: none !important;
         }
     }
     .folderPreviewWrapper__48112{
@@ -238,7 +261,7 @@
     // Fix folder icon height when folder is expanded
     .isExpanded__48112 .folderHeader__48112{
         margin-bottom: 0;
-        .wrapper_cc5dd2{
+        .wrapper_cc5dd2, .wrapper__6e9f8 {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
