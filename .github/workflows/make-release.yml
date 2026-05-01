@@ -39,7 +39,7 @@ jobs:
           name: Release ${{ github.event.inputs.version || format('release-{0}', github.run_id) }}
           body: 'Automated release with built theme files.'
           files: |
-            dist/Fluent-Discord-static.theme.css
-            dist/Fluent-Discord.theme.css
+            dist/Fluent-Discord-Redux-static.theme.css
+            dist/Fluent-Discord-Redux.theme.css
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
