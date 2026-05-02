@@ -218,14 +218,6 @@
 
     // Open folder
     .folderIcon__48112 {
-        &::before {
-            content: "\E8B7"; // Folder Open
-            @include FontIconFluent;
-            color: $TextOnAccentFillColorPrimary;
-            position: absolute;
-            font-size: 32px;
-        }
-
         &::after {
             content: "\E8D5"; // Folder Fill
             @include FontIconFluent;
