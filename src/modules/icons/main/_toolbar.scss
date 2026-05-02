@@ -92,7 +92,7 @@ html[lang^="en-"].theme-dark .toolbar__9293f {
             content: "\E8AA"; // VideoChat
         }
 
-        &[aria-label="Add friends to DM" i]::before {
+        &[aria-label*="Add Friends" i]::before {
             content: "\E902"; // Group
         }
 
