@@ -1,4 +1,4 @@
-# Fluent Discord
+# Fluent Discord Redux
 A Windows 11 theme for Discord
 
 This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
