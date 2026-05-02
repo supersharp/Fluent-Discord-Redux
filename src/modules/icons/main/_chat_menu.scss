@@ -1,67 +1,90 @@
-html[lang^="en-"].theme-dark .wrapper_f7ecac{
-    .button_f7ecac{
-        &[aria-label="Reply"]::before{
+html[lang^="en-"].theme-dark .wrapper_f7ecac {
+    .button_f7ecac {
+        &[aria-label="Reply"]::before {
             content: "\E97A"; // Reply
         }
-        &[aria-label="Edit"]::before{
+
+        &[aria-label="Edit"]::before {
             content: "\E104"; // Edit
         }
-        &[aria-label="Create Thread"]::before{
+
+        &[aria-label="Create Thread"]::before {
             content: "\E15C"; // ShowResults
         }
-        &[aria-label="View Thread"]::before{
+
+        &[aria-label="View Thread"]::before {
             content: "\E15C"; // ShowResults
         }
-        &[aria-label="Mark Unread"]::before{
+
+        &[aria-label="Mark Unread"]::before {
             content: "\E119"; // Mail
         }
-        &[aria-label="Pin Message"]::before{
+
+        &[aria-label="Pin Message"]::before {
             content: "\E141"; // Pin
         }
-        &[aria-label="Unpin Message"]::before{
+
+        &[aria-label="Unpin Message"]::before {
             content: "\E196"; // UnPin
         }
-        &[aria-label="Copy Link"]::before{
+
+        &[aria-label="Copy Link"]::before {
             content: "\E167"; // Link
         }
-        &[aria-label="Copy Message ID"]::before{
+
+        &[aria-label="Copy Message ID"]::before {
             content: "ID";
             @include FontNormal;
         }
-        &[aria-label="Reactions"]::before{
+
+        &[aria-label="Reactions"]::before {
             content: "\E11D"; // Emoji
         }
-        &[aria-label="Add Super Reaction"]::before{
+
+        &[aria-label="Add Super Reaction"]::before {
             content: "\EA38"; // Asterisk
         }
-        &[aria-label="Delete"]::before{
+
+        &[aria-label="Delete"]::before {
             content: "\E107"; // Delete
         }
-        &[aria-label="Add Reaction"]::before{
+
+        &[aria-label="Add Reaction"]::before {
             content: "\E11D"; // Emoji
         }
-        &[aria-label="Publish"]::before{
+
+        &[aria-label="Publish"]::before {
             content: "\E789"; // Megaphone
         }
-        &[aria-label="Published"]::before{
+
+        &[aria-label="Published"]::before {
             content: "\E081"; // Checkmark
         }
-        &[aria-label="More"]::before{
+
+        &[aria-label="More"]::before {
             content: "\E10C"; // More
         }
 
         // Upload attachment
-        &[aria-label="Spoiler Attachment"]::before{
+        &[aria-label="Spoiler Attachment"]::before {
             content: "\ED1A"; // Hide
         }
-        &[aria-label="Modify Attachment"]::before{
+
+        &[aria-label="Modify Attachment"]::before {
             content: "\E104"; // Edit
         }
-        &[aria-label="Remove Attachment"]::before{
+
+        &[aria-label="Remove Attachment"]::before {
             content: "\E107"; // Delete
         }
+
         &[aria-label="Forward"]::before {
             content: "\E72A"; // Forward
+        }
+
+        // Translate Message Plugin
+        &[aria-label="Translate"]::before {
+            content: "\E8C1"; // Translate
         }
     }
 }
