@@ -81,6 +81,7 @@
     // Guild with no icon
     .childWrapper__6e9f8 {
         background-color: transparent;
+        transform: translate(-2px, -2px) !important; // Nudge left and up
 
         &:hover {
             background-color: transparent;
