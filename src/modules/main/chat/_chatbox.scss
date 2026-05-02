@@ -5,28 +5,32 @@
         padding-right: 15px;
     }
 
-    .channelTextArea__74017{
+    .channelTextArea__74017,
+    .channelTextArea_f75fb0 {
         margin-bottom: 8px;
-        background: $ControlFillColorDefault;
-        border: 1px solid $ControlStrokeColorDefault;
-        border-bottom: 2px solid $ControlStrokeColorDefault;
+        background: $ControlFillColorDefault !important;
+        border: 1px solid $ControlStrokeColorDefault !important;
+        border-bottom: 2px solid $ControlStrokeColorDefault !important;
         border-radius: 4px;
         &:hover{
-            background-color: $ControlFillColorSecondary;
+            background-color: $ControlFillColorSecondary !important;
         }
         &:focus-within{
-            background-color: $ControlFillColorInputActiveBrush;
-            border-color: $ControlStrokeColorDefault;
-            border-bottom-color: $AccentBase;
+            background-color: $ControlFillColorInputActiveBrush !important;
+            border-color: $ControlStrokeColorDefault !important;
+            border-bottom-color: $AccentBase !important;
         }
         &.channelTextAreaDisabled__74017{
-            background-color: $ControlFillColorDisabled;
+            background-color: $ControlFillColorDisabled !important;
         }
     }
-    .themedBackground__74017{
-        background: transparent;
+    .themedBackground__74017,
+    .themedBackground_f75fb0 {
+        background: transparent !important;
     }
-    .scrollableContainer__74017{
+    .scrollableContainer__74017,
+    .scrollableContainer_f75fb0 {
+        background: transparent !important;
         border-radius: 4px;
         overflow-y: auto;
     }
