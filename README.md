@@ -6,9 +6,15 @@ With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent
 
 Changes from the original fork:
 * Fixed orbs balance 
-* Fixed search bar in the shop view
+* Fixed search bar in all the views (Shop, Quests, Channel view)
 * Fixed broken theme for settings page
-* Updated elements to match the newest discord UI
+* Inbox overflow fix - Fixed inbox overflowing the viewport
+* Black outline removal - Removed the black outline on server folders
+* Fixed broken alignments for server icons in the left dock
+* The autoupdate theme now points to this GitHub Repo
+* GitHub Actions support for builds
+* Updated elements to match the newest Discord UI (May 2026)
+
 
 ## Download
 * From [Releases](https://github.com/supersharp/Fluent-Discord-Redux/releases/latest)
