@@ -16,13 +16,7 @@
     }
 
     // Pill
-    .pill_e5445c,
-    // Normal guild
-    .pill_ed9a5f,
-    // DM
-    .pill__1f388 {
-
-        // Home
+    .wrapper__58105.overlay__58105 {
         .item__58105 {
             width: 3px;
             height: 16px !important; // Override inline
@@ -38,7 +32,7 @@
             }
 
             // Selected
-            @for $i from 21 through 40 {
+            @for $i from 21 through 48 {
                 &[style*="height: #{$i}"] {
                     background-color: $AccentFillColorDefault;
                 }
