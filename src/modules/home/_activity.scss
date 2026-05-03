@@ -54,6 +54,23 @@
         .thumbnail__0f2e8 {
             border-radius: 4px;
         }
+
+        // Facepile (multiple users)
+        .facePileItem__0f2e8 {
+            .wrapper__44b0c {
+                border-radius: 50%;
+                border: 2px solid $LayerFillColorDefault;
+                margin-left: -4px;
+                
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+            .mask__44b0c foreignObject {
+                mask: none !important;
+                border-radius: 50%;
+            }
+        }
     }
 
     .inset_bf1984{
