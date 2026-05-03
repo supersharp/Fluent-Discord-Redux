@@ -3,6 +3,7 @@ A Windows 11 theme for Discord
 
 This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
 With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
+The looks and feel may deviate from the original theme.
 
 The code is written with the help of GitHub CoPilot.
 
@@ -15,6 +16,7 @@ Changes from the original fork:
 * Fixed broken alignments for server icons in the left dock
 * The autoupdate theme now points to this GitHub Repo
 * GitHub Actions support for builds
+* Many more changes.
 * Updated elements to match the newest Discord UI (May 2026)
 
 
