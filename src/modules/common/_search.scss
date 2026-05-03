@@ -1,16 +1,21 @@
 .theme-dark{
-    .input__48d49{
+    .input__48d49,
+    .input__0f084,
+    .comboBoxInput__0edde {
         height: 32px;
-        padding: 0 8px;
+        padding: 0 12px;
         border: 1px solid;
         border-bottom-width: 2px;
         border-color: $ControlStrokeColorDefault;
         border-radius: 4px;
         @include TypeBody;
         background-color: $ControlFillColorDefault;
-        color: $TextFillColorSecondary;
+        color: $TextFillColorPrimary;
+        transition: all 0.2s ease;
+
         &:hover{
             border-color: $ControlStrokeColorSecondary;
+            background-color: $ControlFillColorSecondary;
         }
         &:focus{
             background-color: $ControlFillColorInputActiveBrush;

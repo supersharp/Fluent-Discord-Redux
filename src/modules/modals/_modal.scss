@@ -6,10 +6,14 @@
     }
 
     // Body
-    .root__49fc1{
-        background-color: $SolidBackgroundFillColorBase;
+    .root__49fc1,
+    .container__8a031 {
+        background-color: $MicaBackgroundFillColorBase;
+        backdrop-filter: blur(16px);
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
+        @include Elevation128;
+        overflow: hidden;
     }
 
     // Headers
