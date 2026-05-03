@@ -6,7 +6,10 @@
     border-radius: 8px;
 }
 
-.theme-dark .contentWrapper__08434 #emoji-picker-tab-panel{
+.theme-dark .contentWrapper__08434 #emoji-picker-tab-panel,
+.theme-dark .contentWrapper__08434 #gif-picker-tab-panel,
+.theme-dark .contentWrapper__08434 #sticker-picker-tab-panel,
+.theme-dark .contentWrapper__08434 #kaomoji-picker-tab-panel{
     background: transparent;
     backdrop-filter: none;
     border: 0;
@@ -17,6 +20,7 @@
     // Navigation
     .nav__08434{
         .navButton__08434 {
+            position: relative;
             padding-left: 0;
             padding-right: 0;
             margin-left: 0;
@@ -53,25 +57,41 @@
     }
     .header_c0e32c, // Emoji
     .header__8ef02, // Stickers
-    .header_fed6d3{ // GIFs
+    .header_fed6d3, // GIFs
+    .header__81b99{ // Kaomoji
         background-color: transparent;
         box-shadow: none;
     }
     // Search
-    .inner_fea832{
+    .container__5a838{
         padding: 0;
     }
-    .container__33507{ // GIFs search
+    .container__72c38{ // Search container
         background-color: transparent;
+    }
+    .wrapper__72c38.container__0f084{
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        outline: none;
+
+        &:focus-within,
+        &:hover{
+            background-color: transparent;
+            border: 0;
+            box-shadow: none;
+            outline: none;
+        }
     }
     // Emoji search
     // Fix inherited height
-    .medium_fea832 .input_fea832{
+    .md__0f084 .input__0f084{
         height: 32px;
     }
-    .input_fea832{
+    .input__0f084{
         margin: 0;
-        padding-right: 32px;
+        padding-left: 12px;
+        padding-right: 12px;
         background-color: $ControlFillColorDefault;
         color: $TextFillColorSecondary;
         border: 1px solid $ControlStrokeColorDefault;
@@ -86,23 +106,33 @@
             color: $TextFillColorPrimary;
             border-color: $ControlStrokeColorDefault;
             border-bottom-color: $AccentBase;
+            box-shadow: none;
+            outline: none;
         }
         &::placeholder{
             @include TypeBody;
         }
     }
-    // Search clear button
-    .iconLayout_fea832{
-        position: absolute;
-        top: 6px;
-        right: 4px;
-        &.medium_fea832{
-            width: 22px;
-            height: 22px;
-            .iconContainer_fea832{
-                width: 16px;
-                height: 16px;
-            }
+
+    // Kaomoji
+    .kaomojiContainer__81b99{
+        padding-right: 0 !important; // Override inline
+    }
+
+    .categoryLabel__81b99{
+        @include TypeBodyStrong;
+        color: $TextFillColorPrimary !important;
+        text-transform: none;
+    }
+
+    .button_a22cb0.secondary_a22cb0{
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: $ControlFillColorSecondary;
+            border-color: $ControlStrokeColorSecondary;
         }
     }
 
@@ -111,6 +141,63 @@
     .categoryList_c0e32c{
         background-color: $SolidBackgroundFillColorBase;
     }
+
+    // Sticker sidebar
+    .wrapper__4e6ce.categoryList__3ad28{
+        background-color: $SolidBackgroundFillColorBase;
+    }
+
+    .stickerCategory__3ad28,
+    .standardStickerShortcut__3ad28{
+        border-radius: 4px;
+
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+        }
+    }
+
+    .stickerCategoryGenericSelected__3ad28{
+        background-color: $ControlFillColorSecondary;
+    }
+
+    .standardStickerShortcut__3ad28{
+        background-color: $SolidBackgroundFillColorSecondary;
+
+        &:hover{
+            background-color: $SolidBackgroundFillColorSecondary;
+        }
+    }
+
+    .unicodeShortcut_b9ee0c{
+        background-color: $SolidBackgroundFillColorSecondary;
+        border-radius: 4px;
+        color: $TextFillColorPrimary;
+
+        &:hover{
+            background-color: $SolidBackgroundFillColorSecondary;
+        }
+    }
+
+    .stickerCategoryGenericIcon__3ad28,
+    .standardStickerShortcut__3ad28,
+    .stickerCategory__3ad28{
+        color: $TextFillColorPrimary;
+    }
+
+    .upsell_ac65bb.emptyGuildUpsell_e94b8c{
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+
+        .body_ac65bb{
+            color: $TextFillColorPrimary !important;
+        }
+
+        .textButton__7a01b{
+            color: $AccentTextFillColorPrimary;
+        }
+    }
+
     // Replace emoji icons
     .categoryItemDefaultCategory_b9ee0c{
         &.categoryItem_b9ee0c{
