@@ -1,3 +1,162 @@
+.theme-dark .accountPopout__37e49 {
+    background-color: $AcrylicBackgroundFillColorBase;
+    backdrop-filter: blur(20px);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px;
+    @include Elevation32;
+    overflow: hidden;
+
+    .outer_c0bea0 {
+        background: transparent !important;
+    }
+
+    .inner_c0bea0 {
+        background: transparent !important;
+    }
+
+    .menus_ce8328 {
+        background: $LayerOnAcrylicFillColorDefult;
+        margin: 8px;
+        border-radius: 8px;
+        padding: 4px;
+        border: 1px solid $CardStrokeColorDefault;
+        
+        // Remove gaps between groups
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .menuItem_ce8328 {
+            border-radius: 4px;
+            margin: 0;
+            padding: 6px 8px; // Slightly more horizontal padding, less vertical
+            color: white !important;
+            
+            &:hover, &:active, &.selected_ce8328 {
+                background-color: transparent !important;
+            }
+
+            .menuItemLabelText_ce8328 {
+                @include TypeBody;
+                color: white !important;
+            }
+            
+            svg {
+                color: white !important;
+            }
+        }
+
+        // Remove the large white hover mask and group spacing
+        .overlay_c0bea0 {
+            background: transparent !important;
+            border-radius: 4px;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: none !important;
+            
+            &::before, &::after {
+                display: none !important;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+// Account Switcher Submenu
+.theme-dark .scroller_c1e9c4 {
+    background: transparent !important; // Let the Acrylic shine through
+    padding: 4px !important;
+    
+    // Target the account switcher menu items specifically to limit width
+    .userMenuItem_d40c56 {
+        min-width: 160px;
+        max-width: 240px;
+    }
+
+    // Hover fixes for switcher items
+    .item_c1e9c4 {
+        border-radius: 4px;
+        margin: 0;
+        padding: 6px 8px;
+        color: white !important;
+        
+        &:hover, &:active, &.selected_c1e9c4 {
+            background-color: transparent !important;
+        }
+
+        .label_c1e9c4, .userMenuText_d40c56 {
+            color: white !important;
+        }
+
+        svg {
+            color: white !important;
+        }
+    }
+
+    // Remove separators in switcher
+    .separator_c1e9c4 {
+        display: none !important;
+    }
+}
+
+// General Popout Menu (Context Menus / Submenus)
+.theme-dark, .theme-midnight {
+    &.layerContainer__59d0d, .layerContainer__59d0d {
+        // Target any container that acts as a menu/submenu in the layer
+        .menu_c1e9c4,
+        .scroller_c1e9c4:not(.contentWrapper__08434 .scroller_c1e9c4) { // Exclude emoji picker scrollers
+            background-color: $AcrylicBackgroundFillColorBase !important;
+            backdrop-filter: blur(20px);
+            border: 1px solid $SurfaceStrokeColorDefault;
+            border-radius: 8px;
+            @include Elevation32;
+            padding: 0;
+            min-height: unset !important;
+            min-width: unset !important; // Fix for wide popouts
+            width: fit-content !important;
+
+            .scroller_c1e9c4 {
+                padding: 4px !important;
+                background: transparent !important;
+                min-width: unset !important;
+            }
+
+            // Hide default Discord separator
+            .separator_c1e9c4 {
+                display: none !important;
+            }
+
+            // Standardize items
+            .item_c1e9c4 {
+                margin: 0;
+                border-radius: 4px;
+                color: white !important;
+                
+                &:hover, &:active, &.selected_c1e9c4 {
+                    background-color: transparent !important;
+                }
+
+                .label_c1e9c4, .userMenuText_d40c56, .menuItemLabelText_ce8328 {
+                    color: white !important;
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
+
+        // Ensure animators don't add backgrounds
+        [class*="animator"] {
+            background: transparent !important;
+        }
+    }
+}
+
 .theme-dark .userPopoutOuter_c69a7b{
     // Remove style from context menu in user popout
     .menu_c1e9c4.menu_ad5fac{
