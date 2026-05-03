@@ -4,6 +4,8 @@ A Windows 11 theme for Discord
 This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
 With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
 
+The code is written with the help of GitHub CoPilot.
+
 Changes from the original fork:
 * Fixed orbs balance 
 * Fixed search bar in all the views (Shop, Quests, Channel view)
