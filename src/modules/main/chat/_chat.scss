@@ -206,7 +206,26 @@
     .chatGradientBase__36d07 {
         display: none;
     }
-    .scrollerSpacer__36d07{
-        height: 16px;
+    // Wave button / Compact button
+    .compactButton__7ff28 {
+        background-color: $ControlFillColorDefault !important;
+        border: 1px solid $ControlStrokeColorDefault !important;
+        border-radius: 16px !important; // Pill shape
+        padding: 4px 12px !important;
+        color: white !important;
+        @include TypeBody;
+        transition: background-color $AnimationFadeInOut;
+        
+        &:hover {
+            background-color: $ControlFillColorSecondary !important;
+        }
+        &:active {
+            background-color: $ControlFillColorTertiary !important;
+        }
+
+        // Ensure text inside is white
+        &, .contents__201d5 {
+            color: white !important;
+        }
     }
 }
