@@ -1,48 +1,70 @@
 .theme-dark{
     .sidebar__5e434 {
-        border-right: none !important;
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
         box-shadow: none !important;
-        &::after, &::before {
+        &::after {
             display: none !important;
             content: none !important;
         }
     }
     .sidebarList__5e434 {
-        background-color: transparent;
+        background-color: transparent !important;
+        background: transparent !important;
         border: 0 !important;
-        border-right: none !important;
+        border-right: 0 !important;
         border-radius: 0;
         box-shadow: none !important;
-        &::after, &::before {
+        &::before,
+        &::after {
             display: none !important;
             content: none !important;
         }
     }
-    .guilds__5e434 {
-        border-right: none !important;
+    .sidebarListRounded__5e434 {
+        border-right: 0 !important;
         box-shadow: none !important;
     }
-    .container__5e434, .page__5e434, .base__5e434, .content__5e434 {
-        border: none !important;
+    .sidebar__5e434 + * {
+        border-left: 0 !important;
+        border-top: 0 !important;
         box-shadow: none !important;
-        &::after, &::before {
-            display: none !important;
-            content: none !important;
-        }
+    }
+    .sidebar__5e434 + *::before,
+    .sidebar__5e434 + *::after {
+        display: none !important;
+        content: none !important;
+    }
+    .sidebarList__5e434 + * {
+        border-left: 0 !important;
+        border-top: 0 !important;
+        box-shadow: none !important;
+    }
+    .privateChannels_e6b769 {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+    .container__2637a {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
     }
     .sidebarResizeHandle__5e434 {
+        display: none !important;
+        background: transparent !important;
         background-color: transparent !important;
-        width: 2px !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
         opacity: 0 !important;
         border: none !important;
-        transition: opacity 0.2s ease;
         &::before, &::after {
             display: none !important;
             content: none !important;
-        }
-        &:hover {
-            opacity: 1 !important;
-            background-color: $ControlStrokeColorSecondary !important;
         }
     }
     // Increase bottom margin of channels list so there is a consistent margin around the account box

@@ -21,3 +21,57 @@
         background-color: transparent;
     }
 }
+
+// Neutralize top-edge seams at the app content stack level.
+.theme-dark {
+    .base__5e434,
+    .content__5e434,
+    .page__5e434 {
+        border-top: 0 !important;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+
+    .base__5e434::before,
+    .base__5e434::after,
+    .content__5e434::before,
+    .content__5e434::after,
+    .page__5e434::before,
+    .page__5e434::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+// Page-level guard for Home-family header seams (Shop/Quests wrappers).
+.theme-dark .page__5e434 {
+    section[class*="headerBar__"],
+    section[class*="headerBar__"] [class*="container__9293f"],
+    section[class*="headerBar__"] [class*="tabs__"],
+    section[class*="headerBar__"] + [class*="tabs__"],
+    > .shop__6db1d > div,
+    > .shop__6db1d > div > section[class*="headerBar__"],
+    > .shop__6db1d > div + .shopViewWrapper__6db1d,
+    [class*="shopViewWrapper__"],
+    section[class*="headerBar__"] + .toolbar__9293f,
+    .container__955a3 {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    section[class*="headerBar__"]::before,
+    section[class*="headerBar__"]::after,
+    section[class*="headerBar__"] + [class*="tabs__"]::before,
+    section[class*="headerBar__"] + [class*="tabs__"]::after,
+    > .shop__6db1d > div::before,
+    > .shop__6db1d > div::after,
+    [class*="shopViewWrapper__"]::before,
+    [class*="shopViewWrapper__"]::after,
+    .container__955a3::before,
+    .container__955a3::after {
+        display: none !important;
+        content: none !important;
+    }
+}

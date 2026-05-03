@@ -4,21 +4,55 @@
         background: transparent !important;
     }
 
-    .pageWrapper_a3a4ce,
-    .page__5e434 {
-        background-color: $LayerFillColorDefault;
-        border-top: 1px solid $CardStrokeColorDefault;
-        border-left: 1px solid $CardStrokeColorDefault;
-        border-radius: 8px 0 0 0;
+    // Modern Discover layout stack (covers Apps / Servers / Quests views).
+    .page__5e434 .container_a592e1,
+    .page__5e434 .outerContainer_e1147e,
+    .page__5e434 .innerContainer_e1147e,
+    .page__5e434 [class*="container_a592e1"],
+    .page__5e434 [class*="outerContainer_"],
+    .page__5e434 [class*="innerContainer_"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
     }
 
-    .scroller__23746,
-    .contentSection_b6bcee {
+    .page__5e434 .headerBar__8a7fc,
+    .page__5e434 [class*="headerBar__"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .page__5e434 .backdrop__8a7fc,
+    .page__5e434 [class*="backdrop__"] {
+        display: none !important;
+    }
+
+    .pageWrapper_a3a4ce {
         background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-radius: 8px 0 0 0;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+    }
+
+    .pageWrapper_a3a4ce .scroller__23746,
+    .pageWrapper_a3a4ce .contentSection_b6bcee,
+    .pageWrapper_a3a4ce .container_e9ef78,
+    .pageWrapper_a3a4ce .container__551b0,
+    .pageWrapper_a3a4ce .header__551b0,
+    .pageWrapper_a3a4ce .scroller__551b0 {
+        background-color: transparent;
+        background: transparent !important;
     }
 
     // Cards
-    .card__84e3e {
+    .pageWrapper_a3a4ce .card__84e3e {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
@@ -29,18 +63,66 @@
     }
 
     // Discover sidebar
-    .sidebarList__5e434 {
-        background-color: $LayerFillColorDefault !important;
-        border-right: 1px solid $CardStrokeColorDefault;
+    .pageWrapper_a3a4ce .sidebarList__5e434,
+    .pageWrapper_a3a4ce [class*="sidebarList_"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
 
         .container__551b0,
-        .header__551b0 {
+        .header__551b0,
+        .scroller__551b0,
+        .nav__551b0 {
             background-color: transparent !important;
         }
     }
 
+    // Hash-agnostic fallback for current/future Discover class rotations.
+    .pageWrapper_a3a4ce > [class*="sidebarList"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .pageWrapper_a3a4ce > [class*="sidebarList"] > div,
+    .pageWrapper_a3a4ce > [class*="sidebarList"] > nav,
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="header"],
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="scroller"],
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="nav"] {
+        background-color: transparent !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    // Discover-specific sidebar fallback based on nav item structure.
+    .sidebarList__5e434:has([class*="navItem__"]),
+    [class*="sidebarList_"]:has([class*="navItem__"]) {
+        background-color: transparent !important;
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+
+        [class*="container__"],
+        [class*="header__"],
+        [class*="scroller__"],
+        [class*="nav__"] {
+            background-color: transparent !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: 0 !important;
+        }
+    }
+
     // Nav
-    .nav__551b0 {
+    .pageWrapper_a3a4ce .nav__551b0 {
         padding: 0 8px;
         display: flex;
         flex-direction: column;
@@ -87,7 +169,7 @@
         }
     }
 
-    .sidebar_c48ade {
+    .pageWrapper_a3a4ce .sidebar_c48ade {
         .container__91a9d {
             height: 32px;
             margin-bottom: 2px;
@@ -176,7 +258,7 @@
     }
 
     // Search box
-    .searchBox__56feb {
+    .container_f69601 .searchBox__56feb {
         padding-right: 0;
         background-color: transparent;
         border: 0;
@@ -239,35 +321,6 @@
             border-radius: 8px;
             margin: 16px;
             overflow: hidden;
-        }
-
-        // Sidebar and Navigation
-        .sidebar__5e434,
-        .sidebarList__5e434,
-        .container__551b0,
-        .header__551b0,
-        .nav__551b0,
-        .scroller__551b0,
-        [class*="wrapper_"],
-        .guild-sidebar,
-        &.theme-midnight .sidebar__5e434,
-        &.theme-midnight .sidebarList__5e434,
-        &.theme-midnight .container__551b0,
-        &.theme-midnight .header__551b0,
-        &.theme-midnight .scroller__551b0 {
-            background-color: transparent !important;
-            background: transparent !important;
-            --background-secondary: transparent !important;
-            --background-secondary-alt: transparent !important;
-            --background-tertiary: transparent !important;
-        }
-
-        .sidebarList__5e434 {
-            background-color: transparent !important;
-        }
-
-        .container__551b0 {
-            background-color: transparent !important;
         }
 
         // Search Bar
