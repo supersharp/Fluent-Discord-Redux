@@ -23,17 +23,43 @@
     }
 
     // Card
-    .wrapper__00943{
+    .wrapper__00943,
+    .container__0f2e8 {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
-        &:hover{
+        border-radius: 8px;
+        margin: 8px 0 0 8px;
+        padding: 8px;
+
+        &:hover {
             background-color: $LayerFillColorAlt;
         }
+
+        .userName__0f2e8,
+        .nameContainer__703b9 {
+            @include TypeBodyStrong;
+        }
+
+        .contentTitle__0f2e8 {
+            @include TypeBody;
+            color: $TextFillColorPrimary !important;
+        }
+
+        .badgesContainer__635ed {
+            @include TypeCaption;
+            color: $TextFillColorSecondary;
+            margin-top: 4px;
+        }
+
+        .thumbnail__0f2e8 {
+            border-radius: 4px;
+        }
     }
+
     .inset_bf1984{
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
-        border-radius: 4px;
+        border-radius: 8px;
         .section__00943{
             background-color: transparent;
         }

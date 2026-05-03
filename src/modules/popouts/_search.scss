@@ -1,18 +1,22 @@
-.theme-dark .container__55c99{
+.theme-dark .container__55c99,
+.theme-dark .container__16eb0 {
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
+    padding: 8px 0;
 
-    .header__56fec{
+    .header__56fec,
+    .groupHeader__971b5 {
         @include TypeBodyStrong;
         color: $TextFillColorPrimary;
+        padding: 8px 16px;
         text-transform: none;
     }
 
-    .option__56fec{
-        margin: 1px 10px;
-        height: 32px;
+    .option__56fec,
+    .itemContainer__971b5 {
+        margin: 1px 4px;
         border: 1px solid transparent;
         border-radius: 4px;
         &:hover{
@@ -34,14 +38,29 @@
 
         .filter__56fec,
         .displayedNick__56fec,
+        .text-sm\/medium_cf4812,
         strong{
             color: $TextFillColorPrimary;
             @include TypeBody;
         }
         .answer__56fec,
-        .displayUsername__56fec{
+        .displayUsername__56fec,
+        .filterSublabelTextContainer__971b5{
             color: $TextFillColorSecondary;
             @include TypeBody;
+        }
+
+        .item__971b5 {
+            padding: 4px 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .itemIcon__971b5 {
+            color: $TextFillColorSecondary;
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
         }
     }
     .resultsGroup__56fec .resultsGroup__56fec,
@@ -67,9 +86,7 @@
     // Calendar
     .react-datepicker{
         background-color: transparent;
-        .react-datepicker__navigation{
 
-        }
         // inc/dec month buttons
         &__navigation.react-datepicker__navigation--previous{
             width: 32px;
