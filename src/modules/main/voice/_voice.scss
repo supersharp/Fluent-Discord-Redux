@@ -1,95 +1,154 @@
-// DEBUG: 2022-06-04 - Useful debug snippets to help with theming
-// Force display voice screen elements (toolbars)
-// .root_bfe55a.idle_bfe55a *{
-//     opacity: 1 !important;
-//     transform: unset !important;
-// }
-// Draw debug borders on top toolbar buttons
-// .toolbar__9293f{
-//     border: 1px solid red;
-//     div[role=button],
-//     button[type=button]{
-//         border: 1px solid green;
-//     }
-// }
-
-.theme-dark .wrapper_cb9592{
-    background-color: #000;
+.theme-dark .wrapper_cb9592 {
+    background-color: $SolidBackgroundFillColorBase;
     border-radius: 8px 0 0 0;
 
     // Attach borders in call
-    ~ .content_f75fb0{
+    ~.content_f75fb0 {
         border-radius: 0;
     }
 
     // Round top-left corner
-    .callContainer_cb9592{
+    .callContainer_cb9592 {
+        background-color: $SolidBackgroundFillColorBase;
         border-radius: 8px 0 0 0;
     }
 
-    // Quality indicator
-    .liveQualityIndicator__30845{
-        .liveLarge_a7acae{
-            width: auto !important; // Override conflict
-            height: 16px !important; // Override conflict
-            font-weight: normal;
+    // Inactive voice view (No one in voice)
+    .container__5aa3a {
+        background-color: transparent;
+
+        .channelName__5aa3a {
+            @include TypeTitle;
+            color: $TextFillColorPrimary;
+        }
+
+        .text-sm\/normal_cf4812 {
+            @include TypeBody;
+            color: $TextFillColorSecondary !important;
+        }
+
+        .joinButton__5aa3a {
+            .button_a22cb0 {
+                @include TypeBodyStrong;
+                border-radius: 4px;
+            }
         }
     }
 
-    // Buttons bar
-    .buttonSection__1405b{
-        border-radius: 4px;
-    }
-    .attachedCaretButtonContainer_f1ceac{
-        .button__201d5[aria-label="More Options"]{
-            svg{
+    // Control Tray (Bottom buttons)
+    .videoControls_bfe55a {
+        .bottomControls_bfe55a {
+            padding: 16px;
+        }
+
+        // Remove group outlines
+        .buttonSection__1405b,
+        .wrapper__1405b {
+            background-color: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .centerButton_f1ceac {
+            border-radius: 4px;
+            transition: all 0.2s ease;
+
+            &.colorable_f1ceac.primaryDark_f1ceac {
+                background-color: $ControlFillColorDefault;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary;
+                }
+
+                &:active {
+                    background-color: $ControlFillColorTertiary;
+                }
+            }
+
+            &.disconnect_f1ceac {
+                background-color: $SystemFillColorCriticalBackground;
+                color: $SystemFillColorCritical;
+
+                &:hover {
+                    background-color: $SystemFillColorCriticalBackground;
+                    filter: brightness(1.2);
+                }
+            }
+        }
+
+        // Fix missing Options icon
+        .button__201d5[aria-label*="ptions"] {
+            &::before {
+                display: none !important;
+            }
+
+            svg {
                 display: block !important;
             }
+        }
+
+        // Align edge controls away from the side
+        .edgeControls_bfe55a {
+            margin: 0 16px;
         }
     }
 
     // User tiles
-    .tile__2f4f7{
-        background-color: $SubtleFillColorTertiary;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        // Only apply border colour to users
-        &.tile__2f4f7:hover{
+    .tile__2f4f7 {
+        background-color: $LayerFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:hover {
             border-color: $ControlStrokeColorDefault;
+            background-color: $LayerFillColorAlt;
         }
-        .overlayTitle__2f4f7{
+
+        .overlayTitle__2f4f7 {
             background-color: $ControlOnImageFillColorDefault;
+            backdrop-filter: blur(8px);
             border-radius: 4px;
+            @include TypeCaption;
         }
-        // Status button
-        .status__2f4f7{
-            background-color: $ControlOnImageFillColorDefault;
-            border-radius: 4px;
-            &:hover{
-                background-color: $ControlOnImageFillColorSecondary;
-            }
-            &:active{
-                background-color: $ControlOnImageFillColorTertiary;
-            }
+
+        // Avatar masks in voice
+        .avatarStack__44b0c {
+            border-radius: 50%;
+        }
+
+        .mask__44b0c foreignObject {
+            mask: none !important;
+            border-radius: 50%;
         }
     }
-    .participantsButton__211d1{
+
+    .participantsButton__211d1 {
         background-color: $ControlOnImageFillColorDefault;
+        backdrop-filter: blur(8px);
         border: 1px solid $ControlStrokeColorDefault;
-        &:hover{
+        border-radius: 4px;
+
+        &:hover {
             background-color: $ControlOnImageFillColorSecondary;
         }
-        &:active{
-            background-color: $ControlOnImageFillColorTertiary;
+    }
+
+    // Sidebar chat divide fixes
+    &.sidebarOpen_cb9592,
+    .channelChatWrapper_cb9592 {
+        border: none !important;
+        &::before, &::after {
+            display: none !important;
         }
     }
 }
 
 // Icon replacements
 // Top toolbar (excludes Inbox button)
-html[lang^="en-"].theme-dark .toolbar__9293f{
-    .button__201d5{
-        &::before{
+html[lang^="en-"].theme-dark .toolbar__9293f {
+    .button__201d5 {
+        &::before {
             @include FontIconFluent;
             width: 62px;
             position: absolute;
@@ -98,16 +157,18 @@ html[lang^="en-"].theme-dark .toolbar__9293f{
             text-align: center;
             display: block;
         }
+
         // Remove default icon
-        svg{
+        svg {
             display: none;
         }
     }
 }
+
 // Bottom toolbar (mic/speaker mute, leave, activity buttons)
 // NOTE - 2023-03-07: Discord removed aria-label from activity and react buttons, so only remove default icons from buttons WITH an aria-label set
-html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5[aria-label]{
-    &::before{
+html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5[aria-label] {
+    &::before {
         @include FontIconFluent;
         width: 62px;
         position: absolute;
@@ -116,7 +177,8 @@ html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5[aria-label]{
         text-align: center;
         display: block;
     }
-    svg{
+
+    svg {
         display: none;
     }
 }

@@ -74,7 +74,7 @@
 .theme-dark .chat_f75fb0.threadSidebarOpen_f75fb0{
     border-radius: 0;
     .content_f75fb0{
-        border-right: 1px solid $CardStrokeColorDefault;
+        border-right: 1px solid transparent;
         border-radius: 8px 8px 0 0;
     }
     .chatContent_f75fb0{
@@ -84,7 +84,8 @@
 
 .theme-dark .resizeHandle__01ae2{
     position: relative;
-    background-color: transparent;
+    background-color: $SolidBackgroundFillColorBase !important;
+    border: none !important;
     &::before{
         content: "";
         width: 3px;
