@@ -26,8 +26,7 @@ Changes from the original fork:
 * [EmojiReplace](https://betterdiscord.app/theme/EmojiReplace) theme by DevilBro to get Windows 11 emoji on Discord
 
 ## Getting Help
-* Check the [FAQ](https://github.com/supersharp/Fluent-Discord-Redux/wiki/FAQ) first
-* All options are documented on the [wiki](https://github.com/supersharp/Fluent-Discord-Redux/wiki)
+* Keep in mind, this theme is a personal project and the primary function was to keep the theme updated for myself. Please keep this in mind for issues and requests.
 * Report bugs by opening an [issue](https://github.com/supersharp/Fluent-Discord-Redux/issues)
 
 ## Preview
