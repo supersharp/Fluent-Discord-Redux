@@ -1,13 +1,49 @@
 .theme-dark{
-    .sidebar__5e434{
-        &::after{
-            display: none;
+    .sidebar__5e434 {
+        border-right: none !important;
+        box-shadow: none !important;
+        &::after, &::before {
+            display: none !important;
+            content: none !important;
         }
     }
-    .sidebarList__5e434{
+    .sidebarList__5e434 {
         background-color: transparent;
-        border: 0;
+        border: 0 !important;
+        border-right: none !important;
         border-radius: 0;
+        box-shadow: none !important;
+        &::after, &::before {
+            display: none !important;
+            content: none !important;
+        }
+    }
+    .guilds__5e434 {
+        border-right: none !important;
+        box-shadow: none !important;
+    }
+    .container__5e434, .page__5e434, .base__5e434, .content__5e434 {
+        border: none !important;
+        box-shadow: none !important;
+        &::after, &::before {
+            display: none !important;
+            content: none !important;
+        }
+    }
+    .sidebarResizeHandle__5e434 {
+        background-color: transparent !important;
+        width: 2px !important;
+        opacity: 0 !important;
+        border: none !important;
+        transition: opacity 0.2s ease;
+        &::before, &::after {
+            display: none !important;
+            content: none !important;
+        }
+        &:hover {
+            opacity: 1 !important;
+            background-color: $ControlStrokeColorSecondary !important;
+        }
     }
     // Increase bottom margin of channels list so there is a consistent margin around the account box
     .container__2637a{
