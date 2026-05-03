@@ -45,6 +45,16 @@
 
 // Page-level guard for Home-family header seams (Shop/Quests wrappers).
 .theme-dark .page__5e434 {
+    > .shop__6db1d .shopViewWrapper__6db1d,
+    > .shop__6db1d .shopScroll__08415,
+    > .container__955a3 > .scroller__23746,
+    > [class*="shop__"] [class*="shopViewWrapper__"],
+    > [class*="shop__"] [class*="shopScroll__"],
+    > [class*="container__955a3"] > .scroller__23746 {
+        border-top-left-radius: 8px !important;
+        overflow: hidden;
+    }
+
     section[class*="headerBar__"],
     section[class*="headerBar__"] [class*="container__9293f"],
     section[class*="headerBar__"] [class*="tabs__"],
@@ -73,5 +83,87 @@
     .container__955a3::after {
         display: none !important;
         content: none !important;
+    }
+}
+
+// Quests toolbar tabs: match Shop tab size and active indicator weight.
+.theme-dark .page__5e434 .container__955a3 {
+    .headerBar__1a9ce {
+        .tabs__26669 .tabWrapper__26669,
+        .container__26669 .tabWrapper__26669 {
+            height: 36px;
+            margin: 0 0 0 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 0;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+
+            &::before,
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .tabs__26669 .tab__26669,
+        .container__26669 .tab__26669 {
+            @include TypeBody;
+            color: $TextFillColorPrimary !important;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            padding: 0 10px;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+
+            &:hover {
+                color: $TextFillColorSecondary !important;
+            }
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .tabs__26669 .tab__26669 [class*="text-"],
+        .container__26669 .tab__26669 [class*="text-"],
+        .tabs__26669 .tab__26669 [data-text-variant],
+        .container__26669 .tab__26669 [data-text-variant] {
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+        }
+
+        .tabs__26669 .tab__26669.selected__26669,
+        .container__26669 .tab__26669.selected__26669 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+
+            &::before {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        // Some builds put selected state on the wrapper instead of the title node.
+        .tabs__26669 .tabWrapper__26669.selected_aa8da2,
+        .container__26669 .tabWrapper__26669.selected_aa8da2 {
+            background-color: transparent !important;
+            border-bottom: 0 !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+        }
     }
 }

@@ -369,4 +369,171 @@
             }
         }
     }
+
+    // Match Quests/Friends look for Discover Apps & Servers top toolbar.
+    .page__5e434 {
+        // Friends-style rounded corner belongs to the content pane, not the toolbar.
+        .outerContainer_e1147e .scroller__23746,
+        .container_d08938 .scroller__23746,
+        .container__955a3 .scroller__23746,
+        .shopViewWrapper__6db1d,
+        .shopScroll__08415 {
+            border-top-left-radius: 8px !important;
+            overflow: hidden;
+        }
+
+        // Match Friends toolbar logic: keep toolbar stack transparent so acrylic/layer context shows through.
+        > .container_a592e1,
+        > [class*="container_a592e1"],
+        .outerContainer_e1147e,
+        .outerContainer_e1147e > .innerContainer_e1147e,
+        .container_d08938 {
+            background-color: transparent !important;
+            background-image: none !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: 0 !important;
+        }
+
+        .outerContainer_e1147e > .innerContainer_e1147e > .headerBar__8a7fc,
+        .container_d08938 > .headerBar__8a7fc {
+            background-color: transparent !important;
+            background-image: none !important;
+            background: transparent !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            border-top: 0 !important;
+        }
+
+        .headerBar__8a7fc.overlay__8a7fc {
+            background-color: transparent !important;
+            background-image: none !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .container__955a3 .headerBar__1a9ce,
+        .container__955a3 .headerBar__1a9ce.container__9293f,
+        .container__955a3 .headerBar__1a9ce.container__9293f.themed__9293f {
+            background-color: transparent !important;
+            background-image: none !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41,
+        .headerBar__8a7fc .container__65d41,
+        .headerBar__8a7fc .measurements__65d41 {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 {
+            height: 36px;
+            min-height: 36px;
+            margin: 0 0 0 8px;
+            padding: 0 10px;
+            border-radius: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include TypeBody;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+            border: 0 !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            color: $TextFillColorPrimary !important;
+
+            &:hover {
+                background-color: transparent !important;
+                color: $TextFillColorSecondary !important;
+            }
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+
+            &::before {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 [class*="text-"],
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 [data-text-variant] {
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2[aria-selected="true"],
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2.selected_aa8da2 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            border-bottom: 0 !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        // Discover Quests uses a different tab stack than Apps/Servers.
+        .container__955a3 .headerBar__1a9ce {
+            .tabs__26669 .tabWrapper__26669,
+            .container__26669 .tabWrapper__26669 {
+                height: 36px;
+                margin: 0 0 0 8px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                border-radius: 0;
+            }
+
+            .tabs__26669 .tab__26669,
+            .container__26669 .tab__26669 {
+                @include TypeBody;
+                color: $TextFillColorPrimary !important;
+                margin: 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 36px;
+                border-bottom: 0 !important;
+                box-shadow: none !important;
+
+                &:hover {
+                    color: $TextFillColorSecondary !important;
+                }
+
+                &::after {
+                    display: none !important;
+                    content: none !important;
+                }
+            }
+
+            .tabs__26669 .tab__26669.selected__26669,
+            .container__26669 .tab__26669.selected__26669 {
+                background-color: transparent !important;
+                color: $TextFillColorPrimary !important;
+                box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+
+                &::before {
+                    display: none !important;
+                    content: none !important;
+                }
+            }
+        }
+    }
 }

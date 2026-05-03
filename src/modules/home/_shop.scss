@@ -86,12 +86,29 @@
                     > div[role="button"] {
                         width: auto;
                         height: auto;
+                        position: relative;
 
                         > svg {
-                            position: static;
+                            position: static !important;
                             top: auto;
                             left: auto;
                             width: auto;
+                        }
+                    }
+
+                    // Compact width fallback: Shop may render search as a standalone icon button.
+                    [aria-label*="Search" i] {
+                        width: auto !important;
+                        min-width: 32px;
+                        height: 32px !important;
+                        position: relative;
+
+                        > svg {
+                            position: static !important;
+                            top: auto !important;
+                            left: auto !important;
+                            width: 16px;
+                            height: 16px;
                         }
                     }
 
@@ -119,16 +136,20 @@
                 // Wishlist button - the heart SVG icon is invisible
                 // because currentColor inherits a dark value
                 .wishlistButton__80679 {
-                    width: auto;
-                    height: auto;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    width: 32px !important;
+                    min-width: 32px !important;
+                    height: 32px !important;
+                    padding: 0 !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    flex: 0 0 32px;
+                    position: relative;
 
                     svg {
-                        position: static;
-                        top: auto;
-                        left: auto;
+                        position: static !important;
+                        top: auto !important;
+                        left: auto !important;
                         width: 16px;
                         height: 16px;
                         display: block;
@@ -233,6 +254,27 @@
     // which squeezes the balance widget on any page that shows it.
     .toolbar__9293f {
         background-color: transparent !important;
+
+        [class*="searchIcon__"][role="button"] {
+            width: 24px !important;
+            min-width: 24px !important;
+            height: 32px !important;
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative;
+            flex: 0 0 24px;
+
+            > svg {
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
         .container__44ee9 {
             overflow: visible;
             flex-shrink: 0;
@@ -250,6 +292,56 @@
         }
         .balanceCounterText__98f64 {
             overflow: visible;
+        }
+    }
+
+    // Match Friends toolbar look for Shop tabs.
+    .shop__6db1d {
+        .headerBar__80679 {
+            background-color: $LayerFillColorDefault !important;
+            border-bottom: 1px solid $CardStrokeColorDefault !important;
+        }
+
+        .tabs__354ec .tab__354ec,
+        .tabs__354ec .item_aa8da2 {
+            height: 36px;
+            margin: 0 0 0 8px;
+            border-radius: 0;
+            position: relative;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            color: $TextFillColorPrimary !important;
+            @include TypeBody;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+
+            &:hover {
+                background-color: transparent !important;
+                color: $TextFillColorSecondary !important;
+            }
+        }
+
+        // Shop tabs render nested text variant nodes; force the same type ramp as Friends.
+        .tabs__354ec .tab__354ec [class*="text-"],
+        .tabs__354ec .item_aa8da2 [class*="text-"],
+        .tabs__354ec .tab__354ec [data-text-variant],
+        .tabs__354ec .item_aa8da2 [data-text-variant] {
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+        }
+
+        .tabs__354ec .tab__354ec[aria-selected="true"],
+        .tabs__354ec .tab__354ec.selected__354ec,
+        .tabs__354ec .item_aa8da2.selected_aa8da2 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
         }
     }
 }

@@ -41,8 +41,9 @@
     gap: 4px;
     margin-right: 4px;
     // Using these selectors so there are fewer conflicts in the voice screen
-    div[role=button]:not(.iconLayout_fea832), // :not excludes the search/clear button in the search bar
+    div[role=button]:not(.iconLayout_fea832):not([class*="searchIcon__"]), // :not excludes search controls from fixed 60px icon-button geometry
     button[type=button]{
+        position: relative;
         width: 60px;
         height: 32px;
         border-radius: 4px;
