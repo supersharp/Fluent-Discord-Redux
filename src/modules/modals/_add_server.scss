@@ -1,8 +1,7 @@
-// This file is courtesy of Discord's Department of Redundancy Depart at Discord
-// Add server modal has light theme manually applied to it for some reason.
-.theme-light .root__49fc1{
-    background: $SolidBackgroundFillColorBase;
-    border: 1px solid $SurfaceStrokeColorDefault;
+// Add server modal
+.root__49fc1{
+    background: $SolidBackgroundFillColorBase !important;
+    border: 1px solid $SurfaceStrokeColorDefault !important;
     border-radius: 8px;
     box-shadow: none;
 
@@ -10,7 +9,7 @@
     // Header (main page)
     .header__49fc1{
         padding: 24px 24px 0 24px;
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
         align-items: unset;
         .title_c04f35,
         .subtitle_c04f35{
@@ -28,7 +27,7 @@
     // Content
     .content__49fc1{
         padding: 24px 24px 0 24px;
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
     }
     .templatesList_c04f35,
     .optionsList__78f69{
@@ -43,8 +42,8 @@
             height: 32px;
             margin-bottom: 4px;
             padding: 0 12px;
-            background-color: transparent;
-            border: 1px solid transparent;
+            background-color: $ControlFillColorDefault !important;
+            border: 1px solid $ControlStrokeColorDefault !important;
             border-radius: 4px;
             .icon_eb2cd2{
                 display: none;
@@ -58,10 +57,10 @@
                 filter: brightness(200%);
             }
             &:hover{
-                background-color: $SubtleFillColorSecondary;
+                background-color: $ControlFillColorSecondary !important;
             }
             &:active{
-                background-color: $SubtleFillColorTertiary;
+                background-color: $ControlFillColorTertiary !important;
             }
         }
     }
@@ -152,7 +151,7 @@
     // Header
     .header__49fc1{
         padding: 24px 24px 0 24px;
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
         align-items: unset;
         .title__78f69,
         .subtitle__78f69{
@@ -169,7 +168,7 @@
 
     // Content
     .content__49fc1{
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
     }
 
     // Sub sub page (de ja vu?)
@@ -177,7 +176,7 @@
     // Header
     .header__49fc1{
         padding: 24px 24px 0 24px;
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
         align-items: unset;
         .title_b917ac,
         .subtitle_b917ac{
@@ -194,7 +193,7 @@
 
     // Content
     .content__49fc1{
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
     }
     .createGuild_b917ac{
         margin-top: 0;
@@ -206,7 +205,7 @@
     // Header
     .header__49fc1{
         padding: 24px 24px 0 24px;
-        background-color: $CardBackgroundFillColorDefault;
+        background-color: transparent !important;
         align-items: unset;
         .title__991a0,
         .text-sm-normal__95a78{

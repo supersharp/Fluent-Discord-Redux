@@ -1,41 +1,119 @@
-.theme-dark{
-    .discoverHeader_b992d4{
+.theme-dark {
+    .discoverHeader_b992d4 {
         @include TypeBodyStrong;
+        background: transparent !important;
     }
 
-    .pageWrapper_a3a4ce{
+    .pageWrapper_a3a4ce,
+    .page__5e434 {
         background-color: $LayerFillColorDefault;
         border-top: 1px solid $CardStrokeColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
         border-radius: 8px 0 0 0;
     }
 
-    .sidebar_c48ade{
-        .container__91a9d{
+    .scroller__23746,
+    .contentSection_b6bcee {
+        background-color: transparent;
+    }
+
+    // Cards
+    .card__84e3e {
+        background-color: $LayerFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: $LayerFillColorAlt;
+        }
+    }
+
+    // Discover sidebar
+    .sidebarList__5e434 {
+        background-color: $LayerFillColorDefault !important;
+        border-right: 1px solid $CardStrokeColorDefault;
+
+        .container__551b0,
+        .header__551b0 {
+            background-color: transparent !important;
+        }
+    }
+
+    // Nav
+    .nav__551b0 {
+        padding: 0 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .navItem__551b0 {
+            width: 100%;
+            min-height: 32px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-bottom: 2px;
+            padding: 0 8px;
+            position: relative;
+
+            .navItemIcon__551b0 {
+                color: $TextFillColorSecondary;
+            }
+
+            &.selected__551b0 {
+                background-color: $SubtleFillColorSecondary;
+
+                .navItemIcon__551b0 {
+                    color: $TextFillColorPrimary;
+                }
+
+                &::before {
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    background-color: $AccentBase;
+                    border-radius: 2px;
+                }
+            }
+
+            &:hover:not(.selected__551b0) {
+                background-color: $SubtleFillColorTertiary;
+            }
+        }
+    }
+
+    .sidebar_c48ade {
+        .container__91a9d {
             height: 32px;
             margin-bottom: 2px;
             position: relative;
 
-            .itemInner_c72b37{
+            .itemInner_c72b37 {
                 height: 32px;
                 padding: 0 8px;
             }
 
-            .avatar__91a9d{
+            .avatar__91a9d {
                 width: 16px;
                 height: 16px;
             }
-            .name__91a9d{
+
+            .name__91a9d {
                 @include TypeBody;
                 color: $TextFillColorPrimary;
             }
 
-            &.selected__91a9d{
-                .itemInner_c72b37{
+            &.selected__91a9d {
+                .itemInner_c72b37 {
                     background-color: $SubtleFillColorSecondary;
                 }
 
-                &::before{
+                &::before {
                     content: "";
                     width: 3px;
                     height: 16px;
@@ -51,35 +129,40 @@
 
     // Main
     // Search
-    .container_f69601{
-        .searchBox__56feb{
+    .container_f69601 {
+        .searchBox__56feb {
             background-color: transparent;
             box-shadow: none;
 
             &:focus,
-            &:focus-within{
+            &:focus-within {
                 box-shadow: none;
             }
-            .searchBoxInput__56498{
+
+            .searchBoxInput__56498 {
                 @include TypeBody;
                 color: $TextFillColorPrimary;
-                &::placeholder{
+
+                &::placeholder {
                     @include TypeBody;
                     color: $TextFillColorSecondary;
                 }
             }
+
             .clearIcon__21453,
-            .searchIcon_f69601{
+            .searchIcon_f69601 {
                 width: 16px;
                 height: 16px;
                 position: absolute;
                 top: 8px;
                 right: 16px;
-                path{
+
+                path {
                     fill: #FFF;
                 }
             }
-            .cta_f18d68{
+
+            .cta_f18d68 {
                 display: none;
             }
         }
@@ -87,55 +170,149 @@
 
     // Search results
     // Header
-    .header_e37a20{
+    .header_e37a20 {
         @include TypeSubtitle;
         color: $TextFillColorPrimary;
     }
 
     // Search box
-    .searchBox__56feb{
+    .searchBox__56feb {
         padding-right: 0;
         background-color: transparent;
         border: 0;
         box-shadow: none;
 
         &:focus,
-        &:focus-within{
+        &:focus-within {
             box-shadow: none;
         }
-        .searchBoxInput__56498{
+
+        .searchBoxInput__56498 {
             @include TypeBody;
             color: $TextFillColorPrimary;
-            &::placeholder{
+
+            &::placeholder {
                 @include TypeBody;
                 color: $TextFillColorSecondary;
             }
         }
+
         .clearIcon__21453,
-        .searchIcon_d1a3c1{
+        .searchIcon_d1a3c1 {
             width: 16px;
             height: 16px;
             position: absolute;
             top: 8px;
             right: 16px;
-            path{
+
+            path {
                 fill: #FFF;
             }
         }
     }
 
     // Results
-    .categories_f69601{
-        .categoryPill_f69601{
-            .categoryLabel-2m4AT-{
+    .categories_f69601 {
+        .categoryPill_f69601 {
+            .categoryLabel-2m4AT- {
                 @include TypeBody;
                 color: $TextFillColorSecondary;
             }
-            &.selected_f69601{
+
+            &.selected_f69601 {
                 background-color: $AccentBase;
-                .categoryLabel_f69601{
+
+                .categoryLabel_f69601 {
                     color: $TextFillColorPrimary;
                 }
+            }
+        }
+
+        // Modern Discover Page Overrides
+        .container_e9ef78,
+        .contentSection_b6bcee,
+        .scroller__23746 {
+            background-color: transparent !important;
+        }
+
+        .container_e9ef78 {
+            border-radius: 8px;
+            margin: 16px;
+            overflow: hidden;
+        }
+
+        // Sidebar and Navigation
+        .sidebar__5e434,
+        .sidebarList__5e434,
+        .container__551b0,
+        .header__551b0,
+        .nav__551b0,
+        .scroller__551b0,
+        [class*="wrapper_"],
+        .guild-sidebar,
+        &.theme-midnight .sidebar__5e434,
+        &.theme-midnight .sidebarList__5e434,
+        &.theme-midnight .container__551b0,
+        &.theme-midnight .header__551b0,
+        &.theme-midnight .scroller__551b0 {
+            background-color: transparent !important;
+            background: transparent !important;
+            --background-secondary: transparent !important;
+            --background-secondary-alt: transparent !important;
+            --background-tertiary: transparent !important;
+        }
+
+        .sidebarList__5e434 {
+            background-color: transparent !important;
+        }
+
+        .container__551b0 {
+            background-color: transparent !important;
+        }
+
+        // Search Bar
+        .searchBar__1ac1c {
+            .input__0f084 {
+                @include TypeBody;
+                color: $TextFillColorPrimary !important;
+
+                &::placeholder {
+                    color: $TextFillColorSecondary !important;
+                }
+            }
+
+            .wrapper__72c38 {
+                background-color: $ControlFillColorDefault !important;
+                border: 1px solid $ControlStrokeColorDefault !important;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary !important;
+                }
+            }
+        }
+
+        // Section and App Titles
+        .sectionTitle_d2a5f7,
+        .appName_f215b9 {
+            @include TypeBodyStrong;
+            color: $TextFillColorPrimary !important;
+        }
+
+        .appCategory_f215b9,
+        .description_f215b9 {
+            @include TypeCaption;
+            color: $TextFillColorSecondary !important;
+        }
+
+        // Card background for Discover
+        .card__84e3e {
+            background-color: $LayerFillColorDefault !important;
+            border: 1px solid $CardStrokeColorDefault !important;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: $LayerFillColorAlt !important;
             }
         }
     }
