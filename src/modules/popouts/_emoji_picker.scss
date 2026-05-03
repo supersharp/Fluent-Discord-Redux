@@ -1,22 +1,58 @@
-.theme-dark .contentWrapper__08434,
-.theme-dark #emoji-picker-tab-panel{
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
-    border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+.theme-dark, .theme-midnight, .theme-darker {
+    // Clear parent backgrounds to allow blur to show through
+    [id^="popout_"]:has(.wrapper_c0e32c),
+    .layer__59d0d:has(.wrapper_c0e32c),
+    .animatorBottom_faf9c0:has(.wrapper_c0e32c),
+    .animatorBottom_faf9c0:has(.wrapper_c0e32c) > div {
+        background: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    // Clear internal backgrounds that might block the Mica
+    .contentWrapper__08434,
+    #emoji-picker-tab-panel,
+    .wrapper_c0e32c,
+    .emojiPicker_c0e32c,
+    .bodyWrapper_c0e32c,
+    .emojiPickerListWrapper_c0e32c,
+    .listWrapper_c656ac,
+    .scroller_affa7e {
+        background: transparent !important;
+        background-color: transparent !important;
+        --background-tertiary: transparent !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --popout-background: transparent !important;
+    }
+
+    // Apply Mica to the main container
+    .contentWrapper__08434,
+    #emoji-picker-tab-panel {
+        background: $MicaBackgroundFillColorBase !important;
+        background-color: transparent !important;
+        backdrop-filter: blur(16px);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        box-shadow: var(--elevation-stroke), var(--elevation-high);
+        overflow: hidden;
+    }
 }
 
-.theme-dark .contentWrapper__08434 #emoji-picker-tab-panel,
-.theme-dark .contentWrapper__08434 #gif-picker-tab-panel,
-.theme-dark .contentWrapper__08434 #sticker-picker-tab-panel,
-.theme-dark .contentWrapper__08434 #kaomoji-picker-tab-panel{
-    background: transparent;
-    backdrop-filter: none;
-    border: 0;
-    border-radius: 0;
+.theme-dark, .theme-midnight, .theme-darker {
+    .contentWrapper__08434 #emoji-picker-tab-panel,
+    .contentWrapper__08434 #gif-picker-tab-panel,
+    .contentWrapper__08434 #sticker-picker-tab-panel,
+    .contentWrapper__08434 #kaomoji-picker-tab-panel {
+        background: transparent !important;
+        backdrop-filter: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
 }
 
-.theme-dark{
+.theme-dark, .theme-midnight, .theme-darker {
     // Navigation
     .nav__08434{
         .navButton__08434 {
@@ -70,17 +106,18 @@
         background-color: transparent;
     }
     .wrapper__72c38.container__0f084{
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-        outline: none;
+        background-color: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        position: relative; // For absolute icon positioning
 
         &:focus-within,
         &:hover{
-            background-color: transparent;
-            border: 0;
-            box-shadow: none;
-            outline: none;
+            background-color: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
         }
     }
     // Emoji search
@@ -90,27 +127,43 @@
     }
     .input__0f084{
         margin: 0;
-        padding-left: 12px;
+        padding-left: 32px; // Space for the icon
         padding-right: 12px;
-        background-color: $ControlFillColorDefault;
-        color: $TextFillColorSecondary;
-        border: 1px solid $ControlStrokeColorDefault;
-        border-bottom: 2px solid $ControlStrokeColorDefault;
+        background-color: $ControlFillColorDefault !important;
+        color: $TextFillColorSecondary !important;
+        border: 1px solid $ControlStrokeColorDefault !important;
+        border-bottom: 2px solid $ControlStrokeColorDefault !important;
         border-radius: 4px;
         @include TypeBody;
         &:hover{
-            border-color: $ControlStrokeColorSecondary;
+            border-color: $ControlStrokeColorSecondary !important;
+            background-color: $ControlFillColorSecondary !important;
         }
         &:focus{
-            background-color: $ControlFillColorInputActiveBrush;
-            color: $TextFillColorPrimary;
-            border-color: $ControlStrokeColorDefault;
-            border-bottom-color: $AccentBase;
-            box-shadow: none;
-            outline: none;
+            background-color: $ControlFillColorInputActiveBrush !important;
+            color: $TextFillColorPrimary !important;
+            border-color: $ControlStrokeColorDefault !important;
+            border-bottom-color: $AccentBase !important;
+            box-shadow: none !important;
+            outline: none !important;
         }
         &::placeholder{
             @include TypeBody;
+            color: $TextFillColorTertiary;
+        }
+    }
+
+    // Search icon positioning
+    .icon__0f084 {
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: $TextFillColorSecondary;
+        svg {
+            width: 16px;
+            height: 16px;
         }
     }
 
@@ -139,7 +192,9 @@
     // Emoji
     // Sidebar
     .categoryList_c0e32c{
-        background-color: $SolidBackgroundFillColorBase;
+        background-color: transparent !important;
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(16px);
     }
 
     // Sticker sidebar
@@ -169,12 +224,12 @@
     }
 
     .unicodeShortcut_b9ee0c{
-        background-color: $SolidBackgroundFillColorSecondary;
-        border-radius: 4px;
-        color: $TextFillColorPrimary;
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(16px);
+        color: $TextFillColorPrimary !important;
 
         &:hover{
-            background-color: $SolidBackgroundFillColorSecondary;
+            background-color: $SubtleFillColorSecondary !important;
         }
     }
 
@@ -201,7 +256,7 @@
     // Replace emoji icons
     .categoryItemDefaultCategory_b9ee0c{
         &.categoryItem_b9ee0c{
-            svg{
+            .categoryIcon_b9ee0c{
                 display: none;
             }
             &::before{
@@ -209,8 +264,13 @@
                 color: $TextFillColorPrimary;
                 @include FontIconFluent;
                 font-size: 20px;
-                line-height: calc(32px - 8px);
+                line-height: 32px;
                 vertical-align: middle;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                border-radius: 4px;
             }
             &[aria-label="top guild emoji"]::before{
                 content: "\ECAD"; // Calories
@@ -248,9 +308,30 @@
             }
         }
     }
+
+    // Selected state for categories
+    .categoryItemDefaultCategorySelected_b9ee0c,
+    .categoryItemGuildCategorySelected_b9ee0c,
+    .categoryItemRecentEmojiSelected_b9ee0c {
+        background-color: $AccentFillColorDefault !important;
+        border-radius: 4px;
+        &::before {
+            color: #FFF !important; // Force white as requested
+        }
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    // Hover state for categories
+    .categoryItem_b9ee0c:hover:not([class*="Selected"]) {
+        background-color: $SubtleFillColorSecondary !important;
+        border-radius: 4px;
+    }
     // Info bar
     .inspector_aeaaeb {
-        background-color: $SolidBackgroundFillColorSecondary;
+        background-color: transparent !important;
+        border-top: 1px solid $DividerStrokeColorDefault;
     }
     // "Popular" badge in info bar
     .topGuildEmojiBadge_aeaaeb{
@@ -262,12 +343,32 @@
     .wrapper__14245{
         margin: 0 -8px;
         padding: 0 16px;
-        background-color: $SolidBackgroundFillColorTertiary;
+        background-color: transparent !important; // Mica takes care of it, or use subtle fill
         border-radius: 4px;
         .headerLabel__14245{
             @include TypeBodyStrong;
             color: $TextFillColorPrimary;
             text-transform: none;
+            font-size: 14px;
+        }
+    }
+
+    // Super Reaction Button
+    .label__0d242 {
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: 4px;
+        margin-left: 8px;
+        padding: 4px;
+        transition: $AnimationFastInvokeFast;
+        &:hover {
+            background-color: $ControlFillColorSecondary;
+            border-color: $ControlStrokeColorSecondary;
+        }
+        &[aria-pressed="true"] {
+            background-color: $AccentFillColorDefault;
+            border-color: $AccentControlElevationBorder;
+            color: $TextOnAccentFillColorPrimary;
         }
     }
 
