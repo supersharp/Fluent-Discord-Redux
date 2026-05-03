@@ -4,7 +4,7 @@ A Windows 11 theme for Discord
 This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
 With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
 
-The looks and feel may deviate from the original theme.
+The look and feel may deviate from the original theme.
 
 The code is written with the help of GitHub CoPilot.
 
