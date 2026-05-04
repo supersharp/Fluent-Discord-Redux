@@ -1,6 +1,6 @@
 .theme-dark .menu_c1e9c4{
-    min-width: 280px;
-    background: $AcrylicBackgroundFillColorDefault;
+    min-width: 180px;
+    background: $AcrylicBackgroundFillColorBase;
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
     @include Elevation32;
@@ -13,7 +13,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(20px);
         border-radius: 8px;
     }
 
