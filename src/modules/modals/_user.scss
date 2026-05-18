@@ -1,18 +1,25 @@
 .theme-dark {
 
     // Target the absolute root of the modal layer and its parents to kill the outer border
-    [role="dialog"]:has(.profileContentContainer__9c3be),
-    [role="dialog"]:has(.profileCard__9c3be),
-    div[class*="root_"]:has(.profileContentContainer__9c3be),
-    div[class*="layer_"]:has(.profileContentContainer__9c3be) {
+    [role="dialog"]:has([class*="profileContent"]),
+    [role="dialog"]:has([class*="profileCard"]),
+    [role="dialog"]:has([class*="userProfile"]),
+    div[class*="root_"]:has([class*="profileContent"]),
+    div[class*="root_"]:has([class*="profileCard"]),
+    div[class*="root_"]:has([class*="userProfile"]),
+    div[class*="layer_"]:has([class*="profileContent"]),
+    div[class*="layer_"]:has([class*="profileCard"]),
+    div[class*="layer_"]:has([class*="userProfile"]) {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
     }
 
     // The large User Profile modal (Main surface)
-    .profileContentContainer__9c3be,
-    .outer_c0bea0:has(.profileCard__9c3be) {
+    [class*="profileContentContainer_"],
+    [class*="profileContentOuter_"],
+    [class*="outer_"]:has([class*="profileContentInner_"]),
+    [class*="outer_"]:has([class*="profileCard_"]) {
         background: $MicaBackgroundFillColorBase !important;
         backdrop-filter: blur(32px) !important;
         border: 1px solid $SurfaceStrokeColorDefault !important;
@@ -22,7 +29,7 @@
         @include Elevation128;
         box-shadow: none !important;
 
-        .inner_c0bea0 {
+        [class*="inner_"] {
             background: transparent !important;
             display: flex !important;
             flex-direction: row !important;
@@ -31,13 +38,14 @@
             border-radius: 8px !important;
             overflow: hidden !important;
 
-            .scrim__4c1fe,
-            .backgroundImage__9c3be {
+            [class*="scrim_"],
+            [class*="backgroundImage_"] {
                 display: none !important;
             }
 
-            // Left section (Profile Card)
-            .profileCard__9c3be {
+            // Left section (Profile Card / Main Profile)
+            [class*="profileCard_"],
+            & > main[class*="profile_"] {
                 background: transparent !important;
                 width: 400px !important;
                 flex: 0 0 400px !important;
@@ -47,7 +55,7 @@
             }
 
             // Right section (Tabs and Board)
-            .container__37bfc {
+            & > [class*="container_"] {
                 background-color: rgba(0, 0, 0, 0.2) !important;
                 flex: 1 1 auto !important;
                 display: flex !important;
@@ -59,7 +67,7 @@
                 border-radius: 15px !important;
 
                 // Tab list scroller
-                .tabListScroller__37bfc {
+                [class*="tabListScroller_"] {
                     overflow: visible !important;
                     background: transparent !important;
                     border: none !important;
@@ -98,7 +106,9 @@
                     display: flex !important;
                     background: transparent !important;
 
-                    .item_aa8da2 {
+                    // Support both .item_aa8da2 and .tabBarItem__37bfc (own profile use .tabBarItem__37bfc!)
+                    .item_aa8da2,
+                    .tabBarItem__37bfc {
                         padding: 0 12px !important; // Match card content padding for alignment
                         height: 48px;
                         display: flex;
@@ -136,7 +146,7 @@
                 }
 
                 // Tab Panels / Widgets
-                .tabBarPanel__37bfc {
+                [class*="tabBarPanel_"] {
                     flex: 1 1 auto;
                     width: 100% !important;
                     overflow: hidden !important; // Restore overflow hidden to allow internal scrolling
@@ -146,7 +156,7 @@
                     top: 0 !important;
                     min-height: 0; // Allow flex container to shrink correctly
 
-                    .tabPanelScroller__37bfc {
+                    [class*="tabPanelScroller_"] {
                         padding: 16px 16px 16px 24px !important; // Match tab offset + top padding
                         height: 100% !important;
                         min-height: 0 !important;
@@ -155,7 +165,8 @@
                         max-width: 100% !important;
                     }
 
-                    .container__62dd3 {
+                    // Widget card containers
+                    [class*="container_"] {
                         background-color: $CardBackgroundFillColorDefault;
                         border: 1px solid $CardStrokeColorDefault !important;
                         border-radius: 8px;

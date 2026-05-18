@@ -2,10 +2,12 @@
 .theme-dark .header__0b563,
 .theme-dark .header_c791b2 {
     background: transparent !important; // Override inline
-    .iconWrapper__9293f{
+
+    .iconWrapper__9293f {
         display: none;
     }
 }
+
 .theme-dark .content_f75fb0 {
     height: calc(100% - 1px);
     padding: 0;
@@ -14,20 +16,22 @@
     border-left: 0;
     border-radius: 8px 0 0 0;
     box-shadow: none;
-    &::before{
+
+    &::before {
         content: unset;
     }
 
     // Customise tab
     // Customisation questions
-    .prompt__5d7c9{
+    .prompt__5d7c9 {
         background-color: $LayerFillColorDefault;
         border-top: 0;
         border-left: 0;
         border-radius: 8px 0 0 0;
     }
+
     // My profile
-    .profileCard__9c3be{
+    .profileCard__9c3be {
         background-color: $LayerFillColorDefault;
         border-top: 0;
         border-left: 0;
@@ -35,33 +39,37 @@
     }
 
     // Browse channels
-    .pageBody__41ed7{
+    .pageBody__41ed7 {
         background-color: transparent;
     }
+
     .channelRow_e4503a {
         background-color: $CardBackgroundFillColorDefault;
         border-width: 1px 1px 0 1px;
         border-style: solid;
         border-color: $CardStrokeColorDefault;
-        &.firstChannel_e4503a{
+
+        &.firstChannel_e4503a {
             border-radius: 4px 4px 0 0;
         }
-        &.lastChannel_e4503a{
+
+        &.lastChannel_e4503a {
             border-radius: 0 0 4px 4px;
         }
     }
-    .separator_e4503a{
+
+    .separator_e4503a {
         display: none;
     }
 
     // Fix for channel checkboxes not displaying
-    .channelActions_e4503a .checkbox_f525d3{
+    .channelActions_e4503a .checkbox_f525d3 {
         display: block;
     }
 
     // Category row has some issues
-    .categoryRow_e4503a{
-        .checkbox_f525d3{
+    .categoryRow_e4503a {
+        .checkbox_f525d3 {
             display: block;
         }
     }
@@ -77,7 +85,7 @@
     background-color: transparent !important;
 
     // Page content scroller — direct child of the page wrapper.
-    > div[class*="scrollerBase_"] {
+    >div[class*="scrollerBase_"] {
         background-color: $LayerFillColorDefault;
         border-top: 1px solid $CardStrokeColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
@@ -99,6 +107,7 @@
 // Globally scoped to .theme-dark so they apply regardless of parent wrapper hash changes.
 // These elements are unique to the Members view anyway.
 .theme-dark {
+
     // Content + table containers — transparent so the scroller BG shows through.
     .content_f75fb0.container_c791b2,
     [class*="mainTableContainer__"],
@@ -169,6 +178,7 @@
 // which is the pagination container unique to this component.
 .theme-dark [class*="pagination_e8f197"],
 .theme-dark [class*="paginationContainer_e8f197"] {
+
     // All page number buttons — base state
     [class*="roundButton_"][class*="pageButton_"] {
         width: 28px;
