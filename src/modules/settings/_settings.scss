@@ -53,7 +53,7 @@
         .title__0d850{
             @include TypeBody;
         }
-        .note__0d850{
+        .note__71961{
             margin-right: 64px;
         }
         .description_ddd181, .labelDescriptor_ddd181{
@@ -108,11 +108,75 @@
     .contentBody_e9e3ed,
     .panel__6131a {
         background: transparent !important;
-        background-color: transparent !important;
     }
 
     .container__8a031 {
         backdrop-filter: blur(var(--fluent-acrylic-background-blur));
+    }
+
+    // New settings layout row wrappers - render invisible
+    .container__75920 > .baseSettingWrapper__32428 {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container__75920:has(.baseSettingWrapper__32428) {
+        margin-bottom: 0;
+    }
+
+    // Appearance uses horizontal radiogroups for theme pickers; avoid double card backgrounds
+    .container__75920 .baseSettingWrapper__32428 [role=radiogroup][aria-orientation=horizontal],
+    .container__75920 .baseSettingWrapper__32428 .group__64e61[data-orientation=horizontal] {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    // Theme selector selected state (new settings classes)
+
+    .themeSelectionContainer__36dee {
+        .themeSelection__36dee.selected__36dee,
+        .themeSelection__36dee[aria-checked=true] {
+            border-color: var(--fluent-selected-ring-color) !important;
+            box-shadow: inset 0 0 0 1px var(--fluent-selected-ring-color) !important;
+            outline: 1px solid var(--fluent-selected-ring-color) !important;
+        }
+
+        .selectionCircle__36dee {
+            background-color: var(--fluent-selected-ring-color) !important;
+            border-color: var(--fluent-selected-ring-color) !important;
+        }
+
+        .selectionCircle__36dee .checkmarkCircle__36dee circle {
+            fill: #FFF !important;
+        }
+
+        .selectionCircle__36dee .checkmark__36dee {
+            color: var(--fluent-selected-ring-color) !important;
+        }
+    }
+
+    // App icon selector selected ring previously uses --interactive-text-default (Discord purple)
+    .appIconSelection__8a3d7.selected__8a3d7 {
+        border-color: var(--fluent-selected-ring-color) !important;
+        box-shadow: 0 0 0 2px var(--fluent-selected-ring-color) !important;
+        outline: 1px solid var(--fluent-selected-ring-color) !important;
+    }
+
+    .appIconSelectionContainer__8a3d7:has(.appIconSelection__8a3d7.selected__8a3d7) .selectionCircle__36dee {
+        background-color: var(--fluent-selected-ring-color) !important;
+        border-color: var(--fluent-selected-ring-color) !important;
+    }
+
+    .appIconSelectionContainer__8a3d7:has(.appIconSelection__8a3d7.selected__8a3d7) .selectionCircle__36dee .checkmarkCircle__36dee circle {
+        fill: #FFF !important;
+    }
+
+    .appIconSelection__8a3d7 .selectionCircle__36dee .checkmark__36dee {
+        color: var(--fluent-selected-ring-color) !important;
     }
 
     .sidebar__409aa {
@@ -202,3 +266,4 @@
         background-color: rgba(255, 255, 255, 0.08);
     }
 }
+

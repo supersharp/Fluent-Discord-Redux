@@ -2,13 +2,13 @@
     // Roles
     // Fix header
     &#roles-tab{
-        .title_b717a1{
+        h2{
             @include TypeTitle;
         }
 
 
         // Advanced permissions
-        .contentContainer__91dc3{
+        .contentContainer__77062{
             left: 256px;
         }
         .contentWidth_c6bf1b{
@@ -17,10 +17,10 @@
 
         // Left
         .container_e29cd7{
-            .titleContainer_e29cd7{
+            .titleContainer_f215b9{
                 padding-top: 40px;
                 background-color: transparent;
-                .titleText_e29cd7{
+                h2{
                     @include TypeSubtitle;
                     text-transform: none;
                 }
@@ -33,7 +33,7 @@
         .header_c6bf1b{
             padding-top: 40px;
             background-color: $CardStrokeColorDefaultSolid;
-            .titleText__81b3e{
+            h2{
                 @include TypeSubtitle;
                 text-transform: none;
             }
@@ -42,25 +42,53 @@
 
 
     // Server template
-    // Fix header
-    &#guild_templates-tab{
-        .title_b717a1{
+    // Tab Titles
+    &#access-tab,
+    &#guild_templates-tab,
+    &#vanity_url-tab,
+    &#integrations-tab {
+        h2:first-child {
             @include TypeTitle;
         }
     }
 
-    // Custom invite link
-    // Fix header
-    &#vanity_url-tab{
-        .title_b717a1{
-            @include TypeTitle;
-        }
-    }
+    // Access Settings
+    &#access-tab {
+        .joinOptions__959cb {
+            gap: 8px;
+            display: flex;
+            margin-top: 16px;
 
-    // Integrations
-    &#integrations-tab{
-        .title_b717a1{
-            @include TypeTitle;
+            .joinOptionTab__959cb {
+                background-color: $CardBackgroundFillColorDefault;
+                border: 1px solid $CardStrokeColorDefault;
+                border-radius: 4px;
+                padding: 16px;
+                flex: 1;
+                transition: background-color 0.2s;
+
+                &.selected_aa8da2 {
+                    background-color: $SubtleFillColorSecondary;
+                    border-color: $AccentBase;
+                }
+
+                &:hover:not(.selected_aa8da2) {
+                    background-color: $SubtleFillColorSecondary;
+                }
+            }
+        }
+
+        .rulesContainer_f7c056 {
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            padding: 16px;
+            margin-top: 16px;
+
+            .inputWrapper_f7c056 {
+                background-color: transparent;
+                border: none;
+            }
         }
     }
 
@@ -130,18 +158,85 @@
     }
 
     // Audit Log
-    // NOTE: 2023-06-17 - Cannot target Audit log page
-
-    // Server boot status
-    // Fix title
-    &#guild_premium-tab{
-        .title_b717a1 {
-            @include TypeTitle;
+    .customContainer__23e6b {
+        .auditLog__43dab {
+            background-color: $CardBackgroundFillColorDefault;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            &:hover {
+                background-color: $SubtleFillColorSecondary;
+            }
         }
     }
 
-    // Members
-    // NOTE: 2023-06-17 - Cannot target Members page
+    // Server Boosts page (guild_premium-tab + standalone container__89463)
+    // Structure: container__89463 > contentContainer__89463
+    //              > powerupsContainer__89463 (left scroller)
+    //              > sidebarContainer__89463  (right panel)
+    // &[id] scoping keeps h2 fix inside contentColumn__23e6b; .container__89463
+    // targets the standalone Boosts page root directly.
+    &#guild_premium-tab {
+        h2 {
+            @include TypeTitle;
+        }
+    }
+}
+
+// Server Boosts standalone page — outside contentColumn__23e6b scope.
+// Scoped to .container__89463 to avoid bleed; partial-match on __89463 suffix
+// for hash resilience while remaining narrow enough not to hit unrelated elements.
+.theme-dark .page__5e434 > .container__89463 {
+    background-color: transparent;
+
+    // Header bar — suppress seam line
+    [class*="toolbar__89463"] {
+        background-color: transparent !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    // Main content flex wrapper
+    [class*="contentContainer__89463"] {
+        background-color: transparent;
+        display: flex;
+        flex: 1;
+        min-height: 0;
+    }
+
+    // Left scrollable content area
+    [class*="powerupsContainer__89463"] {
+        background-color: $LayerFillColorDefault;
+        border-top-left-radius: 8px;
+        border: 0;
+        box-shadow: none;
+    }
+
+    // Level / perk tier cards — card__823e1 is the card variant class;
+    // targeting both the specific combo and partial fallback.
+    [class*="container__5573a"][class*="card__"],
+    [class*="parentContainer__5573a"] > [class*="container__5573a"] {
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+    }
+
+    // Right sidebar wrapper — keep transparent so the acrylic BG shows
+    [class*="sidebarContainer__89463"] {
+        background-color: transparent;
+    }
+
+    // Sidebar inner notice/info card
+    [class*="container__58c46"] {
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 4px;
+    }
+}
+
+.theme-dark .contentColumn__23e6b {
+
+
 
     // Invites
     // NOTE: 2023-06-17 - Cannot target Invites page
@@ -163,3 +258,4 @@
         display: none;
     }
 }
+

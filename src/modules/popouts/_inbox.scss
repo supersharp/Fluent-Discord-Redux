@@ -77,7 +77,7 @@
     // NOTE: 2023-01-04 - Mentions tab scroller uses a different class which doesn't have L/R padding
     
     .container__95796, // Mentions
-    .channel__427f0{ // Unreads
+    .channel__972a0{ // Unreads
         padding-right: 16px;
         padding-bottom: 16px;
         .channelHeader__35a7e{
@@ -102,7 +102,7 @@
     }
 
     // Unread headers have a collapse button
-    .channel__427f0{
+    .channel__972a0{
         .channelHeader__35a7e{
             padding-left: 48px;
         }
@@ -134,3 +134,4 @@
         }
     }
 }
+

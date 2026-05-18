@@ -16,7 +16,8 @@
     color: $TextFillColorSecondary;
 
     // Sizing
-    &.inputDefault__0f084{
+    &.inputDefault__0f084,
+    &[class*="inputDefault_"] {
         padding: 0 12px;
         // height: 32px;
     }
@@ -34,7 +35,7 @@
         color: $TextFillColorSecondary;
     }
 
-    &.textarea_dde0a8, // eg. user popout note textarea
+    &.textarea__9daae, // eg. user popout note textarea
     &.textArea__89a34{ // eg. channel MOTD textare
         padding: 4px 12px;
     }
@@ -64,7 +65,7 @@
     .popout__3f413{
         background: $SolidbackgroundFillColorQuarternary;
         border: 1px solid $SurfaceStrokeColorFlyout;
-        .option__3f413{
+        .option__56a50{
             min-height: 32px;
             margin: 4px;
             padding: 8px;
@@ -93,9 +94,35 @@
                     background-color: $SubtleFillColorSecondary;
                     border-radius: 4px;
                 }
-                .selectedIcon__3f413{
+                .selectedIcon__2e223{
                     display: none;
                 }
+            }
+        }
+
+        // New select menu classes (e.g. Content & Social 'Show/Blur/Block')
+        [class*="option_"]{
+            color: $TextFillColorPrimary;
+            &:hover{
+                background-color: $SubtleFillColorSecondary;
+            }
+            &[aria-selected=true]{
+                color: var(--fluent-selected-ring-color) !important;
+                font-weight: 600;
+            }
+            [class*="selectedIcon_"]{
+                color: var(--fluent-selected-ring-color) !important;
+                path{
+                    fill: currentColor !important;
+                }
+            }
+        }
+
+        // Direct class override for new hash variants (e.g. selectedIcon_a16aea)
+        [class*="selectedIcon_a16"]{
+            color: var(--fluent-selected-ring-color) !important;
+            path{
+                fill: currentColor !important;
             }
         }
     }
@@ -111,6 +138,17 @@
         min-height: calc(32px - 6px);
         height: calc(32px - 6px);
         margin: 2px;
+    }
+}
+
+// Global fallback for new select menu hashes (e.g. selectedIcon_a16eaa)
+.theme-dark [role="option"][aria-selected=true] [class*="selectedIcon_"],
+.theme-dark [class*="option_"][aria-selected=true] [class*="selectedIcon_"],
+.theme-dark .selectedIcon_a16eaa{
+    color: var(--fluent-selected-ring-color) !important;
+
+    path{
+        fill: currentColor !important;
     }
 }
 
@@ -215,3 +253,4 @@
     background-color: $AccentBase;
     color: $TextOnAccentFillColorPrimary;
 }
+

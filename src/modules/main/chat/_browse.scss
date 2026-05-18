@@ -1,5 +1,6 @@
 // Channels & Roles
-.theme-dark .header__0b563{
+.theme-dark .header__0b563,
+.theme-dark .header_c791b2 {
     background: transparent !important; // Override inline
     .iconWrapper__9293f{
         display: none;
@@ -9,9 +10,10 @@
     height: calc(100% - 1px);
     padding: 0;
     background: $LayerFillColorDefault !important; // Override inline
-    border-top: 1px solid $CardStrokeColorDefault;
-    border-left: 1px solid $CardStrokeColorDefault;
+    border-top: 0;
+    border-left: 0;
     border-radius: 8px 0 0 0;
+    box-shadow: none;
     &::before{
         content: unset;
     }
@@ -20,15 +22,15 @@
     // Customisation questions
     .prompt__5d7c9{
         background-color: $LayerFillColorDefault;
-        border-top: 1px solid $CardStrokeColorDefault;
-        border-left: 1px solid $CardStrokeColorDefault;
+        border-top: 0;
+        border-left: 0;
         border-radius: 8px 0 0 0;
     }
     // My profile
-    .profileCard__5d7c9{
+    .profileCard__9c3be{
         background-color: $LayerFillColorDefault;
-        border-top: 1px solid $CardStrokeColorDefault;
-        border-left: 1px solid $CardStrokeColorDefault;
+        border-top: 0;
+        border-left: 0;
         border-radius: 8px 0 0 0;
     }
 
@@ -65,25 +67,147 @@
     }
 }
 
-// Members
-.theme-dark .page_c791b2{
+// ==========================================================================
+// Server Members standalone page (server sidebar → Members).
+// ==========================================================================
+
+// 1. Wrapper backgrounds
+// Target the specific hash classes of the new standalone members page wrapper.
+.theme-dark .chat_f75fb0.page_c791b2 {
     background-color: transparent !important;
-    .header_c791b2{
-        box-shadow: none;
-    }
-    .scroller_d20375{
+
+    // Page content scroller — direct child of the page wrapper.
+    > div[class*="scrollerBase_"] {
         background-color: $LayerFillColorDefault;
         border-top: 1px solid $CardStrokeColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
         border-radius: 8px 0 0 0;
     }
+}
 
-    .content_f75fb0{
+// Header bar — suppress seam and fix border-radius.
+.theme-dark .header_c791b2,
+.theme-dark [class*="header_"].container__9293f {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    border-bottom: 0 !important;
+    border-top-left-radius: 8px;
+    overflow: hidden;
+}
+
+// 2. Members Table Elements
+// Globally scoped to .theme-dark so they apply regardless of parent wrapper hash changes.
+// These elements are unique to the Members view anyway.
+.theme-dark {
+    // Content + table containers — transparent so the scroller BG shows through.
+    .content_f75fb0.container_c791b2,
+    [class*="mainTableContainer__"],
+    [class*="horizontalScroller__"] {
         background-color: transparent !important;
-        // border: 0;
+        box-shadow: none !important;
+        border-left: 0;
     }
-    .mainTableContainer__09a38{
+
+    // The actual <table> element and its header row — fully transparent.
+    [class*="table_"],
+    [class*="tableHeaderRow__"] {
+        background-color: transparent !important;
+    }
+
+    // Table header cells — subtle bottom border to delineate columns.
+    [class*="tableHeaderCellContainer__"] {
         background-color: transparent;
-        box-shadow: none;
+        border-bottom: 1px solid $DividerStrokeColorDefault;
+    }
+
+    // Search / filter header block above the table.
+    [class*="searchHeaderContainer__"] {
+        background-color: transparent !important;
+    }
+
+    // Loading progress bar strip & bottom save-notice bar.
+    [class*="loaderContainer__"],
+    [class*="saveNoticeContainer__"] {
+        background-color: transparent;
+    }
+
+    // Member row cards — Fluent contiguous list treatment matching Browse Channels.
+    .memberRowContainer__71c22,
+    [class*="memberRowContainer__"] {
+        background-color: $CardBackgroundFillColorDefault !important;
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: $CardStrokeColorDefault;
+        border-radius: 0;
+        margin-bottom: 0;
+        transition: background-color 83ms linear;
+
+        &:hover {
+            background-color: $SubtleFillColorSecondary !important;
+        }
+
+        &:first-child {
+            border-top-left-radius: 8px !important;
+            border-top-right-radius: 8px !important;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $CardStrokeColorDefault !important;
+            border-bottom-left-radius: 8px !important;
+            border-bottom-right-radius: 8px !important;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// Members page pagination controls — c15210 component family.
+// roundButton_c15210 = page number buttons (inactive)
+// activeButton_c15210 = currently selected page (was Discord purple #5865F2)
+// endButton_c15210 = Back / Next navigation buttons
+// pageButton_c15210 = shared base class on all pagination buttons
+// Partial-match on __c15210 suffix; scoped via .pagination_e8f197 ancestor
+// which is the pagination container unique to this component.
+.theme-dark [class*="pagination_e8f197"],
+.theme-dark [class*="paginationContainer_e8f197"] {
+    // All page number buttons — base state
+    [class*="roundButton_"][class*="pageButton_"] {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: transparent;
+        color: $TextFillColorPrimary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 83ms linear;
+
+        &:hover {
+            background-color: $SubtleFillColorSecondary;
+        }
+    }
+
+    // Active / current page button — replace Discord purple
+    [class*="roundButton_"][class*="activeButton_"] {
+        background-color: $AccentTextFillColorPrimary !important;
+        color: $TextOnAccentFillColorPrimary !important;
+
+        &:hover {
+            background-color: $AccentTextFillColorSecondary !important;
+        }
+    }
+
+    // Back / Next buttons — already use lookBlank__201d5 so mostly inherits,
+    // just ensure no leftover background leaks through
+    [class*="endButton_"][class*="pageButton_"] {
+        background-color: transparent;
+        color: $TextFillColorPrimary;
+
+        &:hover {
+            background-color: $SubtleFillColorSecondary;
+        }
+
+        &:disabled {
+            color: $TextFillColorDisabled;
+        }
     }
 }

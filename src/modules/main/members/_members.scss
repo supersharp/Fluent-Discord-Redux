@@ -20,6 +20,12 @@
         background: transparent;
         border: 1px solid transparent;
         color: $TextFillColorPrimary;
+        
+        // Counteract Discord's native 16px padding update to restore compact spacing
+        padding: 1px 0 !important;
+        margin-bottom: 1px !important;
+        min-height: 42px !important;
+
         &:hover{
             background-color: $SubtleFillColorSecondary;
             border-color: $SubtleFillColorSecondary;
@@ -69,11 +75,15 @@
     }
 }
 
-// Remove Nitro decorations
-// Avatar decorations
-// This also removes them from user profile popouts and modals, but not cozy chat.
-.avatarDecoration__44b0c{
+// Remove Nitro decorations from member list, chat, and popouts.
+// Excludes shop product-preview tiles where the decoration IS the product.
+.avatarDecoration__44b0c:not([class*="productPreview"] .avatarDecoration__44b0c) {
     display: var(--fluent-show-nitro-decorations);
+}
+// Explicit restore inside shop product previews so the decoration preview
+// is always shown regardless of the user's --fluent-show-nitro-decorations setting.
+[class*="productPreview__"] .avatarDecoration__44b0c {
+    display: block;
 }
 // Member list background
 .nameplated__91a9d{

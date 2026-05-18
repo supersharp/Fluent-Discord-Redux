@@ -1,5 +1,6 @@
 .theme-dark{
     .tabBar__0b563,         // A: Guild > Channels & Roles
+    [class*="tabBar_"],     // Generic fallback for tab bars
     .tabBar_b9fccc,         // B: User profile modal
     .tabBar_d6f9e9,         // C: User Settings > Profiles
     .settingsTabBar_dc2e0e, // D: User Settings > Family Centre
@@ -40,6 +41,50 @@
             .textBadge_f05120{
                 background-color: $SystemFillColorSolidNeutralBackground !important; // Override inline
                 @include TypeCaption;
+            }
+        }
+    }
+
+    // New settings tab classes (e.g. Content & Social) where selected text can inherit brand purple
+    [class*="tabBar_"]{
+        [class*="tab_"]{
+            color: $TextFillColorPrimary;
+            &:hover{
+                color: $TextFillColorSecondary;
+            }
+            &[class*="selected_"]{
+                color: var(--fluent-selected-ring-color) !important;
+            }
+        }
+        [class*="tab_"][class*="selected_"][class*="brand_"]{
+            color: var(--fluent-selected-ring-color) !important;
+        }
+    }
+
+    // Content & Social vertical tabs (new hashes): force Fluent selected highlight
+    .tabBar_eeedb9.vertical_eeedb9{
+        .tab_eeedb9.vertical_eeedb9.item_aa8da2{
+            color: $TextFillColorPrimary;
+            position: relative;
+            border-left: 0 !important;
+            &:hover{
+                color: $TextFillColorSecondary;
+            }
+
+            &.selected_eeedb9,
+            &.selected_aa8da2,
+            &.brand_aa8da2.selected_aa8da2{
+                color: var(--fluent-selected-ring-color) !important;
+                background-color: $SubtleFillColorTertiary;
+                border-left: 0 !important;
+                box-shadow: inset 3px 0 0 var(--fluent-selected-ring-color);
+
+                &::before,
+                &::after{
+                    display: none !important;
+                    content: none !important;
+                }
+
             }
         }
     }

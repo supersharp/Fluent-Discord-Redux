@@ -1,35 +1,39 @@
-.theme-dark .menu_c1e9c4{
-    min-width: 180px;
-    background: $AcrylicBackgroundFillColorBase;
-    border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
-    @include Elevation32;
-    position: relative;
-
-    &::before{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        backdrop-filter: blur(20px);
+// Channels, members, settings nav
+.theme-dark {
+    @include context-menu {
+        min-width: 180px;
+        background: $AcrylicBackgroundFillColorBase;
+        border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
+        @include Elevation32;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(20px);
+            border-radius: 8px;
+        }
     }
 
-    .scroller_c1e9c4{
+    // Scroller inside context menu
+    .scroller_c1e9c4 {
         padding: 4px 8px;
         max-height: calc(100vh - 64px);
     }
 
     // Separators
-    .separator_c1e9c4{
+    .separator_c1e9c4 {
         margin: 10px 4px;
         border-bottom-color: $DividerStrokeColorDefault;
     }
 
     // Item
-    .item_c1e9c4{
+    .item_c1e9c4 {
         min-height: 34px;
         margin: 2px 0 2px -4px;
         padding: 4px 12px;
@@ -37,20 +41,23 @@
         @include TypeBody;
         color: $TextFillColorPrimary;
         transition: background-color $AnimationFadeInOut;
-        &.focused_c1e9c4{
+
+        &.focused_c1e9c4 {
             background-color: $SubtleFillColorSecondary;
             transition: background-color $AnimationFadeInOut;
         }
-        &.colorDanger_c1e9c4{
+
+        &.colorDanger_c1e9c4 {
             color: $SystemFillColorCritical;
         }
-        &.disabled_c1e9c4{
+
+        &.disabled_c1e9c4 {
             color: $TextFillColorDisabled;
             opacity: 1;
         }
 
         // Icons
-        &::before{
+        &::before {
             padding-right: 12px;
             @include FontIconFluent;
             font-size: 16px;
@@ -58,57 +65,60 @@
 
         // Remove subtext on Spotify menu items
         &[id*="spotify"],
-        &[id*="listen"]{
-            .subtext_c1e9c4{
+        &[id*="listen"] {
+            .subtext_c1e9c4 {
                 display: none;
             }
         }
 
         // Remove left margin from 'Upload file' option
-        .optionName__77820{
+        .optionName__77820 {
             margin: 0;
         }
 
         // Fix font size in upload menu
-        .optionLabel__77820{
+        .optionLabel__77820 {
             @include TypeBody;
         }
 
         // Items with subtext
-        .subtext_c1e9c4{
+        .subtext_c1e9c4 {
             margin-top: 0;
             @include TypeCaption;
             color: $TextFillColorSecondary;
-            strong{
+
+            strong {
                 font-weight: normal;
             }
         }
 
         // Remove Discord icons, unless it's a checkbox
-        &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]):not([id^="message-add-reaction"]){
-            .icon_c1e9c4{
+        &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]):not([id^="message-add-reaction"]) {
+            .icon_c1e9c4 {
                 display: none;
             }
         }
+
         // Remove icons from upload/attach menu
-        .optionIcon__77820{
+        .optionIcon__77820 {
             display: none;
         }
     }
 
     // Emoji items
-    .button_f563df{
+    .button_f563df {
         width: 24px;
         height: 24px;
         background-color: transparent;
-        &.focused_f563df{
+
+        &.focused_f563df {
             background-color: $SubtleFillColorSecondary;
             box-shadow: none;
         }
-        .icon_f563df{
+
+        .icon_f563df {
             width: 18px;
             height: 18px;
-
         }
     }
 }

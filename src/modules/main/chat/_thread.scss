@@ -63,9 +63,10 @@
     }
 }
 
-.theme-dark .chat_a44415{
-    border-top: 1px solid $CardStrokeColorDefault;
-    border-left: 1px solid $CardStrokeColorDefault;
+.theme-dark .chat_f75fb0{
+    border-top: 0;
+    border-left: 0;
+    box-shadow: none;
     border-radius: 8px 0 0 0;
     &::before{
         display: none;
@@ -82,7 +83,7 @@
     }
 }
 
-.theme-dark .resizeHandle__01ae2{
+.theme-dark .resizeHandle__08434{
     position: relative;
     background-color: $SolidBackgroundFillColorBase !important;
     border: none !important;
@@ -112,8 +113,9 @@
         &.floating__01ae2{
             border-left: 0;
         }
-        .chat_f02135{
+        .chat_f75fb0{
             border-radius: 0;
         }
     }
 }
+

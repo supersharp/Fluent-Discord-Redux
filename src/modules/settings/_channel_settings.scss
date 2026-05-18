@@ -2,7 +2,7 @@
     // Permissions
     // Fix header
     &#permissions-tab{
-        .title_b717a1{
+        h2{
             @include TypeTitle;
         }
 
@@ -11,37 +11,59 @@
         .advancedModeDivider__4914c ~ .button__201d5{
             margin-top: 32px;
             .contents__201d5{
-                h2{
+                .advancedTitle__4914c{
                     @include TypeBodyStrong;
                 }
             }
         }
         // Sidebar
-        .sidebarScrollable_ff90b2{
-            .scroller_ff90b2{
+        .sidebarScrollable__53543{
+            .scroller__53543{
                 background-color: transparent;
+            }
+            .side_aa8da2 .item_aa8da2{
+                margin-right: 8px;
+                border-radius: 4px;
+                @include TypeBody;
+                &:hover{
+                    background-color: $SubtleFillColorSecondary;
+                }
+                &.selected_aa8da2{
+                    background-color: $SubtleFillColorSecondary;
+                    &::before{
+                        content: "";
+                        width: 3px;
+                        height: 16px;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -8px;
+                        left: 0;
+                        background-color: $AccentBase;
+                        border-radius: 2px;
+                    }
+                }
             }
         }
 
         // Permissions list
         // Fix width
-        .sidebarScrollable_ff90b2+.content_ff90b2{
+        .sidebarScrollable__53543+.content__53543{
             max-width: calc(1000px - 232px);
         }
 
         // The permissions
         .permissionsForm__0ab2c{
-            .flex__7c0ba.vertical_abf706{
+            .container__5a838{
                 margin-bottom: 8px;
                 padding: 8px 16px;
                 background-color: $CardBackgroundFillColorDefault;
                 border: 1px solid $CardStrokeColorDefault;
                 border-radius: 4px;
-                h4{
+                label{
                     @include TypeBody;
                     line-height: 32px;
                 }
-                .description_ddd181{
+                .description__5a838{
                     margin-right: 100px;
                     @include TypeCaption;
                 }

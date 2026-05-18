@@ -21,14 +21,12 @@
 
     .input_ac6cb0{
         height: 32px;
-        background-color: transparent;
-        border: 1px solid;
+        background-color: $ControlFillColorDefault;
+        border: 1px solid $ControlStrokeColorDefault;
         border-bottom-width: 2px;
         border-radius: 4px;
         @include TypeBody;
-        background-color: $ControlFillColorDefault;
         color: $TextFillColorSecondary;
-        border-color: $ControlStrokeColorDefault;
         &:hover{
             border-color: $ControlStrokeColorSecondary;
         }

@@ -4,8 +4,8 @@
 
 .theme-dark .container_f369db{
     background-color: $LayerFillColorDefault;
-    border-top: 1px solid $CardStrokeColorDefault;
-    border-left: 1px solid $CardStrokeColorDefault;
+    border-top: 0;
+    border-left: 0;
     border-radius: 8px 0 0 0;
 
     // Threads
@@ -25,7 +25,7 @@
             color: $TextFillColorPrimary !important; // Override inline
             @include TypeBodyStrong;
         }
-        .messageContent_faa96b{
+        .messageContent_c19a55{
             @include TypeBody;
         }
     }
@@ -37,3 +37,4 @@
         border-radius: 4px;
     }
 }
+

@@ -44,9 +44,9 @@
         // Remove group outlines
         .buttonSection__1405b,
         .wrapper__1405b {
-            background-color: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
         }
 
         .centerButton_f1ceac {
@@ -123,7 +123,8 @@
         }
     }
 
-    .participantsButton__211d1 {
+    .participantsButton__211d1,
+    [class*="participantsButton_"] {
         background-color: $ControlOnImageFillColorDefault;
         backdrop-filter: blur(8px);
         border: 1px solid $ControlStrokeColorDefault;
@@ -137,9 +138,9 @@
     // Sidebar chat divide fixes
     &.sidebarOpen_cb9592,
     .channelChatWrapper_cb9592 {
-        border: none !important;
+        border: none;
         &::before, &::after {
-            display: none !important;
+            display: none;
         }
     }
 }

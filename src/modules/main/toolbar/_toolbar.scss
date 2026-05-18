@@ -25,7 +25,8 @@
     .dot__9293f{
         color: $TextFillColorDisabled;
     }
-    .topic__6ec1a{
+    .topic__6ec1a,
+    [class*="topic_"] {
         color: $TextFillColorPrimary;
         @include TypeBody;
     }
@@ -36,12 +37,24 @@
     }
 }
 
+.theme-dark .chat_f75fb0{
+    .subtitleContainer__49508,
+    [class*="headerBar__"],
+    .title_f75fb0,
+    .container__9293f{
+        border: 0;
+        box-shadow: none;
+        border-top-left-radius: 8px;
+        overflow: hidden;
+    }
+}
+
 // Toolbar
 .theme-dark .toolbar__9293f{
     gap: 4px;
     margin-right: 4px;
     // Using these selectors so there are fewer conflicts in the voice screen
-    div[role=button]:not(.iconLayout_fea832):not([class*="searchIcon__"]), // :not excludes search controls from fixed 60px icon-button geometry
+    div[role=button]:not(.iconLayout__0c4c4):not([class*="searchIcon__"]), // :not excludes search controls from fixed 60px icon-button geometry
     button[type=button]{
         position: relative;
         width: 60px;
@@ -65,7 +78,8 @@
             &::before{
                 color: $TextOnAccentFillColorPrimary;
             }
-            .count__03d4d{
+            .count__03d4d,
+            [class*="count_"] {
                 color: $TextOnAccentFillColorPrimary !important; // Override inline
             }
         }
@@ -74,7 +88,8 @@
             color: $SystemFillColorCritical;
         }
     }
-    .count__03d4d{
+    .count__03d4d,
+    [class*="count_"] {
         position: absolute;
         top: 2px;
         left: 38px;
@@ -110,3 +125,4 @@ html[lang^="en-"].theme-dark .toolbar__9293f{
         }
     }
 }
+

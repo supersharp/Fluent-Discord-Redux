@@ -1,5 +1,5 @@
 // User settings section sub header
-.theme-dark .eyebrow_b717a1{
+.theme-dark .eyebrow_cf4812{
     @include TypeBodyStrong;
     color: $TextFillColorPrimary;
     text-transform: none;
@@ -7,6 +7,7 @@
 
 // Global Typography Mappings (New Hashes)
 .text-xs\/semibold_cf4812 { @include TypeBodyStrong; font-size: 12px; }
+.text-sm\/normal_cf4812 { @include TypeBody; }
 .text-sm\/medium_cf4812 { @include TypeBody; }
 .text-sm\/semibold_cf4812 { @include TypeBodyStrong; }
 .text-md\/medium_cf4812 { @include TypeBody; font-size: 16px; }

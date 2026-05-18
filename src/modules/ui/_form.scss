@@ -1,7 +1,42 @@
+// Radio buttons (SVG-based, used in e.g. Accessibility settings)
+// Override Discord's CSS variables for radio selected state
+.theme-dark {
+    --radio-background-selected-default: #{$AccentTextFillColorPrimary};
+    --radio-border-selected-default: #{$AccentTextFillColorPrimary};
+    --radio-dot-color-default: #FFF;
+}
+// Also target the SVG circles directly for robustness
+.theme-dark [class*="radioGroupOption_"]{
+    [class*="outerRadioFill_"] {
+        fill: transparent;
+    }
+    [class*="innerDotRadio_"] {
+        fill: transparent;
+    }
+    [class*="outerRadioBase_"] {
+        fill: none;
+        stroke: $ControlStrongFillColorDefault;
+        stroke-width: 2px;
+    }
+    &[data-selected],
+    &[aria-checked=true] {
+        [class*="outerRadioFill_"] {
+            fill: $AccentTextFillColorPrimary;
+        }
+        [class*="innerDotRadio_"] {
+            fill: #FFF;
+        }
+    }
+    &[data-selected] [class*="outerRadioBase_"],
+    &[aria-checked=true] [class*="outerRadioBase_"] {
+        stroke: $AccentTextFillColorPrimary;
+    }
+}
+
 // Radio groups
-.theme-dark div[role=radiogroup]{
-    background-color: $SystemFillColorAttentionBackground;
-    border: 1px solid $CardStrokeColorDefault;
+.theme-dark div[role=radiogroup][aria-orientation=vertical]{
+    background-color: transparent;
+    border: 0;
     border-radius: 4px;
     .item__88a69{
         margin-bottom: 0;
@@ -23,7 +58,7 @@
             border: 0;
         }
 
-        .info__88a69{
+        .info__35859{
             grid-gap: 0;
             .text-md-medium_a84e09{
                 @include TypeBody;
@@ -52,6 +87,29 @@
     }
 }
 
+// New radio group classes in settings redesign
+.theme-dark .group__64e61[data-orientation=vertical]{
+    background-color: transparent;
+    border: 0;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .radioGroupOption__64e61{
+        margin: 0;
+        padding: 8px;
+        background-color: transparent;
+        border-radius: 0;
+
+        &:hover{
+            background-color: $SubtleFillColorSecondary;
+        }
+
+        &[data-selected=true]{
+            background-color: $SubtleFillColorTertiary;
+        }
+    }
+}
+
 // Toggle switch
 .theme-dark .container__3f21e{
     background-color: transparent !important; // Override inline
@@ -59,6 +117,13 @@
     svg{
         display: none;
     }
+}
+// Override Discord's switchIndicator div (hash-independent) when switch is on
+// Discord sets the "on" color as an inline style on switchIndicator.
+// Use :has(input:checked) broadly to cover both Discord and Vencord switch structures.
+.theme-dark label:has(input:checked) [data-mana-component="switchIndicator"],
+.theme-dark label[class*="container_"]:has(input:checked) [class*="switchIndicator"]{
+    background-color: $AccentTextFillColorPrimary !important;
 }
 .input__3f21e{
     width: 40px;
@@ -139,6 +204,60 @@
         display: none;
     }
 }
+
+// Checkbox - Mana/new-style component (__714a9 family), used in Browse Channels view.
+// Structure: checkboxOption__714a9[data-selected] > checkboxIndicator__714a9 > checkmark__714a9 SVG + checkStroke__714a9 SVG
+// The SVGs use fill="currentColor" so color is inherited from the indicator container.
+// Partial-match on the prefix (__714a9 → checkboxOption__, checkboxIndicator__) keeps this
+// resilient to hash rotation while staying tightly scoped — the double-underscore pattern
+// is unique to Discord's CSS-module naming convention.
+.theme-dark [class*="checkboxOption__"] {
+    // Unchecked indicator: Fluent border + transparent background
+    [class*="checkboxIndicator__"] {
+        width: 18px;
+        height: 18px;
+        border: 1.5px solid $ControlStrongFillColorDefault;
+        border-radius: 4px;
+        background-color: $ControlAltFillColorSecondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: transparent; // hide SVG currentColor content when unchecked
+
+        // The small dot SVG shown in unchecked state
+        [class*="checkmark__"] {
+            display: none;
+        }
+        // The check-stroke SVG hidden until selected
+        [class*="checkStroke__"] {
+            display: none;
+        }
+    }
+
+    &:hover [class*="checkboxIndicator__"] {
+        background-color: $ControlAltFillColorTertiary;
+        border-color: $ControlStrongFillColorDefault;
+    }
+
+    // Checked / selected state
+    &[data-selected="true"] [class*="checkboxIndicator__"] {
+        background-color: $AccentTextFillColorPrimary;
+        border-color: $AccentTextFillColorPrimary;
+        color: #FFF; // checkStroke SVG uses currentColor
+
+        [class*="checkmark__"] {
+            display: none; // hide the dot ring
+        }
+        [class*="checkStroke__"] {
+            display: block; // show the checkmark path
+        }
+    }
+
+    &[data-selected="true"]:hover [class*="checkboxIndicator__"] {
+        background-color: $AccentTextFillColorSecondary;
+        border-color: $AccentTextFillColorSecondary;
+    }
+}
 // Checkbox (in context menu)
 .theme-dark .menu_c1e9c4 .item_c1e9c4[role="menuitemcheckbox"]{
     .iconContainer_c1e9c4{
@@ -185,3 +304,4 @@
         }
     }
 }
+

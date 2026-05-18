@@ -5,10 +5,11 @@
     padding-bottom: 0;
 
     // Connection status/disconnect
-    .connection_e131a9{
+    .connection__9bfb9{
         height: 32px;
     }
-    .rtcConnectionStatus__06d62 {
+    .rtcConnectionStatus__06d62,
+    [class*="rtcConnectionStatus_"] {
         padding-bottom: 0;
         .button__201d5{
             line-height: 16px;
@@ -21,32 +22,39 @@
         @include TypeBody;
         color: $TextFillColorPrimary !important; // Override inline
     }
-    .voiceUsers__68617{
+    .voiceUsers__68617,
+    [class*="voiceUsers_"] {
         padding-top: 4px;
     }
 
     // Connection status colours
-    .rtcConnectionQualityFine__06d62{
+    .rtcConnectionQualityFine__06d62,
+    [class*="rtcConnectionQualityFine_"] {
         .ping__06d62 path{
             fill: $SystemFillColorSuccess;
         }
-        .rtcConnectionStatusConnected__06d62{
+        .rtcConnectionStatusConnected__06d62,
+        [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorSuccess;
         }
     }
-    .rtcConnectionQualityAverage__06d62{
+    .rtcConnectionQualityAverage__06d62,
+    [class*="rtcConnectionQualityAverage_"] {
         .ping__06d62 path{
             fill: $SystemFillColorCaution;
         }
-        .rtcConnectionStatusConnected__06d62{
+        .rtcConnectionStatusConnected__06d62,
+        [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorCaution;
         }
     }
-    .rtcConnectionQualityBad__06d62{
+    .rtcConnectionQualityBad__06d62,
+    [class*="rtcConnectionQualityBad_"] {
         .ping__06d62 path{
             fill: $SystemFillColorCritical;
         }
-        .rtcConnectionStatusConnected__06d62{
+        .rtcConnectionStatusConnected__06d62,
+        [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorCritical;
         }
     }
@@ -120,12 +128,17 @@ html[lang^="en-"].theme-dark .panels__5e434 .button__201d5[aria-label]{
 }
 
 // Fix connection status text not appearing
-.rtcConnectionStatus__06d62 .contents__201d5{
-    display: block !important;
-    .rtcConnectionStatusLabel__06d62{
-        font-weight: 500;
+.rtcConnectionStatus__06d62,
+[class*="rtcConnectionStatus_"] {
+    .contents__201d5{
+        display: block !important;
+        .rtcConnectionStatusLabel__06d62,
+        [class*="rtcConnectionStatusLabel_"] {
+            font-weight: 500;
+        }
     }
 }
+
 
 
 

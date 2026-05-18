@@ -1,4 +1,5 @@
-.theme-dark .homeContainer__73533{
+.theme-dark .homeContainer__73533,
+.theme-dark [class*="homeContainer_"] {
     // Main
     // Card
     .card_d4f6c7{
@@ -10,16 +11,19 @@
     // Side bar
     // Widget container
     .container_c68a2c,
-    .container__29699{
+    .container__29699,
+    [class*="widgetContainer_"] {
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
         // Server description
-        .description__6b38f{
+        .description__6b38f,
+        [class*="description_"] {
             @include TypeBody;
         }
         // Active Now
-        .container__55cc1{
+        .container__55cc1,
+        [class*="activeNowContainer_"] {
             border: 1px solid transparent;
             border-radius: 4px;
             &:hover{

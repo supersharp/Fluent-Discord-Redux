@@ -7,9 +7,10 @@ $isAutoFile: false;
 @import 'modules/core/reset';
 
 // Mixins
-// Order: None, alpabetic
+// Order: None, alphabetic
 @import 'modules/mixins/elevation';
 @import 'modules/mixins/font';
+@import 'modules/mixins/selectors';
 @import 'modules/mixins/type';
 
 // Common

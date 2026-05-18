@@ -9,11 +9,14 @@
 
     .content_f75fb0{
         background-color: $LayerFillColorAlt;
-        border-left: 1px solid $CardStrokeColorDefault;
+        border-left: 0;
         border-radius: 8px 0 0 0;
+        box-shadow: none;
     }
     .chatContent_f75fb0{
-        background-color: transparent;
+        background-color: $LayerFillColorDefault;
+        border-top-left-radius: 8px;
+        overflow: hidden;
     }
 
     // New/old messages bars
@@ -147,10 +150,11 @@
         display: var(--fluent-show-nitro-decorations);
     }
 
-    // Start of server
-    .container__00de6{
+    // Start of server / channel
+    .container__00de6,
+    [class*="container_"][data-list-item-id] {
         align-items: flex-start;
-        padding: 0;
+        padding: 16px;
         .titleName_aae012{
             text-align: left;
             @include TypeTitle;
@@ -164,25 +168,24 @@
             color: $TextFillColorPrimary;
             @include TypeBody;
         }
-    }
-
-    // Start of channel
-    .container__00de6{
-        padding: 16px;
-        .header__00de6{
+        .header__00de6,
+        [class*="header_"] {
             @include TypeTitle;
         }
-        .description__00de6{
+        .description__00de6,
+        [class*="description_"] {
             color: $TextFillColorPrimary;
             @include TypeBody;
         }
     }
-    .emptyChannelIcon__00de6{
+    .emptyChannelIcon__00de6,
+    [class*="emptyChannelIcon_"] {
         display: none;
     }
 
     // Thread
-    .container__9271d{
+    .container__9271d,
+    [class*="container_"][data-list-item-id] {
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $SurfaceStrokeColorFlyout;
         border-radius: 8px;
@@ -207,7 +210,8 @@
         display: none;
     }
     // Wave button / Compact button
-    .compactButton__7ff28 {
+    .compactButton__7ff28,
+    [class*="compactButton_"] {
         background-color: $ControlFillColorDefault !important;
         border: 1px solid $ControlStrokeColorDefault !important;
         border-radius: 16px !important; // Pill shape
@@ -215,7 +219,7 @@
         color: white !important;
         @include TypeBody;
         transition: background-color $AnimationFadeInOut;
-        
+
         &:hover {
             background-color: $ControlFillColorSecondary !important;
         }

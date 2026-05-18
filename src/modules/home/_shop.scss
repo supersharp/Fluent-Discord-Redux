@@ -6,16 +6,32 @@
 
 .theme-dark {
     .shop__6db1d {
-        background-color: transparent !important;
+        background-color: transparent !important; // Override inline
         border-top: 0 !important;
         box-shadow: none !important;
         outline: 0 !important;
 
+        > div {
+            position: relative;
+        }
+
+        // Final seam mask for Shop only: overlay the boundary line between
+        // the Shop header stack and first content wrapper.
+        > div::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -1px;
+            height: 2px;
+            background-color: $LayerFillColorDefault;
+            pointer-events: none;
+            z-index: 2;
+        }
+
         .headerBar__80679 {
-            // Ensure the header bar doesn't clip overflowing
-            // elements like the orb balance pill
             overflow: visible;
-            background-color: transparent !important;
+            background-color: $LayerFillColorDefault !important; // Override inline
             border: 0 !important;
             box-shadow: none !important;
             filter: none !important;
@@ -25,7 +41,8 @@
             -webkit-mask: none !important;
             outline: 0 !important;
 
-            .upperContainer__9293f {
+            .upperContainer__9293f,
+            .children__9293f {
                 overflow: visible;
                 border: 0 !important;
                 box-shadow: none !important;
@@ -38,40 +55,20 @@
                 outline: 0 !important;
             }
 
-            .children__9293f {
-                border: 0 !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                filter: none !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                mask: none !important;
-                -webkit-mask: none !important;
-                outline: 0 !important;
-            }
-
-            // Shop tabs use a separate container stack that can render
-            // its own border/shadow seam below the header.
+            // Shop tabs container stack
             .container__354ec,
             .measurements__354ec,
             .tabs__354ec,
             .tab__354ec {
                 border: 0 !important;
-                border-top: 0 !important;
-                border-bottom: 0 !important;
                 box-shadow: none !important;
                 background-color: transparent !important;
-                background: transparent !important;
-            }
 
-            .container__354ec::before,
-            .container__354ec::after,
-            .measurements__354ec::before,
-            .measurements__354ec::after,
-            .tabs__354ec::before,
-            .tabs__354ec::after {
-                display: none !important;
-                content: none !important;
+                &::before,
+                &::after {
+                    display: none !important;
+                    content: none !important;
+                }
             }
 
             .toolbar__9293f {
@@ -81,8 +78,6 @@
                 .searchBar__824d3 {
                     overflow: visible;
 
-                    // The search bar container is a div[role="button"]
-                    // which may inherit unwanted sizing from theme rules
                     > div[role="button"] {
                         width: auto;
                         height: auto;
@@ -96,7 +91,7 @@
                         }
                     }
 
-                    // Compact width fallback: Shop may render search as a standalone icon button.
+                    // Compact width fallback
                     [aria-label*="Search" i] {
                         width: auto !important;
                         min-width: 32px;
@@ -134,7 +129,6 @@
                 }
 
                 // Wishlist button - the heart SVG icon is invisible
-                // because currentColor inherits a dark value
                 .wishlistButton__80679 {
                     width: 32px !important;
                     min-width: 32px !important;
@@ -162,49 +156,8 @@
                 }
             }
         }
-    }
 
-    // Shop-only top seam fix.
-    .shop__6db1d {
-        > div {
-            position: relative;
-        }
-
-        // Final seam mask for Shop only: overlay the boundary line between
-        // the Shop header stack and first content wrapper.
-        > div::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -1px;
-            height: 2px;
-            background-color: $LayerFillColorDefault;
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        .tabs__354ec.top_aa8da2,
-        .shopViewWrapper__6db1d,
-        .shopScroll__08415,
-        .shop__08415,
-        .mainContent__08415,
-        [class*="shopViewWrapper__"],
-        [class*="shopScroll__"],
-        [class*="shop__"],
-        [class*="mainContent__"],
-        [class*="blockContainer__"],
-        [class*="feedContent__"],
-        [class*="heroBlock__"],
-        [class*="banner__"] {
-            border-top: 0 !important;
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            background-image: none !important;
-        }
-
-        // Hard boundary fix for the exact Shop structure:
-        // .shop__6db1d > div > section.headerBar + .shopViewWrapper__6db1d
+        // Hard boundary fix for header + content seam
         > div > section[class*="headerBar__"] {
             border-bottom: 0 !important;
             box-shadow: none !important;
@@ -236,22 +189,75 @@
             box-shadow: none !important;
         }
 
-        .tabs__354ec.top_aa8da2::before,
-        .tabs__354ec.top_aa8da2::after,
-        .shopViewWrapper__6db1d::before,
-        .shopViewWrapper__6db1d::after,
-        .shopScroll__08415::before,
-        .shopScroll__08415::after,
-        .mainContent__08415::before,
-        .mainContent__08415::after {
-            display: none !important;
-            content: none !important;
+        // Shop content area seam fixes
+        .tabs__354ec.top_aa8da2,
+        .shopViewWrapper__6db1d,
+        .shopScroll__08415,
+        .shop__08415,
+        .mainContent__08415,
+        [class*="shopViewWrapper__"],
+        [class*="shopScroll__"],
+        [class*="shop__"],
+        [class*="mainContent__"],
+        [class*="blockContainer__"],
+        [class*="feedContent__"],
+        [class*="heroBlock__"],
+        [class*="banner__"] {
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            background-image: none !important;
+
+            &::before,
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        // Shop tabs styling
+        .tabs__354ec .tab__354ec,
+        .tabs__354ec .item_aa8da2 {
+            height: 36px;
+            margin: 0 0 0 8px;
+            border-radius: 0;
+            position: relative;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            color: $TextFillColorPrimary !important;
+            @include TypeBody;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+
+            &:hover {
+                background-color: transparent !important;
+                color: $TextFillColorSecondary !important;
+            }
+
+            // Nested text variant nodes
+            [class*="text-"],
+            [data-text-variant] {
+                font-feature-settings: 'rclt' 0 !important;
+                font-size: 14px !important;
+                font-style: normal !important;
+                font-weight: 400 !important;
+                line-height: 20px !important;
+            }
+        }
+
+        .tabs__354ec .tab__354ec[aria-selected="true"],
+        .tabs__354ec .tab__354ec.selected__354ec,
+        .tabs__354ec .item_aa8da2.selected_aa8da2 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
         }
     }
 
     // Orb balance pill - GLOBAL fix (applies to Shop, Quests, etc.)
-    // The original theme's toolbar rule forces div[role=button] to 60px wide,
-    // which squeezes the balance widget on any page that shows it.
     .toolbar__9293f {
         background-color: transparent !important;
 
@@ -292,56 +298,6 @@
         }
         .balanceCounterText__98f64 {
             overflow: visible;
-        }
-    }
-
-    // Match Friends toolbar look for Shop tabs.
-    .shop__6db1d {
-        .headerBar__80679 {
-            background-color: $LayerFillColorDefault !important;
-            border-bottom: 1px solid $CardStrokeColorDefault !important;
-        }
-
-        .tabs__354ec .tab__354ec,
-        .tabs__354ec .item_aa8da2 {
-            height: 36px;
-            margin: 0 0 0 8px;
-            border-radius: 0;
-            position: relative;
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            color: $TextFillColorPrimary !important;
-            @include TypeBody;
-            font-feature-settings: 'rclt' 0 !important;
-            font-size: 14px !important;
-            font-style: normal !important;
-            font-weight: 400 !important;
-            line-height: 20px !important;
-
-            &:hover {
-                background-color: transparent !important;
-                color: $TextFillColorSecondary !important;
-            }
-        }
-
-        // Shop tabs render nested text variant nodes; force the same type ramp as Friends.
-        .tabs__354ec .tab__354ec [class*="text-"],
-        .tabs__354ec .item_aa8da2 [class*="text-"],
-        .tabs__354ec .tab__354ec [data-text-variant],
-        .tabs__354ec .item_aa8da2 [data-text-variant] {
-            font-feature-settings: 'rclt' 0 !important;
-            font-size: 14px !important;
-            font-style: normal !important;
-            font-weight: 400 !important;
-            line-height: 20px !important;
-        }
-
-        .tabs__354ec .tab__354ec[aria-selected="true"],
-        .tabs__354ec .tab__354ec.selected__354ec,
-        .tabs__354ec .item_aa8da2.selected_aa8da2 {
-            background-color: transparent !important;
-            color: $TextFillColorPrimary !important;
-            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
         }
     }
 }

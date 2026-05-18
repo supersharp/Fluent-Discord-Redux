@@ -11,7 +11,6 @@
     .page__5e434 [class*="container_a592e1"],
     .page__5e434 [class*="outerContainer_"],
     .page__5e434 [class*="innerContainer_"] {
-        background-color: transparent !important;
         background: transparent !important;
         border: 0 !important;
         box-shadow: none !important;
@@ -19,7 +18,6 @@
 
     .page__5e434 .headerBar__8a7fc,
     .page__5e434 [class*="headerBar__"] {
-        background-color: transparent !important;
         background: transparent !important;
         border-top: 0 !important;
         border-bottom: 0 !important;
@@ -65,7 +63,6 @@
     // Discover sidebar
     .pageWrapper_a3a4ce .sidebarList__5e434,
     .pageWrapper_a3a4ce [class*="sidebarList_"] {
-        background-color: transparent !important;
         background: transparent !important;
         border-right: 0 !important;
         box-shadow: none !important;
@@ -83,7 +80,6 @@
 
     // Hash-agnostic fallback for current/future Discover class rotations.
     .pageWrapper_a3a4ce > [class*="sidebarList"] {
-        background-color: transparent !important;
         background: transparent !important;
         border-right: 0 !important;
         box-shadow: none !important;
@@ -94,7 +90,6 @@
     .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="header"],
     .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="scroller"],
     .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="nav"] {
-        background-color: transparent !important;
         background: transparent !important;
         box-shadow: none !important;
     }
@@ -102,7 +97,6 @@
     // Discover-specific sidebar fallback based on nav item structure.
     .sidebarList__5e434:has([class*="navItem__"]),
     [class*="sidebarList_"]:has([class*="navItem__"]) {
-        background-color: transparent !important;
         background: transparent !important;
         border-right: 0 !important;
         box-shadow: none !important;
@@ -231,8 +225,12 @@
                 }
             }
 
+            padding-right: 0;
+            border: 0;
+
             .clearIcon__21453,
-            .searchIcon_f69601 {
+            .searchIcon_f69601,
+            .searchIcon_d1a3c1 {
                 width: 16px;
                 height: 16px;
                 position: absolute;
@@ -257,44 +255,9 @@
         color: $TextFillColorPrimary;
     }
 
-    // Search box
-    .container_f69601 .searchBox__56feb {
-        padding-right: 0;
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-
-        &:focus,
-        &:focus-within {
-            box-shadow: none;
-        }
-
-        .searchBoxInput__56498 {
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-
-            &::placeholder {
-                @include TypeBody;
-                color: $TextFillColorSecondary;
-            }
-        }
-
-        .clearIcon__21453,
-        .searchIcon_d1a3c1 {
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 8px;
-            right: 16px;
-
-            path {
-                fill: #FFF;
-            }
-        }
-    }
 
     // Results
-    .categories_f69601 {
+    .categories__6131a {
         .categoryPill_f69601 {
             .categoryLabel-2m4AT- {
                 @include TypeBody;
@@ -304,7 +267,7 @@
             &.selected_f69601 {
                 background-color: $AccentBase;
 
-                .categoryLabel_f69601 {
+                .categoryLabel__81b99 {
                     color: $TextFillColorPrimary;
                 }
             }
@@ -372,6 +335,7 @@
 
     // Match Quests/Friends look for Discover Apps & Servers top toolbar.
     .page__5e434 {
+
         // Friends-style rounded corner belongs to the content pane, not the toolbar.
         .outerContainer_e1147e .scroller__23746,
         .container_d08938 .scroller__23746,
@@ -382,33 +346,20 @@
             overflow: hidden;
         }
 
-        // Match Friends toolbar logic: keep toolbar stack transparent so acrylic/layer context shows through.
-        > .container_a592e1,
-        > [class*="container_a592e1"],
-        .outerContainer_e1147e,
+        // Apps/Servers: opaque toolbar matching Quests tone.
+        // Uses direct solid color — blend-mode approaches render as transparent.
         .outerContainer_e1147e > .innerContainer_e1147e,
         .container_d08938 {
-            background-color: transparent !important;
-            background-image: none !important;
-            background: transparent !important;
             box-shadow: none !important;
             border: 0 !important;
         }
 
         .outerContainer_e1147e > .innerContainer_e1147e > .headerBar__8a7fc,
-        .container_d08938 > .headerBar__8a7fc {
-            background-color: transparent !important;
-            background-image: none !important;
-            background: transparent !important;
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            border-top: 0 !important;
-        }
-
+        .container_d08938 > .headerBar__8a7fc,
         .headerBar__8a7fc.overlay__8a7fc {
-            background-color: transparent !important;
+            background: #202020 !important;
             background-image: none !important;
-            background: transparent !important;
+            background-blend-mode: normal !important;
             border: 0 !important;
             box-shadow: none !important;
         }
@@ -489,51 +440,23 @@
             }
         }
 
-        // Discover Quests uses a different tab stack than Apps/Servers.
-        .container__955a3 .headerBar__1a9ce {
-            .tabs__26669 .tabWrapper__26669,
-            .container__26669 .tabWrapper__26669 {
-                height: 36px;
-                margin: 0 0 0 8px;
-                display: flex;
-                align-items: center;
-                position: relative;
-                border-radius: 0;
-            }
 
-            .tabs__26669 .tab__26669,
-            .container__26669 .tab__26669 {
-                @include TypeBody;
-                color: $TextFillColorPrimary !important;
-                margin: 0;
-                position: relative;
-                display: flex;
-                align-items: center;
-                height: 36px;
-                border-bottom: 0 !important;
-                box-shadow: none !important;
+    }
 
-                &:hover {
-                    color: $TextFillColorSecondary !important;
-                }
+    // Hard override for live Apps/Servers DOM path — highest specificity, flat opaque color, no blend modes.
+    // Backdrop has inline opacity:0 so it must be hidden; the headerBar itself gets the color.
+    .content__592e1 .outerContainer_e1147e .backdrop__8a7fc,
+    .content__592e1 .container_d08938 .backdrop__8a7fc {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
 
-                &::after {
-                    display: none !important;
-                    content: none !important;
-                }
-            }
-
-            .tabs__26669 .tab__26669.selected__26669,
-            .container__26669 .tab__26669.selected__26669 {
-                background-color: transparent !important;
-                color: $TextFillColorPrimary !important;
-                box-shadow: inset 0 -3px 0 $AccentLight1 !important;
-
-                &::before {
-                    display: none !important;
-                    content: none !important;
-                }
-            }
-        }
+    .content__592e1 .outerContainer_e1147e > .innerContainer_e1147e > .headerBar__8a7fc,
+    .content__592e1 .container_d08938 > .headerBar__8a7fc {
+        background: #202020 !important;
+        background-image: none !important;
+        background-blend-mode: normal !important;
+        border: 0 !important;
+        box-shadow: none !important;
     }
 }

@@ -27,19 +27,15 @@
     .base__5e434,
     .content__5e434,
     .page__5e434 {
-        border-top: 0 !important;
+        border-top: 0 !important; // Override inline
         box-shadow: none !important;
         outline: 0 !important;
-    }
 
-    .base__5e434::before,
-    .base__5e434::after,
-    .content__5e434::before,
-    .content__5e434::after,
-    .page__5e434::before,
-    .page__5e434::after {
-        display: none !important;
-        content: none !important;
+        &::before,
+        &::after {
+            display: none !important;
+            content: none !important;
+        }
     }
 }
 
@@ -83,6 +79,23 @@
     .container__955a3::after {
         display: none !important;
         content: none !important;
+    }
+}
+
+// Quests dedicated view
+// Hide the hero banner ("Introducing Discord Orbs") - heroWrapper__955a3.
+// Partial-match is scoped to the Quests container (__955a3) so it won't
+// affect other views. Avoids targeting heroGradient_ which was never present.
+.theme-dark .page__5e434 .container__955a3 {
+    [class*="heroWrapper__"] {
+        display: none !important;
+    }
+
+    // Remove the white/tinted card background on quest tile text containers.
+    // textContainer_956c6 is scoped via its quest tile ancestor article so the
+    // partial match cannot leak outside the Quests grid.
+    article[class*="questTile_"] [class*="textContainer_"] {
+        background-color: transparent !important;
     }
 }
 

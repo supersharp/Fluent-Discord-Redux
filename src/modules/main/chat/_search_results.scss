@@ -1,10 +1,10 @@
-.theme-dark :is(.searchResultsWrap_a9e706, .searchResultsWrap_a98f3b){
+.theme-dark .searchResultsWrap_a98f3b{
     background-color: $LayerFillColorDefault;
     border-left: 1px solid $CardStrokeColorDefault;
 
     :is(.searchHeader_f3b986, .searchHeader_ae7890){
         background-color: transparent;
-        :is(.totalResults_f3b986, .totalResults_ae7890) > div{
+        .totalResults_ae7890 > div{
             @include TypeBodyStrong;
         }
     }
@@ -41,7 +41,7 @@
     }
 
     // Result
-    :is(.searchResult__02a39, .searchResult__80bf8){
+    .searchResult__80bf8{
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
@@ -63,3 +63,4 @@
         }
     }
 }
+

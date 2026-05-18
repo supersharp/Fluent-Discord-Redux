@@ -1,12 +1,10 @@
-.theme-dark, .theme-midnight, .theme-darker {
+.theme-dark {
     // Clear parent backgrounds to allow blur to show through
     [id^="popout_"]:has(.wrapper_c0e32c),
     .layer__59d0d:has(.wrapper_c0e32c),
     .animatorBottom_faf9c0:has(.wrapper_c0e32c),
     .animatorBottom_faf9c0:has(.wrapper_c0e32c) > div {
         background: transparent !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
     }
 
     // Clear internal backgrounds that might block the Mica
@@ -19,7 +17,6 @@
     .listWrapper_c656ac,
     .scroller_affa7e {
         background: transparent !important;
-        background-color: transparent !important;
         --background-tertiary: transparent !important;
         --background-secondary: transparent !important;
         --background-secondary-alt: transparent !important;
@@ -30,16 +27,13 @@
     .contentWrapper__08434,
     #emoji-picker-tab-panel {
         background: $MicaBackgroundFillColorBase !important;
-        background-color: transparent !important;
         backdrop-filter: blur(16px);
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
         box-shadow: var(--elevation-stroke), var(--elevation-high);
         overflow: hidden;
     }
-}
 
-.theme-dark, .theme-midnight, .theme-darker {
     .contentWrapper__08434 #emoji-picker-tab-panel,
     .contentWrapper__08434 #gif-picker-tab-panel,
     .contentWrapper__08434 #sticker-picker-tab-panel,
@@ -50,9 +44,7 @@
         border-radius: 0;
         box-shadow: none;
     }
-}
 
-.theme-dark, .theme-midnight, .theme-darker {
     // Navigation
     .nav__08434{
         .navButton__08434 {
@@ -98,6 +90,7 @@
         background-color: transparent;
         box-shadow: none;
     }
+
     // Search
     .container__5a838{
         padding: 0;
@@ -120,6 +113,7 @@
             outline: none !important;
         }
     }
+
     // Emoji search
     // Fix inherited height
     .md__0f084 .input__0f084{
@@ -199,7 +193,7 @@
 
     // Sticker sidebar
     .wrapper__4e6ce.categoryList__3ad28{
-        background-color: $SolidBackgroundFillColorBase;
+        background-color: $SolidBackgroundFillColorSecondary;
     }
 
     .stickerCategory__3ad28,
@@ -328,11 +322,13 @@
         background-color: $SubtleFillColorSecondary !important;
         border-radius: 4px;
     }
+
     // Info bar
     .inspector_aeaaeb {
         background-color: transparent !important;
         border-top: 1px solid $DividerStrokeColorDefault;
     }
+
     // "Popular" badge in info bar
     .topGuildEmojiBadge_aeaaeb{
         display: none;
@@ -384,12 +380,10 @@
             margin: 3px;
         }
     }
+
     // Diversity selector in stand alone emoji popout (eg. reaction)
     .diversitySelectorOptions_a45a2a {
-        // top: 0;
         right: 12px;
-    }
-    .diversitySelectorOptions_a45a2a {
         border: 1px solid $ControlStrokeColorDefault;
         .diversityEmojiItem_a45a2a{
             width: 30px;
@@ -400,7 +394,6 @@
             margin: 3px;
         }
     }
-
 
     // Nitro prompt
     .premiumPromo__3a1b6{

@@ -23,7 +23,12 @@
             border-width: 1px;
             border-style: inset;
             border-color: $AccentControlElevationBorder;
-            color: $TextOnAccentFillColorPrimary;
+            color: #FFF !important;
+            svg,
+            [class*="icon"]{
+                color: #FFF !important;
+                fill: currentColor;
+            }
             &:hover{
                 background-color: $AccentFillColorSecondary;
             }
@@ -161,7 +166,12 @@
         border-width: 1px;
         border-style: inset;
         border-color: $AccentControlElevationBorder;
-        color: $TextOnAccentFillColorPrimary;
+        color: #FFF !important;
+        svg,
+        [class*="icon"]{
+            color: #FFF !important;
+            fill: currentColor;
+        }
         &:hover{
             background-color: $AccentFillColorSecondary;
         }
@@ -199,13 +209,14 @@
     }
 
     // Secondary critical - red text, grey background
-    &.critical-secondary_a22cb0{
+    &.critical-secondary_a22cb0 {
         background-color: $ControlFillColorDefault;
         border-width: 1px;
         border-style: outset;
         border-color: $SystemFillColorCritical;
-            color: $SystemFillColorCritical;
-        &:hover{
+        color: $SystemFillColorCritical;
+
+        &:hover {
             background-color: $ControlFillColorSecondary;
         }
         &:active{
