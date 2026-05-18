@@ -6,7 +6,7 @@ With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent
 
 The look and feel may deviate from the original theme.
 
-The code is written with the help of GitHub CoPilot.
+The code is written with the help of AI.
 
 Changes from the original fork:
 * Fixed orbs balance 
