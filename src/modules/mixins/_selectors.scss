@@ -1,0 +1,472 @@
+// ============================================================================
+// Resilient selector mixins for Discord hash classes.
+// Each mixin outputs a set of selectors (primary hash + partial-match fallback)
+// so when Discord updates their hashes the theme still has selectors in place.
+//
+// Usage:
+//   @include modal-backdrop {
+//       background: transparent;
+//   }
+// ============================================================================
+
+// ============================================================================
+// CHANNEL LIST
+// ============================================================================
+
+@mixin channel-list-wrapper {
+    .wrapper__35981,
+    [class*="channel"] > [class*="wrapper_"] {
+        @content;
+    }
+}
+
+@mixin channel-text {
+    .channel__35981,
+    [class*="channel_"][data-list-item-id] {
+        @content;
+    }
+}
+
+@mixin channel-selected {
+    .channel__35981.selected-2SZiTB,
+    [class*="channel_"][class*="selected_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// MEMBER LIST
+// ============================================================================
+
+@mixin member-list-wrapper {
+    .membersWrap__4bde8,
+    [class*="members_"] {
+        @content;
+    }
+}
+
+@mixin member-item {
+    .member__50ffd,
+    [class*="member_"][data-list-item-id] {
+        @content;
+    }
+}
+
+// ============================================================================
+// CHAT / MESSAGES
+// ============================================================================
+
+@mixin chat-content-area {
+    .content__4529f,
+    [class*="content_"][class*="chat_"] {
+        @content;
+    }
+}
+
+@mixin message-group {
+    .groupsWrapper__4529f,
+    .message__4529f,
+    [class*="groupsWrapper_"],
+    [class*="message_"][data-list-item-id] {
+        @content;
+    }
+}
+
+// ============================================================================
+// CHATBOX / TEXTAREA
+// ============================================================================
+
+@mixin chatbox-container {
+    .scrollableContainer__7b98c,
+    .scrollableContainer__74017,
+    [class*="scrollableContainer_"] {
+        @content;
+    }
+}
+
+@mixin chatbox-textarea {
+    .textarea__7b98c,
+    .textArea__74017,
+    textarea[class*="textarea_"],
+    [class*="slateTextArea_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// MODALS / LAYERS
+// ============================================================================
+
+@mixin modal-backdrop {
+    .backdrop__8a7fc,
+    [class*="backdrop_"][data-testid^="layer-backdrop"] {
+        @content;
+    }
+}
+
+@mixin modal-root {
+    .root__49fc1,
+    .container__8a031,
+    [class*="root_"]:has(.quickswitcher_ac6cb0),
+    [class*="container_"][role="dialog"] {
+        @content;
+    }
+}
+
+@mixin modal-header {
+    .header__49fc1,
+    .header-1R3myj,
+    [class*="header_"][class*="separator_"] {
+        @content;
+    }
+}
+
+@mixin modal-content {
+    .content__49fc1,
+    [class*="content_"][role="document"] {
+        @content;
+    }
+}
+
+@mixin modal-footer {
+    .footer__8a031,
+    .footer__49fc1,
+    [class*="footer_"][class*="separator_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// SETTINGS PANELS
+// ============================================================================
+
+@mixin settings-container {
+    .container__23e6f,
+    [class*="container_"][role="main"] {
+        @content;
+    }
+}
+
+@mixin settings-header {
+    .header__23e6f,
+    [class*="header_"][class*="settings_"] {
+        @content;
+    }
+}
+
+@mixin settings-sections {
+    .sections-1oLLo9,
+    .sectionsContainer__23e6f,
+    [class*="sections_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// TOOLBAR / HOME ICONS
+// ============================================================================
+
+@mixin toolbar-icon {
+    .iconWrapper__9293f,
+    [class*="iconWrapper_"][role="button"] {
+        @content;
+    }
+}
+
+@mixin home-icon-wrapper {
+    .wrapper__133bf,
+    [class*="wrapper_"][data-list-item-id] {
+        @content;
+    }
+}
+
+// ============================================================================
+// TAB BAR (Shop, Quests, Friends, etc.)
+// ============================================================================
+
+@mixin tab-bar-container {
+    .tabs__354ec,
+    .tabBar__133bf,
+    [class*="tabBar_"],
+    [class*="tabs_"][role="tablist"] {
+        @content;
+    }
+}
+
+@mixin tab-item {
+    .item_aa8da2,
+    [class*="tab_"][role="tab"] {
+        @content;
+    }
+}
+
+@mixin tab-selected {
+    .selected_aa8da2,
+    [aria-selected="true"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// SCROLLBAR
+// ============================================================================
+
+@mixin scrollbar-thin {
+    .scrollerBase__99f8c.thin__99f8c,
+    .thin_d125d2,
+    [class*="scroller"][class*="thin_"],
+    [class*="thin_"] {
+        @content;
+    }
+}
+
+@mixin scrollbar-auto {
+    .scrollerBase__99f8c.auto__99f8c,
+    .auto_d125d2,
+    [class*="scroller"][class*="auto_"],
+    [class*="auto_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// CONTEXT MENU / POPOUT
+// ============================================================================
+
+@mixin context-menu {
+    .menu__58105,
+    .menu_c1e9c4,
+    [role="menu"][class*="menu_"] {
+        @content;
+    }
+}
+
+@mixin menu-item {
+    .item__58105,
+    .item_c1e9c4,
+    [role="menuitem"][class*="item_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// VOICE / RTC
+// ============================================================================
+
+@mixin voice-user-panel {
+    .voiceUser__2e283,
+    [class*="voiceUser_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// EMOJI PICKER
+// ============================================================================
+
+@mixin emoji-picker-container {
+    .emojiPicker_c0e32c,
+    .wrapper_c0e32c,
+    [class*="emojiPicker_"],
+    [class*="picker_"][role="dialog"] {
+        @content;
+    }
+}
+
+@mixin emoji-category-list {
+    .categoryList_c0e32c,
+    [class*="categoryList_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// DISCOVERY / SHOP
+// ============================================================================
+
+@mixin discover-page-wrapper {
+    .pageWrapper_a3a4ce,
+    .page__5e434,
+    [class*="pageWrapper_"],
+    [class*="page_"][role="main"] {
+        @content;
+    }
+}
+
+@mixin shop-view-wrapper {
+    .shopViewWrapper__6db1d,
+    [class*="shopViewWrapper_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// SEARCH
+// ============================================================================
+
+@mixin search-container {
+    .container__55c99,
+    .container__16eb0,
+    [class*="search_"][role="search"] {
+        @content;
+    }
+}
+
+@mixin search-input-wrapper {
+    .wrapper__72c38,
+    .searchBox__56feb,
+    [class*="searchBox_"],
+    [class*="wrapper_"][class*="input_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// FORUM / THREADS
+// ============================================================================
+
+@mixin forum-post-card {
+    .container_f93fc4,
+    [class*="container_"][data-list-item-id] {
+        @content;
+    }
+}
+
+// ============================================================================
+// GUILD LIST (left sidebar icons)
+// ============================================================================
+
+@mixin guild-icon-wrapper {
+    .listItem__62d4f,
+    .pill__62d4f,
+    [class*="listItem_"][data-list-item-id],
+    [class*="pill_"] {
+        @content;
+    }
+}
+
+@mixin guild-unread-badge {
+    .mentionBadge__62d4f,
+    [class*="mentionBadge_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// USER PANEL (bottom-left)
+// ============================================================================
+
+@mixin user-panel-container {
+    .userPanelOuter__0f481,
+    .userPanelInner__0f481,
+    [class*="userPanel_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// LOADING SCREEN
+// ============================================================================
+
+@mixin loading-screen {
+    .loading__52eef,
+    [class*="loading_"][role="progressbar"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// BETTERDISCORD / VENCORD PLUGINS
+// ============================================================================
+
+@mixin bd-plugin-card {
+    .pluginList-3mre5Y,
+    .pluginListItem-2P6xZz,
+    [class*="pluginList"],
+    [class*="pluginListItem_"] {
+        @content;
+    }
+}
+
+@mixin vencord-settings-panel {
+    .vc-tab-bar-container,
+    #vc-settings-tab-bar {
+        @content;
+    }
+}
+
+// ============================================================================
+// INPUT / FORM ELEMENTS
+// ============================================================================
+
+@mixin text-input-field {
+    .input__0f084,
+    .input__0ed4f,
+    input[class*="input_"] {
+        @content;
+    }
+}
+
+@mixin dropdown-select {
+    .select__7e549,
+    [class*="select_"][role="listbox"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// CARDS / CONTENT BLOCKS
+// ============================================================================
+
+@mixin card-container {
+    .card__84e3e,
+    [class*="card_"][role="article"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// TOOLTIP
+// ============================================================================
+
+@mixin tooltip-root {
+    .tooltip-14MtrL,
+    [class*="tooltip_"][role="tooltip"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// TITLEBAR / WINDOW CONTROLS
+// ============================================================================
+
+@mixin titlebar-container {
+    .titleBar__593a0,
+    [class*="titleBar_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// ACTIVITY FEED
+// ============================================================================
+
+@mixin activity-feed {
+    .container__2391b,
+    [class*="activityFeed"],
+    [class*="container_"][data-tid="activity-feed"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// INBOX / MESSAGE REQUESTS
+// ============================================================================
+
+@mixin inbox-container {
+    .panels__49fc1,
+    [class*="inbox_"],
+    [role="main"][aria-label="Inbox"] {
+        @content;
+    }
+}

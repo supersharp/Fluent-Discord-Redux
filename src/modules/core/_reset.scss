@@ -16,6 +16,12 @@
     --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
+// Override Discord brand/link colors with fluent accent
+.theme-dark{
+    --text-link: #{$AccentTextFillColorPrimary};
+    --text-link-low-saturation: #{$AccentTextFillColorPrimary};
+}
+
 *,
 ::before,
 ::after{

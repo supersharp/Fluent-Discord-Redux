@@ -21,3 +21,165 @@
         background-color: transparent;
     }
 }
+<<<<<<< Updated upstream
+=======
+
+// Neutralize top-edge seams at the app content stack level.
+.theme-dark {
+    .base__5e434,
+    .content__5e434,
+    .page__5e434 {
+        border-top: 0 !important; // Override inline
+        box-shadow: none !important;
+        outline: 0 !important;
+
+        &::before,
+        &::after {
+            display: none !important;
+            content: none !important;
+        }
+    }
+}
+
+// Page-level guard for Home-family header seams (Shop/Quests wrappers).
+.theme-dark .page__5e434 {
+    > .shop__6db1d .shopViewWrapper__6db1d,
+    > .shop__6db1d .shopScroll__08415,
+    > .container__955a3 > .scroller__23746,
+    > [class*="shop__"] [class*="shopViewWrapper__"],
+    > [class*="shop__"] [class*="shopScroll__"],
+    > [class*="container__955a3"] > .scroller__23746 {
+        border-top-left-radius: 8px !important;
+        overflow: hidden;
+    }
+
+    section[class*="headerBar__"],
+    section[class*="headerBar__"] [class*="container__9293f"],
+    section[class*="headerBar__"] [class*="tabs__"],
+    section[class*="headerBar__"] + [class*="tabs__"],
+    > .shop__6db1d > div,
+    > .shop__6db1d > div > section[class*="headerBar__"],
+    > .shop__6db1d > div + .shopViewWrapper__6db1d,
+    [class*="shopViewWrapper__"],
+    section[class*="headerBar__"] + .toolbar__9293f,
+    .container__955a3 {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    section[class*="headerBar__"]::before,
+    section[class*="headerBar__"]::after,
+    section[class*="headerBar__"] + [class*="tabs__"]::before,
+    section[class*="headerBar__"] + [class*="tabs__"]::after,
+    > .shop__6db1d > div::before,
+    > .shop__6db1d > div::after,
+    [class*="shopViewWrapper__"]::before,
+    [class*="shopViewWrapper__"]::after,
+    .container__955a3::before,
+    .container__955a3::after {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+// Quests dedicated view
+// Hide the hero banner ("Introducing Discord Orbs") - heroWrapper__955a3.
+// Partial-match is scoped to the Quests container (__955a3) so it won't
+// affect other views. Avoids targeting heroGradient_ which was never present.
+.theme-dark .page__5e434 .container__955a3 {
+    [class*="heroWrapper__"] {
+        display: none !important;
+    }
+
+    // Remove the white/tinted card background on quest tile text containers.
+    // textContainer_956c6 is scoped via its quest tile ancestor article so the
+    // partial match cannot leak outside the Quests grid.
+    article[class*="questTile_"] [class*="textContainer_"] {
+        background-color: transparent !important;
+    }
+}
+
+// Quests toolbar tabs: match Shop tab size and active indicator weight.
+.theme-dark .page__5e434 .container__955a3 {
+    .headerBar__1a9ce {
+        .tabs__26669 .tabWrapper__26669,
+        .container__26669 .tabWrapper__26669 {
+            height: 36px;
+            margin: 0 0 0 8px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            border-radius: 0;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+
+            &::before,
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .tabs__26669 .tab__26669,
+        .container__26669 .tab__26669 {
+            @include TypeBody;
+            color: $TextFillColorPrimary !important;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            padding: 0 10px;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+
+            &:hover {
+                color: $TextFillColorSecondary !important;
+            }
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .tabs__26669 .tab__26669 [class*="text-"],
+        .container__26669 .tab__26669 [class*="text-"],
+        .tabs__26669 .tab__26669 [data-text-variant],
+        .container__26669 .tab__26669 [data-text-variant] {
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+        }
+
+        .tabs__26669 .tab__26669.selected__26669,
+        .container__26669 .tab__26669.selected__26669 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+
+            &::before {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        // Some builds put selected state on the wrapper instead of the title node.
+        .tabs__26669 .tabWrapper__26669.selected_aa8da2,
+        .container__26669 .tabWrapper__26669.selected_aa8da2 {
+            background-color: transparent !important;
+            border-bottom: 0 !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+        }
+    }
+}
+>>>>>>> Stashed changes

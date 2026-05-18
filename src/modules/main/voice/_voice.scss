@@ -36,6 +36,7 @@
         }
     }
 
+<<<<<<< Updated upstream
     // Buttons bar
     .buttonSection__1405b{
         border-radius: 4px;
@@ -43,6 +44,56 @@
     .attachedCaretButtonContainer_f1ceac{
         .button__201d5[aria-label="More Options"]{
             svg{
+=======
+    // Control Tray (Bottom buttons)
+    .videoControls_bfe55a {
+        .bottomControls_bfe55a {
+            padding: 16px;
+        }
+
+        // Remove group outlines
+        .buttonSection__1405b,
+        .wrapper__1405b {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .centerButton_f1ceac {
+            border-radius: 4px;
+            transition: all 0.2s ease;
+
+            &.colorable_f1ceac.primaryDark_f1ceac {
+                background-color: $ControlFillColorDefault;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary;
+                }
+
+                &:active {
+                    background-color: $ControlFillColorTertiary;
+                }
+            }
+
+            &.disconnect_f1ceac {
+                background-color: $SystemFillColorCriticalBackground;
+                color: $SystemFillColorCritical;
+
+                &:hover {
+                    background-color: $SystemFillColorCriticalBackground;
+                    filter: brightness(1.2);
+                }
+            }
+        }
+
+        // Fix missing Options icon
+        .button__201d5[aria-label*="ptions"] {
+            &::before {
+                display: none !important;
+            }
+
+            svg {
+>>>>>>> Stashed changes
                 display: block !important;
             }
         }
@@ -73,14 +124,31 @@
             }
         }
     }
+<<<<<<< Updated upstream
     .participantsButton__211d1{
+=======
+
+    .participantsButton__211d1,
+    [class*="participantsButton_"] {
+>>>>>>> Stashed changes
         background-color: $ControlOnImageFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
         &:hover{
             background-color: $ControlOnImageFillColorSecondary;
         }
+<<<<<<< Updated upstream
         &:active{
             background-color: $ControlOnImageFillColorTertiary;
+=======
+    }
+
+    // Sidebar chat divide fixes
+    &.sidebarOpen_cb9592,
+    .channelChatWrapper_cb9592 {
+        border: none;
+        &::before, &::after {
+            display: none;
+>>>>>>> Stashed changes
         }
     }
 }

@@ -1,10 +1,18 @@
+<<<<<<< Updated upstream
 .theme-dark .searchResultsWrap_a9e706{
+=======
+.theme-dark .searchResultsWrap_a98f3b{
+>>>>>>> Stashed changes
     background-color: $LayerFillColorDefault;
     border-left: 1px solid $CardStrokeColorDefault;
 
     .searchHeader_f3b986{
         background-color: transparent;
+<<<<<<< Updated upstream
         .totalResults_f3b986 > div{
+=======
+        .totalResults_ae7890 > div{
+>>>>>>> Stashed changes
             @include TypeBodyStrong;
         }
     }
@@ -41,7 +49,11 @@
     }
 
     // Result
+<<<<<<< Updated upstream
     .searchResult__02a39{
+=======
+    .searchResult__80bf8{
+>>>>>>> Stashed changes
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
@@ -63,3 +75,4 @@
         }
     }
 }
+

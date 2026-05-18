@@ -1,122 +1,135 @@
-.theme-dark{
+.theme-dark {
     // Backdrop
-    .backdrop__1a911{
+    @include modal-backdrop {
         background: $SmokeFillColorDefault !important; // Override inline
         opacity: 1 !important; // Override inline
     }
 
     // Body
+<<<<<<< Updated upstream
     .root__49fc1{
         background-color: $SolidBackgroundFillColorBase;
+=======
+    @include modal-root {
+        background-color: $MicaBackgroundFillColorBase;
+        backdrop-filter: blur(16px);
+>>>>>>> Stashed changes
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
     }
 
     // Headers
-    .header__49fc1, // eg. notification settings
-    // .header__802af, // eg. change password
-    // .header-1kWa4s, // eg. change username
-    .header-1R3myj{ // eg. edit email
+    @include modal-header {
         padding: 24px;
         background-color: $LayerFillColorAlt;
         border-radius: 8px 8px 0 0;
         align-items: unset;
+
         .heading-lg-semibold__58a54, // eg. notification settings
         .title__802af, // eg. change password
         .title_b404ff, // eg. change username
-        .title_ad198f{ // eg. edit email
+        .title_ad198f { // eg. edit email
             @include TypeSubtitle;
             text-align: left;
         }
+
         .text-md-normal__6e567, // eg. notification settings
         .subtitle__802af, // eg. change password
         .subtitle_b404ff, // eg. change username
-        .subtitle_ad198f{ // eg. edit email
+        .subtitle_ad198f { // eg. edit email
             @include TypeBody;
             color: $TextFillColorPrimary;
             text-align: left;
         }
 
         // Remove divider line in notification settings
-        &.separator__49fc1{
+        &.separator__7dd5e {
             box-shadow: none;
         }
     }
 
     // Content
-    .content__49fc1{
+    @include modal-content {
         padding-right: 24px !important;
         padding-left: 24px;
         background-color: $LayerFillColorAlt;
         border-bottom: 1px solid $CardStrokeColorDefault;
         border-radius: 0;
 
-        video{
+        video {
             display: none;
         }
     }
 
     // Footer
-    .footer__49fc1{
+    @include modal-footer {
         padding: 24px;
         background-color: transparent;
 
         // Remove divider line in notification settings
-        &.footerSeparator__49fc1{
+        &.footerSeparator__49fc1 {
             box-shadow: none;
         }
 
         // Add gap between buttons
-        .button__201d5{
+        .button__201d5 {
             margin-left: 8px;
         }
     }
 }
 
-.theme-dark{
+.theme-dark {
     // Special cases
+
     // Remove images from headers
     // screenshare
-    .art_e1cc86{
+    .art__4ad81 {
         display: none;
     }
+
     // Verify email
-    .headerImage_a62824{
+    .headerImage_a62824 {
         display: none;
     }
+
     // NOTE: 2023-06-13 - Style fix for the verify email modal which uses the wrong class for the actions div
-    .headerImage_a62824 ~ div .content__49fc1{
+    .headerImage_a62824 ~ div .content__49fc1 {
         background-color: transparent;
     }
-    .buttons_ce7406{
+
+    .buttons_ce7406 {
         margin-top: 16px;
         flex-direction: row;
-        button{
+
+        button {
             flex-grow: 1;
             width: 50%;
         }
-        button:first-child{
+
+        button:first-child {
             margin-right: 8px;
         }
     }
+
     // Enter phone number
-    .phoneField_a0c54f{
-        .countryButton_a0c54f{
+    .phoneField_a0c54f {
+        .countryButton_a0c54f {
             min-width: 64px;
         }
     }
 
     // Upload sound
-    .headerContainer_a52f04{
+    .headerContainer_a52f04 {
         margin-bottom: 0;
-        .header_a52f04{
+
+        .header_a52f04 {
             @include TypeSubtitle;
             text-align: left;
         }
     }
 
     // Event info modal
-    .card__88264{
+    .card__88264 {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;

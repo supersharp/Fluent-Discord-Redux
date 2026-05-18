@@ -1,5 +1,5 @@
 .theme-dark .audioControls_f316dd,
-.theme-dark .videoControls_f316dd{
+.theme-dark .videoControls_bfe55a{
     height: 48px;
     padding: 0 8px;
     background-color: $SolidbackgroundFillColorQuarternary;
@@ -43,7 +43,7 @@
     }
 }
 
-.theme-dark .videoControls_f316dd{
+.theme-dark .videoControls_bfe55a{
     width: calc(100% - 16px);
     bottom: 8px;
     left: 8px;
@@ -58,11 +58,11 @@
     }
 }
 // Remove default video player animations
-.theme-dark .videoControls_f316dd{
+.theme-dark .videoControls_bfe55a{
     transform: unset !important; // Override inline
 }
 .theme-dark .wrapperControlsHidden_f316dd {
-    .videoControls_f316dd{
+    .videoControls_bfe55a{
         animation: $AnimationSoftDismiss fluent-hide-video-controls;
         opacity: 0;
     }
@@ -90,3 +90,4 @@
         display: none;
     }
 }
+

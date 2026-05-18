@@ -1,35 +1,67 @@
+<<<<<<< Updated upstream
 // This file is courtesy of Discord's Department of Redundancy Depart at Discord
 // Add server modal has light theme manually applied to it for some reason.
 .theme-light .root__49fc1{
     background: $SolidBackgroundFillColorBase;
     border: 1px solid $SurfaceStrokeColorDefault;
+=======
+// Add server modal
+.root__49fc1{
+    background: $SolidBackgroundFillColorBase !important; // Override inline
+    border: 1px solid $SurfaceStrokeColorDefault !important;
+>>>>>>> Stashed changes
     border-radius: 8px;
     box-shadow: none;
 
-    // Main page
-    // Header (main page)
+    // Header (common across all sub-pages)
     .header__49fc1{
         padding: 24px 24px 0 24px;
+<<<<<<< Updated upstream
         background-color: $CardBackgroundFillColorDefault;
+=======
+        background-color: transparent !important; // Override inline
+>>>>>>> Stashed changes
         align-items: unset;
+
+        // Title/subtitle text - common styles for all sub-page title variants
         .title_c04f35,
-        .subtitle_c04f35{
+        .subtitle_c04f35,
+        .title__78f69,
+        .subtitle__78f69,
+        .title_b917ac,
+        .subtitle_b917ac,
+        .title__991a0,
+        .text-sm-normal__95a78{
             text-align: left;
             color: $TextFillColorPrimary !important; // Override inline
         }
-        .title_c04f35{
+        .title_c04f35,
+        .title__78f69,
+        .title_b917ac,
+        .title__991a0{
             @include TypeSubtitle;
+            margin: 0;
         }
-        .subtitle_c04f35{
+        .subtitle_c04f35,
+        .subtitle__78f69,
+        .subtitle_b917ac,
+        .text-sm-normal__95a78{
             @include TypeBody;
         }
     }
 
-    // Content
+    // Content (common across all sub-pages)
     .content__49fc1{
         padding: 24px 24px 0 24px;
+<<<<<<< Updated upstream
         background-color: $CardBackgroundFillColorDefault;
+=======
+        background-color: transparent !important; // Override inline
+        border-radius: 0;
+>>>>>>> Stashed changes
     }
+
+    // Main page options list
     .templatesList_c04f35,
     .optionsList__78f69{
         margin-top: 0;
@@ -43,8 +75,13 @@
             height: 32px;
             margin-bottom: 4px;
             padding: 0 12px;
+<<<<<<< Updated upstream
             background-color: transparent;
             border: 1px solid transparent;
+=======
+            background-color: $ControlFillColorDefault !important; // Override inline
+            border: 1px solid $ControlStrokeColorDefault !important;
+>>>>>>> Stashed changes
             border-radius: 4px;
             .icon_eb2cd2{
                 display: none;
@@ -65,7 +102,8 @@
             }
         }
     }
-    // Server name
+
+    // Server name page
     .nameInput_b917ac{
         .label_b717a1{
             color: $TextFillColorPrimary;
@@ -73,19 +111,26 @@
             text-transform: none;
         }
     }
+    .createGuild_b917ac{
+        margin-top: 0;
+        padding-top: 24px;
+    }
+
     // Community guidelines
     .guidelines_b917ac{
         margin-bottom: 16px;
         color: $TextFillColorSecondary !important; // Override inline
         @include TypeCaption;
     }
+
     // Skip question
     .skip__78f69{
         color: $TextFillColorSecondary !important; // Override inline
         @include TypeCaption;
         text-align: left;
     }
-    // Server link
+
+    // Server link page
     .input__991a0{
         background-color: transparent;
     }
@@ -93,7 +138,6 @@
     .input__0ed4f::placeholder{
         font-weight: normal;
     }
-    // Example links
     .formTitle__991a0{
         color: $TextFillColorPrimary;
         @include TypeBody;
@@ -107,7 +151,11 @@
             cursor: pointer;
         }
     }
-    // Server discovery
+    .examplesForm__991a0 ~ .rowContainer__991a0{
+        display: none;
+    }
+
+    // Server discovery row
     .rowContainer__991a0{
         height: 32px;
         margin-bottom: 16px;
@@ -146,6 +194,7 @@
             color: $TextFillColorPrimary;
         }
     }
+<<<<<<< Updated upstream
 
 
     // Sub page (de ja vu?)
@@ -230,4 +279,6 @@
         padding-top: 24px;
         border-radius: 0;
     }
+=======
+>>>>>>> Stashed changes
 }

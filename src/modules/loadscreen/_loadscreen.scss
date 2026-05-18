@@ -1,118 +1,115 @@
 // Hide titlebar
-.theme-dark .container_a2f514{
+.theme-dark .container_a2f514 {
     padding-top: 32px;
     top: -32px;
 }
 
 // Source: C:\Windows\System32\oobe\FirstLogonAnim.html
-@keyframes fluent-loading-blob1-path{
-    0%{
-        top:50vh;
-        left:50vw;
-        width:5vw;
-        height:5vw;
-        opacity:0.5;
+@keyframes fluent-loading-blob1-path {
+    0% {
+        top: 50vh;
+        left: 50vw;
+        width: 5vw;
+        height: 5vw;
+        opacity: 0.5;
     }
-    50%{
-        top:0vh;
-        left:45vw;
-        width:60vw;
-        height:60vw;
+    50% {
+        top: 0vh;
+        left: 45vw;
+        width: 60vw;
+        height: 60vw;
         opacity: 1;
     }
-    100%{
-        top:50vh;
-        left:50vw;
-        width:5vw;
-        height:5vw;
-        opacity:0.5;
+    100% {
+        top: 50vh;
+        left: 50vw;
+        width: 5vw;
+        height: 5vw;
+        opacity: 0.5;
     }
 }
+
 @keyframes fluent-loading-blob2-path {
-    0%{
-        top:40vh;
-        left:45vw;
-        width:15vw;
-        height:15vw;
+    0% {
+        top: 40vh;
+        left: 45vw;
+        width: 15vw;
+        height: 15vw;
     }
-    50%{
-        top:37vh;
-        left:-10vw;
-        width:80vw;
-        height:80vw;
+    50% {
+        top: 37vh;
+        left: -10vw;
+        width: 80vw;
+        height: 80vw;
     }
-    100%{
-        top:40vh;
-        left:45vw;
-        width:15vw;
-        height:15vw;
+    100% {
+        top: 40vh;
+        left: 45vw;
+        width: 15vw;
+        height: 15vw;
     }
 }
+
 @keyframes fluent-loading-blob3-path {
-    0%{
-        top:30vh;
-        left:30vw;
-        width:25vw;
-        height:25vw;
+    0% {
+        top: 30vh;
+        left: 30vw;
+        width: 25vw;
+        height: 25vw;
     }
-    50%{
-        top:-50vh;
-        left:-20vw;
-        width:120vw;
-        height:120vw;
+    50% {
+        top: -50vh;
+        left: -20vw;
+        width: 120vw;
+        height: 120vw;
     }
-    100%{
-        top:30vh;
-        left:30vw;
-        width:25vw;
-        height:25vw;
-    }
-}
-@keyframes fluent-loading-blob-fade{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
+    100% {
+        top: 30vh;
+        left: 30vw;
+        width: 25vw;
+        height: 25vw;
     }
 }
 
+@keyframes fluent-loading-blob-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-.theme-dark .container_a2f514{
+.theme-dark .container_a2f514 {
     background-color: #000;
 
     // Loading blob animations
     &::before,
-    &::after{
+    &::after {
         content: "";
         position: absolute;
     }
-    &::before{
+
+    &::before {
         background: radial-gradient(50% 50% at 50% 50%, rgba(12, 119, 255, 0.3) 15.62%, rgba(12, 119, 255, 0) 100%);
         animation: fluent-loading-blob1-path 15s infinite, fluent-loading-blob-fade 1332ms ease-out;
     }
-    &::after{
+
+    &::after {
         background: radial-gradient(50% 50% at 50% 50%, rgba(0, 56, 255, 0.3) 15.62%, rgba(12, 119, 255, 0) 100%);
         animation: fluent-loading-blob2-path 20s infinite, fluent-loading-blob-fade 1332ms ease-out;
     }
 }
-.content_a2f514{
+
+.content_a2f514 {
     width: 64px;
     height: 64px;
-    &::before{
+
+    &::before {
         content: "";
         position: absolute;
         display: block;
         background: radial-gradient(50% 50% at 50% 50%, rgba(65, 56, 210, 0.5) 15.62%, rgba(65, 56, 210, 0) 100%);
         animation: fluent-loading-blob3-path 30s infinite, fluent-loading-blob-fade 1332ms ease-out;
     }
-}
 
-.content_a2f514{
-    video{
-        display: none;
-    }
-    &::after{
+    &::after {
         content: "Connecting";
         width: 100%;
         position: absolute;
@@ -122,24 +119,39 @@
         text-align: center;
     }
 
+    video {
+        display: none;
+    }
+
+    // Hide splash/tip text
+    .splashHeader__8f8f0,
+    .splashText_d71087,
+    .splashText_cdb473,
+    .tipTitle_a7615c,
+    [class*="splashHeader"],
+    [class*="splashText"],
+    [class*="tipTitle"] {
+        display: none;
+    }
+
     // Loading circle
-    .text_a2f514{
+    .text_a2f514 {
         width: 64px;
         height: 64px;
         display: block;
         animation: fluent-loading-circle 1.5s linear infinite;
-        .body_a2f514{
+
+        .body_a2f514 {
             line-height: unset;
             font-size: 0;
-
             width: 64px;
             height: 64px;
             position: absolute;
-
             background-color: transparent;
             clip: rect(0, 64px, 64px, 32px);
             animation: fluent-loading-circle-progress-1 5s linear infinite;
-            &::after{
+
+            &::after {
                 content: "";
                 position: absolute;
                 height: 64px;
@@ -154,17 +166,20 @@
             }
         }
 
+        // Hide all tip/hint text
         .tipTitle_a2f514,
-        .tip_a2f514{
+        .tip__30cbe,
+        > *:not(.body_a2f514) {
             display: none;
         }
     }
 }
 
 // Links
-.problemsText_a2f514{
+.problemsText_a2f514 {
     color: $TextFillColorPrimary;
 }
-.anchor_edefb8{
+
+.anchor_edefb8 {
     color: $AccentTextFillColorPrimary;
 }

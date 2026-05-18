@@ -20,6 +20,7 @@
     --fluent-accent-hue-sat: 207, 100%;
     --fluent-accent-lightness: 42%;
     --fluent-text-on-accent-color: 0, 0, 0;
+  --fluent-selected-ring-color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
     --fluent-acrylic-background: url(https://takosthings.github.io/Fluent-Discord/img/Captured_Motion_27.jpg);
     --fluent-acrylic-background-blur: 24px;
     --fluent-acrylic-background-dimness: 75%;

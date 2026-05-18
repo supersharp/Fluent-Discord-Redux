@@ -3,15 +3,173 @@
         @include TypeBodyStrong;
     }
 
+<<<<<<< Updated upstream
     .pageWrapper_a3a4ce{
+=======
+    // Modern Discover layout stack (covers Apps / Servers / Quests views).
+    .page__5e434 .container_a592e1,
+    .page__5e434 .outerContainer_e1147e,
+    .page__5e434 .innerContainer_e1147e,
+    .page__5e434 [class*="container_a592e1"],
+    .page__5e434 [class*="outerContainer_"],
+    .page__5e434 [class*="innerContainer_"] {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .page__5e434 .headerBar__8a7fc,
+    .page__5e434 [class*="headerBar__"] {
+        background: transparent !important;
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .page__5e434 .backdrop__8a7fc,
+    .page__5e434 [class*="backdrop__"] {
+        display: none !important;
+    }
+
+    .pageWrapper_a3a4ce {
+        background-color: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-radius: 8px 0 0 0;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+    }
+
+    .pageWrapper_a3a4ce .scroller__23746,
+    .pageWrapper_a3a4ce .contentSection_b6bcee,
+    .pageWrapper_a3a4ce .container_e9ef78,
+    .pageWrapper_a3a4ce .container__551b0,
+    .pageWrapper_a3a4ce .header__551b0,
+    .pageWrapper_a3a4ce .scroller__551b0 {
+        background-color: transparent;
+        background: transparent !important;
+    }
+
+    // Cards
+    .pageWrapper_a3a4ce .card__84e3e {
+>>>>>>> Stashed changes
         background-color: $LayerFillColorDefault;
         border-top: 1px solid $CardStrokeColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
         border-radius: 8px 0 0 0;
     }
 
+<<<<<<< Updated upstream
     .sidebar_c48ade{
         .container__91a9d{
+=======
+    // Discover sidebar
+    .pageWrapper_a3a4ce .sidebarList__5e434,
+    .pageWrapper_a3a4ce [class*="sidebarList_"] {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+
+        .container__551b0,
+        .header__551b0,
+        .scroller__551b0,
+        .nav__551b0 {
+            background-color: transparent !important;
+        }
+    }
+
+    // Hash-agnostic fallback for current/future Discover class rotations.
+    .pageWrapper_a3a4ce > [class*="sidebarList"] {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .pageWrapper_a3a4ce > [class*="sidebarList"] > div,
+    .pageWrapper_a3a4ce > [class*="sidebarList"] > nav,
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="header"],
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="scroller"],
+    .pageWrapper_a3a4ce > [class*="sidebarList"] [class*="nav"] {
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    // Discover-specific sidebar fallback based on nav item structure.
+    .sidebarList__5e434:has([class*="navItem__"]),
+    [class*="sidebarList_"]:has([class*="navItem__"]) {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+
+        [class*="container__"],
+        [class*="header__"],
+        [class*="scroller__"],
+        [class*="nav__"] {
+            background-color: transparent !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border: 0 !important;
+        }
+    }
+
+    // Nav
+    .pageWrapper_a3a4ce .nav__551b0 {
+        padding: 0 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .navItem__551b0 {
+            width: 100%;
+            min-height: 32px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            margin-right: 0;
+            margin-bottom: 2px;
+            padding: 0 8px;
+            position: relative;
+
+            .navItemIcon__551b0 {
+                color: $TextFillColorSecondary;
+            }
+
+            &.selected__551b0 {
+                background-color: $SubtleFillColorSecondary;
+
+                .navItemIcon__551b0 {
+                    color: $TextFillColorPrimary;
+                }
+
+                &::before {
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    background-color: $AccentBase;
+                    border-radius: 2px;
+                }
+            }
+
+            &:hover:not(.selected__551b0) {
+                background-color: $SubtleFillColorTertiary;
+            }
+        }
+    }
+
+    .pageWrapper_a3a4ce .sidebar_c48ade {
+        .container__91a9d {
+>>>>>>> Stashed changes
             height: 32px;
             margin-bottom: 2px;
             position: relative;
@@ -68,8 +226,18 @@
                     color: $TextFillColorSecondary;
                 }
             }
+<<<<<<< Updated upstream
             .clearIcon__21453,
             .searchIcon_f69601{
+=======
+
+            padding-right: 0;
+            border: 0;
+
+            .clearIcon__21453,
+            .searchIcon_f69601,
+            .searchIcon_d1a3c1 {
+>>>>>>> Stashed changes
                 width: 16px;
                 height: 16px;
                 position: absolute;
@@ -92,6 +260,7 @@
         color: $TextFillColorPrimary;
     }
 
+<<<<<<< Updated upstream
     // Search box
     .searchBox__56feb{
         padding-right: 0;
@@ -128,15 +297,157 @@
     .categories_f69601{
         .categoryPill_f69601{
             .categoryLabel-2m4AT-{
+=======
+
+    // Results
+    .categories__6131a {
+        .categoryPill_f69601 {
+            .categoryLabel-2m4AT- {
+>>>>>>> Stashed changes
                 @include TypeBody;
                 color: $TextFillColorSecondary;
             }
             &.selected_f69601{
                 background-color: $AccentBase;
+<<<<<<< Updated upstream
                 .categoryLabel_f69601{
+=======
+
+                .categoryLabel__81b99 {
+>>>>>>> Stashed changes
                     color: $TextFillColorPrimary;
                 }
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    // Match Quests/Friends look for Discover Apps & Servers top toolbar.
+    .page__5e434 {
+
+        // Friends-style rounded corner belongs to the content pane, not the toolbar.
+        .outerContainer_e1147e .scroller__23746,
+        .container_d08938 .scroller__23746,
+        .container__955a3 .scroller__23746,
+        .shopViewWrapper__6db1d,
+        .shopScroll__08415 {
+            border-top-left-radius: 8px !important;
+            overflow: hidden;
+        }
+
+        // Apps/Servers: opaque toolbar matching Quests tone.
+        // Uses direct solid color — blend-mode approaches render as transparent.
+        .outerContainer_e1147e > .innerContainer_e1147e,
+        .container_d08938 {
+            box-shadow: none !important;
+            border: 0 !important;
+        }
+
+        .outerContainer_e1147e > .innerContainer_e1147e > .headerBar__8a7fc,
+        .container_d08938 > .headerBar__8a7fc,
+        .headerBar__8a7fc.overlay__8a7fc {
+            background: #202020 !important;
+            background-image: none !important;
+            background-blend-mode: normal !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .container__955a3 .headerBar__1a9ce,
+        .container__955a3 .headerBar__1a9ce.container__9293f,
+        .container__955a3 .headerBar__1a9ce.container__9293f.themed__9293f {
+            background-color: transparent !important;
+            background-image: none !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41,
+        .headerBar__8a7fc .container__65d41,
+        .headerBar__8a7fc .measurements__65d41 {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 {
+            height: 36px;
+            min-height: 36px;
+            margin: 0 0 0 8px;
+            padding: 0 10px;
+            border-radius: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include TypeBody;
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+            border: 0 !important;
+            border-bottom: 0 !important;
+            box-shadow: none !important;
+            color: $TextFillColorPrimary !important;
+
+            &:hover {
+                background-color: transparent !important;
+                color: $TextFillColorSecondary !important;
+            }
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+
+            &::before {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 [class*="text-"],
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2 [data-text-variant] {
+            font-feature-settings: 'rclt' 0 !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+        }
+
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2[aria-selected="true"],
+        .headerBar__8a7fc .tabs__65d41 .tab__65d41.item_aa8da2.selected_aa8da2 {
+            background-color: transparent !important;
+            color: $TextFillColorPrimary !important;
+            border-bottom: 0 !important;
+            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+
+            &::after {
+                display: none !important;
+                content: none !important;
+            }
+        }
+
+
+    }
+
+    // Hard override for live Apps/Servers DOM path — highest specificity, flat opaque color, no blend modes.
+    // Backdrop has inline opacity:0 so it must be hidden; the headerBar itself gets the color.
+    .content__592e1 .outerContainer_e1147e .backdrop__8a7fc,
+    .content__592e1 .container_d08938 .backdrop__8a7fc {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .content__592e1 .outerContainer_e1147e > .innerContainer_e1147e > .headerBar__8a7fc,
+    .content__592e1 .container_d08938 > .headerBar__8a7fc {
+        background: #202020 !important;
+        background-image: none !important;
+        background-blend-mode: normal !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+>>>>>>> Stashed changes
 }

@@ -1,6 +1,8 @@
 .vc-settings-quickActions-card{
     padding: 0;
     border: 0;
+    background-color: $CardBackgroundFillColorDefault !important;
+    box-shadow: none !important;
 }
 .vc-settings-quickActions-pill{
     background-color: $ControlFillColorDefault;
@@ -12,6 +14,41 @@
         background-color: $ControlFillColorSecondary;
         box-shadow: none;
         transform: none;
+    }
+    &:active{
+        background-color: $ControlFillColorTertiary;
+    }
+}
+
+// Vencord/Equicord primary buttons (e.g. "Notification Settings")
+button.vc-btn-base.vc-btn-primary{
+    background-color: $AccentFillColorDefault;
+    border: 1px solid;
+    border-color: $AccentControlElevationBorder;
+    color: #FFF !important;
+    border-radius: 4px;
+    svg,
+    .vc-icon,
+    [class*="icon"]{
+        color: #FFF !important;
+        fill: currentColor;
+    }
+    &:hover{
+        background-color: $AccentFillColorSecondary;
+    }
+    &:active{
+        background-color: $AccentFillColorTertiary;
+    }
+}
+// Vencord/Equicord secondary buttons
+button.vc-btn-base.vc-btn-secondary{
+    background-color: $ControlFillColorDefault;
+    border: 1px solid;
+    border-color: $ControlElevationBorder;
+    color: $TextFillColorPrimary;
+    border-radius: 4px;
+    &:hover{
+        background-color: $ControlFillColorSecondary;
     }
     &:active{
         background-color: $ControlFillColorTertiary;
@@ -42,4 +79,11 @@
 }
 #vencordthemes-tab .vc-settings-quickActions-card{
     grid-template-columns: repeat(3,1fr);
+}
+
+// Switch indicator color — Vencord settings don't have .theme-dark ancestor
+.vc-switch-checked .vc-switch-indicator,
+.vc-switch-checked [data-mana-component="switchIndicator"],
+.vc-switch-checked [class*="switchIndicator"]{
+    background-color: $AccentTextFillColorPrimary !important;
 }

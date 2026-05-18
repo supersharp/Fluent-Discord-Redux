@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .theme-dark .contentWrapper__08434,
 .theme-dark #emoji-picker-tab-panel{
     background: $MicaBackgroundFillColorBase;
@@ -14,6 +15,55 @@
 }
 
 .theme-dark{
+=======
+.theme-dark {
+    // Clear parent backgrounds to allow blur to show through
+    [id^="popout_"]:has(.wrapper_c0e32c),
+    .layer__59d0d:has(.wrapper_c0e32c),
+    .animatorBottom_faf9c0:has(.wrapper_c0e32c),
+    .animatorBottom_faf9c0:has(.wrapper_c0e32c) > div {
+        background: transparent !important;
+    }
+
+    // Clear internal backgrounds that might block the Mica
+    .contentWrapper__08434,
+    #emoji-picker-tab-panel,
+    .wrapper_c0e32c,
+    .emojiPicker_c0e32c,
+    .bodyWrapper_c0e32c,
+    .emojiPickerListWrapper_c0e32c,
+    .listWrapper_c656ac,
+    .scroller_affa7e {
+        background: transparent !important;
+        --background-tertiary: transparent !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --popout-background: transparent !important;
+    }
+
+    // Apply Mica to the main container
+    .contentWrapper__08434,
+    #emoji-picker-tab-panel {
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(16px);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        box-shadow: var(--elevation-stroke), var(--elevation-high);
+        overflow: hidden;
+    }
+
+    .contentWrapper__08434 #emoji-picker-tab-panel,
+    .contentWrapper__08434 #gif-picker-tab-panel,
+    .contentWrapper__08434 #sticker-picker-tab-panel,
+    .contentWrapper__08434 #kaomoji-picker-tab-panel {
+        background: transparent !important;
+        backdrop-filter: none;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+>>>>>>> Stashed changes
     // Navigation
     .nav__08434{
         .navButton__08434 {
@@ -57,6 +107,7 @@
         background-color: transparent;
         box-shadow: none;
     }
+
     // Search
     .inner_fea832{
         padding: 0;
@@ -64,6 +115,25 @@
     .container__33507{ // GIFs search
         background-color: transparent;
     }
+<<<<<<< Updated upstream
+=======
+    .wrapper__72c38.container__0f084{
+        background-color: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        outline: none !important;
+        position: relative; // For absolute icon positioning
+
+        &:focus-within,
+        &:hover{
+            background-color: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    }
+
+>>>>>>> Stashed changes
     // Emoji search
     // Fix inherited height
     .medium_fea832 .input_fea832{
@@ -109,7 +179,18 @@
     // Emoji
     // Sidebar
     .categoryList_c0e32c{
+<<<<<<< Updated upstream
         background-color: $SolidBackgroundFillColorBase;
+=======
+        background-color: transparent !important;
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(16px);
+    }
+
+    // Sticker sidebar
+    .wrapper__4e6ce.categoryList__3ad28{
+        background-color: $SolidBackgroundFillColorSecondary;
+>>>>>>> Stashed changes
     }
     // Replace emoji icons
     .categoryItemDefaultCategory_b9ee0c{
@@ -161,10 +242,35 @@
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    // Selected state for categories
+    .categoryItemDefaultCategorySelected_b9ee0c,
+    .categoryItemGuildCategorySelected_b9ee0c,
+    .categoryItemRecentEmojiSelected_b9ee0c {
+        background-color: $AccentFillColorDefault !important;
+        border-radius: 4px;
+        &::before {
+            color: #FFF !important; // Force white as requested
+        }
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    // Hover state for categories
+    .categoryItem_b9ee0c:hover:not([class*="Selected"]) {
+        background-color: $SubtleFillColorSecondary !important;
+        border-radius: 4px;
+    }
+
+>>>>>>> Stashed changes
     // Info bar
     .inspector_aeaaeb {
         background-color: $SolidBackgroundFillColorSecondary;
     }
+
     // "Popular" badge in info bar
     .topGuildEmojiBadge_aeaaeb{
         display: none;
@@ -196,12 +302,10 @@
             margin: 3px;
         }
     }
+
     // Diversity selector in stand alone emoji popout (eg. reaction)
     .diversitySelectorOptions_a45a2a {
-        // top: 0;
         right: 12px;
-    }
-    .diversitySelectorOptions_a45a2a {
         border: 1px solid $ControlStrokeColorDefault;
         .diversityEmojiItem_a45a2a{
             width: 30px;
@@ -212,7 +316,6 @@
             margin: 3px;
         }
     }
-
 
     // Nitro prompt
     .premiumPromo__3a1b6{

@@ -44,7 +44,7 @@
     }
 
     // Commands header
-    .categoryHeader_d1405b{
+    .categoryHeader__0034b{
         background-color: $CardStrokeColorDefaultSolid;
         .headerLabel__14245{
             @include TypeBody;
@@ -54,7 +54,7 @@
     }
 
     // Commands matching: header
-    .contentTitle__13533{
+    .contentTitle__0f2e8{
         @include TypeBody;
         color: $TextFillColorPrimary;
         text-transform: none;
@@ -83,7 +83,7 @@
                 @include TypeBody;
                 color: $TextFillColorTertiary;
             }
-            .option__920ab{
+            .option__56a50{
                 padding: 0;
                 margin-left: 1ch;
                 background-color: transparent;
@@ -105,3 +105,4 @@
         }
     }
 }
+

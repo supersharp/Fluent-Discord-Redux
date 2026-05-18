@@ -3,8 +3,14 @@
     // Body
     .tabBody__133bf{
         background-color: $LayerFillColorDefault;
+<<<<<<< Updated upstream
         border-top: 1px solid $CardStrokeColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
+=======
+        border-top: 0;
+        border-left: 0;
+        box-shadow: none;
+>>>>>>> Stashed changes
         border-radius: 8px 0 0 0;
         &::before{
             display: none;
@@ -54,20 +60,24 @@
 
     // Empty
     .friendsEmpty_c7ea19{
-        .image__08515{
+        .image__08515,
+        [class*="image_"] {
             filter: brightness(200%)
         }
-        .text__0e310{
+        .text__0e310,
+        [class*="text_"] {
             @include TypeBody;
             color: $TextFillColorPrimary;
         }
     }
 
     // Add friend
-    .header__94b08{
+    .header__94b08,
+    [class*="header_"] {
         padding: 20px;
     }
-    .addFriendInputWrapper__72ba7{
+    .addFriendInputWrapper__72ba7,
+    [class*="addFriendInputWrapper_"] {
         padding: 0;
         background-color: transparent;
         border: 0;
@@ -77,7 +87,8 @@
         }
     }
     // Remove hint text
-    .addFriendHint__72ba7{
+    .addFriendHint__72ba7,
+    [class*="addFriendHint_"] {
         display: none;
     }
 }

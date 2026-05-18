@@ -59,7 +59,12 @@
     }
 
     .container__95796, // Mentions
+<<<<<<< Updated upstream
     .channel__427f0{ // Unreads
+=======
+    .channel__972a0{ // Unreads
+        padding-right: 16px;
+>>>>>>> Stashed changes
         padding-bottom: 16px;
         .channelHeader__35a7e{
             top: -1px;
@@ -81,7 +86,7 @@
     }
 
     // Unread headers have a collapse button
-    .channel__427f0{
+    .channel__972a0{
         .channelHeader__35a7e{
             padding-left: 48px;
         }
@@ -113,3 +118,4 @@
         }
     }
 }
+

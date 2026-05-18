@@ -1,4 +1,5 @@
 .theme-dark{
+<<<<<<< Updated upstream
     .sidebar__5e434{
         &::after{
             display: none;
@@ -8,6 +9,70 @@
         background-color: transparent;
         border: 0;
         border-radius: 0;
+=======
+    .sidebar__5e434 {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+        &::after {
+            display: none !important;
+            content: none !important;
+        }
+    }
+    .sidebarList__5e434 {
+        background: transparent !important;
+        border: 0 !important;
+        border-right: 0 !important;
+        border-radius: 0;
+        box-shadow: none !important;
+        &::before,
+        &::after {
+            display: none !important;
+            content: none !important;
+        }
+    }
+    .sidebarListRounded__5e434 {
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+    .sidebar__5e434 + * {
+        border-left: 0 !important;
+        border-top: 0 !important;
+        box-shadow: none !important;
+    }
+    .sidebar__5e434 + *::before,
+    .sidebar__5e434 + *::after {
+        display: none !important;
+        content: none !important;
+    }
+    .sidebarList__5e434 + * {
+        border-left: 0 !important;
+        border-top: 0 !important;
+        box-shadow: none !important;
+    }
+    .privateChannels_e6b769 {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+    .container__2637a {
+        background: transparent !important;
+        border-right: 0 !important;
+        box-shadow: none !important;
+    }
+    .sidebarResizeHandle__5e434 {
+        display: none !important;
+        background: transparent !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
+        opacity: 0 !important;
+        border: none !important;
+        &::before, &::after {
+            display: none !important;
+            content: none !important;
+        }
+>>>>>>> Stashed changes
     }
     // Increase bottom margin of channels list so there is a consistent margin around the account box
     .container__2637a{
@@ -94,7 +159,7 @@
                 @include FontIconFluent;
                 font-size: 12px;
             }
-            &.collapsed__29444{
+            &.collapsed__2c397{
                 &::after{
                     content: "\E70D"; // ChevronDown
                 }
@@ -304,20 +369,6 @@
         }
     }
 
-    // Threads
-    // Active threads
-    .wrapper__2ea32{
-        &:hover{
-            .link__2ea32{
-                background-color: $SubtleFillColorSecondary;
-                box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary; // Using box-shadow because borders cause the div to grow
-            }
-        }
-        .name__2ea32{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-        }
-    }
     // Channel tree spine
     .spine__5b40b, .spineBorder__5b40b{
         left: 40px;
@@ -343,10 +394,11 @@
     }
 
     // X in Voice bar
-    .bar__7aaec{
+    .bar__3b95d{
         background-color: $MicaBackgroundFillColorAlt;
         .barText__7aaec{
             text-transform: none;
         }
     }
 }
+

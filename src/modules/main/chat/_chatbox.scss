@@ -23,10 +23,18 @@
             background-color: $ControlFillColorDisabled;
         }
     }
+<<<<<<< Updated upstream
     .themedBackground__74017{
         background: transparent;
     }
     .scrollableContainer__74017{
+=======
+    .themedBackground__74017 {
+        background: transparent !important;
+    }
+    .scrollableContainer__74017 {
+        background: transparent !important;
+>>>>>>> Stashed changes
         border-radius: 4px;
         overflow-y: auto;
     }
@@ -261,7 +269,7 @@
         .name__84522{
             @include TypeBody;
         }
-        .option_a19535{
+        .option__56a50{
             margin-left: 0;
             @include TypeBody;
             &::before{
@@ -281,3 +289,4 @@
         border-radius: 4px 4px 0 0;
     }
 }
+

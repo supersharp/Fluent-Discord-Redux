@@ -173,7 +173,14 @@
         border-radius: 4px;
         border: 0;
     }
+<<<<<<< Updated upstream
     .hiddenVisually__27f77, .folderPreviewWrapper__48112{
+=======
+
+    .hiddenVisually__27f77,
+    [class*="hiddenVisually_"],
+    .folderPreviewWrapper__48112 {
+>>>>>>> Stashed changes
         // width: 44px;
         // height: 44px;
         border-radius: 4px;
@@ -237,8 +244,16 @@
         }
     }
     // Remove the background behind folder icon when hovering
+<<<<<<< Updated upstream
     .hiddenVisually__27f77.hover__48112 .expandedFolderIconWrapper__48112{
         background-color: transparent;
+=======
+    .hiddenVisually__27f77,
+    [class*="hiddenVisually_"] {
+        &.hover__48112 .expandedFolderIconWrapper__48112 {
+            background-color: transparent;
+        }
+>>>>>>> Stashed changes
     }
 
     // Unread notification bars
