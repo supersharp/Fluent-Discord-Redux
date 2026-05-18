@@ -1,11 +1,9 @@
-.theme-dark{
-    .discoverHeader_b992d4{
+.theme-dark {
+    .discoverHeader_b992d4 {
         @include TypeBodyStrong;
+        background: transparent !important;
     }
 
-<<<<<<< Updated upstream
-    .pageWrapper_a3a4ce{
-=======
     // Modern Discover layout stack (covers Apps / Servers / Quests views).
     .page__5e434 .container_a592e1,
     .page__5e434 .outerContainer_e1147e,
@@ -53,17 +51,15 @@
 
     // Cards
     .pageWrapper_a3a4ce .card__84e3e {
->>>>>>> Stashed changes
         background-color: $LayerFillColorDefault;
-        border-top: 1px solid $CardStrokeColorDefault;
-        border-left: 1px solid $CardStrokeColorDefault;
-        border-radius: 8px 0 0 0;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: $LayerFillColorAlt;
+        }
     }
 
-<<<<<<< Updated upstream
-    .sidebar_c48ade{
-        .container__91a9d{
-=======
     // Discover sidebar
     .pageWrapper_a3a4ce .sidebarList__5e434,
     .pageWrapper_a3a4ce [class*="sidebarList_"] {
@@ -169,31 +165,31 @@
 
     .pageWrapper_a3a4ce .sidebar_c48ade {
         .container__91a9d {
->>>>>>> Stashed changes
             height: 32px;
             margin-bottom: 2px;
             position: relative;
 
-            .itemInner_c72b37{
+            .itemInner_c72b37 {
                 height: 32px;
                 padding: 0 8px;
             }
 
-            .avatar__91a9d{
+            .avatar__91a9d {
                 width: 16px;
                 height: 16px;
             }
-            .name__91a9d{
+
+            .name__91a9d {
                 @include TypeBody;
                 color: $TextFillColorPrimary;
             }
 
-            &.selected__91a9d{
-                .itemInner_c72b37{
+            &.selected__91a9d {
+                .itemInner_c72b37 {
                     background-color: $SubtleFillColorSecondary;
                 }
 
-                &::before{
+                &::before {
                     content: "";
                     width: 3px;
                     height: 16px;
@@ -209,27 +205,25 @@
 
     // Main
     // Search
-    .container_f69601{
-        .searchBox__56feb{
+    .container_f69601 {
+        .searchBox__56feb {
             background-color: transparent;
             box-shadow: none;
 
             &:focus,
-            &:focus-within{
+            &:focus-within {
                 box-shadow: none;
             }
-            .searchBoxInput__56498{
+
+            .searchBoxInput__56498 {
                 @include TypeBody;
                 color: $TextFillColorPrimary;
-                &::placeholder{
+
+                &::placeholder {
                     @include TypeBody;
                     color: $TextFillColorSecondary;
                 }
             }
-<<<<<<< Updated upstream
-            .clearIcon__21453,
-            .searchIcon_f69601{
-=======
 
             padding-right: 0;
             border: 0;
@@ -237,17 +231,18 @@
             .clearIcon__21453,
             .searchIcon_f69601,
             .searchIcon_d1a3c1 {
->>>>>>> Stashed changes
                 width: 16px;
                 height: 16px;
                 position: absolute;
                 top: 8px;
                 right: 16px;
-                path{
+
+                path {
                     fill: #FFF;
                 }
             }
-            .cta_f18d68{
+
+            .cta_f18d68 {
                 display: none;
             }
         }
@@ -255,73 +250,88 @@
 
     // Search results
     // Header
-    .header_e37a20{
+    .header_e37a20 {
         @include TypeSubtitle;
         color: $TextFillColorPrimary;
     }
 
-<<<<<<< Updated upstream
-    // Search box
-    .searchBox__56feb{
-        padding-right: 0;
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-
-        &:focus,
-        &:focus-within{
-            box-shadow: none;
-        }
-        .searchBoxInput__56498{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-            &::placeholder{
-                @include TypeBody;
-                color: $TextFillColorSecondary;
-            }
-        }
-        .clearIcon__21453,
-        .searchIcon_d1a3c1{
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 8px;
-            right: 16px;
-            path{
-                fill: #FFF;
-            }
-        }
-    }
-
-    // Results
-    .categories_f69601{
-        .categoryPill_f69601{
-            .categoryLabel-2m4AT-{
-=======
 
     // Results
     .categories__6131a {
         .categoryPill_f69601 {
             .categoryLabel-2m4AT- {
->>>>>>> Stashed changes
                 @include TypeBody;
                 color: $TextFillColorSecondary;
             }
-            &.selected_f69601{
+
+            &.selected_f69601 {
                 background-color: $AccentBase;
-<<<<<<< Updated upstream
-                .categoryLabel_f69601{
-=======
 
                 .categoryLabel__81b99 {
->>>>>>> Stashed changes
                     color: $TextFillColorPrimary;
                 }
             }
         }
+
+        // Modern Discover Page Overrides
+        .container_e9ef78,
+        .contentSection_b6bcee,
+        .scroller__23746 {
+            background-color: transparent !important;
+        }
+
+        .container_e9ef78 {
+            border-radius: 8px;
+            margin: 16px;
+            overflow: hidden;
+        }
+
+        // Search Bar
+        .searchBar__1ac1c {
+            .input__0f084 {
+                @include TypeBody;
+                color: $TextFillColorPrimary !important;
+
+                &::placeholder {
+                    color: $TextFillColorSecondary !important;
+                }
+            }
+
+            .wrapper__72c38 {
+                background-color: $ControlFillColorDefault !important;
+                border: 1px solid $ControlStrokeColorDefault !important;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary !important;
+                }
+            }
+        }
+
+        // Section and App Titles
+        .sectionTitle_d2a5f7,
+        .appName_f215b9 {
+            @include TypeBodyStrong;
+            color: $TextFillColorPrimary !important;
+        }
+
+        .appCategory_f215b9,
+        .description_f215b9 {
+            @include TypeCaption;
+            color: $TextFillColorSecondary !important;
+        }
+
+        // Card background for Discover
+        .card__84e3e {
+            background-color: $LayerFillColorDefault !important;
+            border: 1px solid $CardStrokeColorDefault !important;
+            border-radius: 8px;
+
+            &:hover {
+                background-color: $LayerFillColorAlt !important;
+            }
+        }
     }
-<<<<<<< Updated upstream
-=======
 
     // Match Quests/Friends look for Discover Apps & Servers top toolbar.
     .page__5e434 {
@@ -449,5 +459,4 @@
         border: 0 !important;
         box-shadow: none !important;
     }
->>>>>>> Stashed changes
 }

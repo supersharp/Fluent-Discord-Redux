@@ -5,41 +5,35 @@
         padding-right: 15px;
     }
 
-    .channelTextArea__74017{
+    .channelTextArea__74017,
+    .channelTextArea_f75fb0 {
         margin-bottom: 8px;
-        background: $ControlFillColorDefault;
-        border: 1px solid $ControlStrokeColorDefault;
-        border-bottom: 2px solid $ControlStrokeColorDefault;
+        background: $ControlFillColorDefault !important;
+        border: 1px solid $ControlStrokeColorDefault !important;
+        border-bottom: 2px solid $ControlStrokeColorDefault !important;
         border-radius: 4px;
         &:hover{
-            background-color: $ControlFillColorSecondary;
+            background-color: $ControlFillColorSecondary !important;
         }
         &:focus-within{
-            background-color: $ControlFillColorInputActiveBrush;
-            border-color: $ControlStrokeColorDefault;
-            border-bottom-color: $AccentBase;
+            background-color: $ControlFillColorInputActiveBrush !important;
+            border-color: $ControlStrokeColorDefault !important;
+            border-bottom-color: $AccentBase !important;
         }
         &.channelTextAreaDisabled__74017{
-            background-color: $ControlFillColorDisabled;
+            background-color: $ControlFillColorDisabled !important;
         }
     }
-<<<<<<< Updated upstream
-    .themedBackground__74017{
-        background: transparent;
-    }
-    .scrollableContainer__74017{
-=======
     .themedBackground__74017 {
         background: transparent !important;
     }
     .scrollableContainer__74017 {
         background: transparent !important;
->>>>>>> Stashed changes
         border-radius: 4px;
         overflow-y: auto;
     }
     .sansAttachButton__74017 {
-        padding-left: 0;
+        padding-left: 16px;
     }
 
     // Text input
@@ -49,7 +43,7 @@
     }
     .slateTextArea_ec4baf{
         min-height: 48px;
-        padding: 14px 0;
+        padding: 14px 0 14px 10px;
         color: $TextFillColorPrimary;
         &.placeholder__1b31f {
             color: $TextFillColorSecondary;

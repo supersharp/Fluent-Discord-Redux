@@ -6,16 +6,13 @@
     }
 
     // Body
-<<<<<<< Updated upstream
-    .root__49fc1{
-        background-color: $SolidBackgroundFillColorBase;
-=======
     @include modal-root {
         background-color: $MicaBackgroundFillColorBase;
         backdrop-filter: blur(16px);
->>>>>>> Stashed changes
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
+        @include Elevation128;
+        overflow: hidden;
     }
 
     // Headers

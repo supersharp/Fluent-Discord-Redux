@@ -1,38 +1,39 @@
-.theme-dark{
-    .guilds__5e434{
+.theme-dark {
+    .guilds__5e434 {
         width: 60px;
         background-color: transparent;
         // box-shadow: inset 0 0 0 1px $Green;
     }
+
     // Increase bottom margin of guilds list so there is a consistent margin around the account box
     .wrapper_ef3116 {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + 16px);
     }
 
     // Reduce gap between guilds
-    .stack_dbd263{
+    .stack_dbd263 {
         gap: 4px !important; // Override inline
     }
 
     // Pill
-    .pill_e5445c, // Normal guild
-    .pill_ed9a5f, // DM
-    .pill__1f388{ // Home
-        .item__58105{
+    .wrapper__58105.overlay__58105 {
+        .item__58105 {
             width: 3px;
             height: 16px !important; // Override inline
             margin-left: 0;
             background-color: $TextFillColorPrimary;
             border-radius: 999px;
+
             // Normal state
-            @for $i from 9 through 20{
-                &[style*="height: #{$i}"]{
+            @for $i from 9 through 20 {
+                &[style*="height: #{$i}"] {
                     background-color: $TextFillColorPrimary;
                 }
             }
+
             // Selected
-            @for $i from 21 through 40{
-                &[style*="height: #{$i}"]{
+            @for $i from 21 through 48 {
+                &[style*="height: #{$i}"] {
                     background-color: $AccentFillColorDefault;
                 }
             }
@@ -40,122 +41,149 @@
     }
 
     // Guild icon
-    .listItem__650eb{
+    .listItem__650eb {
         width: 44px;
         // height: 44px;
         margin-left: 8px;
         // box-shadow: inset 0 0 0 1px $Red;
     }
-    .wrapper_cc5dd2{
+
+    .wrapper_cc5dd2 {
         width: 44px !important; // Override inline
         height: 44px !important; // Override inline
         border-radius: 4px;
-        svg{
+        position: relative;
+
+        svg {
             width: 44px;
             height: 44px;
             top: 0;
             left: 0;
-            .icon__6e9f8{
+
+            .icon__6e9f8 {
                 width: 36px;
                 height: auto;
                 border-radius: 50%;
+                display: block;
+                margin: 0 auto !important; // Mathematically center it horizontally
+                padding: 0 !important; // Remove any native padding that causes offset
+                transform: translate(-2px, -2px) !important; // Nudge left and up
             }
         }
     }
+
     // Guild with no icon
     .childWrapper__6e9f8 {
         background-color: transparent;
-        &:hover{
+        transform: translate(-2px, -2px) !important; // Nudge left and up
+
+        &:hover {
             background-color: transparent;
         }
     }
-    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8{
+
+    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
         background-color: transparent;
     }
 
     // Guild interaction states
     // Guild is selected
-    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2{
+    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2 {
         background-color: $ControlFillColorSecondary;
     }
+
     // Guild is selected and hovered
-    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2{
+    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2 {
         box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
     }
+
     // Guild is hovered
-    .blobContainer_e5445c:hover .wrapper_cc5dd2{
+    .blobContainer_e5445c:hover .wrapper_cc5dd2 {
         background-color: $ControlFillColorSecondary;
     }
+
     // Guild is clicked
-    .blobContainer_e5445c:active .wrapper_cc5dd2{
+    .blobContainer_e5445c:active .wrapper_cc5dd2 {
         background-color: $ControlFillColorTertiary;
     }
 
     // Guild badges
-    .iconBadge__650eb{
+    .iconBadge__650eb {
         background-color: $SystemFillColorSolidNeutral;
-        svg{
+
+        svg {
             width: 12px;
             height: 12px;
             color: $TextOnAccentFillColorPrimary;
         }
-        &.isCurrentUserConnected__650eb{
+
+        &.isCurrentUserConnected__650eb {
             background-color: $SystemFillColorSuccess;
         }
     }
+
     .upperBadge_cc5dd2,
-    .lowerBadge_cc5dd2{
+    .lowerBadge_cc5dd2 {
         right: 2px;
     }
-    .upperBadge_cc5dd2{
+
+    .upperBadge_cc5dd2 {
         top: 2px;
     }
-    .lowerBadge_cc5dd2{
+
+    .lowerBadge_cc5dd2 {
         bottom: 2px;
     }
 
     // Home
-    .wrapper__6e9f8{
-        &[data-list-item-id="guildsnav___home"]{
+    .wrapper__6e9f8 {
+        &[data-list-item-id="guildsnav___home"] {
             .childWrapper__6e9f8 {
                 background-color: transparent;
-                &::before{
+
+                &::before {
                     content: "\E80F"; // Home
                     color: $TextFillColorPrimary;
                     @include FontIconFluent;
                     font-size: 16px;
                 }
-                svg{
+
+                svg {
                     display: none !important; // Required to remove 'festive' Discord icon
                 }
             }
         }
     }
+
     // Remove Home :active transform
-    .listItemWrapper__91816:active{
+    .listItemWrapper__91816:active {
         transform: none;
     }
 
     // Separator
-    .guildSeparator__252b6{
+    .guildSeparator__252b6 {
         display: none;
     }
+
     // Add server/Server Discovery icons
     .circleIconButton__5bc7e {
         background-color: transparent;
         color: #FFF;
-        &:hover{
+
+        &:hover {
             background-color: $ControlFillColorSecondary !important; // Override inline
         }
-        &[aria-label]{
-            svg{
+
+        &[aria-label] {
+            svg {
                 width: 18px;
                 height: 18px;
             }
         }
     }
+
     // Offline
-    .guildsError_e8d03f{
+    .guildsError_e8d03f {
         background-color: $SystemFillColorCritical;
         border: 0;
         border-radius: 0;
@@ -164,129 +192,134 @@
     }
 
     // Folders
-    .folderGroup__48112{
+    .folderGroup__48112 {
         width: 52px;
     }
-    .folderGroupBackground__48112{
+
+    .folderGroupBackground__48112 {
         width: 44px;
         left: 8px;
         border-radius: 4px;
         border: 0;
     }
-<<<<<<< Updated upstream
-    .hiddenVisually__27f77, .folderPreviewWrapper__48112{
-=======
 
     .hiddenVisually__27f77,
     [class*="hiddenVisually_"],
     .folderPreviewWrapper__48112 {
->>>>>>> Stashed changes
         // width: 44px;
         // height: 44px;
         border-radius: 4px;
     }
 
     // Open folder
-    .folderIcon__48112{
-        &::before{
-            content: "\E8B7"; // Folder Open
-            @include FontIconFluent;
-            color: $TextOnAccentFillColorPrimary;
-            position: absolute;
-            font-size: 32px;
-        }
-        &::after{
+    .folderIcon__48112 {
+        &::after {
             content: "\E8D5"; // Folder Fill
             @include FontIconFluent;
             font-size: 32px;
         }
-        svg{
+
+        svg {
+            display: none;
+        }
+    }
+
+    // Opened Folder
+    ._48112cbe77dc5022-isExpanded {
+        ._48112cbe77dc5022-folderPreviewWrapper {
             display: none;
         }
     }
 
     // Closed folder
-    .folderHeader__48112{
-        .wrapper_cc5dd2{
+    .folderHeader__48112 {
+        .wrapper_cc5dd2 {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
+
         // Fix alignment
-        svg{
+        svg {
             left: 2px;
         }
+
         // Remove round mask
-        foreignobject{
+        foreignobject {
             // mask: none;
         }
     }
-    .folderPreviewWrapper__48112{
+
+    .folderPreviewWrapper__48112 {
         // width: 44px;
         // height: 44px;
     }
-    .folderPreview__48112{
+
+    .folderPreview__48112 {
         width: 44px;
         height: 44px;
         gap: 1px;
     }
-    .folderPreviewGuildIcon__48112{
+
+    .folderPreviewGuildIcon__48112 {
         width: 18px;
         height: 18px;
         border-radius: 50% !important; // Override inline
     }
 
     // Fix folder icon height when folder is expanded
-    .isExpanded__48112 .folderHeader__48112{
+    .isExpanded__48112 .folderHeader__48112 {
         margin-bottom: 0;
-        .wrapper_cc5dd2{
+
+        .wrapper_cc5dd2 {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
     }
+
     // Remove the background behind folder icon when hovering
-<<<<<<< Updated upstream
-    .hiddenVisually__27f77.hover__48112 .expandedFolderIconWrapper__48112{
-        background-color: transparent;
-=======
     .hiddenVisually__27f77,
     [class*="hiddenVisually_"] {
         &.hover__48112 .expandedFolderIconWrapper__48112 {
             background-color: transparent;
         }
->>>>>>> Stashed changes
     }
 
     // Unread notification bars
     .unreadMentionsIndicatorBottom_ef3116,
-    .unreadMentionsIndicatorTop_ef3116{
+    .unreadMentionsIndicatorTop_ef3116 {
         width: 48px;
-        .bar__3b95d{
+
+        .bar__3b95d {
             background-color: $SystemFillColorCriticalBackground;
         }
-        span{
+
+        span {
             font-size: 0;
-            &::before{
+
+            &::before {
                 @include FontIconFluent;
                 color: $SystemFillColorCritical;
                 vertical-align: middle;
                 font-size: 16px;
             }
         }
-        &:hover span::before{
+
+        &:hover span::before {
             color: $TextFillColorSecondary;
         }
     }
 
-    .unreadMentionsIndicatorBottom_ef3116{
-        span{
-            &::before{
+    .unreadMentionsIndicatorBottom_ef3116 {
+        span {
+            &::before {
                 content: "\EDDC"; // CaretDownSolid8
             }
         }
     }
-    .unreadMentionsIndicatorTop_ef3116{
-        span{
-            &::before{
+
+    .unreadMentionsIndicatorTop_ef3116 {
+        span {
+            &::before {
                 content: "\EDDB"; // CaretUpSolid8
             }
         }

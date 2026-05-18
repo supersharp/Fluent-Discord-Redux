@@ -62,6 +62,7 @@ $isAutoFile: false;
 @import 'modules/home/home';
 @import 'modules/home/main';
 @import 'modules/home/toolbar';
+@import 'modules/home/shop';
 @import 'modules/discover/discovery';
 
 // Loadscreen
@@ -81,6 +82,7 @@ $isAutoFile: false;
 @import 'modules/modals/quickswitcher';
 @import 'modules/modals/reactors';
 @import 'modules/modals/screen_share';
+@import 'modules/modals/search_filters';
 @import 'modules/modals/server_terms';
 @import 'modules/modals/threads';
 @import 'modules/modals/user';

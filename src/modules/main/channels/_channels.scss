@@ -1,15 +1,4 @@
 .theme-dark{
-<<<<<<< Updated upstream
-    .sidebar__5e434{
-        &::after{
-            display: none;
-        }
-    }
-    .sidebarList__5e434{
-        background-color: transparent;
-        border: 0;
-        border-radius: 0;
-=======
     .sidebar__5e434 {
         background: transparent !important;
         border-right: 0 !important;
@@ -72,7 +61,6 @@
             display: none !important;
             content: none !important;
         }
->>>>>>> Stashed changes
     }
     // Increase bottom margin of channels list so there is a consistent margin around the account box
     .container__2637a{

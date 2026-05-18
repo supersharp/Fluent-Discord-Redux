@@ -1,28 +1,9 @@
-<<<<<<< Updated upstream
-.theme-dark .menu_c1e9c4{
-    min-width: 280px;
-    background: $AcrylicBackgroundFillColorDefault;
-    border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
-    @include Elevation32;
-    position: relative;
-
-    &::before{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        backdrop-filter: blur(8px);
-=======
 // Channels, members, settings nav
 .theme-dark {
     @include context-menu {
         min-width: 180px;
         background: $AcrylicBackgroundFillColorBase;
         border: 1px solid $SurfaceStrokeColorDefault;
->>>>>>> Stashed changes
         border-radius: 8px;
         @include Elevation32;
         position: relative;

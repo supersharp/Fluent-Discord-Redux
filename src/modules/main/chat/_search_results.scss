@@ -1,23 +1,15 @@
-<<<<<<< Updated upstream
-.theme-dark .searchResultsWrap_a9e706{
-=======
 .theme-dark .searchResultsWrap_a98f3b{
->>>>>>> Stashed changes
     background-color: $LayerFillColorDefault;
     border-left: 1px solid $CardStrokeColorDefault;
 
-    .searchHeader_f3b986{
+    :is(.searchHeader_f3b986, .searchHeader_ae7890){
         background-color: transparent;
-<<<<<<< Updated upstream
-        .totalResults_f3b986 > div{
-=======
         .totalResults_ae7890 > div{
->>>>>>> Stashed changes
             @include TypeBodyStrong;
         }
     }
     // Tabs (new/old/relevant)
-    .searchHeaderTabList_f3b986 {
+    :is(.searchHeaderTabList_f3b986, .searchHeaderTabList_ae7890) {
         .item_aa8da2 {
             padding-left: 0;
             padding-right: 0;
@@ -49,11 +41,7 @@
     }
 
     // Result
-<<<<<<< Updated upstream
-    .searchResult__02a39{
-=======
     .searchResult__80bf8{
->>>>>>> Stashed changes
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
@@ -62,7 +50,7 @@
         }
     }
     // Jump button
-    .button__02a39{
+    :is(.button__02a39, .button__80bf8){
         padding: 4px 8px;
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorOnAccentDefault;

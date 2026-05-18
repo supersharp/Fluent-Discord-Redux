@@ -1,12 +1,33 @@
-.theme-dark .recentMentionsPopout__95796{
-    // NOTE - 2022-06-08: Calculation is based on: 100vh - titlebar - toolbar - (margin-top + margin-bottom)
-    max-height: calc(100vh - 32px - 48px - 16px) !important;  // Override inline
+// Main container
+.theme-dark .container_fc561d.recentMentionsPopout__95796 {
+    // Use Discord's layer max-height variable to stay within bounds, with fallback
+    max-height: calc(var(--reference-position-layer-max-height, 80vh) - 16px) !important;
     margin: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
 
+    // Inner wrapper that contains the messages
+    .messagesPopoutWrap_e8b59c {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-height: none !important; // Override Discord's inline max-height
+        min-height: 0;
+        border: none; // Ensure no double border
+        background: transparent;
+    }
+
+    // The actual scroller area
+    .scroller__95796 {
+        flex: 1 1 auto;
+        min-height: 0;
+        padding: 0 16px 0 16px;
+    }
     .header_ab6641 {
         background-color: transparent;
         // Tabs
@@ -54,24 +75,19 @@
     // Results
     // Mentions
     // NOTE: 2023-01-04 - Mentions tab scroller uses a different class which doesn't have L/R padding
-    .scroller__95796 {
-        padding: 0 0 0 16px;
-    }
-
+    
     .container__95796, // Mentions
-<<<<<<< Updated upstream
-    .channel__427f0{ // Unreads
-=======
     .channel__972a0{ // Unreads
         padding-right: 16px;
->>>>>>> Stashed changes
         padding-bottom: 16px;
         .channelHeader__35a7e{
             top: -1px;
+            padding-left: 8px;
             padding-right: 16px; // Fixes dismiss buttons butting up on right side
             background-color: $SolidBackgroundFillColorSecondary;
             border-radius: 4px 4px 0 0;
-            .guildIcon__35a7e {
+            .guildIcon__35a7e,
+            .dmIcon__35a7e {
                 background-color: transparent;
                 border-radius: 50%;
             }

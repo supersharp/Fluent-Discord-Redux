@@ -1,6 +1,16 @@
+.container__8a031:has(.quickswitcher_ac6cb0) {
+    padding: 0 !important;
+}
+
+.quickswitcher_ac6cb0,
 .theme-dark .quickswitcher_ac6cb0{
     height: 100%;
-    background-color: $SolidBackgroundFillColorBase;
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    padding: 16px !important;
 
     &::before{
         content: "Quickswitcher";
@@ -25,6 +35,8 @@
             color: $TextFillColorPrimary;
             border-color: $ControlStrokeColorDefault;
             border-bottom-color: $AccentBase;
+            box-shadow: none !important;
+            outline: none !important;
         }
         &::placeholder{
             color: $TextFillColorSecondary;
@@ -32,11 +44,16 @@
     }
 
     // Scroll content
+    .resultsArea_ac6cb0,
+    .scroller_ac6cb0,
+    .content_d125d2 {
+        background-color: transparent !important;
+    }
+
     .scroller_ac6cb0 {
         max-height: unset;
         margin-top: 12px;
         margin-right: -4px;
-        background-color: transparent;
         overflow-y: auto !important; // Override inline
     }
 
@@ -47,8 +64,9 @@
     }
 
     .result__71961{
-        &[aria-selected=true]{
-            background-color: $SubtleFillColorSecondary;
+        &:hover,
+        &[aria-selected="true"]{
+            background-color: $SubtleFillColorSecondary !important;
             &::before{
                 content: "";
                 width: 3px;
@@ -56,7 +74,7 @@
                 position: absolute;
                 left: 0;
                 top: 8px;
-                background-color: $AccentFillColorDefault;
+                background-color: $AccentFillColorDefault !important;
                 border-radius: 2px;
             }
         }
@@ -65,6 +83,12 @@
             @include TypeBody;
             color: $TextFillColorPrimary;
             line-height: 32px;
+            
+            .match__71961 {
+                color: $AccentTextFillColorPrimary;
+                font-weight: 600;
+            }
+
             .username__71961,
             .note__71961{
                 margin: 0;

@@ -1,3 +1,81 @@
+.theme-dark, .theme-midnight, .theme-darker {
+    .accountPopout__37e49 {
+        background-color: $AcrylicBackgroundFillColorBase;
+        backdrop-filter: blur(20px);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        @include Elevation32;
+        width: 300px;
+
+        .outer_c0bea0, 
+        .inner_c0bea0,
+        .scroller_c1e9c4,
+        [class*="scroller"] {
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        .menus_ce8328 {
+            background: transparent !important;
+            box-shadow: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 4px;
+            border: none;
+            border-top: 1px solid $DividerStrokeColorDefault;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+
+            .menuItem_ce8328 {
+                border-radius: 4px;
+                margin: 0;
+                padding: 0;
+                color: white !important;
+                background: transparent !important;
+                
+                &:hover, &:active, &.selected_ce8328 {
+                    background-color: transparent !important;
+                }
+
+                .menuItemLabelText_ce8328 {
+                    @include TypeBody;
+                    color: white !important;
+                }
+                
+                // Style all interactive elements
+                [class*="button"], .label_ce8328, [class*="label"], .item_c1e9c4 {
+                    padding: 6px 10px;
+                    border-radius: 4px;
+                    background: transparent !important;
+                    transition: background-color $AnimationFadeInOut;
+                    
+                    &:hover {
+                        background-color: $SubtleFillColorSecondary !important;
+                    }
+                }
+
+                // Remove top rounding for all menu items except the first one in the scroller
+                // This ensures "Switch Accounts" and "Copy User ID" are flush
+                &:not(:first-child) {
+                    [class*="button"], .label_ce8328, [class*="label"], .item_c1e9c4 {
+                        border-top-left-radius: 0 !important;
+                        border-top-right-radius: 0 !important;
+                    }
+                }
+
+                svg {
+                    color: white !important;
+                }
+            }
+        }
+    }
+}
+
 .theme-dark .userPopoutOuter_c69a7b{
     // Remove style from context menu in user popout
     .menu_c1e9c4.menu_ad5fac{

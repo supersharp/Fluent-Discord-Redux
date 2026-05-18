@@ -1,9 +1,170 @@
-.theme-dark{
-    .user-profile-modal-v2{
-        background-color: transparent;
-        border: 0;
-        .inner_c0bea0{
-            padding: 24px 24px 0 24px;
+.theme-dark {
+
+    // Target the absolute root of the modal layer and its parents to kill the outer border
+    [role="dialog"]:has(.profileContentContainer__9c3be),
+    [role="dialog"]:has(.profileCard__9c3be),
+    div[class*="root_"]:has(.profileContentContainer__9c3be),
+    div[class*="layer_"]:has(.profileContentContainer__9c3be) {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    // The large User Profile modal (Main surface)
+    .profileContentContainer__9c3be,
+    .outer_c0bea0:has(.profileCard__9c3be) {
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(32px) !important;
+        border: 1px solid $SurfaceStrokeColorDefault !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        display: block !important;
+        @include Elevation128;
+        box-shadow: none !important;
+
+        .inner_c0bea0 {
+            background: transparent !important;
+            display: flex !important;
+            flex-direction: row !important;
+            height: 100% !important;
+            border: none !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+
+            .scrim__4c1fe,
+            .backgroundImage__9c3be {
+                display: none !important;
+            }
+
+            // Left section (Profile Card)
+            .profileCard__9c3be {
+                background: transparent !important;
+                width: 400px !important;
+                flex: 0 0 400px !important;
+                border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+                z-index: 10;
+                position: relative !important;
+            }
+
+            // Right section (Tabs and Board)
+            .container__37bfc {
+                background-color: rgba(0, 0, 0, 0.2) !important;
+                flex: 1 1 auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                overflow: hidden !important;
+                border: none !important;
+                z-index: 5;
+                padding-left: 0 !important; // Reverted global padding to fix overlap
+                border-radius: 15px !important;
+
+                // Tab list scroller
+                .tabListScroller__37bfc {
+                    overflow: visible !important;
+                    background: transparent !important;
+                    border: none !important;
+                    box-shadow: none !important;
+                    padding: 0 0 0 20px !important; // Fine-tuned offset for pixel-perfect alignment
+                    margin: 0 !important;
+                    position: relative !important; // Force relative to push content down
+                    top: 0 !important;
+                    width: 100% !important;
+                    height: 80px !important; // Reserve space for the tab bar
+                    min-height: 80px !important;
+                    flex: 0 0 80px !important;
+
+                    // Hide EVERYTHING in the scroller that isn't the tab bar itself (removes lines/spacers)
+                    &,
+                    & *,
+                    &::before,
+                    &::after {
+                        border: none !important;
+                        box-shadow: none !important;
+                    }
+
+                    &>div:not(.top_aa8da2) {
+                        display: none !important;
+                        height: 0 !important;
+                        min-height: 0 !important;
+                        visibility: hidden !important;
+                    }
+                }
+
+                // Tab bar
+                .top_aa8da2 {
+                    border-bottom: none !important;
+                    padding: 0 !important;
+                    margin: 24px 0 24px 0 !important;
+                    display: flex !important;
+                    background: transparent !important;
+
+                    .item_aa8da2 {
+                        padding: 0 12px !important; // Match card content padding for alignment
+                        height: 48px;
+                        display: flex;
+                        align-items: center;
+                        @include TypeBody;
+                        color: $TextFillColorSecondary;
+                        margin: 0;
+                        position: relative;
+                        background: transparent !important;
+                        white-space: nowrap;
+                        border: none !important;
+                        box-shadow: none !important;
+
+                        &:hover {
+                            color: $TextFillColorPrimary;
+                            background-color: $SubtleFillColorSecondary !important;
+                        }
+
+                        &.selected_aa8da2 {
+                            color: $TextFillColorPrimary;
+                            background-color: transparent !important;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 12px; // Align indicator exactly with text start
+                                right: 12px; // Align indicator exactly with text end
+                                height: 3px;
+                                background-color: $AccentBase;
+                                border-radius: 2px 2px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                // Tab Panels / Widgets
+                .tabBarPanel__37bfc {
+                    flex: 1 1 auto;
+                    width: 100% !important;
+                    overflow: hidden !important; // Restore overflow hidden to allow internal scrolling
+                    border-radius: 0 0 8px 0 !important;
+                    padding: 0 !important;
+                    position: relative !important;
+                    top: 0 !important;
+                    min-height: 0; // Allow flex container to shrink correctly
+
+                    .tabPanelScroller__37bfc {
+                        padding: 16px 16px 16px 24px !important; // Match tab offset + top padding
+                        height: 100% !important;
+                        min-height: 0 !important;
+                        margin: 0 !important; // Kill negative margins causing cutoff
+                        width: 100% !important;
+                        max-width: 100% !important;
+                    }
+
+                    .container__62dd3 {
+                        background-color: $CardBackgroundFillColorDefault;
+                        border: 1px solid $CardStrokeColorDefault !important;
+                        border-radius: 8px;
+                        margin-bottom: 16px;
+                        padding: 12px; // Baseline padding for content
+                        overflow: visible !important; // Prevent clipping
+                    }
+                }
+            }
         }
     }
 }

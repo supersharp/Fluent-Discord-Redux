@@ -4,8 +4,6 @@
     color: $TextFillColorPrimary;
     text-transform: none;
 }
-<<<<<<< Updated upstream
-=======
 
 // Global Typography Mappings (New Hashes)
 .text-xs\/semibold_cf4812 { @include TypeBodyStrong; font-size: 12px; }
@@ -15,4 +13,3 @@
 .text-md\/medium_cf4812 { @include TypeBody; font-size: 16px; }
 .heading-lg\/semibold_cf4812 { @include TypeSubtitle; }
 .heading-sm\/medium_cf4812 { @include TypeBodyStrong; }
->>>>>>> Stashed changes
