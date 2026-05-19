@@ -79,7 +79,7 @@
         }
     }
     // Command icon (eg. /tenor command)
-    .hasStackedBar__74017 .attachButton__74017{
+    .hasStackedBar__74017 .inner__74017:not(.sansAttachButton__74017) .attachButton__74017{
         &::before{
             content: unset;
         }

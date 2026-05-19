@@ -46,12 +46,21 @@
             // Left section (Profile Card / Main Profile)
             [class*="profileCard_"],
             & > main[class*="profile_"] {
+                box-sizing: border-box !important;
                 background: transparent !important;
                 width: 400px !important;
                 flex: 0 0 400px !important;
                 border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
                 z-index: 10;
                 position: relative !important;
+                border-radius: 8px 0 0 8px !important;
+
+                // Force banner and header to only round the top-left corner
+                [class*="banner_"],
+                [class*="profileHeader_"],
+                svg[class*="mask_"] {
+                    border-radius: 8px 0 0 0 !important;
+                }
             }
 
             // Right section (Tabs and Board)
@@ -64,7 +73,7 @@
                 border: none !important;
                 z-index: 5;
                 padding-left: 0 !important; // Reverted global padding to fix overlap
-                border-radius: 15px !important;
+                border-radius: 0 8px 8px 0 !important;
 
                 // Tab list scroller
                 [class*="tabListScroller_"] {
@@ -131,14 +140,20 @@
                             color: $TextFillColorPrimary;
                             background-color: transparent !important;
 
+                            &::before {
+                                display: none !important;
+                                content: none !important;
+                            }
+
                             &::after {
-                                content: "";
+                                display: block !important;
+                                content: "" !important;
                                 position: absolute;
                                 bottom: 0;
                                 left: 12px; // Align indicator exactly with text start
                                 right: 12px; // Align indicator exactly with text end
                                 height: 3px;
-                                background-color: $AccentBase;
+                                background-color: $AccentBase !important;
                                 border-radius: 2px 2px 0 0;
                             }
                         }
@@ -165,14 +180,104 @@
                         max-width: 100% !important;
                     }
 
-                    // Widget card containers
-                    [class*="container_"] {
-                        background-color: $CardBackgroundFillColorDefault;
+                    // Widget Card Containers (Board widgets, Activity cards)
+                    // Board widgets are direct container children under sections
+                    // Activity cards are card containers inside list items
+                    section > [class*="container_"]:not([class*="coverContainer_"]):not([class*="platformIconContainer_"]),
+                    [class*="cards_"] [class*="card_"]:not([class*="profileCard_"]):not([class*="gameCover_"]) {
+                        background-color: $CardBackgroundFillColorDefault !important;
                         border: 1px solid $CardStrokeColorDefault !important;
-                        border-radius: 8px;
-                        margin-bottom: 16px;
-                        padding: 12px; // Baseline padding for content
-                        overflow: visible !important; // Prevent clipping
+                        border-radius: 8px !important;
+                        margin-bottom: 12px !important;
+                        padding: 16px !important;
+                        overflow: visible !important;
+                        transition: background-color 0.15s ease, border-color 0.15s ease !important;
+
+                        // Hover effect for interactive cards (like Activity cards)
+                        &:hover {
+                            background-color: $CardBackgroundFillColorTertiary !important;
+                            border-color: $ControlStrokeColorSecondary !important;
+                        }
+
+                        // Remove double borders/backgrounds on nested containers/cards
+                        [class*="container_"],
+                        [class*="card_"] {
+                            background-color: transparent !important;
+                            border: none !important;
+                            padding: 0 !important;
+                            margin: 0 !important;
+                        }
+                    }
+
+                    // Game covers (Board widgets)
+                    [class*="gameCover_"] {
+                        border-radius: 6px !important;
+                        overflow: hidden !important;
+                    }
+
+                    // List items (Mutual Friends & Mutual Servers)
+                    [class*="row_"] {
+                        display: flex !important;
+                        flex-direction: row !important;
+                        align-items: center !important;
+                        padding: 16px !important; // Match Activity card padding
+                        margin-bottom: 12px !important; // Match Activity card margin
+                        border-radius: 8px !important; // Match Activity card border-radius
+                        background-color: $CardBackgroundFillColorDefault !important; // Match Activity card background
+                        border: 1px solid $CardStrokeColorDefault !important; // Match Activity card border
+                        transition: background-color 0.15s ease, border-color 0.15s ease !important;
+                        cursor: pointer !important;
+
+                        &:hover {
+                            background-color: $CardBackgroundFillColorTertiary !important; // Match Activity card hover background
+                            border-color: $ControlStrokeColorSecondary !important; // Match Activity card hover border
+                        }
+
+                        &:active {
+                            background-color: $SubtleFillColorTertiary !important;
+                        }
+
+                        // Avatar or server icon container (direct children only)
+                        & > [class*="avatar_"],
+                        & > [class*="icon_"] {
+                            width: 40px !important;
+                            height: 40px !important;
+                            border-radius: 50% !important; // Ensure all icons and avatars are round
+                            background-size: cover !important;
+                            background-position: center !important;
+                        }
+
+                        // Details (text container)
+                        [class*="details_"] {
+                            margin-left: 12px !important;
+                            flex: 1 1 auto !important;
+                            display: flex !important;
+                            flex-direction: column !important;
+                            justify-content: center !important;
+                            min-width: 0 !important;
+
+                            // Primary text (Friend name / Server name)
+                            [class*="name_"],
+                            [class*="tag_"] {
+                                color: $TextFillColorPrimary !important;
+                                font-weight: 600 !important;
+                                @include TypeBody;
+                                overflow: hidden !important;
+                                text-overflow: ellipsis !important;
+                                white-space: nowrap !important;
+                            }
+
+                            // Secondary text (Status, Mutual friends subtitle)
+                            [class*="defaultColor_"],
+                            [class*="container_"] {
+                                color: $TextFillColorSecondary !important;
+                                @include TypeCaption;
+                                overflow: hidden !important;
+                                text-overflow: ellipsis !important;
+                                white-space: nowrap !important;
+                                margin-top: 2px !important;
+                            }
+                        }
                     }
                 }
             }

@@ -293,15 +293,36 @@
 }
 
 // Textbox with emoji button (set custom status modal)
-.theme-dark .inputContainer__9b8f6{
-    .emojiButtonContainer__9b8f6{
-        right: 0;
-        left: unset;
-        ~ .inputWrapper__0ed4f{
-            .input__0ed4f{
-                padding-right: 40px;
-            }
+.theme-dark [class*="inputContainer_"] {
+    position: relative !important;
+
+    [class*="emojiButtonContainer_"] {
+        position: absolute !important;
+        left: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 2 !important;
+    }
+
+    [class*="inputWrapper_"],
+    .inputWrapper__0ed4f {
+        width: 100% !important;
+
+        textarea[class*="input_"],
+        .input__0ed4f {
+            padding-left: 56px !important; // Make room for the emoji button on the left
+            height: 44px !important; // Balanced vertical height
+            min-height: 44px !important;
+            padding-top: 10px !important; // Center input text vertically
+            padding-bottom: 10px !important;
         }
+    }
+
+    [class*="hiddenPlaceholder_"] {
+        left: 56px !important; // Align placeholder text with input text
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        color: $TextFillColorSecondary !important;
     }
 }
 
