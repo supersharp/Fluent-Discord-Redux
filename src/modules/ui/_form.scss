@@ -326,3 +326,31 @@
     }
 }
 
+.theme-dark .wrapper__72c38.container__0f084.hasLeading__0f084 {
+    position: relative;
+
+    .icon__0f084 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+        z-index: 2;
+        color: $TextFillColorSecondary;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .input__0f084,
+    textarea[class*="input_"] {
+        padding-left: 42px;
+    }
+}
+
