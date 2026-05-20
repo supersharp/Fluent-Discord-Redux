@@ -34,8 +34,16 @@ Changes from the original fork:
 * Keep in mind, this theme is a personal project and the primary function was to keep the theme updated for myself. Please keep this in mind for issues and requests.
 * Report bugs by opening an [issue](https://github.com/supersharp/Fluent-Discord-Redux/issues)
 
-## Preview
-![Preview](https://raw.githubusercontent.com/supersharp/Fluent-Discord-Redux/develop/images/ui-1.12.1.png)
+## Preview (Screenshots)
+<details>
+    <img width="2560" height="1400" alt="Guild_Chat_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Guild_Chat_v0.0.18.png" />
+    <img width="2560" height="1400" alt="Friends_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Friends_v0.0.18.png" />
+    <img width="2560" height="1400" alt="Active_Voice_Chat_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Active_Voice_Chat_v0.0.18.png" />
+    <img width="2560" height="1400" alt="Inactive_Voice_Chat_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Inactive_Voice_Chat_v0.0.18.png" />
+    <img width="2560" height="1400" alt="Quest_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Quest_v0.0.18.png" />
+    <img width="2560" height="1400" alt="Shop_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Shop_v0.0.18.jpg" />
+    <img width="2560" height="1400" alt="Settings_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Settings_v0.0.18.png" />
+</details>
 
 ## Building Locally
 To build and compile the theme yourself from the SCSS source code:
