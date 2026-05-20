@@ -94,34 +94,48 @@
     }
 }
 
-.theme-dark .resizeHandle__08434 {
-    background-color: transparent !important;
-    border: none !important;
+.theme-dark {
+    @include resize-handle {
+        background: transparent !important;
+        border: none !important;
 
-    &::before {
-        content: "";
-        width: 3px;
-        height: 128px;
-        position: absolute;
-        top: 50%;
-        left: 3px;
-        margin-top: -64px;
-        background-color: $ControlStrokeColorSecondary;
-        border-radius: 9999px;
-        opacity: 0;
-        transition: opacity 167ms Cubic-bezier(0, 0, 0, 1)
-    }
+        &::before {
+            content: "";
+            width: 3px;
+            height: 128px;
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            margin-top: -64px;
+            background-color: $ControlStrokeColorSecondary;
+            border-radius: 9999px;
+            opacity: 0;
+            transition: opacity 167ms Cubic-bezier(0, 0, 0, 1);
+        }
 
-    &:hover::before {
-        opacity: 1;
-        transition: opacity 250ms Cubic-bezier(0.55, 0.55, 0, 1);
+        &:hover::before {
+            opacity: 1;
+            transition: opacity 250ms Cubic-bezier(0.55, 0.55, 0, 1);
+        }
     }
 }
 
 // Narrow window
 .theme-dark .chatLayerWrapper__01ae2 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    .chatTarget__01ae2 {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
     .container__01ae2 {
-        background-color: $SolidBackgroundFillColorBase;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
 
         &.floating__01ae2 {
             border-left: 0;

@@ -1,5 +1,5 @@
 .theme-dark .wrapper_cb9592 {
-    background-color: $SolidBackgroundFillColorBase;
+    background: transparent !important;
     border-radius: 8px 0 0 0;
 
     // Attach borders in call
@@ -7,36 +7,102 @@
         border-radius: 0;
     }
 
-    // Round top-left corner
-    .callContainer_cb9592 {
+    // Round top-left corner; dark background for active calls so user tiles
+    // have a proper backdrop.
+    .callContainer_cb9592,
+    [class*="callContainer_"] {
         background-color: $SolidBackgroundFillColorBase;
         border-radius: 8px 0 0 0;
     }
 
+    // Inactive view — Discord adds .noChat_cb9592 to the wrapper when the
+    // channel is empty and the user hasn't joined.
+    //
+    // .callContainer_cb9592 carries theme-midnight as a class, creating a
+    // self-contained CSS-variable scope where --background-primary etc. are
+    // near-black. We override those variables then zero out the specific
+    // layout wrapper backgrounds (root_bfe55a and its flex child).
+    // NOTE: *:not(canvas) is intentionally avoided — it strips button styling.
+    &.noChat_cb9592,
+    &[class*="noChat_"] {
+        .callContainer_cb9592,
+        [class*="callContainer_"] {
+            // Collapse the theme-midnight dark CSS variable scope
+            --background-primary: transparent !important;
+            --background-secondary: transparent !important;
+            --background-secondary-alt: transparent !important;
+            --background-tertiary: transparent !important;
+            --background-floating: transparent !important;
+
+            background: transparent !important;
+
+            // Target the specific layout wrappers that render the dark fill.
+            // From the DOM: callContainer > root_bfe55a > div[flex]
+            .root_bfe55a,
+            [class*="root_bfe55a"],
+            .root_bfe55a > div {
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+
     // Inactive voice view (No one in voice)
-    .container__5aa3a {
+    // pulseGradient__11664 is a canvas element that renders the purple/blue
+    // animated background gradient.  We hide it so the dark $SolidBackgroundFillColorBase
+    // of callContainer_cb9592 (line above) shows through cleanly.
+    .container__5aa3a,
+    [class*="container__5aa3a"] {
         background-color: transparent;
 
-        .channelName__5aa3a {
+        // Hide the animated purple gradient canvas
+        .pulseGradient__11664,
+        [class*="pulseGradient__"] {
+            display: none !important;
+        }
+
+        .channelName__5aa3a,
+        [class*="channelName__"] {
             @include TypeTitle;
             color: $TextFillColorPrimary;
         }
 
-        .text-sm\/normal_cf4812 {
+        [data-text-variant="text-sm/normal"] {
             @include TypeBody;
             color: $TextFillColorSecondary !important;
         }
 
-        .joinButton__5aa3a {
-            .button_a22cb0 {
+        .joinButton__5aa3a,
+        [class*="joinButton__"] {
+            // overlay-primary_a22cb0 has black text for use over light/gradient
+            // backgrounds. On the dark mica background we restyle it to match
+            // the Fluent control appearance used elsewhere in the theme.
+            .button_a22cb0,
+            [class*="button_"] {
                 @include TypeBodyStrong;
                 border-radius: 4px;
+                background-color: $ControlFillColorDefault !important;
+                border: 1px solid $ControlStrokeColorDefault !important;
+                color: $TextFillColorPrimary !important;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary !important;
+                }
+
+                &:active {
+                    background-color: $ControlFillColorTertiary !important;
+                }
+
+                // Ensure nested text nodes inherit the colour override
+                span, [data-text-variant] {
+                    color: $TextFillColorPrimary !important;
+                }
             }
         }
     }
 
     // Control Tray (Bottom buttons)
-    .videoControls_bfe55a {
+    @include voice-video-controls {
         .bottomControls_bfe55a {
             padding: 16px;
         }
@@ -138,7 +204,8 @@
     // Sidebar chat divide fixes
     &.sidebarOpen_cb9592,
     .channelChatWrapper_cb9592 {
-        border: none;
+        border: none !important;
+        background: transparent !important;
         &::before, &::after {
             display: none;
         }

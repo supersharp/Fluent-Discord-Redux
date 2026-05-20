@@ -470,3 +470,52 @@
         @content;
     }
 }
+
+// ============================================================================
+// MEDIA PLAYER & CALL CONTROLS
+// ============================================================================
+
+@mixin chat-video-controls {
+    .videoControls_f316dd,
+    [class*="messageAttachment_"] [class*="videoControls_"],
+    [class*="chatContent_"] [class*="videoControls_"] {
+        @content;
+    }
+}
+
+@mixin chat-audio-controls {
+    .audioControls_f316dd,
+    [class*="audioControls_"] {
+        @content;
+    }
+}
+
+@mixin voice-video-controls {
+    .videoControls_bfe55a,
+    .wrapper_cb9592 [class*="videoControls_"],
+    .callContainer_cb9592 [class*="videoControls_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// RESIZE HANDLE
+// ============================================================================
+
+@mixin resize-handle {
+    .resizeHandle__01ae2,
+    [class*="resizeHandle_"] {
+        @content;
+    }
+}
+
+// ============================================================================
+// INBOX BUTTON
+// ============================================================================
+
+@mixin inbox-button {
+    .clickable__81391,
+    [class*="clickable_"][aria-label="Inbox"] {
+        @content;
+    }
+}

@@ -21,7 +21,7 @@
         }
     }
     // Inbox
-    .clickable__81391{
+    @include inbox-button {
         width: 46px;
         height: 32px;
         margin: 0;
