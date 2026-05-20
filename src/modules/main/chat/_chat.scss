@@ -1,20 +1,29 @@
 .theme-dark{
+    // Page wrapper + chat page shell: exact hash + partial-match fallback for future class rotation
+    .page__5e434 > div > .chat_f75fb0,
+    [class*="page__"] > div > .chat_f75fb0,
+    [class*="page__"] > div > [class*="chat_"] {
+        background: transparent !important;
+    }
+
     .chat_f75fb0{
-        background: transparent;
+        background: transparent !important;
         border-top: 0;
         &[data-has-border=true]{
             border-top: 0;
         }
     }
 
-    .content_f75fb0{
-        background-color: $LayerFillColorAlt;
+    .content_f75fb0,
+    [class*="content_"][class*="chat_"] {
+        background-color: $LayerFillColorDefault !important;
         border-left: 0;
         border-radius: 8px 0 0 0;
         box-shadow: none;
     }
-    .chatContent_f75fb0{
-        background-color: $LayerFillColorDefault;
+    .chatContent_f75fb0,
+    [class*="chatContent_"]{
+        background-color: transparent !important;
         border-top-left-radius: 8px;
         overflow: hidden;
     }

@@ -39,11 +39,16 @@
 
 .theme-dark .chat_f75fb0{
     .subtitleContainer__49508,
+    .subtitleContainer_f75fb0,
+    [class*="subtitleContainer_"],
     [class*="headerBar__"],
     .title_f75fb0,
-    .container__9293f{
-        border: 0;
-        box-shadow: none;
+    [class*="title_"],
+    .container__9293f,
+    [class*="container__9293f"]{
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
         border-top-left-radius: 8px;
         overflow: hidden;
     }
