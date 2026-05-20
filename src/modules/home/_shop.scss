@@ -15,23 +15,14 @@
             position: relative;
         }
 
-        // Final seam mask for Shop only: overlay the boundary line between
-        // the Shop header stack and first content wrapper.
-        > div::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -1px;
-            height: 2px;
-            background-color: $LayerFillColorDefault;
-            pointer-events: none;
-            z-index: 2;
-        }
+        // Final seam mask removed: header bar is now transparent so no
+        // colour boundary exists between it and the dark app-frame background.
 
-        .headerBar__80679 {
+        // Each exact hashed class is paired with a wildcard fallback.
+        .headerBar__80679,
+        [class*="headerBar__"] {
             overflow: visible;
-            background-color: $LayerFillColorDefault !important; // Override inline
+            background: transparent !important; // Override inline; header sits flush with dark titlebar
             border: 0 !important;
             box-shadow: none !important;
             filter: none !important;
@@ -42,7 +33,9 @@
             outline: 0 !important;
 
             .upperContainer__9293f,
-            .children__9293f {
+            [class*="upperContainer__"],
+            .children__9293f,
+            [class*="children__"] {
                 overflow: visible;
                 border: 0 !important;
                 box-shadow: none !important;
@@ -57,9 +50,13 @@
 
             // Shop tabs container stack
             .container__354ec,
+            [class*="container__354ec"],
             .measurements__354ec,
+            [class*="measurements__"],
             .tabs__354ec,
-            .tab__354ec {
+            [class*="tabs__"],
+            .tab__354ec,
+            [class*="tab__"] {
                 border: 0 !important;
                 box-shadow: none !important;
                 background-color: transparent !important;
@@ -71,11 +68,13 @@
                 }
             }
 
-            .toolbar__9293f {
+            .toolbar__9293f,
+            [class*="toolbar__"] {
                 overflow: visible;
 
                 // Search bar - uses new Mana component input classes
-                .searchBar__824d3 {
+                .searchBar__824d3,
+                [class*="searchBar__"] {
                     overflow: visible;
 
                     > div[role="button"] {
@@ -107,16 +106,21 @@
                         }
                     }
 
-                    .container__0f084 {
+                    .container__0f084,
+                    [class*="container__0f084"] {
                         background-color: $ControlFillColorDefault;
                         border: 1px solid $ControlStrokeColorDefault;
                         border-radius: 4px;
 
-                        .icon__0f084 svg {
-                            color: $TextFillColorSecondary;
+                        .icon__0f084,
+                        [class*="icon__0f084"] {
+                            svg {
+                                color: $TextFillColorSecondary;
+                            }
                         }
 
-                        .input__0f084 {
+                        .input__0f084,
+                        [class*="input__0f084"] {
                             @include TypeBody;
                             color: $TextFillColorPrimary;
                             background-color: transparent;
@@ -129,7 +133,8 @@
                 }
 
                 // Wishlist button - the heart SVG icon is invisible
-                .wishlistButton__80679 {
+                .wishlistButton__80679,
+                [class*="wishlistButton__"] {
                     width: 32px !important;
                     min-width: 32px !important;
                     height: 32px !important;
@@ -181,6 +186,16 @@
             outline: 0 !important;
             position: relative;
             z-index: 1;
+            background-color: $LayerFillColorDefault !important;
+
+            .shopScroll__08415,
+            [class*="shopScroll__"] {
+                background-color: transparent !important;
+            }
+            .shop__08415,
+            [class*="shop__"]:not(.shop__6db1d):not([class*="shop__6db1d"]) {
+                background-color: transparent !important;
+            }
         }
 
         > div > section[class*="headerBar__"] + .shopViewWrapper__6db1d,
@@ -217,7 +232,9 @@
 
         // Shop tabs styling
         .tabs__354ec .tab__354ec,
-        .tabs__354ec .item_aa8da2 {
+        [class*="tabs__"] [class*="tab__"],
+        .tabs__354ec .item_aa8da2,
+        [class*="tabs__"] .item_aa8da2 {
             height: 36px;
             margin: 0 0 0 8px;
             border-radius: 0;
@@ -249,8 +266,11 @@
         }
 
         .tabs__354ec .tab__354ec[aria-selected="true"],
+        [class*="tabs__"] [class*="tab__"][aria-selected="true"],
         .tabs__354ec .tab__354ec.selected__354ec,
-        .tabs__354ec .item_aa8da2.selected_aa8da2 {
+        [class*="tabs__"] [class*="tab__"][class*="selected__"],
+        .tabs__354ec .item_aa8da2.selected_aa8da2,
+        [class*="tabs__"] .item_aa8da2.selected_aa8da2 {
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
             box-shadow: inset 0 -3px 0 $AccentLight1 !important;
@@ -258,7 +278,8 @@
     }
 
     // Orb balance pill - GLOBAL fix (applies to Shop, Quests, etc.)
-    .toolbar__9293f {
+    .toolbar__9293f,
+    [class*="toolbar__"] {
         background-color: transparent !important;
 
         [class*="searchIcon__"][role="button"] {
@@ -281,10 +302,15 @@
             }
         }
 
-        .container__44ee9 {
+        .container__44ee9,
+        [class*="container__44ee9"] {
             overflow: visible;
             flex-shrink: 0;
         }
+        // NOTE: [class*="clickable_"] intentionally omitted — "clickable_" is a
+        // common stem shared with chat toolbar buttons (.clickable_9293f) and
+        // adding a wildcard overrides their width:60px layout.  The exact class
+        // is sufficient here; update resilience is accepted as a known trade-off.
         .clickable_a3e8db {
             width: auto !important;
             height: 32px !important;
@@ -292,11 +318,13 @@
             display: flex !important;
             align-items: center !important;
         }
-        .container_a3e8db {
+        .container_a3e8db,
+        [class*="container_a3e8db"] {
             overflow: visible;
             min-width: fit-content;
         }
-        .balanceCounterText__98f64 {
+        .balanceCounterText__98f64,
+        [class*="balanceCounterText__"] {
             overflow: visible;
         }
     }

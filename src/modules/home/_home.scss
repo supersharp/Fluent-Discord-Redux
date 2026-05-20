@@ -40,43 +40,64 @@
 }
 
 // Page-level guard for Home-family header seams (Shop/Quests wrappers).
+// Header bars (Quests / Shop) are transparent so they sit flush against
+// the dark titlebar background.  Only the body content panels below get
+// the mica LayerFillColorDefault tint.
 .theme-dark .page__5e434 {
+
+    // ── Transparent header-bar zone ───────────────────────────────────────
+    // Outer wrappers and header bars: strip all backgrounds so the dark
+    // app-frame / titlebar colour shows through.
+    // Each exact hash is paired with a [class*] wildcard for update resilience.
+    section[class*="headerBar__"],
+    section[class*="headerBar__"] [class*="container__9293f"],
+    section[class*="headerBar__"] [class*="tabs__"],
+    section[class*="headerBar__"] + [class*="tabs__"],
+    section[class*="headerBar__"] + .toolbar__9293f,
+    section[class*="headerBar__"] + [class*="toolbar__"],
+    > .shop__6db1d > div,
+    > [class*="shop__"] > div,
+    > .shop__6db1d > div > section[class*="headerBar__"],
+    > [class*="shop__"] > div > section[class*="headerBar__"],
+    .container__955a3,
+    [class*="container__955a3"] {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        overflow: hidden;
+    }
+
+    // ── Mica content panels ───────────────────────────────────────────────
+    // The actual body scrollers / wrappers below the header bar get the
+    // semi-transparent mica LayerFillColorDefault colour.
     > .shop__6db1d .shopViewWrapper__6db1d,
     > .shop__6db1d .shopScroll__08415,
     > .container__955a3 > .scroller__23746,
     > [class*="shop__"] [class*="shopViewWrapper__"],
     > [class*="shop__"] [class*="shopScroll__"],
-    > [class*="container__955a3"] > .scroller__23746 {
+    > [class*="container__955a3"] > [class*="scroller__"],
+    [class*="shopViewWrapper__"] {
+        background-color: $LayerFillColorDefault !important;
         border-top-left-radius: 8px !important;
         overflow: hidden;
     }
 
-    section[class*="headerBar__"],
-    section[class*="headerBar__"] [class*="container__9293f"],
-    section[class*="headerBar__"] [class*="tabs__"],
-    section[class*="headerBar__"] + [class*="tabs__"],
-    > .shop__6db1d > div,
-    > .shop__6db1d > div > section[class*="headerBar__"],
-    > .shop__6db1d > div + .shopViewWrapper__6db1d,
-    [class*="shopViewWrapper__"],
-    section[class*="headerBar__"] + .toolbar__9293f,
-    .container__955a3 {
-        border-top: 0 !important;
-        border-bottom: 0 !important;
-        box-shadow: none !important;
-        background: transparent !important;
-    }
-
+    // ── Pseudo-element cleanup ────────────────────────────────────────────
     section[class*="headerBar__"]::before,
     section[class*="headerBar__"]::after,
     section[class*="headerBar__"] + [class*="tabs__"]::before,
     section[class*="headerBar__"] + [class*="tabs__"]::after,
     > .shop__6db1d > div::before,
     > .shop__6db1d > div::after,
+    > [class*="shop__"] > div::before,
+    > [class*="shop__"] > div::after,
     [class*="shopViewWrapper__"]::before,
     [class*="shopViewWrapper__"]::after,
     .container__955a3::before,
-    .container__955a3::after {
+    .container__955a3::after,
+    [class*="container__955a3"]::before,
+    [class*="container__955a3"]::after {
         display: none !important;
         content: none !important;
     }
@@ -100,10 +121,17 @@
 }
 
 // Quests toolbar tabs: match Shop tab size and active indicator weight.
-.theme-dark .page__5e434 .container__955a3 {
-    .headerBar__1a9ce {
+// Each exact hash class is paired with a [class*] wildcard fallback so the
+// rule survives Discord's periodic class-name hash rotations.
+.theme-dark .page__5e434 .container__955a3,
+.theme-dark .page__5e434 [class*="container__955a3"] {
+    // Accept both the known headerBar hash and any future rotation.
+    .headerBar__1a9ce,
+    [class*="headerBar__"] {
         .tabs__26669 .tabWrapper__26669,
-        .container__26669 .tabWrapper__26669 {
+        [class*="tabs__"] [class*="tabWrapper__"],
+        .container__26669 .tabWrapper__26669,
+        [class*="container__26669"] [class*="tabWrapper__"] {
             height: 36px;
             margin: 0 0 0 8px;
             display: flex;
@@ -121,7 +149,9 @@
         }
 
         .tabs__26669 .tab__26669,
-        .container__26669 .tab__26669 {
+        [class*="tabs__"] [class*="tab__"],
+        .container__26669 .tab__26669,
+        [class*="container__26669"] [class*="tab__"] {
             @include TypeBody;
             color: $TextFillColorPrimary !important;
             margin: 0;
@@ -149,9 +179,13 @@
         }
 
         .tabs__26669 .tab__26669 [class*="text-"],
+        [class*="tabs__"] [class*="tab__"] [class*="text-"],
         .container__26669 .tab__26669 [class*="text-"],
+        [class*="container__26669"] [class*="tab__"] [class*="text-"],
         .tabs__26669 .tab__26669 [data-text-variant],
-        .container__26669 .tab__26669 [data-text-variant] {
+        [class*="tabs__"] [class*="tab__"] [data-text-variant],
+        .container__26669 .tab__26669 [data-text-variant],
+        [class*="container__26669"] [class*="tab__"] [data-text-variant] {
             font-feature-settings: 'rclt' 0 !important;
             font-size: 14px !important;
             font-style: normal !important;
@@ -159,8 +193,12 @@
             line-height: 20px !important;
         }
 
+        // Selected tab — use aria-selected as the hash-agnostic fallback
+        // alongside the exact selected__ class.
         .tabs__26669 .tab__26669.selected__26669,
-        .container__26669 .tab__26669.selected__26669 {
+        [class*="tabs__"] [class*="tab__"][aria-selected="true"],
+        .container__26669 .tab__26669.selected__26669,
+        [class*="container__26669"] [class*="tab__"][aria-selected="true"] {
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
             box-shadow: inset 0 -3px 0 $AccentLight1 !important;
@@ -171,9 +209,11 @@
             }
         }
 
-        // Some builds put selected state on the wrapper instead of the title node.
+        // Some builds put selected state on the wrapper instead of the tab node.
         .tabs__26669 .tabWrapper__26669.selected_aa8da2,
-        .container__26669 .tabWrapper__26669.selected_aa8da2 {
+        [class*="tabs__"] [class*="tabWrapper__"].selected_aa8da2,
+        .container__26669 .tabWrapper__26669.selected_aa8da2,
+        [class*="container__26669"] [class*="tabWrapper__"].selected_aa8da2 {
             background-color: transparent !important;
             border-bottom: 0 !important;
             box-shadow: inset 0 -3px 0 $AccentLight1 !important;
