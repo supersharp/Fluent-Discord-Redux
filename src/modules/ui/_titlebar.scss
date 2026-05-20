@@ -26,7 +26,7 @@
         height: 32px;
         margin: 0;
         justify-content: center;
-        &::before{
+        &[aria-label="Inbox"]::before{
             content: "\E715"; // Mail
             @include FontIconFluent;
         }
@@ -36,7 +36,7 @@
         &[aria-expanded=true]{
             background-color: $ControlFillColorTertiary;
         }
-        svg{
+        &[aria-label="Inbox"] svg{
             display: none;
         }
     }
@@ -76,7 +76,7 @@ html.theme-dark.app-focused{
     .winButton_c38106{
         color: $TextFillColorPrimary;
     }
-    .clickable__81391::before{
+    .clickable__81391[aria-label="Inbox"]::before{
         color: $TextFillColorPrimary;
     }
 }
