@@ -1,12 +1,12 @@
 .theme-dark{
-    .form_f75fb0{
+    [class*="form_"]{
         margin-top: 0;
         padding-left: 17px;
         padding-right: 15px;
     }
 
-    .channelTextArea__74017,
-    .channelTextArea_f75fb0 {
+    [class*="form_"] .channelTextArea__74017,
+    [class*="form_"] [class*="channelTextArea_"] {
         margin-bottom: 8px;
         background: $ControlFillColorDefault !important;
         border: 1px solid $ControlStrokeColorDefault !important;
@@ -24,10 +24,10 @@
             background-color: $ControlFillColorDisabled !important;
         }
     }
-    .themedBackground__74017 {
+    [class*="form_"] .themedBackground__74017 {
         background: transparent !important;
     }
-    .scrollableContainer__74017 {
+    [class*="form_"] .scrollableContainer__74017 {
         background: transparent !important;
         border-radius: 4px;
         overflow-y: auto;
@@ -37,11 +37,11 @@
     }
 
     // Text input
-    .textArea__74017{
+    [class*="form_"] .textArea__74017{
         height: 48px;
         min-height: 48px;
     }
-    .slateTextArea_ec4baf{
+    [class*="form_"] [class*="slateTextArea_"]{
         min-height: 48px;
         padding: 14px 0 14px 10px;
         color: $TextFillColorPrimary;
@@ -89,7 +89,7 @@
     }
 
     // Button group within chatbox
-    .buttons__74017{
+    [class*="form_"] .buttons__74017{
         height: 48px;
         gap: 4px;
         // Remove the gift button
@@ -223,7 +223,7 @@
 
     // Various chatbox states
     // No Permission
-    .textAreaDisabled__74017 {
+    [class*="form_"] .textAreaDisabled__74017 {
         overflow: hidden;
         .placeholder__1b31f {
             color: $TextFillColorSecondary;

@@ -1,286 +1,47 @@
-.theme-dark {
+// User profile modal styling overrides
 
-    // Target the absolute root of the modal layer and its parents to kill the outer border
-    [role="dialog"]:has([class*="profileContent"]),
-    [role="dialog"]:has([class*="profileCard"]),
-    [role="dialog"]:has([class*="userProfile"]),
-    div[class*="root_"]:has([class*="profileContent"]),
-    div[class*="root_"]:has([class*="profileCard"]),
-    div[class*="root_"]:has([class*="userProfile"]),
-    div[class*="layer_"]:has([class*="profileContent"]),
-    div[class*="layer_"]:has([class*="profileCard"]),
-    div[class*="layer_"]:has([class*="userProfile"]) {
+.theme-dark,
+.theme-light,
+.theme-midnight,
+.theme-darker {
+    // Target root containers that house user profiles and force background transparency to prevent corner bleed
+    [class*="root_"]:has([class*="userProfileModalOuter_"]),
+    [class*="root_"]:has([class*="userProfileOuter_"]),
+    [class*="root_"]:has([class*="userProfile"]),
+    [class*="root_"]:has([class*="userPopout"]),
+    [class*="root_"]:has([class*="profile"]) {
         background: transparent !important;
-        border: none !important;
+        background-color: transparent !important;
         box-shadow: none !important;
+        border: none !important;
     }
 
-    // The large User Profile modal (Main surface)
-    [class*="profileContentContainer_"],
-    [class*="profileContentOuter_"],
-    [class*="outer_"]:has([class*="profileContentInner_"]),
-    [class*="outer_"]:has([class*="profileCard_"]) {
-        background: $MicaBackgroundFillColorBase !important;
-        backdrop-filter: blur(32px) !important;
-        border: 1px solid $SurfaceStrokeColorDefault !important;
-        border-radius: 8px !important;
-        overflow: hidden !important;
-        display: block !important;
-        @include Elevation128;
-        box-shadow: none !important;
+    // Force the "Games I like" widget grid to lay out horizontally
+    [class*="gameWidgetGrid_"] {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)) !important;
+        gap: 12px !important;
+        width: 100% !important;
 
-        [class*="inner_"] {
-            background: transparent !important;
+        > li,
+        [class*="gameWidget_"] {
             display: flex !important;
-            flex-direction: row !important;
-            height: 100% !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
             border: none !important;
-            border-radius: 8px !important;
+        }
+
+        // Fix game cover images
+        [class*="gameCover_"] {
+            width: 80px !important;
+            height: 106px !important;
+            border-radius: 6px !important;
             overflow: hidden !important;
-
-            [class*="scrim_"],
-            [class*="backgroundImage_"] {
-                display: none !important;
-            }
-
-            // Left section (Profile Card / Main Profile)
-            [class*="profileCard_"],
-            & > main[class*="profile_"] {
-                box-sizing: border-box !important;
-                background: transparent !important;
-                width: 400px !important;
-                flex: 0 0 400px !important;
-                border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
-                z-index: 10;
-                position: relative !important;
-                border-radius: 8px 0 0 8px !important;
-
-                // Force banner and header to only round the top-left corner
-                [class*="banner_"],
-                [class*="profileHeader_"],
-                svg[class*="mask_"] {
-                    border-radius: 8px 0 0 0 !important;
-                }
-            }
-
-            // Right section (Tabs and Board)
-            & > [class*="container_"] {
-                background-color: rgba(0, 0, 0, 0.2) !important;
-                flex: 1 1 auto !important;
-                display: flex !important;
-                flex-direction: column !important;
-                overflow: hidden !important;
-                border: none !important;
-                z-index: 5;
-                padding-left: 0 !important; // Reverted global padding to fix overlap
-                border-radius: 0 8px 8px 0 !important;
-
-                // Tab list scroller
-                [class*="tabListScroller_"] {
-                    overflow: visible !important;
-                    background: transparent !important;
-                    border: none !important;
-                    box-shadow: none !important;
-                    padding: 0 0 0 20px !important; // Fine-tuned offset for pixel-perfect alignment
-                    margin: 0 !important;
-                    position: relative !important; // Force relative to push content down
-                    top: 0 !important;
-                    width: 100% !important;
-                    height: 80px !important; // Reserve space for the tab bar
-                    min-height: 80px !important;
-                    flex: 0 0 80px !important;
-
-                    // Hide EVERYTHING in the scroller that isn't the tab bar itself (removes lines/spacers)
-                    &,
-                    & *,
-                    &::before,
-                    &::after {
-                        border: none !important;
-                        box-shadow: none !important;
-                    }
-
-                    &>div:not(.top_aa8da2) {
-                        display: none !important;
-                        height: 0 !important;
-                        min-height: 0 !important;
-                        visibility: hidden !important;
-                    }
-                }
-
-                // Tab bar
-                .top_aa8da2 {
-                    border-bottom: none !important;
-                    padding: 0 !important;
-                    margin: 24px 0 24px 0 !important;
-                    display: flex !important;
-                    background: transparent !important;
-
-                    // Support both .item_aa8da2 and .tabBarItem__37bfc (own profile use .tabBarItem__37bfc!)
-                    .item_aa8da2,
-                    .tabBarItem__37bfc {
-                        padding: 0 12px !important; // Match card content padding for alignment
-                        height: 48px;
-                        display: flex;
-                        align-items: center;
-                        @include TypeBody;
-                        color: $TextFillColorSecondary;
-                        margin: 0;
-                        position: relative;
-                        background: transparent !important;
-                        white-space: nowrap;
-                        border: none !important;
-                        box-shadow: none !important;
-
-                        &:hover {
-                            color: $TextFillColorPrimary;
-                            background-color: $SubtleFillColorSecondary !important;
-                        }
-
-                        &.selected_aa8da2 {
-                            color: $TextFillColorPrimary;
-                            background-color: transparent !important;
-
-                            &::before {
-                                display: none !important;
-                                content: none !important;
-                            }
-
-                            &::after {
-                                display: block !important;
-                                content: "" !important;
-                                position: absolute;
-                                bottom: 0;
-                                left: 12px; // Align indicator exactly with text start
-                                right: 12px; // Align indicator exactly with text end
-                                height: 3px;
-                                background-color: $AccentBase !important;
-                                border-radius: 2px 2px 0 0;
-                            }
-                        }
-                    }
-                }
-
-                // Tab Panels / Widgets
-                [class*="tabBarPanel_"] {
-                    flex: 1 1 auto;
-                    width: 100% !important;
-                    overflow: hidden !important; // Restore overflow hidden to allow internal scrolling
-                    border-radius: 0 0 8px 0 !important;
-                    padding: 0 !important;
-                    position: relative !important;
-                    top: 0 !important;
-                    min-height: 0; // Allow flex container to shrink correctly
-
-                    [class*="tabPanelScroller_"] {
-                        padding: 16px 16px 16px 24px !important; // Match tab offset + top padding
-                        height: 100% !important;
-                        min-height: 0 !important;
-                        margin: 0 !important; // Kill negative margins causing cutoff
-                        width: 100% !important;
-                        max-width: 100% !important;
-                    }
-
-                    // Widget Card Containers (Board widgets, Activity cards)
-                    // Board widgets are direct container children under sections
-                    // Activity cards are card containers inside list items
-                    section > [class*="container_"]:not([class*="coverContainer_"]):not([class*="platformIconContainer_"]),
-                    [class*="cards_"] [class*="card_"]:not([class*="profileCard_"]):not([class*="gameCover_"]) {
-                        background-color: $CardBackgroundFillColorDefault !important;
-                        border: 1px solid $CardStrokeColorDefault !important;
-                        border-radius: 8px !important;
-                        margin-bottom: 12px !important;
-                        padding: 16px !important;
-                        overflow: visible !important;
-                        transition: background-color 0.15s ease, border-color 0.15s ease !important;
-
-                        // Hover effect for interactive cards (like Activity cards)
-                        &:hover {
-                            background-color: $CardBackgroundFillColorTertiary !important;
-                            border-color: $ControlStrokeColorSecondary !important;
-                        }
-
-                        // Remove double borders/backgrounds on nested containers/cards
-                        [class*="container_"],
-                        [class*="card_"] {
-                            background-color: transparent !important;
-                            border: none !important;
-                            padding: 0 !important;
-                            margin: 0 !important;
-                        }
-                    }
-
-                    // Game covers (Board widgets)
-                    [class*="gameCover_"] {
-                        border-radius: 6px !important;
-                        overflow: hidden !important;
-                    }
-
-                    // List items (Mutual Friends & Mutual Servers)
-                    [class*="row_"] {
-                        display: flex !important;
-                        flex-direction: row !important;
-                        align-items: center !important;
-                        padding: 16px !important; // Match Activity card padding
-                        margin-bottom: 12px !important; // Match Activity card margin
-                        border-radius: 8px !important; // Match Activity card border-radius
-                        background-color: $CardBackgroundFillColorDefault !important; // Match Activity card background
-                        border: 1px solid $CardStrokeColorDefault !important; // Match Activity card border
-                        transition: background-color 0.15s ease, border-color 0.15s ease !important;
-                        cursor: pointer !important;
-
-                        &:hover {
-                            background-color: $CardBackgroundFillColorTertiary !important; // Match Activity card hover background
-                            border-color: $ControlStrokeColorSecondary !important; // Match Activity card hover border
-                        }
-
-                        &:active {
-                            background-color: $SubtleFillColorTertiary !important;
-                        }
-
-                        // Avatar or server icon container (direct children only)
-                        & > [class*="avatar_"],
-                        & > [class*="icon_"] {
-                            width: 40px !important;
-                            height: 40px !important;
-                            border-radius: 50% !important; // Ensure all icons and avatars are round
-                            background-size: cover !important;
-                            background-position: center !important;
-                        }
-
-                        // Details (text container)
-                        [class*="details_"] {
-                            margin-left: 12px !important;
-                            flex: 1 1 auto !important;
-                            display: flex !important;
-                            flex-direction: column !important;
-                            justify-content: center !important;
-                            min-width: 0 !important;
-
-                            // Primary text (Friend name / Server name)
-                            [class*="name_"],
-                            [class*="tag_"] {
-                                color: $TextFillColorPrimary !important;
-                                font-weight: 600 !important;
-                                @include TypeBody;
-                                overflow: hidden !important;
-                                text-overflow: ellipsis !important;
-                                white-space: nowrap !important;
-                            }
-
-                            // Secondary text (Status, Mutual friends subtitle)
-                            [class*="defaultColor_"],
-                            [class*="container_"] {
-                                color: $TextFillColorSecondary !important;
-                                @include TypeCaption;
-                                overflow: hidden !important;
-                                text-overflow: ellipsis !important;
-                                white-space: nowrap !important;
-                                margin-top: 2px !important;
-                            }
-                        }
-                    }
-                }
-            }
+            object-fit: cover !important;
         }
     }
 }

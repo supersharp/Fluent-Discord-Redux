@@ -1,107 +1,140 @@
-.theme-dark .chat_f75fb0 .search__49676{
-    margin: 0 4px 0 0;
-    .searchBar_c322aa{
-        width: 60px;
-        height: 32px;
-        background-color: transparent;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        border: 0;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color $AnimationFadeInOut,
-                    width $AnimationFastInvokeMedium;
-        &:hover{
-            background-color: $ControlFillColorSecondary;
+.theme-dark,
+.theme-light,
+.theme-midnight,
+.theme-darker {
+    [class*="search__"]{
+        margin: 0 4px 0 0;
+        width: 60px !important;
+        max-width: 60px !important;
+        min-width: 0 !important;
+        flex: 0 0 60px !important;
+        transition: width $AnimationFastInvokeMedium,
+                    max-width $AnimationFastInvokeMedium,
+                    flex $AnimationFastInvokeMedium;
+
+        &:has([class*="search_"][class*="focused_"]),
+        &:has([class*="search_"][class*="open_"]),
+        &:has([class*="popoutOpen_"]),
+        &:has(.popout-open) {
+            width: 232px !important;
+            max-width: 232px !important;
+            min-width: 232px !important;
+            flex: 0 0 232px !important;
+            transition: width $AnimationSoftDismiss,
+                        max-width $AnimationSoftDismiss,
+                        flex $AnimationSoftDismiss;
+        }
+
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) {
+            position: relative !important;
+            width: 100% !important;
+            min-width: 0 !important;
+        }
+
+        [class*="searchBar_"]{
+            width: 100% !important;
+            min-width: 0 !important;
+            height: 32px;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
             transition: background-color $AnimationFadeInOut;
+            &:hover{
+                background-color: $ControlFillColorSecondary;
+                transition: background-color $AnimationFadeInOut;
+            }
+            .public-DraftEditorPlaceholder-root,
+            [class*="iconLayout_"]{
+                display: none !important;
+            }
+            [class*="iconLayout_"]{
+                height: 24px;
+            }
         }
-        .public-DraftEditorPlaceholder-root,
-        .icon_c322aa{
-            display: none;
+
+        // Icon when not active
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]):not([class*="focused_"]):not([class*="open_"])::before{
+            content: "\e721"; // Search
+            width: 60px;
+            font-size: 16px;
+            @include FontIconFluent;
+            text-align: center;
+            line-height: 32px;
+            vertical-align: middle;
+            position: absolute;
         }
-        .icon_c322aa{
+
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"],
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"],
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]).popout-open [class*="searchBar_"]{
+            width: 100% !important;
+            height: 32px;
+            margin: 0;
+            background-color: $ControlFillColorDefault;
+            background-image: none;
+            cursor: text;
+            border: 1px solid $ControlStrokeColorDefault;
+            border-bottom-width: 2px;
+            border-radius: 4px;
+            transition: width $AnimationSoftDismiss;
+        }
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"]{
+            background-color: $ControlFillColorInputActiveBrush;
+            border-color: $ControlStrokeColorDefault;
+            border-bottom-color: $AccentBase;
+        }
+
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="iconLayout_"],
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="iconLayout_"]{
+            width: 24px;
             height: 24px;
+            display: block !important;
+            padding: 4px 0 0 4px;
         }
-    }
-
-    // Icon when not active
-    .search_c322aa:not(.focused_c322aa):not(.open_c322aa)::before{
-        content: "\e721"; // Search
-        width: 60px;
-        font-size: 16px;
-        @include FontIconFluent;
-        text-align: center;
-        line-height: 32px;
-        vertical-align: middle;
-        position: absolute;
-    }
-
-    .search_c322aa.focused_c322aa .searchBar_c322aa,
-    .search_c322aa.open_c322aa .searchBar_c322aa,
-    .search_c322aa.popout-open .searchBar_c322aa{
-        width: 232px;
-        height: 32px;
-        margin: 0;
-        background-color: $ControlFillColorDefault;
-        background-image: none;
-        cursor: text;
-        border: 1px solid $ControlStrokeColorDefault;
-        border-bottom-width: 2px;
-        border-radius: 4px;
-        transition: width $AnimationSoftDismiss;
-    }
-    .search_c322aa.focused_c322aa .searchBar_c322aa{
-        background-color: $ControlFillColorInputActiveBrush;
-        border-color: $ControlStrokeColorDefault;
-        border-bottom-color: $AccentBase;
-    }
-
-    .search_c322aa.open_c322aa .icon_c322aa,
-    .search_c322aa.focused_c322aa .icon_c322aa{
-        width: 24px;
-        height: 24px;
-        display: block;
-        padding: 4px 0 0 4px;
-    }
-    .search_c322aa.open_c322aa .searchBar_c322aa .public-DraftEditorPlaceholder-root,
-    .search_c322aa.focused_c322aa .searchBar_c322aa .public-DraftEditorPlaceholder-root{
-        display: block;
-    }
-    .search_c322aa .DraftEditor-root .DraftEditor-editorContainer{
-        height: 26px;
-    }
-    .search_c322aa .searchBar_c322aa .DraftEditor-root{
-        width: 100%;
-        color: $TextFillColorPrimary;
-        @include TypeBody;
-        .public-DraftEditor-content{
-            overflow-x: hidden;
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root{
+            display: block;
         }
-        .public-DraftEditor-content,
-        .public-DraftEditorPlaceholder-root{
-            padding: 3px 8px 0;
-            box-sizing: border-box;
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) .DraftEditor-root .DraftEditor-editorContainer{
+            height: 26px;
         }
-    }
-    // Add margin to textarea when open/focused so text doesn't appear over the search/clear icon
-    .search_c322aa .searchBar_c322aa .public-DraftEditorPlaceholder-root{
-        color: $TextFillColorSecondary;
-        @include TypeBody;
-    }
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] .DraftEditor-root{
+            width: 100% !important;
+            min-width: 0 !important;
+            color: $TextFillColorPrimary;
+            @include TypeBody;
+            .public-DraftEditor-content{
+                overflow-x: hidden;
+            }
+            .public-DraftEditor-content,
+            .public-DraftEditorPlaceholder-root{
+                padding: 3px 8px 0;
+                box-sizing: border-box;
+            }
+        }
+        // Add margin to textarea when open/focused so text doesn't appear over the search/clear icon
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] .public-DraftEditorPlaceholder-root{
+            color: $TextFillColorSecondary;
+            @include TypeBody;
+        }
 
-    span[class^="searchAnswer-"],
-    span[class^="searchFilter-"]{
-        background-color: $TextFillColorPrimary;
-        color: #000;
-        font-weight: normal;
-    }
+        span[class^="searchAnswer-"],
+        span[class^="searchFilter-"]{
+            background-color: $TextFillColorPrimary;
+            color: #000;
+            font-weight: normal;
+        }
 
-    // Search/clear icon in textarea
-    .iconContainer_fea832{
-        // Flip eyeglass icon so the handle is the same side as the Fluent icon
-        &:first-child{
-            transform: rotateZ(90deg);
+        // Search/clear icon in textarea
+        .iconContainer_fea832{
+            // Flip eyeglass icon so the handle is the same side as the Fluent icon
+            &:first-child{
+                transform: rotateZ(90deg);
+            }
         }
     }
 }

@@ -8,9 +8,12 @@
     }
 }
 
-.theme-dark .zoomedCarouselModalRoot_f74404.root__49fc1{
-    background-color: transparent;
-    border: 0;
+.theme-dark [class*="carouselModal_"].root__49fc1,
+.theme-dark [class*="zoomedCarouselModalRoot_"].root__49fc1 {
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
 
     .downloadLink_aa8ea9{
         color: $TextFillColorSecondary;
@@ -19,3 +22,13 @@
     }
 }
 
+// Media viewer backdrop overlay to block out main UI/wallpaper bleed
+.theme-dark,
+.theme-light,
+.theme-midnight,
+.theme-darker {
+    [class*="scrim_"][class*="lightbox_"] {
+        background-color: #000000 !important;
+        opacity: 0.95 !important;
+    }
+}

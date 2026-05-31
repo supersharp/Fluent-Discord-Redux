@@ -2,8 +2,7 @@
 .theme-midnight,
 .theme-darker {
 
-    [class*="accountPopout_"],
-    [class*="userPopoutOuter_"] {
+    [class*="accountPopout_"] {
         background-color: $AcrylicBackgroundFillColorBase;
         backdrop-filter: blur(20px);
         border: 1px solid $SurfaceStrokeColorDefault;
@@ -84,32 +83,6 @@
                 svg {
                     color: white !important;
                 }
-            }
-        }
-    }
-}
-
-.theme-dark .userPopoutOuter_c69a7b {
-
-    // Remove style from context menu in user popout
-    .menu_c1e9c4.menu_ad5fac {
-        background-color: transparent;
-        border: 0;
-        box-shadow: none;
-
-        &::before {
-            content: unset;
-        }
-
-        .separator_c1e9c4 {
-            display: none;
-        }
-
-        .item_c1e9c4 {
-
-            // Remove icon
-            .iconContainerLeft_c1e9c4 {
-                display: none;
             }
         }
     }

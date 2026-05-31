@@ -7,54 +7,60 @@
 
     // Body
     @include modal-root {
-        background-color: $MicaBackgroundFillColorBase;
-        backdrop-filter: blur(16px);
-        border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
-        @include Elevation128;
-        overflow: hidden;
+        &:not([class*="userProfile"]):not([class*="user-profile"]):not([class*="userPopout"]):not([class*="outer_"]):not([class*="profile"]):not([class*="carouselModal"]):not([class*="lightbox"]) {
+            background-color: $MicaBackgroundFillColorBase;
+            backdrop-filter: blur(16px);
+            border: 1px solid $SurfaceStrokeColorDefault;
+            border-radius: 8px;
+            @include Elevation128;
+            overflow: hidden;
+        }
     }
 
     // Headers
     @include modal-header {
-        padding: 24px;
-        background-color: $LayerFillColorAlt;
-        border-radius: 8px 8px 0 0;
-        align-items: unset;
+        &:not([class*="userProfile"]):not([class*="user-profile"]):not([class*="userPopout"]):not([class*="outer_"]):not([class*="inner_"]):not([class*="profile"]):not([class*="carouselModal"]):not([class*="lightbox"]) {
+            padding: 24px;
+            background-color: $LayerFillColorAlt;
+            border-radius: 8px 8px 0 0;
+            align-items: unset;
 
-        .heading-lg-semibold__58a54, // eg. notification settings
-        .title__802af, // eg. change password
-        .title_b404ff, // eg. change username
-        .title_ad198f { // eg. edit email
-            @include TypeSubtitle;
-            text-align: left;
-        }
+            .heading-lg-semibold__58a54, // eg. notification settings
+            .title__802af, // eg. change password
+            .title_b404ff, // eg. change username
+            .title_ad198f { // eg. edit email
+                @include TypeSubtitle;
+                text-align: left;
+            }
 
-        .text-md-normal__6e567, // eg. notification settings
-        .subtitle__802af, // eg. change password
-        .subtitle_b404ff, // eg. change username
-        .subtitle_ad198f { // eg. edit email
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-            text-align: left;
-        }
+            .text-md-normal__6e567, // eg. notification settings
+            .subtitle__802af, // eg. change password
+            .subtitle_b404ff, // eg. change username
+            .subtitle_ad198f { // eg. edit email
+                @include TypeBody;
+                color: $TextFillColorPrimary;
+                text-align: left;
+            }
 
-        // Remove divider line in notification settings
-        &.separator__7dd5e {
-            box-shadow: none;
+            // Remove divider line in notification settings
+            &.separator__7dd5e {
+                box-shadow: none;
+            }
         }
     }
 
     // Content
     @include modal-content {
-        padding-right: 24px !important;
-        padding-left: 24px;
-        background-color: $LayerFillColorAlt;
-        border-bottom: 1px solid $CardStrokeColorDefault;
-        border-radius: 0;
+        &:not([class*="userProfile"]):not([class*="user-profile"]):not([class*="userPopout"]):not([class*="outer_"]):not([class*="inner_"]):not([class*="profile"]):not([class*="carouselModal"]):not([class*="lightbox"]) {
+            padding-right: 24px !important;
+            padding-left: 24px;
+            background-color: $LayerFillColorAlt;
+            border-bottom: 1px solid $CardStrokeColorDefault;
+            border-radius: 0;
 
-        video {
-            display: none;
+            video {
+                display: none;
+            }
         }
     }
 
