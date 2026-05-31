@@ -1,5 +1,5 @@
 # Fluent Discord Redux
-A Windows 11 theme for Discord
+A Windows 11 theme for Discord - Dark Mode must be on, light mode is not supported. 
 
 This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
 With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
