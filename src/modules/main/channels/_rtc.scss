@@ -107,10 +107,19 @@
 
 // Streaming game/app
 .theme-dark .activityPanel__5e434{
-    background-color: transparent;
+    background: transparent !important;
+    backdrop-filter: blur(var(--fluent-acrylic-background-blur)) !important;
     padding-bottom: 0;
     border-top: 0;
     border-bottom: 0;
+
+    .body__5dec7,
+    [class*="body_"],
+    .gameWrapper__8c6c2,
+    [class*="gameWrapper_"] {
+        background: transparent !important;
+    }
+
     .title_d1da5f{
         @include TypeBody;
     }

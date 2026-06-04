@@ -63,7 +63,13 @@ html[lang^="en-"].theme-dark .panels__5e434 .button__201d5{
     &[aria-label="Stop"]::before{
         content: "\E15B"; // Stop
     }
+
+    // Activity
+    &[aria-label="Invite to Join" i]::before{
+        content: "\E1E2"; // AddFriend
+    }
 }
+
 
 html[lang^="en-"].theme-dark .panels__5e434 .actionButtons_e131a9 button.button__201d5{
     &[aria-label*="camera" i]::before{
