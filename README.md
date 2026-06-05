@@ -1,11 +1,5 @@
 # Fluent Discord Redux
 A Windows 11 theme for Discord - Dark Mode must be on, light mode is not supported. 
-
-This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
-With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
-
-The look and feel may deviate from the original theme.
-
 The code is written with the help of AI.
 
 Changes from the original fork:
@@ -44,6 +38,13 @@ Changes from the original fork:
     <img width="2560" height="1400" alt="Shop_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Shop_v0.0.18.jpg" />
     <img width="2560" height="1400" alt="Settings_v0_0_18" src="https://github.com/supersharp/Fluent-Discord-Redux/blob/develop/images/Settings_v0.0.18.png" />
 </details>
+
+## Credits
+
+This is forked from [Fluent Discord](https://github.com/TakosThings/Fluent-Discord) by [TakosThings](https://github.com/TakosThings)
+With the original fixes from [ShiroNeko99](https://github.com/ShiroNeko99/Fluent-Discord)
+
+The look and feel may deviate from the original theme.
 
 ## Building Locally
 To build and compile the theme yourself from the SCSS source code:
