@@ -1,7 +1,64 @@
 // Remove background from RTC/account
-.theme-dark .panels__5e434 {
+.theme-dark .panels__5e434,
+.theme-midnight .panels__5e434,
+.panels__5e434 {
     background: transparent !important;
+    backdrop-filter: blur(var(--fluent-acrylic-background-blur)) !important;
     border-radius: 4px;
+ 
+    // Active quest panel background transparency
+    [class*="themeScope_"],
+    [class*="mask_"],
+    [class*="wrapper_"],
+    [class*="contentWrapper_"],
+    [class*="content_"],
+    [class*="contentCollapsed_"],
+    [class*="contentExpanded_"],
+    [class*="overlay_"],
+    [class*="postEnrollmentBackgroundCollapsed_"] {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+ 
+    [class*="borders_"] {
+        display: none !important;
+    }
+
+    // Hide collapsed and expanded content states when they are inert (inactive) to prevent double rendering, text bleed, and click blocking
+    [class*="contentCollapsed_"][inert],
+    [class*="contentExpanded_"][inert] {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    // Force collapsed progress ring and text to be visible (ignoring Discord's inline opacity: 0 transitions)
+    [class*="contentCollapsed_"] {
+        [class*="questProgressWrapper_"] > div,
+        [class*="questProgressCopy_"] > div {
+            opacity: 1 !important;
+        }
+    }
+
+    // Apply mica blur and card background when hovered, expanded, or completed on the expanded background layer
+    [class*="postEnrollmentBackgroundExpanded_"] {
+        background: transparent !important;
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        border-radius: 8px;
+        pointer-events: none !important;
+    }
+
+    [class*="wrapper_"][class*="wrapperVisible_"]:hover,
+    [class*="wrapper_"][class*="wrapperVisible_"]:has([class*="contentExpanded_"][aria-hidden="false"]) {
+        [class*="postEnrollmentBackgroundExpanded_"] {
+            background-color: rgba(20, 20, 20, 0.85) !important;
+            backdrop-filter: blur(var(--fluent-acrylic-background-blur)) !important;
+            border: 1px solid $CardStrokeColorDefault !important;
+        }
+    }
 
     // Remove 1px margin from bottom of panel
     .container__37e49 {
