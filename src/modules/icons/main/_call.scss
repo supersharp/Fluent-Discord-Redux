@@ -1,57 +1,75 @@
-html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5{
+html[lang^="en-"].theme-dark :is(.wrapper__1405b, [class*="wrapper_"], [class*="attachedCaretButtonContainer_"], [class*="buttonSection_"]) .button__201d5 {
     &[aria-label*="Camera"]::before,
-    &[aria-label*="Join Video Call"]::before{
+    &[aria-label*="Join Video Call"]::before {
         content: "\E156"; // WebCam
     }
-    &[aria-label="Share Your Screen"]::before{
+
+    &[aria-label="Share Your Screen"]::before {
         content: "\EC15"; // MiracastLogoSmall
     }
-    &[aria-label="Stop Streaming"]::before{
+
+    &[aria-label="Stop Streaming"]::before {
         content: "\EA14"; // DisconnectDisplay
     }
-    &[aria-label="Unmute"]::before{
+
+    &[aria-label="Unmute"]::before {
         content: "\EC54"; // MicOff
     }
-    &[aria-label="Mute"]::before{
+
+    &[aria-label="Mute"]::before {
         content: "\E720"; // Microphone
     }
-    &[aria-label="Disconnect"]::before{
+
+    &[aria-label="Disconnect"]::before {
         content: "\E137"; // HangUp
     }
-    &[aria-label="Stop Watching"]::before{
+
+    &[aria-label="Stop Watching"]::before {
         content: "\E191"; // StopSlideShow
     }
-    &[aria-label="Join Call"]::before{
+
+    &[aria-label="Join Call"]::before {
         content: "\E13A"; // Phone
     }
-    &[aria-label="Dismiss"]::before{
+
+    &[aria-label="Dismiss"]::before {
         // There's no Call Reject icon, so have to reuse
         content: "\E137"; // HangUp
     }
-    &[aria-label="Start An Activity"i]::before{
+
+    &[aria-label="Start An Activity"i]::before {
         content: "\EA86"; // Puzzle
     }
-    &[aria-label="Leave Activity"]::before{
+
+    &[aria-label="Leave Activity"]::before {
         content: "\E137"; // HangUp
     }
 
-    &[aria-label="Hide chat"]::before{
-        content: "\E70D"; // ChevronDown
+    &[aria-label*="Soundboard"i]::before {
+        content: "\E8D6"; // Music / Soundboard
     }
-    &[aria-label="Show chat"]::before{
+
+    &[aria-label="Hide chat"]::before {
         content: "\E70D"; // ChevronDown
     }
 
-    &[aria-label="Pop Out"]::before{
+    &[aria-label="Show chat"]::before {
+        content: "\E70D"; // ChevronDown
+    }
+
+    &[aria-label="Pop Out"]::before {
         content: "\E17C"; // NewWindow
     }
-    &[aria-label="Full Screen"]::before{
+
+    &[aria-label="Full Screen"]::before {
         content: "\E1D9"; // FullScreen
     }
-    &[aria-label="Exit Full Screen"]::before{
+
+    &[aria-label="Exit Full Screen"]::before {
         content: "\E1D8"; // BackToWindow
     }
-    &[aria-label^="Return"]::before{
+
+    &[aria-label^="Return"]::before {
         content: "\F71A"; // ReturnToCall
     }
 }

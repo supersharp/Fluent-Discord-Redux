@@ -233,9 +233,9 @@ html[lang^="en-"].theme-dark .toolbar__9293f {
     }
 }
 
-// Bottom toolbar (mic/speaker mute, leave, activity buttons)
+// Bottom toolbar (mic/speaker mute, leave, activity, soundboard buttons)
 // NOTE - 2023-03-07: Discord removed aria-label from activity and react buttons, so only remove default icons from buttons WITH an aria-label set
-html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5[aria-label] {
+html[lang^="en-"].theme-dark :is(.wrapper__1405b, [class*="wrapper_"], [class*="attachedCaretButtonContainer_"], [class*="buttonSection_"]) .button__201d5[aria-label] {
     &::before {
         @include FontIconFluent;
         width: 62px;
@@ -246,7 +246,8 @@ html[lang^="en-"].theme-dark .wrapper__1405b .button__201d5[aria-label] {
         display: block;
     }
 
-    svg {
-        display: none;
+    svg,
+    [class*="lottieIcon_"] {
+        display: none !important;
     }
 }

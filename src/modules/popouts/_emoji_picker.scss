@@ -87,8 +87,9 @@
     .header__8ef02, // Stickers
     .header_fed6d3, // GIFs
     .header__81b99{ // Kaomoji
-        background-color: transparent;
-        box-shadow: none;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border-bottom: none !important;
     }
 
     // Search
@@ -186,9 +187,13 @@
     // Emoji
     // Sidebar
     .categoryList_c0e32c{
-        background-color: transparent !important;
-        background: $MicaBackgroundFillColorBase !important;
-        backdrop-filter: blur(16px);
+        background: rgba(0, 0, 0, 0.2) !important;
+        backdrop-filter: none !important;
+    }
+
+    // Emoji body wrapper (contains grid)
+    .bodyWrapper_c0e32c {
+        border-top: 1px solid $DividerStrokeColorDefault !important;
     }
 
     // Sticker sidebar
@@ -218,8 +223,8 @@
     }
 
     .unicodeShortcut_b9ee0c{
-        background: $MicaBackgroundFillColorBase !important;
-        backdrop-filter: blur(16px);
+        background: transparent !important;
+        backdrop-filter: none !important;
         color: $TextFillColorPrimary !important;
 
         &:hover{
