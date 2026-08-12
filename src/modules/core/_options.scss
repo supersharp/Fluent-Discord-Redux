@@ -1,7 +1,5 @@
 /**
  * Start user options
- * Visit the wiki for information on this section
- * https://github.com/TakosThings/Fluent-Discord/wiki
 */
 
 /**
@@ -10,18 +8,13 @@
  * This option is found in User settings > Appearance.
 */
 
-/**
-  * Visit the wiki for in-depth help on changing the below variables: https://github.com/TakosThings/Fluent-Discord/wiki/Options
-  * You can change the accent colour by using the Colour Selector tool: https://takosthings.github.io/Fluent-Discord/color.html
-**/
-
 :root{
     /* DefaultBlue */
     --fluent-accent-hue-sat: 207, 100%;
     --fluent-accent-lightness: 42%;
     --fluent-text-on-accent-color: 0, 0, 0;
   --fluent-selected-ring-color: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
-    --fluent-acrylic-background: url(https://takosthings.github.io/Fluent-Discord/img/Captured_Motion_27.jpg);
+    --fluent-acrylic-background: url(https://raw.githubusercontent.com/supersharp/Fluent-Discord-Redux/9b2870297a28d41d4b5f3eea937ccb7d532f9b50/images/Captured_Motion_27.jpg);
     --fluent-acrylic-background-blur: 24px;
     --fluent-acrylic-background-dimness: 75%;
     --fluent-acrylic-background-saturate: 140%;
