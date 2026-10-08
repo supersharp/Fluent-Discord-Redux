@@ -12,7 +12,7 @@ Changes from the original fork:
 * The autoupdate theme now points to this GitHub Repo
 * GitHub Actions support for builds
 * Many more changes.
-* Updated elements to match the newest Discord UI (May 2026)
+* Updated elements to match the newest Discord UI (October 2026)
 
 
 ## Download
