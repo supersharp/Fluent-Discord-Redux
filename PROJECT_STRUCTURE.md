@@ -120,23 +120,6 @@ Discord uses obfuscated CSS class names with random alphanumeric hashes (e.g. `w
 
 ---
 
-## 7. How to Handle Maintenance Updates (HTML Dumps)
-
-When Discord updates break theme layouts:
-1. **Inspect Dumps**: The user will place HTML source code dumps in `dist/Discord_Source_Code/*.txt`.
-2. **Identify Class Changes**:
-   - Compare classes in the `.txt` dumps against classes in `src/modules/`.
-   - Look for changed component classes (e.g., Mana component rotation `0f084` -> `75098`, tabs changing to `navigationMenu__80679`, message action hover bars changing to `popover_f84418`).
-3. **Trace Impact**:
-   - Use ripgrep/grep search to find all occurrences of the old class hash across `src/`.
-4. **Apply Updates**:
-   - Update selectors in the corresponding modules.
-   - Maintain existing structure and formatting.
-5. **Compile & Validate**:
-   - Run `npm run build-static` and `npm run build-auto`. Ensure zero build errors.
-
----
-
-## 8. Specific Component Policies
+## 7. Specific Component Policies
 
 - **In-Call Voice Controls**: The bottom in-call toolbar (`videoControls_`, `bottomControls_`, `attachedCaretButtonContainer_`, soundboard, mute, disconnect) is intentionally kept **unthemed**. Discord's native pill layouts, attached dropdown carets, Lottie animations, and disconnect button styling are preserved without custom CSS or font icon overrides to avoid regressions during active calls.
