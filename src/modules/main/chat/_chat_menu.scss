@@ -1,10 +1,29 @@
-.theme-dark .wrapper_f7ecac{
+.theme-dark :is(.wrapper_f7ecac, .popover_f84418, [class*="popover_"]){
     background-color: $ControlOnImageFillColorDefault;
     border: 1px solid $ControlStrokeColorDefault;
+    border-radius: 6px;
+
+    :is(.button_f7ecac, .hoverBarButton_f84418, [class*="hoverBarButton_"]) {
+        border-radius: 4px;
+        transition: background-color $AnimationFadeInOut;
+
+        &:hover {
+            background-color: $ControlFillColorSecondary;
+        }
+
+        &:active {
+            background-color: $ControlFillColorTertiary;
+        }
+    }
+
+    .separator_f84418,
+    [class*="separator_"] {
+        background-color: $DividerStrokeColorDefault;
+    }
 }
 
-html[lang^="en-"].theme-dark .wrapper_f7ecac{
-    .button_f7ecac[aria-label]{
+html[lang^="en-"].theme-dark :is(.wrapper_f7ecac, .popover_f84418, [class*="popover_"]){
+    :is(.button_f7ecac, .hoverBarButton_f84418, [class*="hoverBarButton_"])[aria-label]:not([aria-label^="Click to react"]):not(:has(.emoji)){
         &::before{
             @include FontIconFluent;
         }
@@ -13,3 +32,4 @@ html[lang^="en-"].theme-dark .wrapper_f7ecac{
         }
     }
 }
+

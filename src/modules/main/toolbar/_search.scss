@@ -168,5 +168,12 @@
                 transform: rotateZ(90deg);
             }
         }
+
+        // Clear icon vertical alignment fix (adjust vertical optical center)
+        .clear__0c4c4,
+        [class*="clear_"] {
+            position: relative;
+            top: -3px;
+        }
     }
 }

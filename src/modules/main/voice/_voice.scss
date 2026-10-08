@@ -101,61 +101,11 @@
         }
     }
 
-    // Control Tray (Bottom buttons)
+    // Voice controls (bottom control tray) are unthemed per user preference
+    // to preserve Discord's native button layout, pill shapes, and animations.
     @include voice-video-controls {
-        .bottomControls_bfe55a {
-            padding: 16px;
-        }
-
-        // Remove group outlines
-        .buttonSection__1405b,
-        .wrapper__1405b {
-            background-color: transparent;
-            border: none;
-            box-shadow: none;
-        }
-
-        .centerButton_f1ceac {
-            border-radius: 4px;
-            transition: all 0.2s ease;
-
-            &.colorable_f1ceac.primaryDark_f1ceac {
-                background-color: $ControlFillColorDefault;
-
-                &:hover {
-                    background-color: $ControlFillColorSecondary;
-                }
-
-                &:active {
-                    background-color: $ControlFillColorTertiary;
-                }
-            }
-
-            &.disconnect_f1ceac {
-                background-color: $SystemFillColorCriticalBackground;
-                color: $SystemFillColorCritical;
-
-                &:hover {
-                    background-color: $SystemFillColorCriticalBackground;
-                    filter: brightness(1.2);
-                }
-            }
-        }
-
-        // Fix missing Options icon
-        .button__201d5[aria-label*="ptions"] {
-            &::before {
-                display: none !important;
-            }
-
-            svg {
-                display: block !important;
-            }
-        }
-
-        // Align edge controls away from the side
-        .edgeControls_bfe55a {
-            margin: 0 16px;
+        .button__201d5 {
+            border-radius: revert;
         }
     }
 
@@ -231,23 +181,4 @@ html[lang^="en-"].theme-dark .toolbar__9293f {
             display: none;
         }
     }
-}
-
-// Bottom toolbar (mic/speaker mute, leave, activity, soundboard buttons)
-// NOTE - 2023-03-07: Discord removed aria-label from activity and react buttons, so only remove default icons from buttons WITH an aria-label set
-html[lang^="en-"].theme-dark :is(.wrapper__1405b, [class*="wrapper_"], [class*="attachedCaretButtonContainer_"], [class*="buttonSection_"]) .button__201d5[aria-label] {
-    &::before {
-        @include FontIconFluent;
-        width: 62px;
-        position: absolute;
-        font-size: 16px;
-        line-height: 36px;
-        text-align: center;
-        display: block;
-    }
-
-    svg,
-    [class*="lottieIcon_"] {
-        display: none !important;
-    }
-}
+}

@@ -48,7 +48,7 @@
                 outline: 0 !important;
             }
 
-            // Shop tabs container stack
+            // Shop tabs & navigation menu container stack
             .container__354ec,
             [class*="container__354ec"],
             .measurements__354ec,
@@ -56,7 +56,17 @@
             .tabs__354ec,
             [class*="tabs__"],
             .tab__354ec,
-            [class*="tab__"] {
+            [class*="tab__"],
+            .nav__96f2d,
+            [class*="nav__96f2d"],
+            .navigationMenu__80679,
+            [class*="navigationMenu__"],
+            .navigationMenuItemsContainer__96f2d,
+            [class*="navigationMenuItemsContainer__"],
+            .navigationMenuItemsMeasurementContainer__96f2d,
+            [class*="navigationMenuItemsMeasurementContainer__"],
+            .navigationMenuItemContainer__96f2d,
+            [class*="navigationMenuItemContainer__"] {
                 border: 0 !important;
                 box-shadow: none !important;
                 background-color: transparent !important;
@@ -107,20 +117,26 @@
                     }
 
                     .container__0f084,
-                    [class*="container__0f084"] {
+                    .container__75098,
+                    [class*="container__0f084"],
+                    [class*="container__75098"] {
                         background-color: $ControlFillColorDefault;
                         border: 1px solid $ControlStrokeColorDefault;
                         border-radius: 4px;
 
                         .icon__0f084,
-                        [class*="icon__0f084"] {
+                        .icon__75098,
+                        [class*="icon__0f084"],
+                        [class*="icon__75098"] {
                             svg {
                                 color: $TextFillColorSecondary;
                             }
                         }
 
                         .input__0f084,
-                        [class*="input__0f084"] {
+                        .input__75098,
+                        [class*="input__0f084"],
+                        [class*="input__75098"] {
                             @include TypeBody;
                             color: $TextFillColorPrimary;
                             background-color: transparent;
@@ -230,11 +246,15 @@
             }
         }
 
-        // Shop tabs styling
+        // Shop tabs & navigation menu styling
         .tabs__354ec .tab__354ec,
         [class*="tabs__"] [class*="tab__"],
         .tabs__354ec .item_aa8da2,
-        [class*="tabs__"] .item_aa8da2 {
+        [class*="tabs__"] .item_aa8da2,
+        .navigationMenuButton__96f2d,
+        [class*="navigationMenuButton__"],
+        .navigationMenuItem__96f2d,
+        [class*="navigationMenuItem__"] {
             height: 36px;
             margin: 0 0 0 8px;
             border-radius: 0;
@@ -254,6 +274,12 @@
                 color: $TextFillColorSecondary !important;
             }
 
+            // Caret in dropdown items
+            .caret__96f2d,
+            [class*="caret__"] {
+                color: $TextFillColorSecondary;
+            }
+
             // Nested text variant nodes
             [class*="text-"],
             [data-text-variant] {
@@ -270,10 +296,54 @@
         .tabs__354ec .tab__354ec.selected__354ec,
         [class*="tabs__"] [class*="tab__"][class*="selected__"],
         .tabs__354ec .item_aa8da2.selected_aa8da2,
-        [class*="tabs__"] .item_aa8da2.selected_aa8da2 {
+        [class*="tabs__"] .item_aa8da2.selected_aa8da2,
+        .navigationMenuButton__96f2d.selected__96f2d,
+        [class*="navigationMenuButton__"][class*="selected__"],
+        .navigationMenuButton__96f2d[aria-current="page"],
+        [class*="navigationMenuButton__"][aria-current="page"],
+        .navigationMenuButton__96f2d:has([aria-current="page"]),
+        [class*="navigationMenuButton__"]:has([aria-current="page"]),
+        .navigationMenuButton__96f2d:has([class*="selected__"]),
+        [class*="navigationMenuButton__"]:has([class*="selected__"]),
+        .navigationMenuItemContainer__96f2d > .navigationMenuItem__96f2d.selected__96f2d,
+        [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][class*="selected__"],
+        .navigationMenuItemContainer__96f2d > .navigationMenuItem__96f2d[aria-current="page"],
+        [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][aria-current="page"] {
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
             box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+        }
+
+        // Never double-underline inner elements inside compound menu groups (e.g. Browse dropdown)
+        .navigationMenuItemGroup__96f2d [class*="navigationMenuItem__"],
+        [class*="navigationMenuItemGroup__"] [class*="navigationMenuItem__"],
+        .navigationMenuButton__96f2d [class*="navigationMenuItem__"],
+        [class*="navigationMenuButton__"] [class*="navigationMenuItem__"],
+        .navigationMenuCaret__96f2d,
+        [class*="navigationMenuCaret__"] {
+            box-shadow: none !important;
+        }
+
+        // Product card badges (e.g. "NEW" badge on shop items)
+        .productCardBadge_bfa4bd,
+        [class*="productCardBadge_"],
+        .badge__06db1[class*="productCardBadge_"],
+        .textBadge__06db1[class*="productCardBadge_"],
+        [class*="textBadge__"][class*="productCardBadge_"] {
+            background-color: $AccentLight1 !important;
+            color: #FFFFFF !important;
+            border-radius: 4px;
+            font-weight: 600;
+
+            svg,
+            path {
+                fill: #FFFFFF !important;
+                color: #FFFFFF !important;
+            }
+
+            * {
+                color: #FFFFFF !important;
+            }
         }
     }
 

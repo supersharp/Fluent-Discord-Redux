@@ -1,1 +1,12 @@
-// User profile popout styling removed to restore default Discord styling
+// User profile popout styling - clear outer layer backgrounds to prevent corner bleed
+.theme-dark,
+.theme-light,
+.theme-midnight,
+.theme-darker {
+    [id^="popout_"]:has(.user-profile-popout),
+    .layer__59d0d:has(.user-profile-popout),
+    [class*="animator"]:has(.user-profile-popout),
+    [class*="animator"]:has(.user-profile-popout) > div {
+        background: transparent !important;
+    }
+}

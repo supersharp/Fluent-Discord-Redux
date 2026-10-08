@@ -2,8 +2,8 @@
     // Clear parent backgrounds to allow blur to show through
     [id^="popout_"]:has(.wrapper_c0e32c),
     .layer__59d0d:has(.wrapper_c0e32c),
-    .animatorBottom_faf9c0:has(.wrapper_c0e32c),
-    .animatorBottom_faf9c0:has(.wrapper_c0e32c) > div {
+    :is(.animatorBottom_faf9c0, .animatorLeft_faf9c0, .animatorRight_faf9c0, [class*="animator"]):has(.wrapper_c0e32c),
+    :is(.animatorBottom_faf9c0, .animatorLeft_faf9c0, .animatorRight_faf9c0, [class*="animator"]):has(.wrapper_c0e32c) > div {
         background: transparent !important;
     }
 
@@ -99,7 +99,7 @@
     .container__72c38{ // Search container
         background-color: transparent;
     }
-    .wrapper__72c38.container__0f084{
+    .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]){
         background-color: transparent !important;
         border: 0 !important;
         box-shadow: none !important;
@@ -117,10 +117,10 @@
 
     // Emoji search
     // Fix inherited height
-    .md__0f084 .input__0f084{
+    :is(.md__0f084, .md__75098, [class*="md_"]) :is(.input__0f084, .input__75098, [class*="input_"]){
         height: 32px;
     }
-    .input__0f084{
+    :is(.input__0f084, .input__75098, [class*="input_"]){
         margin: 0;
         padding-left: 32px; // Space for the icon
         padding-right: 12px;
@@ -149,7 +149,7 @@
     }
 
     // Search icon positioning
-    .emojiPickerHasTabWrapper_c0e32c .wrapper__72c38.container__0f084 .icon__0f084 {
+    :is(.emojiPickerHasTabWrapper_c0e32c, .wrapper_c0e32c, [class*="wrapper_"]) .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]) :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
         position: absolute;
         left: 8px;
         top: 50%;

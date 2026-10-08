@@ -43,6 +43,17 @@
                 background-color: $SystemFillColorSolidNeutralBackground !important; // Override inline
                 @include TypeCaption;
             }
+
+            // B: Modern feature/new badges on tabs
+            .textBadge__06db1,
+            [class*="textBadge__06db1"],
+            .badge__06db1,
+            [class*="badge__06db1"] {
+                background-color: $AccentLight1 !important;
+                color: #FFFFFF !important;
+                @include TypeCaption;
+                border-radius: 4px;
+            }
         }
     }
 

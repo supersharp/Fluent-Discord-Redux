@@ -7,29 +7,52 @@
 }
 // Also target the SVG circles directly for robustness
 .theme-dark [class*="radioGroupOption_"]{
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    cursor: pointer;
+
+    [class*="radioIndicator_"],
+    .radioIndicator__64e61 {
+        flex-shrink: 0 !important;
+        position: static !important;
+        width: 20px !important;
+        height: 20px !important;
+        margin: 0 !important;
+        overflow: visible;
+    }
+
+    [class*="outerRadioBase_"] {
+        fill: $ControlAltFillColorSecondary;
+        stroke: $ControlStrongStrokeColorDefault;
+        stroke-width: 3.5px;
+    }
     [class*="outerRadioFill_"] {
         fill: transparent;
     }
     [class*="innerDotRadio_"] {
         fill: transparent;
     }
-    [class*="outerRadioBase_"] {
-        fill: none;
-        stroke: $ControlStrongFillColorDefault;
-        stroke-width: 2px;
+
+    &:hover:not([data-selected]):not([aria-checked=true]) {
+        [class*="outerRadioBase_"] {
+            fill: $ControlAltFillColorTertiary;
+            stroke: $ControlStrongStrokeColorDefault;
+        }
     }
+
     &[data-selected],
     &[aria-checked=true] {
+        [class*="outerRadioBase_"] {
+            fill: $AccentTextFillColorPrimary;
+            stroke: $AccentTextFillColorPrimary;
+        }
         [class*="outerRadioFill_"] {
             fill: $AccentTextFillColorPrimary;
         }
         [class*="innerDotRadio_"] {
-            fill: #FFF;
+            fill: #FFFFFF !important;
         }
-    }
-    &[data-selected] [class*="outerRadioBase_"],
-    &[aria-checked=true] [class*="outerRadioBase_"] {
-        stroke: $AccentTextFillColorPrimary;
     }
 }
 
@@ -87,24 +110,41 @@
     }
 }
 
-// New radio group classes in settings redesign
-.theme-dark .group__64e61[data-orientation=vertical]{
+// New radio group classes in settings redesign & popouts (e.g. Quests sort-by)
+.theme-dark :is(.group__64e61, [class*="group__64e61"])[data-orientation=vertical]{
     background-color: transparent;
     border: 0;
     border-radius: 4px;
     overflow: hidden;
 
-    .radioGroupOption__64e61{
+    .radioGroupOption__64e61,
+    [class*="radioGroupOption__"]{
         margin: 0;
-        padding: 8px;
+        padding: 6px 8px;
         background-color: transparent;
-        border-radius: 0;
+        border-radius: 4px;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        cursor: pointer;
+
+        .radioIndicator__64e61,
+        [class*="radioIndicator_"] {
+            flex-shrink: 0 !important;
+            position: static !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin: 0 !important;
+            overflow: visible;
+        }
 
         &:hover{
             background-color: $SubtleFillColorSecondary;
         }
 
-        &[data-selected=true]{
+        &[data-selected=true],
+        &[data-selected]{
             background-color: $SubtleFillColorTertiary;
         }
     }
@@ -212,6 +252,11 @@
 // resilient to hash rotation while staying tightly scoped — the double-underscore pattern
 // is unique to Discord's CSS-module naming convention.
 .theme-dark [class*="checkboxOption__"] {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
     // Unchecked indicator: Fluent border + transparent background
     [class*="checkboxIndicator__"] {
         width: 18px;
@@ -326,10 +371,10 @@
     }
 }
 
-.theme-dark .wrapper__72c38.container__0f084.hasLeading__0f084 {
+.theme-dark .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]):is(.hasLeading__0f084, .hasLeading__75098, [class*="hasLeading_"]) {
     position: relative;
 
-    .icon__0f084 {
+    :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
         position: absolute;
         left: 10px;
         top: 50%;
@@ -348,9 +393,27 @@
         }
     }
 
-    .input__0f084,
+    :is(.input__0f084, .input__75098, [class*="input_"]),
     textarea[class*="input_"] {
         padding-left: 42px;
+    }
+}
+
+// Sort-by / Filter popouts (e.g. Quests page)
+.theme-dark .popout__9047f,
+.theme-dark [class*="popout__9047f"] {
+    background: $MicaBackgroundFillColorBase !important;
+    backdrop-filter: blur(16px);
+    border: 1px solid $SurfaceStrokeColorFlyout;
+    border-radius: 8px;
+    box-shadow: var(--elevation-stroke), var(--elevation-high);
+    padding: 8px;
+
+    .popoutHeading__9047f,
+    [class*="popoutHeading_"] {
+        @include TypeBodyStrong;
+        color: $TextFillColorSecondary;
+        padding: 4px 8px 8px;
     }
 }
 

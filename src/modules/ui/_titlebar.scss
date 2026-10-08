@@ -13,10 +13,27 @@
 
 
 
+    // Hide back & forward buttons
+    .leading_c38106,
+    [class*="leading_"] {
+        .backForwardButtons__63abb,
+        [class*="backForwardButtons_"] {
+            display: none;
+        }
+    }
+    .backForwardButtons__63abb,
+    [class*="backForwardButtons_"] {
+        display: none;
+    }
+
     // Remove help button
-    .trailing_c38106{
+    .trailing_c38106,
+    [class*="trailing_"] {
         gap: 0;
-        a.anchor_edefb8{
+        a.anchor_edefb8,
+        a.anchor__14d82,
+        a[class*="anchor_"]:has([aria-label="Help"]),
+        a[href*="support.discord.com"] {
             display: none;
         }
     }

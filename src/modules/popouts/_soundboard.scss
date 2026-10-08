@@ -1,85 +1,284 @@
-.theme-dark .picker__09f65{
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
-    border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
-
-    // Search box
-    .header__0856d{
-        box-shadow: none;
-    }
-    // Volume control
-    .settingsClickArea__61424{
-        width: 32px;
-        height: 32px;
-        border-width: 1px;
-        border-style: outset;
-        border-color: $ControlElevationBorder;
-        border-radius: 4px;
-        &:hover{
-            background-color: $ControlFillColorSecondary;
-        }
-        &:active{
-            background-color: $ControlFillColorTertiary;
-        }
-        svg{
-            padding: 6px;
-        }
+.theme-dark {
+    // Clear parent popout layers to allow Mica blur to show through
+    [id^="popout_"]:has(.picker__09f65),
+    [id^="popout_"]:has([class*="picker__09f65"]),
+    .layer__59d0d:has(.picker__09f65),
+    .layer__59d0d:has([class*="picker__09f65"]),
+    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has(.picker__09f65),
+    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has([class*="picker__09f65"]),
+    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has(.picker__09f65) > div,
+    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has([class*="picker__09f65"]) > div {
+        background: transparent !important;
     }
 
-    // Servers
-    .categoryList_a1e0e0{
-        background-color: $SolidBackgroundFillColorBase;
-    }
+    .picker__09f65,
+    [class*="picker__09f65"] {
+        // Collapse theme-midnight dark variable scope
+        --background-primary: transparent !important;
+        --background-secondary: transparent !important;
+        --background-secondary-alt: transparent !important;
+        --background-tertiary: transparent !important;
+        --background-floating: transparent !important;
+        --popout-background: transparent !important;
 
-    // Sounds
-    // Section header
-    .sectionHeader__98b95{
-        .sectionTitle__61424{
-            @include TypeBodyStrong;
-            text-transform: none;
+        // Apply Mica to the main container
+        background: $MicaBackgroundFillColorBase !important;
+        backdrop-filter: blur(16px);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        box-shadow: var(--elevation-stroke), var(--elevation-high);
+        overflow: hidden;
+
+        // Clear internal containers that block Mica
+        .header__0856d,
+        [class*="header__0856d"],
+        .listWrapper__0856d,
+        [class*="listWrapper__0856d"],
+        .wrapper__0c74f,
+        [class*="wrapper__0c74f"],
+        .scroller_affa7e,
+        [class*="scroller_affa7e"],
+        .gridNoticeWrapper__0856d,
+        [class*="gridNoticeWrapper_"] {
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border-bottom: none !important;
+        }
+
+        // Header (search box & volume)
+        .header__0856d,
+        [class*="header__0856d"] {
+            padding: 12px;
+            border-bottom: 1px solid $DividerStrokeColorDefault !important;
+            box-shadow: none !important;
+
+            .wrapper__0d1ef,
+            [class*="wrapper__0d1ef"] {
+                background: transparent !important;
+            }
+
+            .container__5a838,
+            [class*="container__5a838"] {
+                padding: 0;
+            }
+
+            .container__72c38,
+            [class*="container__72c38"] {
+                background-color: transparent !important;
+            }
+
+            .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]) {
+                background-color: transparent !important;
+                border: 0 !important;
+                box-shadow: none !important;
+                outline: none !important;
+                position: relative;
+            }
+
+            // Search input
+            :is(.input__0f084, .input__75098, [class*="input_"]) {
+                height: 32px;
+                margin: 0;
+                padding-left: 32px;
+                padding-right: 12px;
+                background-color: $ControlFillColorDefault !important;
+                color: $TextFillColorPrimary !important;
+                border: 1px solid $ControlStrokeColorDefault !important;
+                border-bottom: 2px solid $ControlStrokeColorDefault !important;
+                border-radius: 4px;
+                @include TypeBody;
+
+                &:hover {
+                    border-color: $ControlStrokeColorSecondary !important;
+                    background-color: $ControlFillColorSecondary !important;
+                }
+
+                &:focus {
+                    background-color: $ControlFillColorInputActiveBrush !important;
+                    color: $TextFillColorPrimary !important;
+                    border-color: $ControlStrokeColorDefault !important;
+                    border-bottom-color: $AccentBase !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                }
+
+                &::placeholder {
+                    @include TypeBody;
+                    color: $TextFillColorTertiary;
+                }
+            }
+
+            // Search icon
+            :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
+                position: absolute;
+                left: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: $TextFillColorSecondary;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        // Volume control
+        .settingsClickArea__61424,
+        [class*="settingsClickArea_"] {
+            width: 32px;
+            height: 32px;
+            background-color: $ControlFillColorDefault;
+            border: 1px solid $ControlStrokeColorDefault;
+            border-radius: 4px;
             color: $TextFillColorPrimary;
-        }
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    // Sound
-    .soundButton__9be63{
-        background-color: $ControlFillColorDefault;
-        border-width: 1px;
-        border-style: outset;
-        border-color: $ControlElevationBorder;
-        border-radius: 4px;
-        color: $TextFillColorPrimary;
-        &:hover{
-            background-color: $ControlFillColorSecondary;
-        }
-        &:active{
-            background-color: $ControlFillColorTertiary;
-        }
-        .ssoundName__9be63{
-            @include TypeBody;
-        }
-        .buttonOverlayBackground__9be63{
-            background-color: $ControlFillColorInputActiveBrush;
-            opacity: 1;
-        }
-    }
+            &:hover {
+                background-color: $ControlFillColorSecondary;
+                border-color: $ControlStrokeColorSecondary;
+            }
 
-    // keybind reminder
-    .keybindHint__46002{
-        margin: 8px;
-        padding: 8px 16px;
-        background-color: $SystemFillColorAttentionBackground;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 4px;
-        .warningIcon__46002{
-            color: $SystemFillColorAttention;
-            // Wrong icon used for this type of info bar, so rotate it 180deg to change it into an 'i'
-            transform: rotate(180deg);
+            &:active {
+                background-color: $ControlFillColorTertiary;
+            }
+
+            svg,
+            [class*="settingsIcon_"] {
+                color: $TextFillColorPrimary;
+            }
         }
-        .keybindHintText__46002{
-            @include TypeBody;
+
+        // Sidebar (Guild categories list on left)
+        .wrapper__4e6ce.categoryList_a1e0e0,
+        .categoryList_a1e0e0,
+        [class*="categoryList_"] {
+            background: rgba(0, 0, 0, 0.2) !important;
+            backdrop-filter: none !important;
+            border-right: 1px solid $DividerStrokeColorDefault;
+
+            .category_a1e0e0,
+            [class*="category_a1e0e0"] {
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $SubtleFillColorSecondary;
+                }
+
+                &.selected_a1e0e0,
+                &[class*="selected_"] {
+                    background-color: $SubtleFillColorTertiary;
+                }
+            }
+        }
+
+        // Section header (Favourites, Gaming Group, Discord Sounds)
+        .sectionContainer__61424,
+        [class*="sectionContainer_"] {
+            background: transparent !important;
+        }
+
+        .sectionHeader__61424,
+        .sectionHeader__98b95,
+        [class*="sectionHeader_"] {
+            background-color: transparent !important;
+            backdrop-filter: none !important;
+            box-shadow: none !important;
+
+            .sectionTitle__61424,
+            [class*="sectionTitle_"] {
+                @include TypeBodyStrong;
+                text-transform: none;
+                color: $TextFillColorPrimary;
+            }
+
+            .headerIcon__61424,
+            [class*="headerIcon_"] {
+                color: $TextFillColorSecondary;
+            }
+        }
+
+        // Sound buttons
+        .soundButton__9be63,
+        [class*="soundButton__"] {
+            background-color: $ControlFillColorDefault !important;
+            border: 1px solid $ControlStrokeColorDefault !important;
+            border-radius: 6px;
+            color: $TextFillColorPrimary;
+            transition: background-color 0.15s ease, border-color 0.15s ease;
+
+            &:hover {
+                background-color: $ControlFillColorSecondary !important;
+                border-color: $ControlStrokeColorSecondary !important;
+            }
+
+            &:active {
+                background-color: $ControlFillColorTertiary !important;
+            }
+
+            .soundName__9be63,
+            [class*="soundName_"] {
+                @include TypeBody;
+                color: $TextFillColorPrimary !important;
+            }
+
+            .buttonOverlayBackground__9be63,
+            [class*="buttonOverlayBackground_"] {
+                background-color: transparent !important;
+            }
+
+            .secondaryButton__9be63,
+            [class*="secondaryButton_"] {
+                background-color: $ControlFillColorDefault;
+                border: 1px solid $ControlStrokeColorDefault;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $ControlFillColorSecondary;
+                    border-color: $ControlStrokeColorSecondary;
+                }
+            }
+        }
+
+        // Add Sound button (dotted outline)
+        .soundAddButton_da9eb2,
+        [class*="soundAddButton_"] {
+            background-color: transparent !important;
+            border: 1px dashed $ControlStrokeColorDefault !important;
+            border-radius: 6px;
+            color: $TextFillColorSecondary !important;
+
+            &:hover {
+                background-color: $SubtleFillColorSecondary !important;
+                border-color: $ControlStrokeColorSecondary !important;
+                color: $TextFillColorPrimary !important;
+            }
+        }
+
+        // Keybind reminder footer
+        .keybindHint__46002,
+        [class*="keybindHint_"] {
+            margin: 8px;
+            padding: 8px 16px;
+            background-color: $SystemFillColorAttentionBackground;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: 4px;
+
+            .warningIcon__46002,
+            [class*="warningIcon_"] {
+                color: $SystemFillColorAttention;
+                transform: rotate(180deg);
+            }
+
+            .keybindHintText__46002,
+            [class*="keybindHintText_"] {
+                @include TypeBody;
+                color: $TextFillColorPrimary;
+            }
         }
     }
 }
-

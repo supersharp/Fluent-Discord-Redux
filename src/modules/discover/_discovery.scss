@@ -288,7 +288,7 @@
 
         // Search Bar
         .searchBar__1ac1c {
-            .input__0f084 {
+            :is(.input__0f084, .input__75098, [class*="input_"]) {
                 @include TypeBody;
                 color: $TextFillColorPrimary !important;
 

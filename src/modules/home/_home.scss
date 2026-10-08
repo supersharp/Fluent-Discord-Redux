@@ -60,7 +60,9 @@
     > .shop__6db1d > div > section[class*="headerBar__"],
     > [class*="shop__"] > div > section[class*="headerBar__"],
     .container__955a3,
-    [class*="container__955a3"] {
+    .contentSection__955a3,
+    [class*="container__955a3"],
+    [class*="contentSection__955a3"] {
         border-top: 0 !important;
         border-bottom: 0 !important;
         box-shadow: none !important;
@@ -76,7 +78,7 @@
     > .container__955a3 > .scroller__23746,
     > [class*="shop__"] [class*="shopViewWrapper__"],
     > [class*="shop__"] [class*="shopScroll__"],
-    > [class*="container__955a3"] > [class*="scroller__"],
+    > :is(.container__955a3, .contentSection__955a3, [class*="container__955a3"], [class*="contentSection__955a3"]) > [class*="scroller__"],
     [class*="shopViewWrapper__"] {
         background-color: $LayerFillColorDefault !important;
         border-top-left-radius: 8px !important;
@@ -107,7 +109,7 @@
 // Hide the hero banner ("Introducing Discord Orbs") - heroWrapper__955a3.
 // Partial-match is scoped to the Quests container (__955a3) so it won't
 // affect other views. Avoids targeting heroGradient_ which was never present.
-.theme-dark .page__5e434 .container__955a3 {
+.theme-dark .page__5e434 :is(.container__955a3, .contentSection__955a3, [class*="__955a3"]) {
     [class*="heroWrapper__"] {
         display: none !important;
     }
@@ -115,7 +117,7 @@
     // Remove the white/tinted card background on quest tile text containers.
     // textContainer_956c6 is scoped via its quest tile ancestor article so the
     // partial match cannot leak outside the Quests grid.
-    article[class*="questTile_"] [class*="textContainer_"] {
+    article[class*="questTile_"] :is([class*="textContainer_"], [class*="rewardDescriptionContainer_"], [class*="container__956c6"]) {
         background-color: transparent !important;
     }
 }
