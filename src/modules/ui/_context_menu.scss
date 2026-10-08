@@ -92,9 +92,10 @@
             }
         }
 
-        // Remove Discord icons, unless it's a checkbox
-        &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]):not([id^="message-add-reaction"]) {
-            .icon_c1e9c4 {
+        // Remove Discord icons and left icon container, unless it's a checkbox
+        &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]) {
+            .icon_c1e9c4,
+            .iconContainerLeft_c1e9c4 {
                 display: none;
             }
         }

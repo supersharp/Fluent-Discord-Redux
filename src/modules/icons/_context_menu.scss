@@ -493,11 +493,7 @@
 
 // Message
 .theme-dark .menu_c1e9c4 .item_c1e9c4{
-    &[id="message-add-reaction"]::before{
-        // Intentionally not displaying an icon as it is a submenu, and would also require icon reuse
-        content: "\E9CE"; // Unknown
-        visibility: hidden;
-    }
+    &[id="message-add-reaction"]::before,
     &[id="message-reactions"]::before{
         content: "\E11D"; // Emoji
     }
@@ -517,6 +513,14 @@
     }
     &[id="message-unpin"]::before{
         content: "\E196"; // UnPin
+    }
+    &[id="message-bookmark"]::before,
+    &[id="message-unbookmark"]::before{
+        content: "\E8A4"; // Bookmark
+    }
+    &[id="message-reminder"]::before,
+    &[id^="message-reminder"]::before{
+        content: "\E121"; // Clock
     }
     &[id="message-reply"]::before{
         content: "\E97A"; // Reply
