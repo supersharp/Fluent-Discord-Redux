@@ -491,139 +491,117 @@
     }
 }
 
-// Message
+// Message & Message Actions
 .theme-dark .menu_c1e9c4 .item_c1e9c4{
     &[id="message-add-reaction"]::before,
-    &[id="message-reactions"]::before{
-        content: "\E11D"; // Emoji
-    }
-    &[id="message-favorite"]::before{
-        // Right click on a reaction
-        content: "\E113"; // Favorite
-    }
-    &[id="message-unfavorite"]::before{
-        // Right click on a reaction
-        content: "\E195"; // UnFavorite
-    }
-    &[id="message-edit"]::before{
-        content: "\E104"; // Edit
-    }
-    &[id="message-pin"]::before{
-        content: "\E141"; // Pin
-    }
-    &[id="message-unpin"]::before{
-        content: "\E196"; // UnPin
-    }
-    &[id="message-bookmark"]::before,
-    &[id="message-unbookmark"]::before{
-        content: "\E8A4"; // Bookmark
-    }
-    &[id="message-reminder"]::before,
-    &[id^="message-reminder"]::before{
-        content: "\E121"; // Clock
-    }
-    &[id="message-reply"]::before{
-        content: "\E97A"; // Reply
-    }
-    &[id="message-thread"]::before{
-        content: "\E15C"; // ShowResults
-    }
-    &[id="message-apps"]::before{
-        content: "\E74C"; // OEM
-    }
-    &[id="message-mark-unread"]::before{
-        content: "\E119"; // Mail
-    }
-    &[id="message-copy-link"]::before{
-        content: "\E167"; // Link
-    }
-    &[id="message-tts"]::before{
-        content: "\EFA9"; // Speech
-    }
-    &[id="message-delete"]::before{
-        content: "\E107"; // Delete
-    }
-    &[id="message-copy"]::before{
-        content: "\E16F"; // Copy
-    }
-    &[id="message-copy-text"]::before{
-        content: "\E16F"; // Copy
-    }
-    &[id="message-copy-image"]::before{
-        content: "\E16F"; // Copy
-    }
-    &[id="message-save-image"]::before{
-        content: "\E159"; // SaveLocal
-    }
-    &[id="message-copy-native-link"]::before{
-        content: "\E167"; // Link
-    }
-    &[id="message-open-native-link"]::before{
-        content: "\E8A7"; // OpenInNewWindow
-    }
-    &[id^="message-devmode-copy-id"]::before{
-        content: "\E943"; // Code
-    }
-    &[id="message-search-google"]::before{
-        content: "\F6FA"; // WebSearch
-    }
-    &[id="message-guild-automod-add-selection"]::before{
-        content: "\E16E"; // Filter
-    }
-    &[id="message-report"]::before{
-        content: "\E730"; // Filter
-    }
-    &[id="message-forward"]::before{
-        content: "\E72A"; // Forward
-    }
-}
-// Message action
-.theme-dark .menu_c1e9c4 .item_c1e9c4{
-    &[id="message-actions-add-reaction-0"]::before{
-        // Intentionally not displaying an icon as it is a submenu, and would also require icon reuse
-        content: "\E9CE"; // Unknown
-        visibility: hidden;
-    }
-    &[id="message-actions-add-reaction-1"]::before{
-        // Intentionally not displaying an icon as it is a submenu, and would also require icon reuse
-        content: "\E9CE"; // Unknown
-        visibility: hidden;
-    }
-    &[id="message-actions-edit"]::before{
-        content: "\E104"; // Edit
-    }
-    &[id="message-actions-pin"]::before{
-        content: "\E141"; // Pin
-    }
-    &[id="message-actions-reply"]::before{
-        content: "\E97A"; // Reply
-    }
-    &[id="message-actions-thread"]::before{
-        content: "\E15C"; // ShowResults
-    }
-    &[id="message-actions-apps"]::before{
-        content: "\E74C"; // OEM
-    }
-    &[id="message-actions-mark-unread"]::before{
-        content: "\E119"; // Mail
-    }
+    &[id="message-actions-add-reaction"]::before,
+    &[id="message-reactions"]::before,
     &[id="message-actions-reactions"]::before{
         content: "\E11D"; // Emoji
     }
+    &[id="message-favorite"]::before,
+    &[id="message-actions-favorite"]::before{
+        // Right click on a reaction
+        content: "\E113"; // Favorite
+    }
+    &[id="message-unfavorite"]::before,
+    &[id="message-actions-unfavorite"]::before{
+        // Right click on a reaction
+        content: "\E195"; // UnFavorite
+    }
+    &[id="message-edit"]::before,
+    &[id="message-actions-edit"]::before{
+        content: "\E104"; // Edit
+    }
+    &[id="message-pin"]::before,
+    &[id="message-actions-pin"]::before{
+        content: "\E141"; // Pin
+    }
+    &[id="message-unpin"]::before,
+    &[id="message-actions-unpin"]::before{
+        content: "\E196"; // UnPin
+    }
+    &[id="message-bookmark"]::before,
+    &[id="message-actions-bookmark"]::before,
+    &[id="message-unbookmark"]::before,
+    &[id="message-actions-unbookmark"]::before{
+        content: "\E8A4"; // Bookmark
+    }
+    &[id="message-reminder"]::before,
+    &[id^="message-reminder"]::before,
+    &[id="message-actions-reminder"]::before,
+    &[id^="message-actions-reminder"]::before{
+        content: "\E121"; // Clock
+    }
+    &[id="message-reply"]::before,
+    &[id="message-actions-reply"]::before{
+        content: "\E97A"; // Reply
+    }
+    &[id="message-thread"]::before,
+    &[id="message-actions-thread"]::before{
+        content: "\E15C"; // ShowResults
+    }
+    &[id="message-apps"]::before,
+    &[id="message-actions-apps"]::before{
+        content: "\E74C"; // OEM
+    }
+    &[id="message-mark-unread"]::before,
+    &[id="message-actions-mark-unread"]::before{
+        content: "\E119"; // Mail
+    }
+    &[id="message-copy-link"]::before,
     &[id="message-actions-copy-link"]::before{
         content: "\E167"; // Link
     }
+    &[id="message-tts"]::before,
     &[id="message-actions-tts"]::before{
         content: "\EFA9"; // Speech
     }
+    &[id="message-delete"]::before,
     &[id="message-actions-delete"]::before{
         content: "\E107"; // Delete
     }
+    &[id="message-copy"]::before,
+    &[id="message-actions-copy"]::before,
+    &[id="message-copy-text"]::before,
+    &[id="message-actions-copy-text"]::before{
+        content: "\E16F"; // Copy
+    }
+    &[id="message-copy-image"]::before,
+    &[id="message-actions-copy-image"]::before{
+        content: "\E16F"; // Copy
+    }
+    &[id="message-save-image"]::before,
+    &[id="message-actions-save-image"]::before{
+        content: "\E159"; // SaveLocal
+    }
+    &[id="message-copy-native-link"]::before,
+    &[id="message-actions-copy-native-link"]::before{
+        content: "\E167"; // Link
+    }
+    &[id="message-open-native-link"]::before,
+    &[id="message-actions-open-native-link"]::before{
+        content: "\E8A7"; // OpenInNewWindow
+    }
+    &[id^="message-devmode-copy-id"]::before,
+    &[id^="message-actions-devmode-copy-id"]::before{
+        content: "\E943"; // Code
+    }
+    &[id="message-search-google"]::before,
+    &[id="message-actions-search-google"]::before{
+        content: "\F6FA"; // WebSearch
+    }
+    &[id="message-guild-automod-add-selection"]::before,
+    &[id="message-actions-guild-automod-add-selection"]::before{
+        content: "\E16E"; // Filter
+    }
+    &[id="message-report"]::before,
     &[id="message-actions-report"]::before{
         content: "\E730"; // ReportHacked
     }
-    &[id^="message-actions-devmode-copy-id"]::before{
-        content: "\E943"; // Code
+    &[id="message-forward"]::before,
+    &[id="message-actions-forward"]::before{
+        content: "\E72A"; // Forward
     }
 }
 

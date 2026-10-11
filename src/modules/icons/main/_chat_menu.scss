@@ -66,6 +66,12 @@ html[lang^="en-"].theme-dark :is(.wrapper_f7ecac, .popover_f84418, [class*="popo
         }
 
         // Upload attachment
+        &[aria-label="Add Attachment"]::before,
+        &[aria-label="Add Attachments"]::before,
+        &[aria-label*="Add Attachment" i]::before {
+            content: "\E723"; // Attach
+        }
+
         &[aria-label="Spoiler Attachment"]::before {
             content: "\ED1A"; // Hide
         }
