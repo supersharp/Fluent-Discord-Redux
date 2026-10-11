@@ -2,7 +2,7 @@
 .theme-light,
 .theme-midnight,
 .theme-darker {
-    [class*="search__"] {
+    :is(.toolbar__9293f, [class*="toolbar_"], [class*="toolbar__"]) [class*="search__"]:not([class*="searchBar_"]) {
         margin: 0 4px 0 0;
         width: 60px !important;
         max-width: 60px !important;

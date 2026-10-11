@@ -272,64 +272,98 @@
                 }
             }
         }
+    }
 
-        // Modern Discover Page Overrides
-        .container_e9ef78,
-        .contentSection_b6bcee,
-        .scroller__23746 {
-            background-color: transparent !important;
+    // Modern Discover Page Overrides
+    .container_e9ef78,
+    .contentSection_b6bcee,
+    .scroller__23746 {
+        background-color: transparent !important;
+    }
+
+    .container_e9ef78 {
+        border-radius: 8px;
+        margin: 16px;
+        overflow: hidden;
+    }
+
+    // Search Bar
+    .searchBar__1ac1c,
+    [class*="searchBar__1ac1c"] {
+        width: 240px !important;
+        max-width: 100% !important;
+        min-width: 200px !important;
+        flex: 0 1 240px !important;
+        transition: width $AnimationFastInvokeMedium,
+            flex $AnimationFastInvokeMedium;
+
+        &:focus-within {
+            width: 320px !important;
+            flex: 0 1 320px !important;
+            transition: width $AnimationSoftDismiss,
+                flex $AnimationSoftDismiss;
         }
 
-        .container_e9ef78 {
-            border-radius: 8px;
-            margin: 16px;
-            overflow: hidden;
-        }
-
-        // Search Bar
-        .searchBar__1ac1c {
-            :is(.input__0f084, .input__75098, [class*="input_"]) {
-                @include TypeBody;
-                color: $TextFillColorPrimary !important;
-
-                &::placeholder {
-                    color: $TextFillColorSecondary !important;
-                }
-            }
-
-            .wrapper__72c38 {
-                background-color: $ControlFillColorDefault !important;
-                border: 1px solid $ControlStrokeColorDefault !important;
-                border-radius: 4px;
-
-                &:hover {
-                    background-color: $ControlFillColorSecondary !important;
-                }
-            }
-        }
-
-        // Section and App Titles
-        .sectionTitle_d2a5f7,
-        .appName_f215b9 {
-            @include TypeBodyStrong;
+        :is(.input__0f084, .input__75098, [class*="input_"]) {
+            @include TypeBody;
             color: $TextFillColorPrimary !important;
+
+            &::placeholder {
+                color: $TextFillColorSecondary !important;
+            }
         }
 
-        .appCategory_f215b9,
-        .description_f215b9 {
-            @include TypeCaption;
-            color: $TextFillColorSecondary !important;
-        }
-
-        // Card background for Discover
-        .card__84e3e {
-            background-color: $LayerFillColorDefault !important;
-            border: 1px solid $CardStrokeColorDefault !important;
-            border-radius: 8px;
+        .wrapper__72c38,
+        [class*="wrapper__72c38"] {
+            background-color: $ControlFillColorDefault !important;
+            border: 1px solid $ControlStrokeColorDefault !important;
+            border-bottom-width: 2px !important;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-bottom-color $AnimationFadeInOut,
+                background-color $AnimationFadeInOut;
 
             &:hover {
-                background-color: $LayerFillColorAlt !important;
+                background-color: $ControlFillColorSecondary !important;
             }
+
+            &:focus-within {
+                background-color: $ControlFillColorInputActiveBrush !important;
+                border-bottom-color: $AccentBase !important;
+            }
+        }
+
+        .icon__75098,
+        [class*="icon__75098"] {
+            color: $TextFillColorSecondary;
+
+            svg {
+                fill: currentColor;
+            }
+        }
+    }
+
+    // Section and App Titles
+    .sectionTitle_d2a5f7,
+    .appName_f215b9 {
+        @include TypeBodyStrong;
+        color: $TextFillColorPrimary !important;
+    }
+
+    .appCategory_f215b9,
+    .description_f215b9 {
+        @include TypeCaption;
+        color: $TextFillColorSecondary !important;
+    }
+
+    // Card background for Discover
+    .card__84e3e {
+        background-color: $LayerFillColorDefault !important;
+        border: 1px solid $CardStrokeColorDefault !important;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: $LayerFillColorAlt !important;
         }
     }
 
