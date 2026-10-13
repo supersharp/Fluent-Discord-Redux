@@ -143,7 +143,12 @@
     &[id="user-context-remove-friend"]::before{
         content: "\E107"; // Delete
     }
-    &[id="user-context-block"]::before{
+    &[id="user-context-ignore"]::before,
+    &[id="user-context-unignore"]::before{
+        content: "\ED1A"; // Hide
+    }
+    &[id="user-context-block"]::before,
+    &[id="user-context-unblock"]::before{
         content: "\E1E0"; // BlockContact
     }
     &[id="user-context-voice-mute"]::before{
@@ -185,10 +190,14 @@
     &[id="user-context-close-dm"]::before{
         content: "\E8BB"; // ChromeClose
     }
+    &[id="user-context-pin-dm"]::before{
+        content: "\E141"; // Pin
+    }
     &[id="user-context-mark-channel-read"]::before{
         content: "\E166"; // Read
     }
-    &[id="user-context-mute-channel"]::before{
+    &[id="user-context-mute-channel"]::before,
+    &[id="user-context-unmute-channel"]::before{
         content: "\EE79"; // ActionCenterQuiet
     }
     &[id="user-context-soundboard-sound-mute"]::before{
@@ -220,6 +229,11 @@
     // Bot/integration
     &[id="user-context-manage-integration"]::before{
         content: "\E774"; // Globe
+    }
+    // Timezones plugin
+    &[id="user-context-set-timezone"]::before,
+    &[id="set-timezone"]::before{
+        content: "\E121"; // Clock
     }
 }
 
@@ -350,10 +364,17 @@
     &[id="gdm-context-mark-channel-read"]::before{
         content: "\E166"; // Read
     }
+    &[id="gdm-context-pin-dm"]::before{
+        content: "\E141"; // Pin
+    }
+    &[id="gdm-context-edit-gdm"]::before{
+        content: "\E104"; // Edit
+    }
     &[id="gdm-context-instant-invites"]::before{
         content: "\E1E2"; // AddFriend
     }
-    &[id="gdm-context-mute-channel"]::before{
+    &[id="gdm-context-mute-channel"]::before,
+    &[id="gdm-context-unmute-channel"]::before{
         content: "\EE79"; // ActionCenterQuiet
     }
 
@@ -375,7 +396,8 @@
     &[id="guild-context-invite-people"]::before{
         content: "\E1E2"; // AddFriend
     }
-    &[id="guild-context-mute-guild"]::before{
+    &[id="guild-context-mute-guild"]::before,
+    &[id="guild-context-unmute-guild"]::before{
         content: "\EE79"; // ActionCenterQuiet
     }
     &[id="guild-context-guild-notifications"]::before{
@@ -401,6 +423,9 @@
     }
     &[id="guild-context-create-event"]::before{
         content: "\E163"; // Calendar
+    }
+    &[id="guild-context-move-to"]::before{
+        content: "\E759"; // SIPMove
     }
     &[id="guild-context-report-raid"]::before{
         content: "\E1DE"; // ReportHacked
