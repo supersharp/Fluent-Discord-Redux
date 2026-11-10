@@ -21,19 +21,19 @@
     }
 
     // Scroller inside context menu
-    .scroller_c1e9c4 {
+    .scroller_M3qk4j {
         padding: 4px 8px;
         max-height: calc(100vh - 64px);
     }
 
     // Separators
-    .separator_c1e9c4 {
+    .separator_M3qk4j {
         margin: 10px 4px;
         border-bottom-color: $DividerStrokeColorDefault;
     }
 
     // Item
-    .item_c1e9c4 {
+    .item_M3qk4j {
         min-height: 34px;
         margin: 2px 0 2px -4px;
         padding: 4px 12px;
@@ -42,16 +42,16 @@
         color: $TextFillColorPrimary;
         transition: background-color $AnimationFadeInOut;
 
-        &.focused_c1e9c4 {
+        &.focused_M3qk4j {
             background-color: $SubtleFillColorSecondary;
             transition: background-color $AnimationFadeInOut;
         }
 
-        &.colorDanger_c1e9c4 {
+        &.colorDanger_M3qk4j {
             color: $SystemFillColorCritical;
         }
 
-        &.disabled_c1e9c4 {
+        &.disabled_M3qk4j {
             color: $TextFillColorDisabled;
             opacity: 1;
         }
@@ -66,13 +66,13 @@
         // Remove subtext on Spotify menu items
         &[id*="spotify"],
         &[id*="listen"] {
-            .subtext_c1e9c4 {
+            .subtext_M3qk4j {
                 display: none;
             }
         }
 
         // Remove left margin from 'Upload file' option
-        .optionName__77820 {
+        .optionName_GdswDh {
             margin: 0;
         }
 
@@ -82,7 +82,7 @@
         }
 
         // Items with subtext
-        .subtext_c1e9c4 {
+        .subtext_M3qk4j {
             margin-top: 0;
             @include TypeCaption;
             color: $TextFillColorSecondary;
@@ -94,30 +94,30 @@
 
         // Remove Discord icons and left icon container, unless it's a checkbox
         &:not([role="menuitemcheckbox"]):not([role="menuitemradio"]) {
-            .icon_c1e9c4,
-            .iconContainerLeft_c1e9c4 {
+            .icon_M3qk4j,
+            .iconContainerLeft_M3qk4j {
                 display: none;
             }
         }
 
         // Remove icons from upload/attach menu
-        .optionIcon__77820 {
+        .optionIcon_GdswDh {
             display: none;
         }
     }
 
     // Emoji items
-    .button_f563df {
+    .button_Qi4I4L {
         width: 24px;
         height: 24px;
         background-color: transparent;
 
-        &.focused_f563df {
+        &.focused_Qi4I4L {
             background-color: $SubtleFillColorSecondary;
             box-shadow: none;
         }
 
-        .icon_f563df {
+        .icon_Qi4I4L {
             width: 18px;
             height: 18px;
         }

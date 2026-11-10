@@ -1,31 +1,31 @@
-.theme-dark .wrapper_cb9592 {
+.theme-dark .wrapper_hbKzX7 {
     background: transparent !important;
     border-radius: 8px 0 0 0;
 
     // Attach borders in call
-    ~.content_f75fb0 {
+    ~.content_z_gUBg {
         border-radius: 0;
     }
 
     // Round top-left corner; dark background for active calls so user tiles
     // have a proper backdrop.
-    .callContainer_cb9592,
+    .callContainer_hbKzX7,
     [class*="callContainer_"] {
         background-color: $SolidBackgroundFillColorBase;
         border-radius: 8px 0 0 0;
     }
 
-    // Inactive view — Discord adds .noChat_cb9592 to the wrapper when the
+    // Inactive view — Discord adds .noChat_hbKzX7 to the wrapper when the
     // channel is empty and the user hasn't joined.
     //
-    // .callContainer_cb9592 carries theme-midnight as a class, creating a
+    // .callContainer_hbKzX7 carries theme-midnight as a class, creating a
     // self-contained CSS-variable scope where --background-primary etc. are
     // near-black. We override those variables then zero out the specific
-    // layout wrapper backgrounds (root_bfe55a and its flex child).
+    // layout wrapper backgrounds (root_4lTkMQ and its flex child).
     // NOTE: *:not(canvas) is intentionally avoided — it strips button styling.
-    &.noChat_cb9592,
+    &.noChat_hbKzX7,
     &[class*="noChat_"] {
-        .callContainer_cb9592,
+        .callContainer_hbKzX7,
         [class*="callContainer_"] {
             // Collapse the theme-midnight dark CSS variable scope
             --background-primary: transparent !important;
@@ -37,10 +37,10 @@
             background: transparent !important;
 
             // Target the specific layout wrappers that render the dark fill.
-            // From the DOM: callContainer > root_bfe55a > div[flex]
-            .root_bfe55a,
-            [class*="root_bfe55a"],
-            .root_bfe55a > div {
+            // From the DOM: callContainer > root_4lTkMQ > div[flex]
+            .root_4lTkMQ,
+            [class*="root_4lTkMQ"],
+            .root_4lTkMQ > div {
                 background: transparent !important;
                 background-color: transparent !important;
             }
@@ -50,7 +50,7 @@
     // Inactive voice view (No one in voice)
     // pulseGradient__11664 is a canvas element that renders the purple/blue
     // animated background gradient.  We hide it so the dark $SolidBackgroundFillColorBase
-    // of callContainer_cb9592 (line above) shows through cleanly.
+    // of callContainer_hbKzX7 (line above) shows through cleanly.
     .container__5aa3a,
     [class*="container__5aa3a"] {
         background-color: transparent;
@@ -61,7 +61,7 @@
             display: none !important;
         }
 
-        .channelName__5aa3a,
+        .channelName_hVh8FI,
         [class*="channelName__"] {
             @include TypeTitle;
             color: $TextFillColorPrimary;
@@ -72,12 +72,12 @@
             color: $TextFillColorSecondary !important;
         }
 
-        .joinButton__5aa3a,
+        .joinButton_hVh8FI,
         [class*="joinButton__"] {
             // overlay-primary_a22cb0 has black text for use over light/gradient
             // backgrounds. On the dark mica background we restyle it to match
             // the Fluent control appearance used elsewhere in the theme.
-            .button_a22cb0,
+            .button_F7qvhY,
             [class*="button_"] {
                 @include TypeBodyStrong;
                 border-radius: 4px;
@@ -104,13 +104,13 @@
     // Voice controls (bottom control tray) are unthemed per user preference
     // to preserve Discord's native button layout, pill shapes, and animations.
     @include voice-video-controls {
-        .button__201d5 {
+        .button_9OQtot {
             border-radius: revert;
         }
     }
 
     // User tiles
-    .tile__2f4f7 {
+    .tile_M3UIYy {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
@@ -129,17 +129,17 @@
         }
 
         // Avatar masks in voice
-        .avatarStack__44b0c {
+        .avatarStack_XpIUHy {
             border-radius: 50%;
         }
 
-        .mask__44b0c foreignObject {
+        .mask_XpIUHy foreignObject {
             mask: none !important;
             border-radius: 50%;
         }
     }
 
-    .participantsButton__211d1,
+    .participantsButton_1uD6uZ,
     [class*="participantsButton_"] {
         background-color: $ControlOnImageFillColorDefault;
         backdrop-filter: blur(8px);
@@ -152,8 +152,8 @@
     }
 
     // Sidebar chat divide fixes
-    &.sidebarOpen_cb9592,
-    .channelChatWrapper_cb9592 {
+    &.sidebarOpen_hbKzX7,
+    .channelChatWrapper_hbKzX7 {
         border: none !important;
         background: transparent !important;
         &::before, &::after {
@@ -164,8 +164,8 @@
 
 // Icon replacements
 // Top toolbar (excludes Inbox button)
-html[lang^="en-"].theme-dark .toolbar__9293f {
-    .button__201d5 {
+html[lang^="en-"].theme-dark .toolbar_ybUK7Z {
+    .button_9OQtot {
         &::before {
             @include FontIconFluent;
             width: 62px;
@@ -181,4 +181,4 @@ html[lang^="en-"].theme-dark .toolbar__9293f {
             display: none;
         }
     }
-}
+}

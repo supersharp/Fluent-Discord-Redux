@@ -1,8 +1,8 @@
-.theme-dark .fileWrapper__0ccae{
+.theme-dark .fileWrapper_-9z-XO{
     width: 400px;
     position: relative;
 
-    .file__0ccae{
+    .file_-9z-XO{
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $SurfaceStrokeColorFlyout;
         border-color: $SurfaceStrokeColorFlyout; // Override Discord CSS
@@ -10,7 +10,7 @@
 
     img{
         display: none;
-        & ~ .fileInner__0ccae{
+        & ~ .fileInner_-9z-XO{
             position: relative;
             padding-left: 40px;
             &::before{
@@ -21,32 +21,32 @@
                 @include FontIconFluent;
                 font-size: 24px;
             }
-            .filenameLinkWrapper__0ccae a{
+            .filenameLinkWrapper_-9z-XO a{
                 line-height: 20px;
             }
         }
 
     }
 
-    img[title="acrobat"] ~ .fileInner__0ccae::before{
+    img[title="acrobat"] ~ .fileInner_-9z-XO::before{
         content: "\ea90"; // PDF
     }
-    img[title="archive"] ~ .fileInner__0ccae::before{
+    img[title="archive"] ~ .fileInner_-9z-XO::before{
         content: "\f012"; // ZipFolder
     }
-    img[title="document"] ~ .fileInner__0ccae::before{
+    img[title="document"] ~ .fileInner_-9z-XO::before{
         content: "\f000"; // KnowledgeArticle
     }
-    img[title="spreadsheet"] ~ .fileInner__0ccae::before{
+    img[title="spreadsheet"] ~ .fileInner_-9z-XO::before{
         content: "\E9F9"; // ReportDocument
     }
-    img[title="unknown"] ~ .fileInner__0ccae::before{
+    img[title="unknown"] ~ .fileInner_-9z-XO::before{
         content: "\e9ce"; // Unknown
     }
 
-    img[title="ae"] ~ .fileInner__0ccae::before,
-    img[title="ai"] ~ .fileInner__0ccae::before,
-    img[title="sketch"] ~ .fileInner__0ccae::before{
+    img[title="ae"] ~ .fileInner_-9z-XO::before,
+    img[title="ai"] ~ .fileInner_-9z-XO::before,
+    img[title="sketch"] ~ .fileInner_-9z-XO::before{
         content: "\e8a5"; // Document
     }
 

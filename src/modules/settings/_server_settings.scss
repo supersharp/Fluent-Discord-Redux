@@ -1,4 +1,4 @@
-.theme-dark .contentColumn__23e6b{
+.theme-dark .contentColumn_fBxaQT{
     // Roles
     // Fix header
     &#roles-tab{
@@ -8,7 +8,7 @@
 
 
         // Advanced permissions
-        .contentContainer__77062{
+        .contentContainer_NUIl5Z{
             left: 256px;
         }
         .contentWidth_c6bf1b{
@@ -16,8 +16,8 @@
         }
 
         // Left
-        .container_e29cd7{
-            .titleContainer_f215b9{
+        .container_UWRh5Q{
+            .titleContainer_ZlNLGi{
                 padding-top: 40px;
                 background-color: transparent;
                 h2{
@@ -25,12 +25,12 @@
                     text-transform: none;
                 }
             }
-            .list_e29cd7{
+            .list_UWRh5Q{
                 padding: 0 16px 96px 16px;
             }
         }
         // Right
-        .header_c6bf1b{
+        .header_VJarcR{
             padding-top: 40px;
             background-color: $CardStrokeColorDefaultSolid;
             h2{
@@ -67,12 +67,12 @@
                 flex: 1;
                 transition: background-color 0.2s;
 
-                &.selected_aa8da2 {
+                &.selected_6zZYhF {
                     background-color: $SubtleFillColorSecondary;
                     border-color: $AccentBase;
                 }
 
-                &:hover:not(.selected_aa8da2) {
+                &:hover:not(.selected_6zZYhF) {
                     background-color: $SubtleFillColorSecondary;
                 }
             }
@@ -98,38 +98,38 @@
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
 
-        .ruleIconContainer_c5e6a1{
+        .ruleIconContainer_mQktSJ{
             background-color: transparent;
         }
         // Pills
-        .actionContainer_bc4513{
+        .actionContainer__Sq065{
             padding: 4px 8px;
             background-color: $SystemFillColorSolidNeutral;
-            .actionIcon_bc4513{
+            .actionIcon__Sq065{
                 color: $TextFillColorPrimary;
             }
-            .actionTextHeader_bc4513{
+            .actionTextHeader__Sq065{
                 color: $TextFillColorPrimary !important;
                 font-weight: normal;
             }
         }
 
 
-        .mentionLimitContainer_ed9c90,
-        .actionContainer__6446f{
+        .mentionLimitContainer_QSBA8Q,
+        .actionContainer_0xIELG{
             background-color: $CardBackgroundFillColorDefault;
         }
         .keywordListContainer__09e76{
             margin-bottom: 0;
             background-color: transparent;
         }
-        .collapseable__217b7{
+        .collapseable_EWrVB9{
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
         }
 
         // Select/drop down
-        .container_fea832{
+        .container_ejC3ZL{
             background-color: $ControlFillColorDefault;
         }
         .resultsList__6ae25{
@@ -139,7 +139,7 @@
         }
 
         // Textarea
-        .keywordTextArea__4546e{
+        .keywordTextArea_csWy6G{
             background-color: $ControlFillColorDefault;
             border: 1px solid;
             border-bottom-width: 2px;
@@ -170,11 +170,11 @@
         }
     }
 
-    // Server Boosts page (guild_premium-tab + standalone container__89463)
-    // Structure: container__89463 > contentContainer__89463
-    //              > powerupsContainer__89463 (left scroller)
-    //              > sidebarContainer__89463  (right panel)
-    // &[id] scoping keeps h2 fix inside contentColumn__23e6b; .container__89463
+    // Server Boosts page (guild_premium-tab + standalone container_rhYbEd)
+    // Structure: container_rhYbEd > contentContainer_rhYbEd
+    //              > powerupsContainer_rhYbEd (left scroller)
+    //              > sidebarContainer_rhYbEd  (right panel)
+    // &[id] scoping keeps h2 fix inside contentColumn_fBxaQT; .container_rhYbEd
     // targets the standalone Boosts page root directly.
     &#guild_premium-tab {
         h2 {
@@ -183,21 +183,21 @@
     }
 }
 
-// Server Boosts standalone page — outside contentColumn__23e6b scope.
-// Scoped to .container__89463 to avoid bleed; partial-match on __89463 suffix
+// Server Boosts standalone page — outside contentColumn_fBxaQT scope.
+// Scoped to .container_rhYbEd to avoid bleed; partial-match on __89463 suffix
 // for hash resilience while remaining narrow enough not to hit unrelated elements.
-.theme-dark .page__5e434 > .container__89463 {
+.theme-dark .page_pog62O > .container_rhYbEd {
     background-color: transparent;
 
     // Header bar — suppress seam line
-    [class*="toolbar__89463"] {
+    [class*="toolbar_rhYbEd"] {
         background-color: transparent !important;
         border-bottom: 0 !important;
         box-shadow: none !important;
     }
 
     // Main content flex wrapper
-    [class*="contentContainer__89463"] {
+    [class*="contentContainer_rhYbEd"] {
         background-color: transparent;
         display: flex;
         flex: 1;
@@ -205,36 +205,36 @@
     }
 
     // Left scrollable content area
-    [class*="powerupsContainer__89463"] {
+    [class*="powerupsContainer_rhYbEd"] {
         background-color: $LayerFillColorDefault;
         border-top-left-radius: 8px;
         border: 0;
         box-shadow: none;
     }
 
-    // Level / perk tier cards — card__823e1 is the card variant class;
+    // Level / perk tier cards — card_nFRzXP is the card variant class;
     // targeting both the specific combo and partial fallback.
-    [class*="container__5573a"][class*="card__"],
-    [class*="parentContainer__5573a"] > [class*="container__5573a"] {
+    [class*="container_aynOSy"][class*="card__"],
+    [class*="parentContainer__5573a"] > [class*="container_aynOSy"] {
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
     }
 
     // Right sidebar wrapper — keep transparent so the acrylic BG shows
-    [class*="sidebarContainer__89463"] {
+    [class*="sidebarContainer_rhYbEd"] {
         background-color: transparent;
     }
 
     // Sidebar inner notice/info card
-    [class*="container__58c46"] {
+    [class*="container_29CVSE"] {
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
     }
 }
 
-.theme-dark .contentColumn__23e6b {
+.theme-dark .contentColumn_fBxaQT {
 
 
 
@@ -245,7 +245,7 @@
     // Channel Settings - Overview
     // Fixes no spacing between channel name text box and Bitrate sections
     .channel-settings-overview{
-        .marginBottom40_fd297e{
+        .marginBottom40_cWXVcV{
             margin-bottom: 24px;
         }
     }

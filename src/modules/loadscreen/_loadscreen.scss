@@ -1,5 +1,5 @@
 // Hide titlebar
-.theme-dark .container_a2f514 {
+.theme-dark .container_oDjP9R {
     padding-top: 32px;
     top: -32px;
 }
@@ -76,7 +76,7 @@
     100% { opacity: 1; }
 }
 
-.theme-dark .container_a2f514 {
+.theme-dark .container_oDjP9R {
     background-color: #000;
 
     // Loading blob animations
@@ -97,7 +97,7 @@
     }
 }
 
-.content_a2f514 {
+.content_oDjP9R {
     width: 64px;
     height: 64px;
 
@@ -124,10 +124,10 @@
     }
 
     // Hide splash/tip text
-    .splashHeader__8f8f0,
-    .splashText_d71087,
-    .splashText_cdb473,
-    .tipTitle_a7615c,
+    .splashHeader_wH1nhw,
+    .splashText_wH1nhw,
+    .splashText_wH1nhw,
+    .tipTitle_oDjP9R,
     [class*="splashHeader"],
     [class*="splashText"],
     [class*="tipTitle"] {
@@ -135,13 +135,13 @@
     }
 
     // Loading circle
-    .text_a2f514 {
+    .text_oDjP9R {
         width: 64px;
         height: 64px;
         display: block;
         animation: fluent-loading-circle 1.5s linear infinite;
 
-        .body_a2f514 {
+        .body_oDjP9R {
             line-height: unset;
             font-size: 0;
             width: 64px;
@@ -167,19 +167,19 @@
         }
 
         // Hide all tip/hint text
-        .tipTitle_a2f514,
-        .tip__30cbe,
-        > *:not(.body_a2f514) {
+        .tipTitle_oDjP9R,
+        .tip_xW8MJW,
+        > *:not(.body_oDjP9R) {
             display: none;
         }
     }
 }
 
 // Links
-.problemsText_a2f514 {
+.problemsText_oDjP9R {
     color: $TextFillColorPrimary;
 }
 
-.anchor_edefb8 {
+.anchor_R6ReNl {
     color: $AccentTextFillColorPrimary;
 }

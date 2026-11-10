@@ -11,12 +11,12 @@
     width: calc(320px - 6px);
     padding: 40px 4px;
 
-    .searchBar_c7e907 {
+    .searchBar_uNafB1 {
         margin-left: 8px;
     }
 
     // Section header
-    .side_aa8da2 .eyebrow_cf4812{
+    .side_6zZYhF .eyebrow_cf4812{
         padding: 0 0 0 8px;
         @include TypeBodyStrong;
         color: $TextFillColorPrimary;
@@ -30,7 +30,7 @@
         }
     }
 
-    .side_aa8da2 .item_aa8da2{
+    .side_6zZYhF .item_6zZYhF{
         padding: 0 12px 0 16px;
         margin-bottom: 4px;
         border: 1px solid transparent;
@@ -58,7 +58,7 @@
             transition: transform 167ms Cubic-bezier(0,0,0,1),
                         opacity 167ms Cubic-bezier(0,0,0,1);
         }
-        &.selected_aa8da2{
+        &.selected_6zZYhF{
             background-color: $SubtleFillColorSecondary;
             &::before{
                 transform: scaleY(100%);
@@ -84,11 +84,11 @@
         }
     }
     // Divider
-    .side_aa8da2 .separator_aa8da2{
+    .side_6zZYhF .separator_6zZYhF{
         margin: 0 -8px;
     }
 
-    .info__35859{
+    .info_ipBn6f{
         // Make all version info match colours
         span{
             color: $TextFillColorSecondary !important; // Override inline

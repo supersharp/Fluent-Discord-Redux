@@ -6,35 +6,35 @@
         border: 1px solid $SurfaceStrokeColorFlyout;
         border-radius: 8px;
         box-sizing: border-box;
-        .mediaBarWrapper_f7877e{
+        .mediaBarWrapper_s1cr3c{
             height: 4px;
             background-color: $ControlStrongFillColorDefault;
             border-radius: 2px;
         }
-        .durationTimeDisplay_f316dd,
-        .durationTimeSeparator_f316dd{
+        .durationTimeDisplay_FJ99sr,
+        .durationTimeSeparator_FJ99sr{
             @include FontNormal;
             font-weight: normal;
             font-size: 14px;
         }
-        .mediaBarProgress_f7877e{
+        .mediaBarProgress_s1cr3c{
             background-color: $AccentLight1;
             border-radius: 2px;
         }
-        .mediaBarGrabber_f7877e{
+        .mediaBarGrabber_s1cr3c{
             background-color: $AccentLight1;
             border: 4px solid #454545;
             border-radius: 50%;
             top: -2px;
         }
-        .fakeEdges_f7877e{
+        .fakeEdges_s1cr3c{
             &::before,
             &::after{
                 display: none;
             }
         }
 
-        .mediaBarInteractionVolume_f7877e{
+        .mediaBarInteractionVolume_s1cr3c{
             height: 32px;
             padding: 0 16px;
             background-color: $SolidbackgroundFillColorQuarternary;
@@ -50,35 +50,35 @@
         border: 1px solid $SurfaceStrokeColorFlyout;
         border-radius: 8px;
         box-sizing: border-box;
-        .mediaBarWrapper_f7877e{
+        .mediaBarWrapper_s1cr3c{
             height: 4px;
             background-color: $ControlStrongFillColorDefault;
             border-radius: 2px;
         }
-        .durationTimeDisplay_f316dd,
-        .durationTimeSeparator_f316dd{
+        .durationTimeDisplay_FJ99sr,
+        .durationTimeSeparator_FJ99sr{
             @include FontNormal;
             font-weight: normal;
             font-size: 14px;
         }
-        .mediaBarProgress_f7877e{
+        .mediaBarProgress_s1cr3c{
             background-color: $AccentLight1;
             border-radius: 2px;
         }
-        .mediaBarGrabber_f7877e{
+        .mediaBarGrabber_s1cr3c{
             background-color: $AccentLight1;
             border: 4px solid #454545;
             border-radius: 50%;
             top: -2px;
         }
-        .fakeEdges_f7877e{
+        .fakeEdges_s1cr3c{
             &::before,
             &::after{
                 display: none;
             }
         }
 
-        .mediaBarInteractionVolume_f7877e{
+        .mediaBarInteractionVolume_s1cr3c{
             height: 32px;
             padding: 0 16px;
             background-color: $SolidbackgroundFillColorQuarternary;
@@ -97,7 +97,7 @@
     @include chat-video-controls {
         transform: unset !important; // Override inline
     }
-    .wrapperControlsHidden_f316dd {
+    .wrapperControlsHidden_FJ99sr {
         @include chat-video-controls {
             animation: $AnimationSoftDismiss fluent-hide-video-controls;
             opacity: 0;
@@ -115,24 +115,24 @@
 }
 
 .theme-dark .messageAttachment__5dae1{
-    .wrapperAudio_f316dd{
+    .wrapperAudio_FJ99sr{
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
     }
 
-    .metadataContent_f316dd{
-        .metadataDownload_f316dd{
+    .metadataContent_FJ99sr{
+        .metadataDownload_FJ99sr{
             @include TypeBody;
         }
-        .metadataSize_f316dd{
+        .metadataSize_FJ99sr{
             color: $TextFillColorTertiary;
             font-weight: normal;
             opacity: 1;
         }
     }
     // Remove icon
-    .audioMetadata_f316dd::before{
+    .audioMetadata_FJ99sr::before{
         display: none;
     }
 }

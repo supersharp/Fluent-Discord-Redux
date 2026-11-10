@@ -1,26 +1,26 @@
-.theme-dark .browser_d98031{
+.theme-dark .browser_l-3BKx{
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
 
     // header
-    .header_d9c882{
+    .header_c0tu5x{
         height: unset;
         min-height: unset;
         padding: 12px 24px;
 
         background-color: transparent;
-        .threadIcon_d9c882{
+        .threadIcon_c0tu5x{
             display: none;
         }
-        .title_d9c882{
+        .title_c0tu5x{
             @include TypeSubtitle;
         }
     }
 
     // Thread list
-    .list_c441f0{
+    .list_6_wQXw{
         padding: 0 24px !important; // Override inline
 
         .sectionHeader__98b95{
@@ -31,17 +31,17 @@
     }
 
     // Thread
-    .container__6764b{
+    .container_yRVHqK{
         background-color: $CardBackgroundFillColorDefault;
         border-radius: 4px;
-        .threadNameLine__6764b{
+        .threadNameLine_yRVHqK{
             margin-bottom: 4px;
             @include TypeBody;
-            .threadName__6764b{
+            .threadName_yRVHqK{
                 color: $TextFillColorPrimary;
             }
         }
-        .subtext__6764b{
+        .subtext_yRVHqK{
             @include TypeCaption;
             color: $TextFillColorSecondary;
         }

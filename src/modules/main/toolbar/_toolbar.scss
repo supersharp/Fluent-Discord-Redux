@@ -1,52 +1,52 @@
-.theme-dark .title_f75fb0, // Normal toolbar
-.theme-dark .container__9293f{ // Browse channels toolbar
+.theme-dark .title_z_gUBg, // Normal toolbar
+.theme-dark .container_ybUK7Z{ // Browse channels toolbar
     padding: 0 0 0 8px;
-    &.themed__9293f{
+    &.themed_ybUK7Z{
         background-color: transparent;
         border: 0;
     }
     // Channel & MOTD
     // Re-colour channel symbol
-    .children__9293f{
+    .children_ybUK7Z{
         // Gradient at end of MOTD field
         &::after{
             display: none;
         }
-        .iconWrapper__9293f svg{
+        .iconWrapper_ybUK7Z svg{
             color: $TextFillColorPrimary;
         }
     }
     // Channel name
-    .title__9293f{
+    .title_ybUK7Z{
         @include TypeBodyStrong
     }
 
     // MOTD
-    .dot__9293f{
+    .dot_ybUK7Z{
         color: $TextFillColorDisabled;
     }
-    .topic__6ec1a,
+    .topic_pVbL3l,
     [class*="topic_"] {
         color: $TextFillColorPrimary;
         @include TypeBody;
     }
 
     // Add some margin to the caret when in fullscreen thread view
-    .caret__9293f{
+    .caret_ybUK7Z{
         margin-right: 8px;
     }
 }
 
-.theme-dark .chat_f75fb0,
-.theme-dark .container__16eb0 {
-    .subtitleContainer__49508,
-    .subtitleContainer_f75fb0,
+.theme-dark .chat_z_gUBg,
+.theme-dark .container_cbVzxY {
+    .subtitleContainer_neq5ug,
+    .subtitleContainer_z_gUBg,
     [class*="subtitleContainer_"],
     [class*="headerBar__"],
-    .title_f75fb0,
+    .title_z_gUBg,
     [class*="title_"],
-    .container__9293f,
-    [class*="container__9293f"]{
+    .container_ybUK7Z,
+    [class*="container_ybUK7Z"]{
         background: transparent !important;
         border: 0 !important;
         box-shadow: none !important;
@@ -56,11 +56,11 @@
 }
 
 // Toolbar
-.theme-dark .toolbar__9293f{
+.theme-dark .toolbar_ybUK7Z{
     gap: 4px;
     margin-right: 4px;
     // Using these selectors so there are fewer conflicts in the voice screen
-    div[role=button]:not(.iconLayout__0c4c4):not([class*="iconLayout_"]):not([class*="searchIcon__"]), // :not excludes search controls from fixed 60px icon-button geometry
+    div[role=button]:not(.iconLayout_v966Ys):not([class*="iconLayout_"]):not([class*="searchIcon__"]), // :not excludes search controls from fixed 60px icon-button geometry
     button[type=button]{
         position: relative;
         width: 60px;
@@ -79,12 +79,12 @@
         }
 
         // Selected
-        &.selected__9293f{
+        &.selected_ybUK7Z{
             background-color: $AccentFillColorSecondary;
             &::before{
                 color: $TextOnAccentFillColorPrimary;
             }
-            .count__03d4d,
+            .count_p_yaLN,
             [class*="count_"] {
                 color: $TextOnAccentFillColorPrimary !important; // Override inline
             }
@@ -94,14 +94,14 @@
             color: $SystemFillColorCritical;
         }
     }
-    .count__03d4d,
+    .count_p_yaLN,
     [class*="count_"] {
         position: absolute;
         top: 2px;
         left: 38px;
         @include TypeCaption;
     }
-    .iconBadge__9293f{
+    .iconBadge_ybUK7Z{
         width: 16px;
         height: 3px;
         right: 22px;
@@ -113,8 +113,8 @@
 }
 
 // Icon replacements
-html[lang^="en-"].theme-dark .toolbar__9293f{
-    .iconWrapper__9293f{
+html[lang^="en-"].theme-dark .toolbar_ybUK7Z{
+    .iconWrapper_ybUK7Z{
         &::before{
             @include FontIconFluent;
             width: 60px;
@@ -125,7 +125,7 @@ html[lang^="en-"].theme-dark .toolbar__9293f{
             display: block;
         }
         // Remove default icon
-        .icon__9293f,
+        .icon_ybUK7Z,
         .controlIcon-35oS15{
             display: none;
         }

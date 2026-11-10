@@ -1,59 +1,59 @@
-.theme-dark .container_e131a9{
+.theme-dark .container_9U6LUN{
     background-color: transparent;
     border-top: 0;
     border-bottom: 0;
     padding-bottom: 0;
 
     // Connection status/disconnect
-    .connection__9bfb9{
+    .connection_9U6LUN{
         height: 32px;
     }
-    .rtcConnectionStatus__06d62,
+    .rtcConnectionStatus_4LJE6I,
     [class*="rtcConnectionStatus_"] {
         padding-bottom: 0;
-        .button__201d5{
+        .button_9OQtot{
             line-height: 16px;
         }
         .text-md\/medium_cf4812{
             @include TypeBody;
         }
     }
-    .subtext__339d0 .text-sm\/medium_cf4812{
+    .subtext_yc3axZ .text-sm\/medium_cf4812{
         @include TypeBody;
         color: $TextFillColorPrimary !important; // Override inline
     }
-    .voiceUsers__68617,
+    .voiceUsers_7FtMGA,
     [class*="voiceUsers_"] {
         padding-top: 4px;
     }
 
     // Connection status colours
-    .rtcConnectionQualityFine__06d62,
+    .rtcConnectionQualityFine_4LJE6I,
     [class*="rtcConnectionQualityFine_"] {
-        .ping__06d62 path{
+        .ping_4LJE6I path{
             fill: $SystemFillColorSuccess;
         }
-        .rtcConnectionStatusConnected__06d62,
+        .rtcConnectionStatusConnected_4LJE6I,
         [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorSuccess;
         }
     }
-    .rtcConnectionQualityAverage__06d62,
+    .rtcConnectionQualityAverage_4LJE6I,
     [class*="rtcConnectionQualityAverage_"] {
-        .ping__06d62 path{
+        .ping_4LJE6I path{
             fill: $SystemFillColorCaution;
         }
-        .rtcConnectionStatusConnected__06d62,
+        .rtcConnectionStatusConnected_4LJE6I,
         [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorCaution;
         }
     }
-    .rtcConnectionQualityBad__06d62,
+    .rtcConnectionQualityBad_4LJE6I,
     [class*="rtcConnectionQualityBad_"] {
-        .ping__06d62 path{
+        .ping_4LJE6I path{
             fill: $SystemFillColorCritical;
         }
-        .rtcConnectionStatusConnected__06d62,
+        .rtcConnectionStatusConnected_4LJE6I,
         [class*="rtcConnectionStatusConnected_"] {
             color: $SystemFillColorCritical;
         }
@@ -69,9 +69,9 @@
     }
 
     // Video/screen share buttons
-    .actionButtons_e131a9{
+    .actionButtons_9U6LUN{
         grid-gap: 4px;
-        .button__201d5 {
+        .button_9OQtot {
             min-width: unset;
             background-color: $ControlFillColorDefault;
             border: 1px solid $ControlStrokeColorDefault;
@@ -83,13 +83,13 @@
             &:active{
                 background-color: $ControlFillColorTertiary;
             }
-            &.buttonActive_e131a9{
+            &.buttonActive_9U6LUN{
                 background-color: transparent;
                 // background-color: $SystemFillColorCriticalBackground !important;
                 animation: fluent-streaming-pulse 3s ease-in-out infinite;
             }
 
-            .contents__201d5{
+            .contents_9OQtot{
                 // Display: flex required to fix alignment of soundboard icon when using non-English - see #249
                 display: flex;
                 font-size: 0;
@@ -99,48 +99,48 @@
             }
         }
         // Hide buttons when you don't have permission. This also hides the soundboard when you are muted
-        .disabledButtonWrapper__201d5{
+        .disabledButtonWrapper_9OQtot{
             display: none;
         }
     }
 }
 
 // Streaming game/app
-.theme-dark .activityPanel__5e434{
+.theme-dark .activityPanel_pog62O{
     background: transparent !important;
     padding-bottom: 0;
     border-top: 0;
     border-bottom: 0;
 
-    .body__5dec7,
+    .body_8eCwJY,
     [class*="body_"],
-    .gameWrapper__8c6c2,
+    .gameWrapper_PY60v2,
     [class*="gameWrapper_"] {
         background: transparent !important;
     }
 
-    .title_d1da5f{
+    .title_y2dW7E{
         @include TypeBody;
     }
 }
 
 // Icons
-html[lang^="en-"].theme-dark .panels__5e434 .button__201d5[aria-label]{
+html[lang^="en-"].theme-dark .panels_pog62O .button_9OQtot[aria-label]{
     &::before{
         @include FontIconFluent;
         font-size: 16px;
     }
-    .contents__201d5{
+    .contents_9OQtot{
         display: none;
     }
 }
 
 // Fix connection status text not appearing
-.rtcConnectionStatus__06d62,
+.rtcConnectionStatus_4LJE6I,
 [class*="rtcConnectionStatus_"] {
-    .contents__201d5{
+    .contents_9OQtot{
         display: block !important;
-        .rtcConnectionStatusLabel__06d62,
+        .rtcConnectionStatusLabel_4LJE6I,
         [class*="rtcConnectionStatusLabel_"] {
             font-weight: 500;
         }

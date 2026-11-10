@@ -1,13 +1,13 @@
-.theme-dark .container_c8ffbb{
+.theme-dark .container_86es0b{
     background: $LayerOnMicaBaseAltFillColor;
     border-left: 1px solid $CardStrokeColorDefault;
 
-    .members_c8ffbb{
+    .members_86es0b{
         background-color: transparent;
     }
 
     // Group header
-    .membersGroup_c8ffbb{
+    .membersGroup_86es0b{
         padding: 20px 8px 0 15px;
         color: $TextFillColorPrimary;
         @include TypeBodyStrong;
@@ -15,7 +15,7 @@
     }
 
     // Member
-    .container__91a9d{
+    .container_J1Adu_{
         margin-left: 7px;
         background: transparent;
         border: 1px solid transparent;
@@ -29,12 +29,12 @@
         &:hover{
             background-color: $SubtleFillColorSecondary;
             border-color: $SubtleFillColorSecondary;
-            .childContainer__91a9d{
+            .childContainer_J1Adu_{
                 background-color: transparent;
             }
         }
         // Selected (user popout open)
-        &.selected__91a9d{
+        &.selected_J1Adu_{
             background-color: $SubtleFillColorSecondary;
             border-color: $SubtleFillColorSecondary;
             &::before{
@@ -43,17 +43,17 @@
                 transition: transform 250ms Cubic-bezier(0.55,0.55,0,1),
                             opacity 250ms Cubic-bezier(0.55,0.55,0,1);
             }
-            .childContainer__91a9d{
+            .childContainer_J1Adu_{
                 background-color: transparent;
             }
         }
         // Greyscale offline avatars
-        &.offline__5d473{
-            .avatar__91a9d{
+        &.offline_Iy0c7A{
+            .avatar_J1Adu_{
                 filter: grayscale(100%);
             }
             &:hover{
-                .avatar__91a9d{
+                .avatar_J1Adu_{
                     filter: grayscale(0%);
                 }
             }
@@ -61,11 +61,11 @@
     }
 
     // Username
-    .name__91a9d{
+    .name_J1Adu_{
         @include TypeBody;
     }
     // Activity
-    .truncated_c9d15c{
+    .truncated_HigqCD{
         @include TypeCaption;
         color: $TextFillColorSecondary;
         strong{
@@ -77,17 +77,17 @@
 
 // Remove Nitro decorations from member list, chat, and popouts.
 // Excludes shop product-preview tiles where the decoration IS the product.
-.avatarDecoration__44b0c:not([class*="productPreview"] .avatarDecoration__44b0c) {
+.avatarDecoration_XpIUHy:not([class*="productPreview"] .avatarDecoration_XpIUHy) {
     display: var(--fluent-show-nitro-decorations);
 }
 // Explicit restore inside shop product previews so the decoration preview
 // is always shown regardless of the user's --fluent-show-nitro-decorations setting.
-[class*="productPreview__"] .avatarDecoration__44b0c {
+[class*="productPreview__"] .avatarDecoration_XpIUHy {
     display: block;
 }
 // Member list background
-.nameplated__91a9d{
-    .container__4bbc6{
+.nameplated_J1Adu_{
+    .container_AFi54G{
         display: var(--fluent-show-nitro-decorations);
     }
 }

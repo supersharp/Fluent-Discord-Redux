@@ -1,30 +1,30 @@
-.theme-dark .nowPlayingColumn__133bf{
+.theme-dark .nowPlayingColumn_zrUwGA{
     background: transparent;
-    .container__7d20c{
+    .container_GNEh_C{
         background-color: $LayerFillColorDefault;
         border-left: 1px solid $CardStrokeColorDefault;
     }
-    .scroller__7d20c{
+    .scroller_GNEh_C{
         border: 0;
     }
 
     // Header
-    .header__7d20c{
+    .header_GNEh_C{
         @include TypeSubtitle;
     }
 
     // User data consent card
-    .card__2eab1.outer_bf1984{
+    .card_6bPiII.outer_ERB-Vv{
         background-color: $LayerFillColorDefault;
-        .header__2eab1,
-        .defaultColor__77578 {
+        .header_6bPiII,
+        .defaultColor_HtJY5C {
             text-align: left;
         }
     }
 
     // Card
-    .wrapper__00943,
-    .container__0f2e8 {
+    .wrapper_o3hXTo,
+    .container_g7esM5 {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
@@ -35,29 +35,29 @@
             background-color: $LayerFillColorAlt;
         }
 
-        .userName__0f2e8,
-        .nameContainer__703b9 {
+        .userName_g7esM5,
+        .nameContainer_Wo4EpK {
             @include TypeBodyStrong;
         }
 
-        .contentTitle__0f2e8 {
+        .contentTitle_g7esM5 {
             @include TypeBody;
             color: $TextFillColorPrimary !important;
         }
 
-        .badgesContainer__635ed {
+        .badgesContainer_CTWncy {
             @include TypeCaption;
             color: $TextFillColorSecondary;
             margin-top: 4px;
         }
 
-        .thumbnail__0f2e8 {
+        .thumbnail_g7esM5 {
             border-radius: 4px;
         }
 
         // Facepile (multiple users)
-        .facePileItem__0f2e8 {
-            .wrapper__44b0c {
+        .facePileItem_g7esM5 {
+            .wrapper_XpIUHy {
                 border-radius: 50%;
                 border: 2px solid $LayerFillColorDefault;
                 margin-left: -4px;
@@ -66,24 +66,24 @@
                     margin-left: 0;
                 }
             }
-            .mask__44b0c foreignObject {
+            .mask_XpIUHy foreignObject {
                 mask: none !important;
                 border-radius: 50%;
             }
         }
     }
 
-    .inset_bf1984{
+    .inset_ERB-Vv{
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
-        .section__00943{
+        .section_o3hXTo{
             background-color: transparent;
         }
     }
 
     // Empty
-    .emptyCard__7e549{
+    .emptyCard_-7KzVR{
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         align-items: baseline;

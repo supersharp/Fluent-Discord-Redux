@@ -10,9 +10,9 @@
         @include Elevation32;
         width: 300px;
 
-        .outer_c0bea0,
-        .inner_c0bea0,
-        .scroller_c1e9c4,
+        .outer_P1YEjQ,
+        .inner_P1YEjQ,
+        .scroller_M3qk4j,
         [class*="scroller"] {
             background: transparent !important;
             background-color: transparent !important;
@@ -47,16 +47,16 @@
                     background-color: transparent !important;
                 }
 
-                .menuItemLabelText_ce8328 {
+                .menuItemLabelText_nitlyF {
                     @include TypeBody;
                     color: white !important;
                 }
 
                 // Style all interactive elements
                 [class*="button"],
-                .label_ce8328,
+                .label_5cyhKQ,
                 [class*="label"],
-                .item_c1e9c4 {
+                .item_M3qk4j {
                     padding: 6px 10px;
                     border-radius: 4px;
                     background: transparent !important;
@@ -72,9 +72,9 @@
                 &:not(:first-child) {
 
                     [class*="button"],
-                    .label_ce8328,
+                    .label_5cyhKQ,
                     [class*="label"],
-                    .item_c1e9c4 {
+                    .item_M3qk4j {
                         border-top-left-radius: 0 !important;
                         border-top-right-radius: 0 !important;
                     }

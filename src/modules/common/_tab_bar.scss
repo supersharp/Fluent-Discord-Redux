@@ -1,15 +1,15 @@
 .theme-dark{
-    .tabBar__0b563,         // A: Guild > Channels & Roles
+    .tabBar_lSEuuI,         // A: Guild > Channels & Roles
     [class*="tabBar_"],     // Generic fallback for tab bars
-    .tabBar_b9fccc,         // B: User profile modal
-    .tabBar_d6f9e9,         // C: User Settings > Profiles
-    .settingsTabBar_dc2e0e, // D: User Settings > Family Centre
-    .tabBar__4efb4,         // E: Event information modal
-    .top_aa8da2{            // F: User Settings > Privacy & Safety
+    .tabBar_OpoUmC,         // B: User profile modal
+    .tabBar_OpoUmC,         // C: User Settings > Profiles
+    .settingsTabBar_XtY2mm, // D: User Settings > Family Centre
+    .tabBar_OpoUmC,         // E: Event information modal
+    .top_6zZYhF{            // F: User Settings > Privacy & Safety
         border-bottom: 0;
 
         // Items
-        .item_aa8da2{
+        .item_6zZYhF{
             position: relative;
             @include TypeBody;
             color: $TextFillColorPrimary;
@@ -20,7 +20,7 @@
             &::after{
                 display: none;
             }
-            &.selected_aa8da2{
+            &.selected_6zZYhF{
                 border: 0;
                 &::before{
                     content: "";
@@ -39,16 +39,16 @@
 
             // Special cases
             // A: Badge for total channels
-            .textBadge_f05120{
+            .textBadge_JPK15v{
                 background-color: $SystemFillColorSolidNeutralBackground !important; // Override inline
                 @include TypeCaption;
             }
 
             // B: Modern feature/new badges on tabs
-            .textBadge__06db1,
-            [class*="textBadge__06db1"],
-            .badge__06db1,
-            [class*="badge__06db1"] {
+            .textBadge_JPK15v,
+            [class*="textBadge_JPK15v"],
+            .badge_Fy2P0m,
+            [class*="badge_Fy2P0m"] {
                 background-color: $AccentLight1 !important;
                 color: #FFFFFF !important;
                 @include TypeCaption;
@@ -75,7 +75,7 @@
 
     // Content & Social vertical tabs (new hashes): force Fluent selected highlight
     .tabBar_eeedb9.vertical_eeedb9{
-        .tab_eeedb9.vertical_eeedb9.item_aa8da2{
+        .tab_eeedb9.vertical_eeedb9.item_6zZYhF{
             color: $TextFillColorPrimary;
             position: relative;
             border-left: 0 !important;
@@ -84,8 +84,8 @@
             }
 
             &.selected_eeedb9,
-            &.selected_aa8da2,
-            &.brand_aa8da2.selected_aa8da2{
+            &.selected_6zZYhF,
+            &.brand_6zZYhF.selected_6zZYhF{
                 color: var(--fluent-selected-ring-color) !important;
                 background-color: $SubtleFillColorTertiary;
                 border-left: 0 !important;

@@ -1,8 +1,8 @@
-.theme-dark .chat_f75fb0{
+.theme-dark .chat_z_gUBg{
     background-color: transparent;
 }
 
-.theme-dark .container_f369db{
+.theme-dark .container_aynOSy{
     background-color: $LayerFillColorDefault;
     border-top: 0;
     border-left: 0;
@@ -14,8 +14,8 @@
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
 
-        &.container_faa96b:active,
-        &.container_faa96b:hover{
+        &.container_aynOSy:active,
+        &.container_aynOSy:hover{
             transform: none;
             box-shadow: none;
             border-color: $CardStrokeColorDefaultSolid;
@@ -25,7 +25,7 @@
             color: $TextFillColorPrimary !important; // Override inline
             @include TypeBodyStrong;
         }
-        .messageContent_c19a55{
+        .messageContent_2i8Bfm{
             @include TypeBody;
         }
     }

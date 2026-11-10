@@ -2,7 +2,7 @@
 .theme-dark [class*="homeContainer_"] {
     // Main
     // Card
-    .card_d4f6c7{
+    .card_D1PiH5{
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
@@ -10,19 +10,19 @@
 
     // Side bar
     // Widget container
-    .container_c68a2c,
-    .container__29699,
+    .container_aynOSy,
+    .container_aynOSy,
     [class*="widgetContainer_"] {
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
         // Server description
-        .description__6b38f,
+        .description_Hb929y,
         [class*="description_"] {
             @include TypeBody;
         }
         // Active Now
-        .container__55cc1,
+        .container_aynOSy,
         [class*="activeNowContainer_"] {
             border: 1px solid transparent;
             border-radius: 4px;
@@ -33,7 +33,7 @@
         }
     }
     // Server icon
-    .icon_ac2d0d{
+    .icon_lMvXrQ{
         margin-top: 0;
         background-color: transparent;
         border: 0;

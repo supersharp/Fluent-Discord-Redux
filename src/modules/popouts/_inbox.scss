@@ -1,5 +1,5 @@
 // Main container
-.theme-dark .container_fc561d.recentMentionsPopout__95796 {
+.theme-dark .container_aynOSy.recentMentionsPopout__95796 {
     // Use Discord's layer max-height variable to stay within bounds, with fallback
     max-height: calc(var(--reference-position-layer-max-height, 80vh) - 16px) !important;
     margin: 8px;
@@ -12,7 +12,7 @@
     border-radius: 8px;
 
     // Inner wrapper that contains the messages
-    .messagesPopoutWrap_e8b59c {
+    .messagesPopoutWrap_6bgemo {
         display: flex;
         flex-direction: column;
         flex: 1 1 auto;
@@ -28,11 +28,11 @@
         min-height: 0;
         padding: 0 16px 0 16px;
     }
-    .header_ab6641 {
+    .header_LSviKk {
         background-color: transparent;
         // Tabs
-        .topPill_aa8da2{
-            .tab_ab6641 {
+        .topPill_6zZYhF{
+            .tab_LSviKk {
                 padding-left: 0;
                 padding-right: 0;
                 margin-right: 16px;
@@ -43,7 +43,7 @@
                     color: $TextFillColorSecondary;
                 }
 
-                &.active_f0cd33 {
+                &.active_5-ruWd {
                     background-color: transparent;
                     color: $AccentTextFillColorPrimary;
                     &::before{
@@ -64,10 +64,10 @@
     }
 
     // No messages
-    .iconContainer_d404a3{
+    .iconContainer_EkmWN_{
         display: none;
     }
-    .header_d404a3{
+    .header_EkmWN_{
         margin-bottom: 24px;
         @include TypeBodyLarge;
     }
@@ -77,7 +77,7 @@
     // NOTE: 2023-01-04 - Mentions tab scroller uses a different class which doesn't have L/R padding
     
     .container__95796, // Mentions
-    .channel__972a0{ // Unreads
+    .channel_zln_tS{ // Unreads
         padding-right: 16px;
         padding-bottom: 16px;
         .channelHeader__35a7e{
@@ -92,8 +92,8 @@
                 border-radius: 50%;
             }
         }
-        .messageContainer__95796, // Mentions
-        .messages__1ccd1{ // Unreads
+        .messageContainer_CKGXbh, // Mentions
+        .messages_TpS9Es{ // Unreads
             margin-left: 0;
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
@@ -102,7 +102,7 @@
     }
 
     // Unread headers have a collapse button
-    .channel__972a0{
+    .channel_zln_tS{
         .channelHeader__35a7e{
             padding-left: 48px;
         }
@@ -120,7 +120,7 @@
     }
 
     // Buttons
-    .button__292b6 {
+    .button_iSgWOH {
         background-color: $ControlFillColorDefault;
         border-width: 1px;
         border-style: outset;

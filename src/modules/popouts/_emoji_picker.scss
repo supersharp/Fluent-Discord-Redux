@@ -1,21 +1,21 @@
 .theme-dark {
     // Clear parent backgrounds to allow blur to show through
-    [id^="popout_"]:has(.wrapper_c0e32c),
-    .layer__59d0d:has(.wrapper_c0e32c),
-    :is(.animatorBottom_faf9c0, .animatorLeft_faf9c0, .animatorRight_faf9c0, [class*="animator"]):has(.wrapper_c0e32c),
-    :is(.animatorBottom_faf9c0, .animatorLeft_faf9c0, .animatorRight_faf9c0, [class*="animator"]):has(.wrapper_c0e32c) > div {
+    [id^="popout_"]:has(.wrapper_-sZhZn),
+    .layer_VVADeK:has(.wrapper_-sZhZn),
+    :is(.animatorBottom_98D4cN, .animatorLeft_98D4cN, .animatorRight_98D4cN, [class*="animator"]):has(.wrapper_-sZhZn),
+    :is(.animatorBottom_98D4cN, .animatorLeft_98D4cN, .animatorRight_98D4cN, [class*="animator"]):has(.wrapper_-sZhZn) > div {
         background: transparent !important;
     }
 
     // Clear internal backgrounds that might block the Mica
-    .contentWrapper__08434,
+    .contentWrapper_58b0l2,
     #emoji-picker-tab-panel,
-    .wrapper_c0e32c,
-    .emojiPicker_c0e32c,
-    .bodyWrapper_c0e32c,
-    .emojiPickerListWrapper_c0e32c,
-    .listWrapper_c656ac,
-    .scroller_affa7e {
+    .wrapper_-sZhZn,
+    .emojiPicker_-sZhZn,
+    .bodyWrapper_-sZhZn,
+    .emojiPickerListWrapper_-sZhZn,
+    .listWrapper_6c9R7U,
+    .scroller_EwKtHG {
         background: transparent !important;
         --background-tertiary: transparent !important;
         --background-secondary: transparent !important;
@@ -24,7 +24,7 @@
     }
 
     // Apply Mica to the main container
-    .contentWrapper__08434,
+    .contentWrapper_58b0l2,
     #emoji-picker-tab-panel {
         background: $MicaBackgroundFillColorBase !important;
         backdrop-filter: blur(16px);
@@ -34,10 +34,10 @@
         overflow: hidden;
     }
 
-    .contentWrapper__08434 #emoji-picker-tab-panel,
-    .contentWrapper__08434 #gif-picker-tab-panel,
-    .contentWrapper__08434 #sticker-picker-tab-panel,
-    .contentWrapper__08434 #kaomoji-picker-tab-panel {
+    .contentWrapper_58b0l2 #emoji-picker-tab-panel,
+    .contentWrapper_58b0l2 #gif-picker-tab-panel,
+    .contentWrapper_58b0l2 #sticker-picker-tab-panel,
+    .contentWrapper_58b0l2 #kaomoji-picker-tab-panel {
         background: transparent !important;
         backdrop-filter: none;
         border: 0;
@@ -46,8 +46,8 @@
     }
 
     // Navigation
-    .nav__08434{
-        .navButton__08434 {
+    .nav_58b0l2{
+        .navButton_58b0l2 {
             position: relative;
             padding-left: 0;
             padding-right: 0;
@@ -61,7 +61,7 @@
             }
 
         }
-        .navButtonActive__08434 {
+        .navButtonActive_58b0l2 {
             background-color: transparent;
             color: $AccentTextFillColorPrimary;
             &::before{
@@ -80,12 +80,12 @@
     }
 
     // Header
-    .emojiPickerHasTabWrapper_c0e32c .header_c0e32c{
+    .emojiPickerHasTabWrapper_-sZhZn .header_-sZhZn{
         padding: 0 12px 12px;
     }
-    .header_c0e32c, // Emoji
-    .header__8ef02, // Stickers
-    .header_fed6d3, // GIFs
+    .header_-sZhZn, // Emoji
+    .header_WSRqCO, // Stickers
+    .header_rfDq2B, // GIFs
     .header__81b99{ // Kaomoji
         background-color: transparent !important;
         box-shadow: none !important;
@@ -93,13 +93,13 @@
     }
 
     // Search
-    .container__5a838{
+    .container_VhFsFg{
         padding: 0;
     }
-    .container__72c38{ // Search container
+    .container_UcGqzv{ // Search container
         background-color: transparent;
     }
-    .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]){
+    .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]){
         background-color: transparent !important;
         border: 0 !important;
         box-shadow: none !important;
@@ -117,10 +117,10 @@
 
     // Emoji search
     // Fix inherited height
-    :is(.md__0f084, .md__75098, [class*="md_"]) :is(.input__0f084, .input__75098, [class*="input_"]){
+    :is(.md_0PLWhS, .md_0PLWhS, [class*="md_"]) :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]){
         height: 32px;
     }
-    :is(.input__0f084, .input__75098, [class*="input_"]){
+    :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]){
         margin: 0;
         padding-left: 32px; // Space for the icon
         padding-right: 12px;
@@ -149,7 +149,7 @@
     }
 
     // Search icon positioning
-    :is(.emojiPickerHasTabWrapper_c0e32c, .wrapper_c0e32c, [class*="wrapper_"]) .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]) :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
+    :is(.emojiPickerHasTabWrapper_-sZhZn, .wrapper_-sZhZn, [class*="wrapper_"]) .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]) :is(.icon_0PLWhS, .icon_0PLWhS, [class*="icon_"]) {
         position: absolute;
         left: 8px;
         top: 50%;
@@ -173,7 +173,7 @@
         text-transform: none;
     }
 
-    .button_a22cb0.secondary_a22cb0{
+    .button_F7qvhY.secondary_F7qvhY{
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
         border-radius: 4px;
@@ -186,23 +186,23 @@
 
     // Emoji
     // Sidebar
-    .categoryList_c0e32c{
+    .categoryList_-sZhZn{
         background: rgba(0, 0, 0, 0.2) !important;
         backdrop-filter: none !important;
     }
 
     // Emoji body wrapper (contains grid)
-    .bodyWrapper_c0e32c {
+    .bodyWrapper_-sZhZn {
         border-top: 1px solid $DividerStrokeColorDefault !important;
     }
 
     // Sticker sidebar
-    .wrapper__4e6ce.categoryList__3ad28{
+    .wrapper_6AvvhR.categoryList_40yGEf{
         background-color: $SolidBackgroundFillColorSecondary;
     }
 
-    .stickerCategory__3ad28,
-    .standardStickerShortcut__3ad28{
+    .stickerCategory_40yGEf,
+    .standardStickerShortcut_40yGEf{
         border-radius: 4px;
 
         &:hover{
@@ -210,11 +210,11 @@
         }
     }
 
-    .stickerCategoryGenericSelected__3ad28{
+    .stickerCategoryGenericSelected_40yGEf{
         background-color: $ControlFillColorSecondary;
     }
 
-    .standardStickerShortcut__3ad28{
+    .standardStickerShortcut_40yGEf{
         background-color: $SolidBackgroundFillColorSecondary;
 
         &:hover{
@@ -222,7 +222,7 @@
         }
     }
 
-    .unicodeShortcut_b9ee0c{
+    .unicodeShortcut_ufks4w{
         background: transparent !important;
         backdrop-filter: none !important;
         color: $TextFillColorPrimary !important;
@@ -232,30 +232,30 @@
         }
     }
 
-    .stickerCategoryGenericIcon__3ad28,
-    .standardStickerShortcut__3ad28,
-    .stickerCategory__3ad28{
+    .stickerCategoryGenericIcon_40yGEf,
+    .standardStickerShortcut_40yGEf,
+    .stickerCategory_40yGEf{
         color: $TextFillColorPrimary;
     }
 
-    .upsell_ac65bb.emptyGuildUpsell_e94b8c{
+    .upsell_NDbtCG.emptyGuildUpsell_dCw_12{
         background-color: transparent;
         border: 0;
         border-radius: 0;
 
-        .body_ac65bb{
+        .body_NDbtCG{
             color: $TextFillColorPrimary !important;
         }
 
-        .textButton__7a01b{
+        .textButton_nJgowo{
             color: $AccentTextFillColorPrimary;
         }
     }
 
     // Replace emoji icons
-    .categoryItemDefaultCategory_b9ee0c{
-        &.categoryItem_b9ee0c{
-            .categoryIcon_b9ee0c{
+    .categoryItemDefaultCategory_ufks4w{
+        &.categoryItem_ufks4w{
+            .categoryIcon_ufks4w{
                 display: none;
             }
             &::before{
@@ -309,7 +309,7 @@
     }
 
     // Selected state for categories
-    .categoryItemDefaultCategorySelected_b9ee0c,
+    .categoryItemDefaultCategorySelected_ufks4w,
     .categoryItemGuildCategorySelected_b9ee0c,
     .categoryItemRecentEmojiSelected_b9ee0c {
         background-color: $AccentFillColorDefault !important;
@@ -323,7 +323,7 @@
     }
 
     // Hover state for categories
-    .categoryItem_b9ee0c:hover:not([class*="Selected"]) {
+    .categoryItem_ufks4w:hover:not([class*="Selected"]) {
         background-color: $SubtleFillColorSecondary !important;
         border-radius: 4px;
     }
@@ -340,13 +340,13 @@
     }
 
     // Emoji category header
-    .header_c656ac,
-    .wrapper__14245{
+    .header_6c9R7U,
+    .wrapper_kSdzCr{
         margin: 0 -8px;
         padding: 0 16px;
         background-color: transparent !important; // Mica takes care of it, or use subtle fill
         border-radius: 4px;
-        .headerLabel__14245{
+        .headerLabel_kSdzCr{
             @include TypeBodyStrong;
             color: $TextFillColorPrimary;
             text-transform: none;
@@ -355,7 +355,7 @@
     }
 
     // Super Reaction Button
-    .label__0d242 {
+    .label_pfW0SY {
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
         border-radius: 4px;
@@ -374,28 +374,28 @@
     }
 
     // Colour change
-    .diversitySelectorButton_a45a2a{
+    .diversitySelectorButton_eHzdRB{
         width: 30px;
         height: 30px;
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
         border-radius: 4px;
         position: relative;
-        .diversityEmojiItemImage_a45a2a{
+        .diversityEmojiItemImage_eHzdRB{
             margin: 3px;
         }
     }
 
     // Diversity selector in stand alone emoji popout (eg. reaction)
-    .diversitySelectorOptions_a45a2a {
+    .diversitySelectorOptions_eHzdRB {
         right: 12px;
         border: 1px solid $ControlStrokeColorDefault;
-        .diversityEmojiItem_a45a2a{
+        .diversityEmojiItem_eHzdRB{
             width: 30px;
             height: 30px;
             padding: 0;
         }
-        .diversityEmojiItemImage_a45a2a{
+        .diversityEmojiItemImage_eHzdRB{
             margin: 3px;
         }
     }

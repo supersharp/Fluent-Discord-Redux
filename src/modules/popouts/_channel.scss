@@ -1,5 +1,5 @@
 // Voice activity
-.theme-dark .container__56cd1 {
+.theme-dark .container_aynOSy {
     background: $SolidBackgroundFillColorSecondary;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorFlyout;
@@ -7,15 +7,15 @@
     @include Elevation32;
 
     // Remove channel icon
-    .channelIcon__45e38{
+    .channelIcon_LyN9F3{
         display: none;
     }
-    .channelName__5aa3a{
+    .channelName_hVh8FI{
         @include TypeBodyStrong;
         color: $TextFillColorPrimary !important; // Override inline
     }
     // Channel user count
-    .container_b1bfd4{
+    .container_aynOSy{
         background-color: transparent;
         svg{
             display: none;
@@ -26,57 +26,57 @@
     }
 
     // Timebar
-    .bar_c8b06d {
+    .bar_5Hv024 {
         height: 3px;
         background-color: $ControlStrokeColorDefault;
         margin: 0 8px;
     }
-    .barInner_c8b06d{
+    .barInner_5Hv024{
         height: 3px;
         background-color: $AccentBase;
     }
     // Timecode
-    .text_c8b06d{
+    .text_5Hv024{
         @include TypeCaption;
     }
 }
 
 // Active thread
-.popout__76f04{
+.popout_j5xNzb{
     background: $SolidBackgroundFillColorSecondary;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorFlyout;
     border-radius: 8px;
     @include Elevation32;
-    .title__76f04{
+    .title_j5xNzb{
         @include TypeBodyStrong;
         color: $TextFillColorPrimary !important; // Override inline
         text-transform: none;
     }
 
-    .row__5906b:hover{
+    .row_xlCdcc:hover{
         background-color: $AccentBase;
         color: $TextOnAccentFillColorPrimary;
-        .timestamp__43dab{
+        .timestamp_UmswPi{
             color: $TextOnAccentFillColorPrimary;
         }
     }
 }
 
 // Stream preview
-.theme-dark .streamPreview__6da2d{
+.theme-dark .streamPreview_1v6-1l{
     background: $SolidBackgroundFillColorSecondary;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorFlyout;
     border-radius: 8px;
     @include Elevation32;
 
-    .previewContainer__6da2d{
+    .previewContainer_1v6-1l{
         background-color: transparent;
     }
 
     // Remove tip
-    .protip__6da2d{
+    .protip_1v6-1l{
         display: none;
     }
 }

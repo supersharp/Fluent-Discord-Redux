@@ -1,4 +1,4 @@
-.theme-dark .contentColumn__23e6b {
+.theme-dark .contentColumn_fBxaQT {
 
     // Misc
     .notice-1Qe0b_ {
@@ -16,7 +16,7 @@
     }
 
     // Remove dividers
-    .divider__1de9c {
+    .divider_ZaYWLb {
         display: none;
     }
 
@@ -25,11 +25,11 @@
         background-color: transparent;
 
         // Remove coloured banner
-        .mask__68edb {
+        .mask_WScet3 {
             display: none !important;
         }
 
-        .userInfo__0a06e {
+        .userInfo_jPuNMC {
             height: 68px;
             margin: 0 0 32px 0;
             padding: 0;
@@ -65,13 +65,13 @@
                 }
             }
 
-            .button__201d5 {
+            .button_9OQtot {
                 display: none;
             }
         }
 
         // Body
-        .background__09691 {
+        .background_tbg0LG {
             margin: 0;
             padding: 0;
             background-color: transparent;
@@ -80,7 +80,7 @@
         .fieldList__1fed1 {
             background-color: transparent;
 
-            .field__1fed1 {
+            .field_PeLYHs {
                 min-height: 64px;
                 padding: 0 16px 0 48px;
                 margin: 0 0 4px 0;
@@ -103,13 +103,13 @@
                 }
 
                 // Override the reveal button
-                .button__201d5.lookLink__201d5 {
+                .button_9OQtot.lookLink_9OQtot {
                     min-width: unset;
                     padding: 0 0 0 4px;
                     background-color: unset;
                     border: unset;
 
-                    .contents__201d5 {
+                    .contents_9OQtot {
                         color: $AccentLight3;
 
                         &:hover {
@@ -120,7 +120,7 @@
             }
 
             // Icons
-            .field__1fed1 {
+            .field_PeLYHs {
                 position: relative;
 
                 &::before {
@@ -173,7 +173,7 @@
     }
 
     // About me
-    .channelTextArea__74017 {
+    .channelTextArea_2x8-Qn {
         .bioTextArea__6a919 {
             height: auto;
             background-color: $ControlFillColorDefault;
@@ -183,7 +183,7 @@
             border-radius: 4px;
 
             // Set a static emoji icon
-            .emojiButton__04eed {
+            .emojiButton_SjG8Ug {
                 margin: 0 4px 0 0;
 
                 &::before {
@@ -193,17 +193,17 @@
                     font-size: 16px;
                 }
 
-                &.emojiButtonHovered__04eed::before {
+                &.emojiButtonHovered_SjG8Ug::before {
                     color: $TextFillColorPrimary;
                 }
 
-                .contents__201d5 {
+                .contents_9OQtot {
                     display: none;
                 }
             }
         }
 
-        .characterCount__795fb {
+        .characterCount_A7cPID {
             top: -24px;
             bottom: unset;
         }
@@ -211,23 +211,23 @@
 
     // Authorised apps
     // Banner
-    .formNotice_f43ba5 {
+    .formNotice_LiOD7I {
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
 
-        .formText_ddd181 {
+        .formText_ac78AK {
             @include TypeBody;
             color: $TextFillColorPrimary;
         }
     }
 
     // Apps
-    .authedApp__50a54 {
+    .authedApp_-8GDCL {
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
 
-        .permission__50a54 {
-            .permissionCheckmark__50a54 {
+        .permission_-8GDCL {
+            .permissionCheckmark_-8GDCL {
                 width: 16px;
                 height: 16px;
                 margin-right: 8px;
@@ -278,7 +278,7 @@
     }
 
     // Connection
-    .connection__9bfb9 {
+    .connection_9U6LUN {
         background-color: $SystemFillColorAttentionBackground;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
@@ -310,7 +310,7 @@
             border: 0;
         }
 
-        .title__0d850 {
+        .title_7kL2qz {
             @include TypeBody;
         }
 
@@ -325,18 +325,18 @@
     &#privacy-\&-safety-tab {
 
         // 'In-game rewards (aka Drops)' (Beta)
-        .container__0d850 {
+        .container_7kL2qz {
             margin-bottom: 8px;
             padding: 16px;
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
 
-            .title__0d850 {
+            .title_7kL2qz {
                 @include TypeBody;
             }
 
-            .description_ddd181 {
+            .description_ac78AK {
                 @include TypeCaption;
                 color: $TextFillColorSecondary;
             }
@@ -351,10 +351,10 @@
     &#family-center-tab {
 
         // Activity tab boxes
-        .container__5dbf8,
-        .container__8cc9a,
-        .container__5b321,
-        .box_d9914b {
+        .container_IQWzzZ,
+        .container_lb1Q8G,
+        .container_aynOSy,
+        .box_lb1Q8G {
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
@@ -368,7 +368,7 @@
         }
 
         // My family tab boxes
-        .box_d9914b {
+        .box_lb1Q8G {
             background-color: $SystemFillColorAttentionBackground;
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
@@ -376,14 +376,14 @@
         }
 
         // Make the layout full-width
-        .container_d9914b {
+        .container_lb1Q8G {
             max-width: unset;
         }
     }
 
     // Subscriptions
     &#subscriptions-tab {
-        .sectionTitle_e335a7 {
+        .sectionTitle_9ec3IA {
             margin-bottom: 32px;
             @include TypeTitle;
         }
@@ -393,7 +393,7 @@
     &#billing-tab {
 
         // Only apply to the main header, not the secondary "Transaction History" header
-        .title_b717a1 .flex__7c0ba {
+        .title_csPsk2 .flex_hkRWAH {
             margin-bottom: 32px;
             @include TypeTitle;
 
@@ -406,7 +406,7 @@
 
     // Appearance
     // Chat preview
-    .preview__3e443 {
+    .preview_nBMTYH {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
     }
@@ -425,13 +425,13 @@
     }
 
     // Nitro themes
-    .premiumFeatureBorder__65c15 {
+    .premiumFeatureBorder_qIotUB {
         margin: 0;
         background: transparent;
         border: 0;
 
-        .headings__67a11 {
-            .title__67a11::after {
+        .headings_QF5mJe {
+            .title_QF5mJe::after {
                 content: "Fluent Discord - Colour themes are not supported";
                 padding-left: 4px;
                 color: $SystemFillColorCritical;
@@ -439,7 +439,7 @@
         }
     }
 
-    .presets_a00e6e:has(.appIconSelectionContainer__8a3d7) {
+    .presets_a00e6e:has(.appIconSelectionContainer_jWcVMn) {
         &::after {
             content: "Fluent Discord - In-app Icon is not supported. Select the \"Default\" option.";
             padding-left: 4px;
@@ -453,7 +453,7 @@
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
 
-        .previewMessage__5d148 {
+        .previewMessage_PMtXxb {
             background-color: $LayerFillColorDefault;
         }
     }
@@ -462,7 +462,7 @@
     &#voice-\&-video-tab {
 
         // Fixes no spacing between video background and advanced sections
-        .h1_b717a1.title_b717a1 {
+        .h1_csPsk2.title_csPsk2 {
             margin-top: 24px;
         }
     }
@@ -478,7 +478,7 @@
 
     // Keybinds
     // Warning
-    .container__6436f.warning__6436f {
+    .container_kRH1UI.warning__6436f {
         height: 48px;
         padding: 8px 16px;
         background-color: $CardBackgroundFillColorDefault;
@@ -495,12 +495,12 @@
             }
         }
 
-        .text__6436f {
+        .text_kRH1UI {
             margin-left: 16px;
         }
 
         // Align the Add keybind button with middle of warning
-        ~.flexChild__7c0ba {
+        ~.flexChild_hkRWAH {
             align-self: center;
         }
     }
@@ -548,7 +548,7 @@
     }
 
     // Catches the first keybind
-    .children__7bffb>.defaultKeybind__740f2 {
+    .children_7AR6oU>.defaultKeybind__740f2 {
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 4px;
     }
@@ -582,13 +582,13 @@
                 line-height: 32px;
             }
 
-            .button__201d5 {
+            .button_9OQtot {
                 float: right;
             }
         }
 
         // The games list
-        .game_cc46f0 {
+        .game_M5fVqw {
             padding: 12px 16px;
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
@@ -618,7 +618,7 @@
         .lastPlayed_cc46f0 {
             color: $TextFillColorSecondary;
 
-            .default__0263c {
+            .default_Dq3ch1 {
                 @include TypeCaption;
 
                 strong {
@@ -626,13 +626,13 @@
                 }
             }
 
-            .hovered__0263c {
+            .hovered_Dq3ch1 {
                 @include FontMonospace;
                 @include TypeCaption;
             }
         }
 
-        .toggleContainer_cc46f0 {
+        .toggleContainer_Lh6jXA {
             margin-right: 8px;
         }
 

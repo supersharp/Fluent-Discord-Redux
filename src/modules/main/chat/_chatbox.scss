@@ -5,7 +5,7 @@
         padding-right: 15px;
     }
 
-    [class*="form_"] .channelTextArea__74017,
+    [class*="form_"] .channelTextArea_2x8-Qn,
     [class*="form_"] [class*="channelTextArea_"] {
         margin-bottom: 8px;
         background: $ControlFillColorDefault !important;
@@ -20,24 +20,24 @@
             border-color: $ControlStrokeColorDefault !important;
             border-bottom-color: $AccentBase !important;
         }
-        &.channelTextAreaDisabled__74017{
+        &.channelTextAreaDisabled_2x8-Qn{
             background-color: $ControlFillColorDisabled !important;
         }
     }
-    [class*="form_"] .themedBackground__74017 {
+    [class*="form_"] .themedBackground_2x8-Qn {
         background: transparent !important;
     }
-    [class*="form_"] .scrollableContainer__74017 {
+    [class*="form_"] .scrollableContainer_2x8-Qn {
         background: transparent !important;
         border-radius: 4px;
         overflow-y: auto;
     }
-    .sansAttachButton__74017 {
+    .sansAttachButton_2x8-Qn {
         padding-left: 16px;
     }
 
     // Text input
-    [class*="form_"] .textArea__74017{
+    [class*="form_"] .textArea_2x8-Qn{
         height: 48px;
         min-height: 48px;
     }
@@ -45,16 +45,16 @@
         min-height: 48px;
         padding: 14px 0 14px 10px;
         color: $TextFillColorPrimary;
-        &.placeholder__1b31f {
+        &.placeholder_SHcSVi {
             color: $TextFillColorSecondary;
         }
     }
 
     // Upload button
-    .attachWrapper__0923f{
+    .attachWrapper_7TM4SO{
         padding: 0;
     }
-    .attachButton__74017 {
+    .attachButton_2x8-Qn {
         width: 32px;
         height: 32px;
         margin: 8px 0 8px 8px;
@@ -74,29 +74,29 @@
                 color: $TextFillColorPrimary;
             }
         }
-        .attachButtonInner__0923f{
+        .attachButtonInner_7TM4SO{
             display: none;
         }
     }
     // Command icon (eg. /tenor command)
-    .hasStackedBar__74017 .inner__74017:not(.sansAttachButton__74017) .attachButton__74017{
+    .hasStackedBar_2x8-Qn .inner_2x8-Qn:not(.sansAttachButton_2x8-Qn) .attachButton_2x8-Qn{
         &::before{
             content: unset;
         }
     }
-    .icon__4d3a9{
+    .icon_kgeBdh{
         padding: 4px;
     }
 
     // Button group within chatbox
-    [class*="form_"] .buttons__74017{
+    [class*="form_"] .buttons_2x8-Qn{
         height: 48px;
         gap: 4px;
         // Remove the gift button
         // Nesting is updated *very* frequently, so try to catch as many configurations as possible
-        & > .button__74017,
+        & > .button_2x8-Qn,
         & > button,
-        .container_c0c49a{
+        .container_ejC3ZL{
             display: none;
         }
 
@@ -104,7 +104,7 @@
         & > div:last-of-type{
             margin-right: 4px;
         }
-        .button__201d5{
+        .button_9OQtot{
             height: 32px;
             width: 32px;
             border: 1px solid transparent;
@@ -114,8 +114,8 @@
                 font-size: 16px;
             }
             &:hover,
-            &.active__24af7,
-            &.emojiButtonHovered__04eed{
+            &.active_hfM7yP,
+            &.emojiButtonHovered_SjG8Ug{
                 background-color: $ControlFillColorDisabled;
                 border-color: $ControlStrokeColorDefault;
                 &::before{
@@ -126,11 +126,11 @@
 
         // Button replacements
         // Common reuse
-        .button__74017[aria-label*="GIF"] .buttonWrapper__24af7, // GIF
-        .button__74017.stickerButton__74017,              // Sticker
-        .emojiButton__04eed,                                // Emoji
-        .channelAppLauncher_e6e74f .button__201d5,          // App Launcher
-        .container_aa63ab .button__201d5{
+        .button_2x8-Qn[aria-label*="GIF"] .buttonWrapper_hfM7yP, // GIF
+        .button_2x8-Qn.stickerButton_2x8-Qn,              // Sticker
+        .emojiButton_SjG8Ug,                                // Emoji
+        .channelAppLauncher_s8hOwn .button_9OQtot,          // App Launcher
+        .container_plpOf8 .button_9OQtot{
             &::before{
                 @include FontIconFluent;
                 color: $TextFillColorSecondary;
@@ -139,43 +139,43 @@
             &:hover::before{
                 color: $TextFillColorPrimary;
             }
-            .lottieIcon__5eb9b{
+            .lottieIcon_69Onuk{
                 display: none !important; // Override in-line
             }
 
         }
         // Replace GIF icon
-        .button__74017[aria-label*="GIF"] .buttonWrapper__24af7{
+        .button_2x8-Qn[aria-label*="GIF"] .buttonWrapper_hfM7yP{
             &::before{
                 content: "\F4A9"; // GIF
             }
         }
         // Replace sticker icon
-        .button__74017.stickerButton__74017{
+        .button_2x8-Qn.stickerButton_2x8-Qn{
             &::before{
                 content: "\F4AA"; // Sticker2
             }
         }
         // Replace emoji button icon
-        .emojiButton__04eed{
+        .emojiButton_SjG8Ug{
             &::before{
                 content: "\E76E"; // Emoji2
             }
-            .spriteContainer__04eed{
+            .spriteContainer_SjG8Ug{
                 display: none;
             }
         }
         // Replace App Launcher button icon
-        .channelAppLauncher_e6e74f .button__201d5{
+        .channelAppLauncher_s8hOwn .button_9OQtot{
             &::before{
                 content: "\ED35"; // Apps
             }
         }
         // Replace Send button icon
-        .separator_aa63ab{
+        .separator_plpOf8{
             display: none;
         }
-        .container_aa63ab .button__201d5{
+        .container_plpOf8 .button_9OQtot{
             &::before{
                 content: "\E122";
                 color: $TextFillColorDisabled;
@@ -186,18 +186,18 @@
             &:enabled::before{
                 color: $TextFillColorSecondary;
             }
-            .contents__201d5{
+            .contents_9OQtot{
                 display: none;
             }
         }
     }
 
     // Is Typing
-    .inTextChannel_b88801.base_b88801{
+    .inTextChannel_U9Tvvz.base_U9Tvvz{
         right: 16px;
         left: unset;
     }
-    .typing_b88801{
+    .typing_U9Tvvz{
         height: 20px;
         top: -24px;
         bottom: unset;
@@ -206,36 +206,36 @@
         align-items: flex-end;
         justify-content: flex-end;
         pointer-events: none;
-        .text_b88801{
+        .text_U9Tvvz{
             margin-left: 8px;
         }
-        &.inTextChannel_b88801 .text_b88801>strong{ // Fighting specificity
+        &.inTextChannel_U9Tvvz .text_U9Tvvz>strong{ // Fighting specificity
             font-weight: normal;
         }
         svg{
             display: none;
         }
         // Slowmode font-size
-        .cooldownText_b21699{
+        .cooldownText_bbCgC2{
             @include TypeCaption;
         }
     }
 
     // Various chatbox states
     // No Permission
-    [class*="form_"] .textAreaDisabled__74017 {
+    [class*="form_"] .textAreaDisabled_2x8-Qn {
         overflow: hidden;
-        .placeholder__1b31f {
+        .placeholder_SHcSVi {
             color: $TextFillColorSecondary;
             @include TypeBody;
         }
         // Fixes a scrollbar appearing
-        .slateTextArea_ec4baf{
+        .slateTextArea_q99V_-{
             padding: 15px 0;
         }
     }
     // Announce channel follow
-    .wrapper__44df5{
+    .wrapper_ST_Y69{
         height: 40px;
         margin: 0 0 8px 0;
         padding: 0;
@@ -243,27 +243,27 @@
         border: 1px solid $ControlStrokeColorDefault;
         border-radius: 4px;
         // Remove image
-        .content__44df5{
+        .content_ST_Y69{
             img{
                 display: none;
             }
-            .title__44df5{
+            .title_ST_Y69{
                 color: $TextFillColorDisabled !important; // Override inline
                 @include TypeBody;
             }
         }
-        .buttonContainer__44df5{
+        .buttonContainer_ST_Y69{
             margin-right: 4px;
         }
     }
 
         // Showing command help
-    .stackedBars__74017{
+    .stackedBars_2x8-Qn{
         background-color: $CardStrokeColorDefaultSolid;
-        .name__84522{
+        .name_sSVWje{
             @include TypeBody;
         }
-        .option__56a50{
+        .option_o2hjBM{
             margin-left: 0;
             @include TypeBody;
             &::before{
@@ -273,13 +273,13 @@
                 content: "}";
             }
 
-            &.active_a19535{
+            &.active_Ga_HJw{
                 background-color: transparent !important;
             }
         }
     }
     // Fixes the border radius of the background for the command help which has higher priority than the theme for some reason
-    .floatingBars__74017:empty+.stackedBars__74017:nth-child(2), .stackedBars__74017:first-child{
+    .floatingBars_2x8-Qn:empty+.stackedBars_2x8-Qn:nth-child(2), .stackedBars_2x8-Qn:first-child{
         border-radius: 4px 4px 0 0;
     }
 }

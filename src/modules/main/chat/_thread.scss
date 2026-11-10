@@ -1,42 +1,42 @@
-.theme-dark .container__01ae2 {
+.theme-dark .container_FrbQJp {
     background-color: transparent;
     border-radius: 0;
 
     // Toolbar
-    .container__9293f {
+    .container_ybUK7Z {
         background-color: transparent;
 
-        .children__9293f {
+        .children_ybUK7Z {
 
             // Removes small gradient
             &::after {
                 display: none;
             }
 
-            >.iconWrapper__9293f {
+            >.iconWrapper_ybUK7Z {
                 display: none;
             }
 
-            .title__9293f {
+            .title_ybUK7Z {
                 @include TypeBodyStrong;
             }
         }
     }
 
     // Archived header
-    .chatHeaderBar_a5700d {
+    .chatHeaderBar_By_-nl {
         margin: 8px;
         background-color: $SystemFillColorSolidNeutralBackground;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;
 
-        .chatHeaderBarText_a5700d {
+        .chatHeaderBarText_By_-nl {
             color: $TextFillColorPrimary;
         }
     }
 
     // Forum thread
-    .container__34c2c {
+    .container_HeWz1C {
         margin: 16px;
         padding: 4px 8px;
         background: $MicaBackgroundFillColorBase;
@@ -44,7 +44,7 @@
         border-radius: 8px;
 
         // Only apply filter when stickied
-        &.header__34c2c {
+        &.header_HeWz1C {
             backdrop-filter: blur(8px);
             @include Elevation32;
         }
@@ -55,8 +55,8 @@
         }
 
         .buttonInner__34c2c,
-        .reactionInner_f8896c,
-        .addReactButton__34c2c {
+        .reactionInner_UNkajC,
+        .addReactButton_HeWz1C {
             background-color: $ControlFillColorDefault;
             border-width: 1px;
             border-style: outset;
@@ -65,12 +65,12 @@
         }
     }
 
-    .divider_ee23ac {
+    .divider_hHhMrs {
         display: none;
     }
 }
 
-.theme-dark .chat_f75fb0 {
+.theme-dark .chat_z_gUBg {
     border-top: 0;
     border-left: 0;
     box-shadow: none;
@@ -81,15 +81,15 @@
     }
 }
 
-.theme-dark .chat_f75fb0.threadSidebarOpen_f75fb0 {
+.theme-dark .chat_z_gUBg.threadSidebarOpen_z_gUBg {
     border-radius: 0;
 
-    .content_f75fb0 {
+    .content_z_gUBg {
         border-right: 1px solid transparent;
         border-radius: 8px 8px 0 0;
     }
 
-    .chatContent_f75fb0 {
+    .chatContent_z_gUBg {
         border-radius: 8px 8px 0 0;
     }
 }
@@ -121,27 +121,27 @@
 }
 
 // Narrow window
-.theme-dark .chatLayerWrapper__01ae2 {
+.theme-dark .chatLayerWrapper_FrbQJp {
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 
-    .chatTarget__01ae2 {
+    .chatTarget_FrbQJp {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
     }
 
-    .container__01ae2 {
+    .container_FrbQJp {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
 
-        &.floating__01ae2 {
+        &.floating_FrbQJp {
             border-left: 0;
         }
 
-        .chat_f75fb0 {
+        .chat_z_gUBg {
             border-radius: 0;
         }
     }

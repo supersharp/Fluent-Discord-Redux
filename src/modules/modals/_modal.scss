@@ -26,24 +26,24 @@
             align-items: unset;
 
             .heading-lg-semibold__58a54, // eg. notification settings
-            .title__802af, // eg. change password
-            .title_b404ff, // eg. change username
-            .title_ad198f { // eg. edit email
+            .title_xRyu39, // eg. change password
+            .title_xRyu39, // eg. change username
+            .title_xRyu39 { // eg. edit email
                 @include TypeSubtitle;
                 text-align: left;
             }
 
             .text-md-normal__6e567, // eg. notification settings
-            .subtitle__802af, // eg. change password
-            .subtitle_b404ff, // eg. change username
-            .subtitle_ad198f { // eg. edit email
+            .subtitle_xRyu39, // eg. change password
+            .subtitle_xRyu39, // eg. change username
+            .subtitle_xRyu39 { // eg. edit email
                 @include TypeBody;
                 color: $TextFillColorPrimary;
                 text-align: left;
             }
 
             // Remove divider line in notification settings
-            &.separator__7dd5e {
+            &.separator_2WyNPo {
                 box-shadow: none;
             }
         }
@@ -70,12 +70,12 @@
         background-color: transparent;
 
         // Remove divider line in notification settings
-        &.footerSeparator__49fc1 {
+        &.footerSeparator__KoJTP {
             box-shadow: none;
         }
 
         // Add gap between buttons
-        .button__201d5 {
+        .button_9OQtot {
             margin-left: 8px;
         }
     }
@@ -91,16 +91,16 @@
     }
 
     // Verify email
-    .headerImage_a62824 {
+    .headerImage_V1nvOI {
         display: none;
     }
 
     // NOTE: 2023-06-13 - Style fix for the verify email modal which uses the wrong class for the actions div
-    .headerImage_a62824 ~ div .content__49fc1 {
+    .headerImage_V1nvOI ~ div .content__KoJTP {
         background-color: transparent;
     }
 
-    .buttons_ce7406 {
+    .buttons_0VkShF {
         margin-top: 16px;
         flex-direction: row;
 
@@ -125,14 +125,14 @@
     .headerContainer_a52f04 {
         margin-bottom: 0;
 
-        .header_a52f04 {
+        .header_VJarcR {
             @include TypeSubtitle;
             text-align: left;
         }
     }
 
     // Event info modal
-    .card__88264 {
+    .card_D1PiH5 {
         background-color: $LayerFillColorDefault;
         border: 1px solid $CardStrokeColorDefault;
         border-radius: 8px;

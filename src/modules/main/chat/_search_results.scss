@@ -1,16 +1,16 @@
-.theme-dark .searchResultsWrap_a98f3b{
+.theme-dark .searchResultsWrap_QHVbp3{
     background-color: $LayerFillColorDefault;
     border-left: 1px solid $CardStrokeColorDefault;
 
-    :is(.searchHeader_f3b986, .searchHeader_ae7890){
+    :is(.searchHeader_DAJqRF, .searchHeader_DAJqRF){
         background-color: transparent;
-        .totalResults_ae7890 > div{
+        .totalResults_DAJqRF > div{
             @include TypeBodyStrong;
         }
     }
     // Tabs (new/old/relevant)
-    :is(.searchHeaderTabList_f3b986, .searchHeaderTabList_ae7890) {
-        .item_aa8da2 {
+    :is(.searchHeaderTabList_DAJqRF, .searchHeaderTabList_DAJqRF) {
+        .item_6zZYhF {
             padding-left: 0;
             padding-right: 0;
             margin-right: 16px;
@@ -21,7 +21,7 @@
                 color: $TextFillColorSecondary;
             }
 
-            &.selected_aa8da2 {
+            &.selected_6zZYhF {
                 background-color: transparent;
                 color: $AccentTextFillColorPrimary;
                 &::before{
@@ -50,7 +50,7 @@
         }
     }
     // Jump button
-    :is(.button__02a39, .button__80bf8){
+    :is(.button_iSgWOH, .button_iSgWOH){
         padding: 4px 8px;
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorOnAccentDefault;

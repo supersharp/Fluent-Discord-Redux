@@ -1,7 +1,7 @@
-.theme-dark .container__133bf{
+.theme-dark .container_zrUwGA{
     border-top: 0;
     // Body
-    .tabBody__133bf{
+    .tabBody_zrUwGA{
         background-color: $LayerFillColorDefault;
         border-top: 0;
         border-left: 0;
@@ -12,13 +12,13 @@
         }
 
         // Search bar
-        .searchBar__5ec2f{
+        .searchBar_wVFOQW{
             margin: 18px 20px 8px 20px;
             background-color: transparent;
         }
 
         // Header
-        .title__1472a{
+        .title_lBh9qJ{
             @include TypeSubtitle;
             color: $TextFillColorPrimary;
             letter-spacing: normal;
@@ -26,40 +26,40 @@
         }
 
         // Item
-        .peopleListItem_cc6179.active_cc6179,
-        .peopleListItem_cc6179:hover{
+        .peopleListItem_y75PxA.active_y75PxA,
+        .peopleListItem_y75PxA:hover{
             border-radius: 4px;
         }
 
         // Username
-        .username__0a06e{
+        .username_jPuNMC{
             @include TypeBodyStrong;
         }
         // User Status
-        .text__19b6d{
+        .text_CXmngM{
             @include TypeCaption;
         }
 
         // Buttons
-        .actionButton_f8fa06{
+        .actionButton_5GqXgh{
             background-color: transparent;
             visibility: hidden;
         }
 
         // Show buttons when hovered
-        .peopleListItem_cc6179.active_cc6179 .actionButton_f8fa06,
-        .peopleListItem_cc6179:hover .actionButton_f8fa06{
+        .peopleListItem_y75PxA.active_y75PxA .actionButton_5GqXgh,
+        .peopleListItem_y75PxA:hover .actionButton_5GqXgh{
             visibility: visible;
         }
     }
 
     // Empty
-    .friendsEmpty_c7ea19{
-        .image__08515,
+    .friendsEmpty_Bb-Yop{
+        .image_hELJz2,
         [class*="image_"] {
             filter: brightness(200%)
         }
-        .text__0e310,
+        .text_aO_lJO,
         [class*="text_"] {
             @include TypeBody;
             color: $TextFillColorPrimary;
@@ -67,30 +67,30 @@
     }
 
     // Add friend
-    .header__94b08,
+    .header_zRLjtn,
     [class*="header_"] {
         padding: 20px;
     }
-    .addFriendInputWrapper__72ba7,
+    .addFriendInputWrapper_jF-DiS,
     [class*="addFriendInputWrapper_"] {
         padding: 0;
         background-color: transparent;
         border: 0;
-        .input__0ed4f{
+        .input_b-mzk1{
             padding: 0 12px;
             letter-spacing: normal;
         }
     }
     // Remove hint text
-    .addFriendHint__72ba7,
+    .addFriendHint_jF-DiS,
     [class*="addFriendHint_"] {
         display: none;
     }
 }
 
 // Icon replacements
-html[lang^="en-"].theme-dark .container__133bf{
-    .actionButton_f8fa06{
+html[lang^="en-"].theme-dark .container_zrUwGA{
+    .actionButton_5GqXgh{
         &::before{
             @include FontIconFluent;
             color: $TextFillColorSecondary;

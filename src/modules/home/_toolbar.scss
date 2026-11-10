@@ -1,21 +1,21 @@
-.theme-dark .container__133bf{
+.theme-dark .container_zrUwGA{
     background-color: transparent;
     // Toolbar
-    .container__9293f{
+    .container_ybUK7Z{
         background-color: transparent;
 
         // Remove icon
-        .children__9293f > .iconWrapper__9293f{
+        .children_ybUK7Z > .iconWrapper_ybUK7Z{
             display: none;
         }
 
         // Remove additional padding from group DMs button
-        .inviteToolbar__133bf{
+        .inviteToolbar_zrUwGA{
             padding-right: 0;
         }
 
         // Tab bar
-        .item__133bf{
+        .item_zrUwGA{
             position: relative;
             height: 36px;
             margin: 0 0 0 8px;
@@ -26,7 +26,7 @@
                 background-color: transparent;
                 color: $TextFillColorSecondary;
             }
-            &.selected_aa8da2{
+            &.selected_6zZYhF{
                 background-color: transparent;
                 &::before{
                     content: "";
@@ -40,15 +40,15 @@
                 }
             }
             // Add friend button
-            &.addFriend__133bf{
+            &.addFriend_zrUwGA{
                 background-color: transparent;
-                &.selected_aa8da2{
+                &.selected_6zZYhF{
                     color: $TextFillColorPrimary;
                 }
             }
 
             // Badge
-            .badge__133bf{
+            .badge_zrUwGA{
                 background-color: $SystemFillColorCritical !important; // For some reason this is in line
                 @include TypeCaption;
                 color: $TextOnAccentFillColorPrimary;
@@ -56,11 +56,11 @@
         }
 
         // Remove gradient on right-side of tab bar
-        .children__9293f::after{
+        .children_ybUK7Z::after{
             display: none;
         }
         // Remove divider between Group DM and Inbox
-        .divider__9293f{
+        .divider_ybUK7Z{
             display: none;
         }
     }

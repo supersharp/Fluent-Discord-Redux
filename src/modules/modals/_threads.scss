@@ -1,35 +1,35 @@
 .theme-dark{
     // To find: Hover on channel with active threads and click 'See All' on the popout
-    .modal__9a792{
+    .modal_lDv9PB{
         background-color: $SolidBackgroundFillColorBase !important; // Override inline
     }
 
-    .container_d9c882{
+    .container_c0tu5x{
         background-color: transparent;
     }
 
     // Header
-    .header_d9c882{
+    .header_c0tu5x{
         height: unset;
         min-height: unset;
         padding: 24px 24px 0 24px;
         background-color: transparent;
         // Remove icon
-        .threadIcon_d9c882{
+        .threadIcon_c0tu5x{
             display: none;
         }
         // Remove divider
-        .divider_d9c882{
+        .divider_c0tu5x{
             display: none;
         }
         // Remove spacer
-        .spacer_d9c882{
+        .spacer_c0tu5x{
             display: none;
         }
     }
 
     // Thread list
-    .list_c441f0{
+    .list_6_wQXw{
         padding: 0 24px;
         padding-right: 24px !important;
     }
@@ -40,7 +40,7 @@
         margin-top: 24px;
     }
     // List item
-    .container__6764b{
+    .container_yRVHqK{
         height: auto;
         padding: 12px;
         background-color: $SubtleFillColorSecondary;
@@ -50,21 +50,21 @@
             background-color: $SubtleFillColorTertiary;
         }
         &:active{
-            .threadNameLine__6764b span{
+            .threadNameLine_yRVHqK span{
                 color: $TextFillColorSecondary;
             }
 
         }
 
         // Thread title
-        .threadNameLine__6764b{
+        .threadNameLine_yRVHqK{
             @include TypeBodyStrong;
             span{
                 color: $TextFillColorPrimary;
             }
         }
         // Subtext
-        .subtext__6764b{
+        .subtext_yRVHqK{
             margin-top: 8px;
             @include TypeCaption;
             color: $TextFillColorSecondary !important;
@@ -75,15 +75,15 @@
 // Redundancy in the moderator's Active Threads modal 🙃
 .theme-dark{
     // To find: Be a moderator in a server with active threads. Open 'Active Threads' from the server dropdown
-    .container_a8217b{
+    .container_dLgLO2{
         background-color: transparent;
     }
-    .header_a8217b{
+    .header_dLgLO2{
         height: unset;
         min-height: unset;
         padding: 24px;
         background-color: transparent;
-        .threadIcon_a8217b{
+        .threadIcon_c0tu5x{
             display: none;
         }
     }

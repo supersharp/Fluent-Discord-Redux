@@ -1,12 +1,12 @@
-.theme-dark .bar_c38106{
-    .title_c38106{
+.theme-dark .bar_3zSH5d{
+    .title_3zSH5d{
         justify-content: flex-start;
         left: 8px;
         &::before{
             content: "Discord";
             color: $TextFillColorSecondary;
         }
-        .title_edbb22{
+        .title_LnjVAX{
             display: none;
         }
     }
@@ -14,24 +14,24 @@
 
 
     // Hide back & forward buttons
-    .leading_c38106,
+    .leading_3zSH5d,
     [class*="leading_"] {
-        .backForwardButtons__63abb,
+        .backForwardButtons_nS9Yqn,
         [class*="backForwardButtons_"] {
             display: none;
         }
     }
-    .backForwardButtons__63abb,
+    .backForwardButtons_nS9Yqn,
     [class*="backForwardButtons_"] {
         display: none;
     }
 
     // Remove help button
-    .trailing_c38106,
+    .trailing_3zSH5d,
     [class*="trailing_"] {
         gap: 0;
-        a.anchor_edefb8,
-        a.anchor__14d82,
+        a.anchor_R6ReNl,
+        a.anchor_R6ReNl,
         a[class*="anchor_"]:has([aria-label="Help"]),
         a[href*="support.discord.com"] {
             display: none;
@@ -59,20 +59,20 @@
     }
 
     // window controls
-    .winButtons_c38106{
+    .winButtons_3zSH5d{
         gap: 0;
-        &.winButtonsWithDivider_c38106::before{
+        &.winButtonsWithDivider_3zSH5d::before{
             content: unset;
         }
     }
-    .winButton_c38106{
+    .winButton_3zSH5d{
         width: 46px;
         &:hover{
             background-color: $ControlFillColorSecondary;
         }
 
         // Close button
-        &.winButtonClose_c38106{
+        &.winButtonClose_3zSH5d{
             &:hover{
                 background-color: #C42B1C;
             }
@@ -87,13 +87,13 @@
 
 // Change titlebar name and controls colour when app is focused
 html.theme-dark.app-focused{
-    .title_c38106::before{
+    .title_3zSH5d::before{
         color: $TextFillColorPrimary;
     }
-    .winButton_c38106{
+    .winButton_3zSH5d{
         color: $TextFillColorPrimary;
     }
-    .clickable__81391[aria-label="Inbox"]::before{
+    .clickable_fErCLM[aria-label="Inbox"]::before{
         color: $TextFillColorPrimary;
     }
 }

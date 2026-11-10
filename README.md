@@ -13,6 +13,7 @@ Changes from the original fork:
 * GitHub Actions support for builds
 * Many more changes.
 * Updated elements to match the newest Discord UI (October 2026)
+* Updated CSS module classes for the Discord Chromium 152 client update (November 2026)
 
 
 ## Download

@@ -1,11 +1,11 @@
-.theme-dark .title_ace4f5{
+.theme-dark .title_y2dW7E{
     color: $TextFillColorPrimary;
     @include TypeBody;
     text-transform: none;
 }
 
 // NOTE: 2022-03-26 - hiddenDiv-2qTqSF is used in the credit card field. See #99
-.theme-dark .input__0ed4f:not(.hiddenDiv__8b579){
+.theme-dark .input_b-mzk1:not(.hiddenDiv_vel7TH){
     height: 32px;
     background-color: $ControlFillColorDefault;
     border: 1px solid;
@@ -37,22 +37,22 @@
     }
 
     &.textarea__9daae, // eg. user popout note textarea
-    &.textArea__89a34{ // eg. channel MOTD textare
+    &.textArea_bGZ7Vb{ // eg. channel MOTD textare
         padding: 4px 12px;
     }
 }
 // Create channel prefix
-.theme-dark .inputPrefix_b545d5{
+.theme-dark .inputPrefix_vel7TH{
     top: 8px;
-    ~ .input__0ed4f{
+    ~ .input_b-mzk1{
         // TODO - 2022-06-08: Resolve this conflict
-        padding-left: 32px !important; // Conflicts with .theme-dark .input__0ed4f:not(.hiddenDiv-2qTqSF)
+        padding-left: 32px !important; // Conflicts with .theme-dark .input_b-mzk1:not(.hiddenDiv-2qTqSF)
     }
 }
 
 // Select
 .theme-dark{
-    .select__3f413{
+    .select_uFkqU2{
         padding: 3px 8px 3px 12px;
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
@@ -63,10 +63,10 @@
     }
 
     // Options popout
-    .popout__3f413{
+    .popout_uFkqU2{
         background: $SolidbackgroundFillColorQuarternary;
         border: 1px solid $SurfaceStrokeColorFlyout;
-        .option__56a50{
+        .option_o2hjBM{
             min-height: 32px;
             margin: 4px;
             padding: 8px;
@@ -95,7 +95,7 @@
                     background-color: $SubtleFillColorSecondary;
                     border-radius: 4px;
                 }
-                .selectedIcon__2e223{
+                .selectedIcon_b5PEJH{
                     display: none;
                 }
             }
@@ -119,7 +119,7 @@
             }
         }
 
-        // Direct class override for new hash variants (e.g. selectedIcon_a16aea)
+        // Direct class override for new hash variants (e.g. selectedIcon_uFkqU2)
         [class*="selectedIcon_a16"]{
             color: var(--fluent-selected-ring-color) !important;
             path{
@@ -130,22 +130,22 @@
 }
 
 // Keybind
-.theme-dark .container_f89b2c{
+.theme-dark .container_aynOSy{
     height: 32px;
     background-color: $ControlFillColorDefault;
     border: 1px solid $ControlStrokeColorDefault;
     border-radius: 4px;
-    .button__201d5{
+    .button_9OQtot{
         min-height: calc(32px - 6px);
         height: calc(32px - 6px);
         margin: 2px;
     }
 }
 
-// Global fallback for new select menu hashes (e.g. selectedIcon_a16eaa)
+// Global fallback for new select menu hashes (e.g. selectedIcon_b5PEJH)
 .theme-dark [role="option"][aria-selected=true] [class*="selectedIcon_"],
 .theme-dark [class*="option_"][aria-selected=true] [class*="selectedIcon_"],
-.theme-dark .selectedIcon_a16eaa{
+.theme-dark .selectedIcon_b5PEJH{
     color: var(--fluent-selected-ring-color) !important;
 
     path{
@@ -154,20 +154,20 @@
 }
 
 // Slider
-.slider_a562c8{
-    .bar_a562c8{
+.slider_p3RiOL{
+    .bar_p3RiOL{
         height: 3px;
         top: 10px;
         background-color: $ControlStrongStrokeColorDefault;
         border-radius: 2px;
     }
-    .barFill_a562c8{
+    .barFill_p3RiOL{
         height: 3px;
         position: absolute;
         background-color: $AccentBase;
         border-radius: 2px;
     }
-    .grabber_a562c8{
+    .grabber_p3RiOL{
         width: 18px;
         height: 18px;
         margin-top: -11px;
@@ -187,11 +187,11 @@
             border: 5px solid #454545;
         }
     }
-    &.hasMarks_a562c8{
-        .bar_a562c8{
+    &.hasMarks_p3RiOL{
+        .bar_p3RiOL{
             top: 34px;
         }
-        .grabber_a562c8{
+        .grabber_p3RiOL{
             margin-top: 2px;
         }
     }
@@ -199,7 +199,7 @@
 
 // Text formatting toolbar
 // Highlight text in the chat box to open the formatting bar
-.theme-dark .toolbar_bba883{
+.theme-dark .toolbar_hPmUPu{
     padding: 4px;
     background: $AcrylicBackgroundFillColorDefault;
     backdrop-filter: blur(10px);
@@ -214,7 +214,7 @@
         margin-right: 4px;
         &:hover{
             background-color: $SubtleFillColorSecondary;
-            &.active__05fbc{
+            &.active_5-ruWd{
                 background-color: $AccentTextFillColorSecondary;
             }
         }
@@ -223,13 +223,13 @@
         }
         &.active__05fbcF{
             background-color: $AccentFillColorDefault;
-            .icon_bba883{
+            .icon_hPmUPu{
                 color: $TextOnAccentFillColorPrimary;
             }
         }
 
         .buttonInner__878f4,
-        .icon_bba883{
+        .icon_hPmUPu{
             width: 16px;
             height: 16px;
         }
@@ -238,13 +238,13 @@
 }
 
 // Copy box
-.copyInput_fffc15{
+.copyInput_cZux1n{
     height: 42px;
     margin-bottom: 8px;
     background-color: $ControlFillColorDefault;
     border: 1px solid $ControlStrokeColorDefault;
     border-radius: 4px;
-    .input__9fba8{
+    .input_ZFr6bW{
         @include TypeBody;
     }
 }

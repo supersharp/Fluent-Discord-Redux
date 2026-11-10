@@ -5,7 +5,7 @@
 // 3. Search bar rendered incorrectly
 
 .theme-dark {
-    .shop__6db1d {
+    .shop_Mqg79R {
         background-color: transparent !important; // Override inline
         border-top: 0 !important;
         box-shadow: none !important;
@@ -19,7 +19,7 @@
         // colour boundary exists between it and the dark app-frame background.
 
         // Each exact hashed class is paired with a wildcard fallback.
-        .headerBar__80679,
+        .headerBar_ViLURN,
         [class*="headerBar__"] {
             overflow: visible;
             background: transparent !important; // Override inline; header sits flush with dark titlebar
@@ -32,9 +32,9 @@
             -webkit-mask: none !important;
             outline: 0 !important;
 
-            .upperContainer__9293f,
+            .upperContainer_ybUK7Z,
             [class*="upperContainer__"],
-            .children__9293f,
+            .children_ybUK7Z,
             [class*="children__"] {
                 overflow: visible;
                 border: 0 !important;
@@ -49,23 +49,23 @@
             }
 
             // Shop tabs & navigation menu container stack
-            .container__354ec,
-            [class*="container__354ec"],
-            .measurements__354ec,
+            .container_uP9HND,
+            [class*="container_uP9HND"],
+            .measurements_uP9HND,
             [class*="measurements__"],
-            .tabs__354ec,
+            .tabs_uP9HND,
             [class*="tabs__"],
-            .tab__354ec,
+            .tab_uP9HND,
             [class*="tab__"],
-            .nav__96f2d,
-            [class*="nav__96f2d"],
-            .navigationMenu__80679,
+            .nav_C10mff,
+            [class*="nav_C10mff"],
+            .navigationMenu_ViLURN,
             [class*="navigationMenu__"],
-            .navigationMenuItemsContainer__96f2d,
+            .navigationMenuItemsContainer_C10mff,
             [class*="navigationMenuItemsContainer__"],
-            .navigationMenuItemsMeasurementContainer__96f2d,
+            .navigationMenuItemsMeasurementContainer_C10mff,
             [class*="navigationMenuItemsMeasurementContainer__"],
-            .navigationMenuItemContainer__96f2d,
+            .navigationMenuItemContainer_C10mff,
             [class*="navigationMenuItemContainer__"] {
                 border: 0 !important;
                 box-shadow: none !important;
@@ -78,12 +78,12 @@
                 }
             }
 
-            .toolbar__9293f,
+            .toolbar_ybUK7Z,
             [class*="toolbar__"] {
                 overflow: visible;
 
                 // Search bar - uses new Mana component input classes
-                .searchBar__824d3,
+                .searchBar_AV6l5m,
                 [class*="searchBar__"] {
                     overflow: visible;
 
@@ -116,27 +116,27 @@
                         }
                     }
 
-                    .container__0f084,
-                    .container__75098,
-                    [class*="container__0f084"],
-                    [class*="container__75098"] {
+                    .container_0PLWhS,
+                    .container_0PLWhS,
+                    [class*="container_0PLWhS"],
+                    [class*="container_0PLWhS"] {
                         background-color: $ControlFillColorDefault;
                         border: 1px solid $ControlStrokeColorDefault;
                         border-radius: 4px;
 
-                        .icon__0f084,
-                        .icon__75098,
-                        [class*="icon__0f084"],
-                        [class*="icon__75098"] {
+                        .icon_0PLWhS,
+                        .icon_0PLWhS,
+                        [class*="icon_0PLWhS"],
+                        [class*="icon_0PLWhS"] {
                             svg {
                                 color: $TextFillColorSecondary;
                             }
                         }
 
-                        .input__0f084,
-                        .input__75098,
-                        [class*="input__0f084"],
-                        [class*="input__75098"] {
+                        .input_0PLWhS,
+                        .input_0PLWhS,
+                        [class*="input_0PLWhS"],
+                        [class*="input_0PLWhS"] {
                             @include TypeBody;
                             color: $TextFillColorPrimary;
                             background-color: transparent;
@@ -149,7 +149,7 @@
                 }
 
                 // Wishlist button - the heart SVG icon is invisible
-                .wishlistButton__80679,
+                .wishlistButton_ViLURN,
                 [class*="wishlistButton__"] {
                     width: 32px !important;
                     min-width: 32px !important;
@@ -188,7 +188,7 @@
             z-index: 2;
         }
 
-        > .shopViewWrapper__6db1d,
+        > .shopViewWrapper_Mqg79R,
         > [class*="shopViewWrapper__"] {
             margin-top: -2px !important;
             padding-top: 2px !important;
@@ -208,23 +208,23 @@
             [class*="shopScroll__"] {
                 background-color: transparent !important;
             }
-            .shop__08415,
-            [class*="shop__"]:not(.shop__6db1d):not([class*="shop__6db1d"]) {
+            .shop_XBXDcd,
+            [class*="shop__"]:not(.shop_Mqg79R):not([class*="shop_Mqg79R"]) {
                 background-color: transparent !important;
             }
         }
 
-        > div > section[class*="headerBar__"] + .shopViewWrapper__6db1d,
+        > div > section[class*="headerBar__"] + .shopViewWrapper_Mqg79R,
         > div > section[class*="headerBar__"] + [class*="shopViewWrapper__"] {
             border-top: 0 !important;
             box-shadow: none !important;
         }
 
         // Shop content area seam fixes
-        .tabs__354ec.top_aa8da2,
-        .shopViewWrapper__6db1d,
+        .tabs_uP9HND.top_6zZYhF,
+        .shopViewWrapper_Mqg79R,
         .shopScroll__08415,
-        .shop__08415,
+        .shop_XBXDcd,
         .mainContent__08415,
         [class*="shopViewWrapper__"],
         [class*="shopScroll__"],
@@ -247,13 +247,13 @@
         }
 
         // Shop tabs & navigation menu styling
-        .tabs__354ec .tab__354ec,
+        .tabs_uP9HND .tab_uP9HND,
         [class*="tabs__"] [class*="tab__"],
-        .tabs__354ec .item_aa8da2,
-        [class*="tabs__"] .item_aa8da2,
-        .navigationMenuButton__96f2d,
+        .tabs_uP9HND .item_6zZYhF,
+        [class*="tabs__"] .item_6zZYhF,
+        .navigationMenuButton_C10mff,
         [class*="navigationMenuButton__"],
-        .navigationMenuItem__96f2d,
+        .navigationMenuItem_C10mff,
         [class*="navigationMenuItem__"] {
             height: 36px;
             margin: 0 0 0 8px;
@@ -275,7 +275,7 @@
             }
 
             // Caret in dropdown items
-            .caret__96f2d,
+            .caret_C10mff,
             [class*="caret__"] {
                 color: $TextFillColorSecondary;
             }
@@ -291,23 +291,23 @@
             }
         }
 
-        .tabs__354ec .tab__354ec[aria-selected="true"],
+        .tabs_uP9HND .tab_uP9HND[aria-selected="true"],
         [class*="tabs__"] [class*="tab__"][aria-selected="true"],
-        .tabs__354ec .tab__354ec.selected__354ec,
+        .tabs_uP9HND .tab_uP9HND.selected_uP9HND,
         [class*="tabs__"] [class*="tab__"][class*="selected__"],
-        .tabs__354ec .item_aa8da2.selected_aa8da2,
-        [class*="tabs__"] .item_aa8da2.selected_aa8da2,
-        .navigationMenuButton__96f2d.selected__96f2d,
+        .tabs_uP9HND .item_6zZYhF.selected_6zZYhF,
+        [class*="tabs__"] .item_6zZYhF.selected_6zZYhF,
+        .navigationMenuButton_C10mff.selected_C10mff,
         [class*="navigationMenuButton__"][class*="selected__"],
-        .navigationMenuButton__96f2d[aria-current="page"],
+        .navigationMenuButton_C10mff[aria-current="page"],
         [class*="navigationMenuButton__"][aria-current="page"],
-        .navigationMenuButton__96f2d:has([aria-current="page"]),
+        .navigationMenuButton_C10mff:has([aria-current="page"]),
         [class*="navigationMenuButton__"]:has([aria-current="page"]),
-        .navigationMenuButton__96f2d:has([class*="selected__"]),
+        .navigationMenuButton_C10mff:has([class*="selected__"]),
         [class*="navigationMenuButton__"]:has([class*="selected__"]),
-        .navigationMenuItemContainer__96f2d > .navigationMenuItem__96f2d.selected__96f2d,
+        .navigationMenuItemContainer_C10mff > .navigationMenuItem_C10mff.selected_C10mff,
         [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][class*="selected__"],
-        .navigationMenuItemContainer__96f2d > .navigationMenuItem__96f2d[aria-current="page"],
+        .navigationMenuItemContainer_C10mff > .navigationMenuItem_C10mff[aria-current="page"],
         [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][aria-current="page"] {
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
@@ -315,20 +315,20 @@
         }
 
         // Never double-underline inner elements inside compound menu groups (e.g. Browse dropdown)
-        .navigationMenuItemGroup__96f2d [class*="navigationMenuItem__"],
+        .navigationMenuItemGroup_C10mff [class*="navigationMenuItem__"],
         [class*="navigationMenuItemGroup__"] [class*="navigationMenuItem__"],
-        .navigationMenuButton__96f2d [class*="navigationMenuItem__"],
+        .navigationMenuButton_C10mff [class*="navigationMenuItem__"],
         [class*="navigationMenuButton__"] [class*="navigationMenuItem__"],
-        .navigationMenuCaret__96f2d,
+        .navigationMenuCaret_C10mff,
         [class*="navigationMenuCaret__"] {
             box-shadow: none !important;
         }
 
         // Product card badges (e.g. "NEW" badge on shop items)
-        .productCardBadge_bfa4bd,
+        .productCardBadge_Ruy7qb,
         [class*="productCardBadge_"],
-        .badge__06db1[class*="productCardBadge_"],
-        .textBadge__06db1[class*="productCardBadge_"],
+        .badge_Fy2P0m[class*="productCardBadge_"],
+        .textBadge_JPK15v[class*="productCardBadge_"],
         [class*="textBadge__"][class*="productCardBadge_"] {
             background-color: $AccentLight1 !important;
             color: #FFFFFF !important;
@@ -348,7 +348,7 @@
     }
 
     // Orb balance pill - GLOBAL fix (applies to Shop, Quests, etc.)
-    .toolbar__9293f,
+    .toolbar_ybUK7Z,
     [class*="toolbar__"] {
         background-color: transparent !important;
 
@@ -372,28 +372,28 @@
             }
         }
 
-        .container__44ee9,
-        [class*="container__44ee9"] {
+        .container_CHR0Z4,
+        [class*="container_CHR0Z4"] {
             overflow: visible;
             flex-shrink: 0;
         }
         // NOTE: [class*="clickable_"] intentionally omitted — "clickable_" is a
-        // common stem shared with chat toolbar buttons (.clickable_9293f) and
+        // common stem shared with chat toolbar buttons (.clickable_ybUK7Z) and
         // adding a wildcard overrides their width:60px layout.  The exact class
         // is sufficient here; update resilience is accepted as a known trade-off.
-        .clickable_a3e8db {
+        .clickable_0XT54_ {
             width: auto !important;
             height: 32px !important;
             overflow: visible;
             display: flex !important;
             align-items: center !important;
         }
-        .container_a3e8db,
-        [class*="container_a3e8db"] {
+        .container_0XT54_,
+        [class*="container_0XT54_"] {
             overflow: visible;
             min-width: fit-content;
         }
-        .balanceCounterText__98f64,
+        .balanceCounterText_yIKdvW,
         [class*="balanceCounterText__"] {
             overflow: visible;
         }

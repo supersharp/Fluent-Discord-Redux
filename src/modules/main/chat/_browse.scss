@@ -1,14 +1,14 @@
 // Channels & Roles
-.theme-dark .header__0b563,
-.theme-dark .header_c791b2 {
+.theme-dark .header_lSEuuI,
+.theme-dark .header_zjGJlN {
     background: transparent !important; // Override inline
 
-    .iconWrapper__9293f {
+    .iconWrapper_ybUK7Z {
         display: none;
     }
 }
 
-.theme-dark .content_f75fb0 {
+.theme-dark .content_z_gUBg {
     height: calc(100% - 1px);
     padding: 0;
     background: $LayerFillColorDefault !important; // Override inline
@@ -23,7 +23,7 @@
 
     // Customise tab
     // Customisation questions
-    .prompt__5d7c9 {
+    .prompt_HOJNvw {
         background-color: $LayerFillColorDefault;
         border-top: 0;
         border-left: 0;
@@ -31,7 +31,7 @@
     }
 
     // My profile
-    .profileCard__9c3be {
+    .profileCard_o6yNAQ {
         background-color: $LayerFillColorDefault;
         border-top: 0;
         border-left: 0;
@@ -43,7 +43,7 @@
         background-color: transparent;
     }
 
-    .channelRow_e4503a {
+    .channelRow_MU-f9x {
         background-color: $CardBackgroundFillColorDefault;
         border-width: 1px 1px 0 1px;
         border-style: solid;
@@ -63,13 +63,13 @@
     }
 
     // Fix for channel checkboxes not displaying
-    .channelActions_e4503a .checkbox_f525d3 {
+    .channelActions_e4503a .checkbox_8b5Lkq {
         display: block;
     }
 
     // Category row has some issues
     .categoryRow_e4503a {
-        .checkbox_f525d3 {
+        .checkbox_8b5Lkq {
             display: block;
         }
     }
@@ -81,7 +81,7 @@
 
 // 1. Wrapper backgrounds
 // Target the specific hash classes of the new standalone members page wrapper.
-.theme-dark .chat_f75fb0.page_c791b2 {
+.theme-dark .chat_z_gUBg.page_zjGJlN {
     background-color: transparent !important;
 
     // Page content scroller — direct child of the page wrapper.
@@ -94,8 +94,8 @@
 }
 
 // Header bar — suppress seam and fix border-radius.
-.theme-dark .header_c791b2,
-.theme-dark [class*="header_"].container__9293f {
+.theme-dark .header_zjGJlN,
+.theme-dark [class*="header_"].container_ybUK7Z {
     box-shadow: none !important;
     background-color: transparent !important;
     border-bottom: 0 !important;
@@ -109,7 +109,7 @@
 .theme-dark {
 
     // Content + table containers — transparent so the scroller BG shows through.
-    .content_f75fb0.container_c791b2,
+    .content_z_gUBg.container_zjGJlN,
     [class*="mainTableContainer__"],
     [class*="horizontalScroller__"] {
         background-color: transparent !important;
@@ -170,14 +170,14 @@
 }
 
 // Members page pagination controls — c15210 component family.
-// roundButton_c15210 = page number buttons (inactive)
-// activeButton_c15210 = currently selected page (was Discord purple #5865F2)
-// endButton_c15210 = Back / Next navigation buttons
-// pageButton_c15210 = shared base class on all pagination buttons
-// Partial-match on __c15210 suffix; scoped via .pagination_e8f197 ancestor
+// roundButton_0MrDiE = page number buttons (inactive)
+// activeButton_0MrDiE = currently selected page (was Discord purple #5865F2)
+// endButton_0MrDiE = Back / Next navigation buttons
+// pageButton_0MrDiE = shared base class on all pagination buttons
+// Partial-match on __c15210 suffix; scoped via .pagination_cUz8fW ancestor
 // which is the pagination container unique to this component.
-.theme-dark [class*="pagination_e8f197"],
-.theme-dark [class*="paginationContainer_e8f197"] {
+.theme-dark [class*="pagination_cUz8fW"],
+.theme-dark [class*="paginationContainer_CrBxko"] {
 
     // All page number buttons — base state
     [class*="roundButton_"][class*="pageButton_"] {
@@ -206,7 +206,7 @@
         }
     }
 
-    // Back / Next buttons — already use lookBlank__201d5 so mostly inherits,
+    // Back / Next buttons — already use lookBlank_9OQtot so mostly inherits,
     // just ensure no leftover background leaks through
     [class*="endButton_"][class*="pageButton_"] {
         background-color: transparent;

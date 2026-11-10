@@ -1,7 +1,7 @@
 // Remove background from RTC/account
-.theme-dark .panels__5e434,
-.theme-midnight .panels__5e434,
-.panels__5e434 {
+.theme-dark .panels_pog62O,
+.theme-midnight .panels_pog62O,
+.panels_pog62O {
     background: transparent !important;
     backdrop-filter: blur(var(--fluent-acrylic-background-blur)) !important;
     border-radius: 4px;
@@ -51,8 +51,15 @@
         }
     }
 
+    // Hide the profile-theme / banner artwork behind the account panel.
+    // Discord 2026 renders it as an absolutely-positioned container inside the
+    // panel; leaving it visible paints a coloured gradient over the acrylic.
+    [class*="fitInAccount_"] {
+        display: none !important;
+    }
+
     // Remove 1px margin from bottom of panel
-    .container__37e49 {
+    .container_g6VwXp {
         background-color: transparent;
         height: 48px;
         margin-bottom: 0;
@@ -68,7 +75,7 @@
         }
     }
 
-    .buttons__37e49 {
+    .buttons_g6VwXp {
         gap: 4px;
     }
 
@@ -76,7 +83,7 @@
         margin-right: 0;
     }
 
-    .button__67645 {
+    .button_Y-8oZW {
         background-color: $ControlFillColorDefault;
         border: 1px solid $ControlStrokeColorDefault;
         border-radius: 4px;
@@ -90,8 +97,8 @@
             background-color: $ControlFillColorTertiary;
         }
 
-        .contents__201d5 { // Non-EN sizing fix
-            .lottieIcon__5eb9b {
+        .contents_9OQtot { // Non-EN sizing fix
+            .lottieIcon_69Onuk {
                 position: absolute;
                 top: 5px;
                 left: 5px;
@@ -103,11 +110,11 @@
         }
 
         // Mic and speaker button with attached menu
-        &.audioButtonWithMenu__5e764 {
+        &.audioButtonWithMenu_gKpIZP {
             border-radius: 4px 0 0 4px;
         }
 
-        &.buttonChevron__5e764 {
+        &.buttonChevron_gKpIZP {
             margin-inline-start: 0;
             border-width: 1px 1px 1px 0;
             border-radius: 0 4px 4px 0;
@@ -118,7 +125,7 @@
             border-color: $SystemFillColorCritical;
             color: $SystemFillColorCritical;
 
-            & ~ .buttonChevron__5e764 {
+            & ~ .buttonChevron_gKpIZP {
                 border-color: $SystemFillColorCritical;
                 color: $SystemFillColorCritical;
             }

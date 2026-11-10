@@ -1,18 +1,18 @@
 .theme-dark {
     // Clear parent popout layers to allow Mica blur to show through
-    [id^="popout_"]:has(.picker__09f65),
-    [id^="popout_"]:has([class*="picker__09f65"]),
-    .layer__59d0d:has(.picker__09f65),
-    .layer__59d0d:has([class*="picker__09f65"]),
-    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has(.picker__09f65),
-    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has([class*="picker__09f65"]),
-    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has(.picker__09f65) > div,
-    :is(.animatorTop_faf9c0, .animatorBottom_faf9c0, [class*="animator"]):has([class*="picker__09f65"]) > div {
+    [id^="popout_"]:has(.picker_1lN7Eh),
+    [id^="popout_"]:has([class*="picker_1lN7Eh"]),
+    .layer_VVADeK:has(.picker_1lN7Eh),
+    .layer_VVADeK:has([class*="picker_1lN7Eh"]),
+    :is(.animatorTop_98D4cN, .animatorBottom_98D4cN, [class*="animator"]):has(.picker_1lN7Eh),
+    :is(.animatorTop_98D4cN, .animatorBottom_98D4cN, [class*="animator"]):has([class*="picker_1lN7Eh"]),
+    :is(.animatorTop_98D4cN, .animatorBottom_98D4cN, [class*="animator"]):has(.picker_1lN7Eh) > div,
+    :is(.animatorTop_98D4cN, .animatorBottom_98D4cN, [class*="animator"]):has([class*="picker_1lN7Eh"]) > div {
         background: transparent !important;
     }
 
-    .picker__09f65,
-    [class*="picker__09f65"] {
+    .picker_1lN7Eh,
+    [class*="picker_1lN7Eh"] {
         // Collapse theme-midnight dark variable scope
         --background-primary: transparent !important;
         --background-secondary: transparent !important;
@@ -30,15 +30,15 @@
         overflow: hidden;
 
         // Clear internal containers that block Mica
-        .header__0856d,
-        [class*="header__0856d"],
-        .listWrapper__0856d,
-        [class*="listWrapper__0856d"],
-        .wrapper__0c74f,
-        [class*="wrapper__0c74f"],
-        .scroller_affa7e,
-        [class*="scroller_affa7e"],
-        .gridNoticeWrapper__0856d,
+        .header_6EKaag,
+        [class*="header_6EKaag"],
+        .listWrapper_6EKaag,
+        [class*="listWrapper_6EKaag"],
+        .wrapper_1lPPox,
+        [class*="wrapper_1lPPox"],
+        .scroller_EwKtHG,
+        [class*="scroller_EwKtHG"],
+        .gridNoticeWrapper_6EKaag,
         [class*="gridNoticeWrapper_"] {
             background: transparent !important;
             background-color: transparent !important;
@@ -47,28 +47,28 @@
         }
 
         // Header (search box & volume)
-        .header__0856d,
-        [class*="header__0856d"] {
+        .header_6EKaag,
+        [class*="header_6EKaag"] {
             padding: 12px;
             border-bottom: 1px solid $DividerStrokeColorDefault !important;
             box-shadow: none !important;
 
-            .wrapper__0d1ef,
-            [class*="wrapper__0d1ef"] {
+            .wrapper_xdTfZL,
+            [class*="wrapper_xdTfZL"] {
                 background: transparent !important;
             }
 
-            .container__5a838,
-            [class*="container__5a838"] {
+            .container_VhFsFg,
+            [class*="container_VhFsFg"] {
                 padding: 0;
             }
 
-            .container__72c38,
-            [class*="container__72c38"] {
+            .container_UcGqzv,
+            [class*="container_UcGqzv"] {
                 background-color: transparent !important;
             }
 
-            .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]) {
+            .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]) {
                 background-color: transparent !important;
                 border: 0 !important;
                 box-shadow: none !important;
@@ -77,7 +77,7 @@
             }
 
             // Search input
-            :is(.input__0f084, .input__75098, [class*="input_"]) {
+            :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]) {
                 height: 32px;
                 margin: 0;
                 padding-left: 32px;
@@ -110,7 +110,7 @@
             }
 
             // Search icon
-            :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
+            :is(.icon_0PLWhS, .icon_0PLWhS, [class*="icon_"]) {
                 position: absolute;
                 left: 8px;
                 top: 50%;
@@ -126,7 +126,7 @@
         }
 
         // Volume control
-        .settingsClickArea__61424,
+        .settingsClickArea_-SUGNi,
         [class*="settingsClickArea_"] {
             width: 32px;
             height: 32px;
@@ -154,22 +154,22 @@
         }
 
         // Sidebar (Guild categories list on left)
-        .wrapper__4e6ce.categoryList_a1e0e0,
-        .categoryList_a1e0e0,
+        .wrapper_6AvvhR.categoryList_X9_kMu,
+        .categoryList_X9_kMu,
         [class*="categoryList_"] {
             background: rgba(0, 0, 0, 0.2) !important;
             backdrop-filter: none !important;
             border-right: 1px solid $DividerStrokeColorDefault;
 
-            .category_a1e0e0,
-            [class*="category_a1e0e0"] {
+            .category_X9_kMu,
+            [class*="category_X9_kMu"] {
                 border-radius: 4px;
 
                 &:hover {
                     background-color: $SubtleFillColorSecondary;
                 }
 
-                &.selected_a1e0e0,
+                &.selected_X9_kMu,
                 &[class*="selected_"] {
                     background-color: $SubtleFillColorTertiary;
                 }
@@ -177,33 +177,33 @@
         }
 
         // Section header (Favourites, Gaming Group, Discord Sounds)
-        .sectionContainer__61424,
+        .sectionContainer_-SUGNi,
         [class*="sectionContainer_"] {
             background: transparent !important;
         }
 
-        .sectionHeader__61424,
+        .sectionHeader_-SUGNi,
         .sectionHeader__98b95,
         [class*="sectionHeader_"] {
             background-color: transparent !important;
             backdrop-filter: none !important;
             box-shadow: none !important;
 
-            .sectionTitle__61424,
+            .sectionTitle_-SUGNi,
             [class*="sectionTitle_"] {
                 @include TypeBodyStrong;
                 text-transform: none;
                 color: $TextFillColorPrimary;
             }
 
-            .headerIcon__61424,
+            .headerIcon_-SUGNi,
             [class*="headerIcon_"] {
                 color: $TextFillColorSecondary;
             }
         }
 
         // Sound buttons
-        .soundButton__9be63,
+        .soundButton_N99eHz,
         [class*="soundButton__"] {
             background-color: $ControlFillColorDefault !important;
             border: 1px solid $ControlStrokeColorDefault !important;
@@ -220,18 +220,18 @@
                 background-color: $ControlFillColorTertiary !important;
             }
 
-            .soundName__9be63,
+            .soundName_N99eHz,
             [class*="soundName_"] {
                 @include TypeBody;
                 color: $TextFillColorPrimary !important;
             }
 
-            .buttonOverlayBackground__9be63,
+            .buttonOverlayBackground_N99eHz,
             [class*="buttonOverlayBackground_"] {
                 background-color: transparent !important;
             }
 
-            .secondaryButton__9be63,
+            .secondaryButton_N99eHz,
             [class*="secondaryButton_"] {
                 background-color: $ControlFillColorDefault;
                 border: 1px solid $ControlStrokeColorDefault;
@@ -245,7 +245,7 @@
         }
 
         // Add Sound button (dotted outline)
-        .soundAddButton_da9eb2,
+        .soundAddButton_J7VcHX,
         [class*="soundAddButton_"] {
             background-color: transparent !important;
             border: 1px dashed $ControlStrokeColorDefault !important;
@@ -260,7 +260,7 @@
         }
 
         // Keybind reminder footer
-        .keybindHint__46002,
+        .keybindHint_mb9pZg,
         [class*="keybindHint_"] {
             margin: 8px;
             padding: 8px 16px;
@@ -268,13 +268,13 @@
             border: 1px solid $CardStrokeColorDefault;
             border-radius: 4px;
 
-            .warningIcon__46002,
+            .warningIcon_mb9pZg,
             [class*="warningIcon_"] {
                 color: $SystemFillColorAttention;
                 transform: rotate(180deg);
             }
 
-            .keybindHintText__46002,
+            .keybindHintText_mb9pZg,
             [class*="keybindHintText_"] {
                 @include TypeBody;
                 color: $TextFillColorPrimary;

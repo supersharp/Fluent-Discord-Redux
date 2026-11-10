@@ -13,7 +13,7 @@
     cursor: pointer;
 
     [class*="radioIndicator_"],
-    .radioIndicator__64e61 {
+    .radioIndicator_oJuRbG {
         flex-shrink: 0 !important;
         position: static !important;
         width: 20px !important;
@@ -61,11 +61,11 @@
     background-color: transparent;
     border: 0;
     border-radius: 4px;
-    .item__88a69{
+    .item_jqZBm0{
         margin-bottom: 0;
         border: 1px solid transparent;
         border-radius: 4px;
-        &.itemFilled__88a69{
+        &.itemFilled_jqZBm0{
             background-color: transparent;
         }
         &[aria-checked=true]{
@@ -77,11 +77,11 @@
 
         // Privacy & Safety
         // Remove coloured bars on left side
-        .radioBar__88a69{
+        .radioBar_jqZBm0{
             border: 0;
         }
 
-        .info__35859{
+        .info_ipBn6f{
             grid-gap: 0;
             .text-md-medium_a84e09{
                 @include TypeBody;
@@ -111,13 +111,13 @@
 }
 
 // New radio group classes in settings redesign & popouts (e.g. Quests sort-by)
-.theme-dark :is(.group__64e61, [class*="group__64e61"])[data-orientation=vertical]{
+.theme-dark :is(.group_oJuRbG, [class*="group_oJuRbG"])[data-orientation=vertical]{
     background-color: transparent;
     border: 0;
     border-radius: 4px;
     overflow: hidden;
 
-    .radioGroupOption__64e61,
+    .radioGroupOption_oJuRbG,
     [class*="radioGroupOption__"]{
         margin: 0;
         padding: 6px 8px;
@@ -129,7 +129,7 @@
         gap: 10px !important;
         cursor: pointer;
 
-        .radioIndicator__64e61,
+        .radioIndicator_oJuRbG,
         [class*="radioIndicator_"] {
             flex-shrink: 0 !important;
             position: static !important;
@@ -151,7 +151,7 @@
 }
 
 // Toggle switch
-.theme-dark .container__3f21e{
+.theme-dark .container_UcGqzv{
     background-color: transparent !important; // Override inline
     border: 0;
     svg{
@@ -165,7 +165,7 @@
 .theme-dark label[class*="container_"]:has(input:checked) [class*="switchIndicator"]{
     background-color: $AccentTextFillColorPrimary !important;
 }
-.input__3f21e{
+.input_UcGqzv{
     width: 40px;
     height: 20px;
     margin: 0;
@@ -204,9 +204,9 @@
 
 
 // Checkbox (in settings UI)
-.theme-dark .checkboxWrapper_f525d3{
-    .input_f525d3,
-    .box_f525d3{
+.theme-dark .checkboxWrapper_8b5Lkq{
+    .input_8b5Lkq,
+    .box_8b5Lkq{
         width: 18px;
         height: 18px;
         position: relative;
@@ -222,9 +222,9 @@
             display: none;
         }
     }
-    &.checked_f525d3{
-        .input_f525d3,
-        .box_f525d3{
+    &.checked_8b5Lkq{
+        .input_8b5Lkq,
+        .box_8b5Lkq{
             background-color: $AccentTextFillColorPrimary !important;
             border-color: $AccentTextFillColorPrimary !important;
             &:hover{
@@ -240,13 +240,13 @@
             }
         }
     }
-    .checkbox_f525d3{
+    .checkbox_8b5Lkq{
         display: none;
     }
 }
 
 // Checkbox - Mana/new-style component (__714a9 family), used in Browse Channels view.
-// Structure: checkboxOption__714a9[data-selected] > checkboxIndicator__714a9 > checkmark__714a9 SVG + checkStroke__714a9 SVG
+// Structure: checkboxOption_vTUVyc[data-selected] > checkboxIndicator_vTUVyc > checkmark_vTUVyc SVG + checkStroke_vTUVyc SVG
 // The SVGs use fill="currentColor" so color is inherited from the indicator container.
 // Partial-match on the prefix (__714a9 → checkboxOption__, checkboxIndicator__) keeps this
 // resilient to hash rotation while staying tightly scoped — the double-underscore pattern
@@ -304,19 +304,19 @@
     }
 }
 // Checkbox (in context menu)
-.theme-dark .menu_c1e9c4 .item_c1e9c4[role="menuitemcheckbox"]{
-    .iconContainer_c1e9c4{
+.theme-dark .menu_M3qk4j .item_M3qk4j[role="menuitemcheckbox"]{
+    .iconContainer_M3qk4j{
         width: 18px;
         height: 18px;
         position: relative;
         background-color: $ControlAltFillColorSecondary;
         border: 1px solid $ControlStrongFillColorDefault;
         border-radius: 4px;
-        .checkbox_f525d3 {
+        .checkbox_8b5Lkq {
             display: none;
         }
     }
-    &[aria-checked=true] .iconContainer_c1e9c4{
+    &[aria-checked=true] .iconContainer_M3qk4j{
         background-color: $AccentTextFillColorPrimary;
         border-color: $AccentTextFillColorPrimary;
         color: $TextOnAccentFillColorPrimary;
@@ -329,10 +329,10 @@
             font-size: 16px;
         }
     }
-    &:hover .iconContainer_c1e9c4{
+    &:hover .iconContainer_M3qk4j{
         background-color: $ControlAltFillColorTertiary;
     }
-    &[aria-checked=true]:hover .iconContainer_c1e9c4{
+    &[aria-checked=true]:hover .iconContainer_M3qk4j{
         background-color: $AccentTextFillColorSecondary;
     }
 }
@@ -350,11 +350,11 @@
     }
 
     [class*="inputWrapper_"],
-    .inputWrapper__0ed4f {
+    .inputWrapper_b-mzk1 {
         width: 100% !important;
 
         textarea[class*="input_"],
-        .input__0ed4f {
+        .input_b-mzk1 {
             padding-left: 56px !important; // Make room for the emoji button on the left
             height: 44px !important; // Balanced vertical height
             min-height: 44px !important;
@@ -371,10 +371,10 @@
     }
 }
 
-.theme-dark .wrapper__72c38:is(.container__0f084, .container__75098, [class*="container_"]):is(.hasLeading__0f084, .hasLeading__75098, [class*="hasLeading_"]) {
+.theme-dark .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]):is(.hasLeading_0PLWhS, .hasLeading_0PLWhS, [class*="hasLeading_"]) {
     position: relative;
 
-    :is(.icon__0f084, .icon__75098, [class*="icon_"]) {
+    :is(.icon_0PLWhS, .icon_0PLWhS, [class*="icon_"]) {
         position: absolute;
         left: 10px;
         top: 50%;
@@ -393,15 +393,15 @@
         }
     }
 
-    :is(.input__0f084, .input__75098, [class*="input_"]),
+    :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]),
     textarea[class*="input_"] {
         padding-left: 42px;
     }
 }
 
 // Sort-by / Filter popouts (e.g. Quests page)
-.theme-dark .popout__9047f,
-.theme-dark [class*="popout__9047f"] {
+.theme-dark .popout__S_k8m,
+.theme-dark [class*="popout__S_k8m"] {
     background: $MicaBackgroundFillColorBase !important;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorFlyout;
@@ -409,7 +409,7 @@
     box-shadow: var(--elevation-stroke), var(--elevation-high);
     padding: 8px;
 
-    .popoutHeading__9047f,
+    .popoutHeading__S_k8m,
     [class*="popoutHeading_"] {
         @include TypeBodyStrong;
         color: $TextFillColorSecondary;

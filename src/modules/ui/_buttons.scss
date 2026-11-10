@@ -1,12 +1,12 @@
-.theme-dark .button__201d5{
+.theme-dark .button_9OQtot{
     border-radius: 4px;
     @include TypeBody;
 
     // Sizes
-    &.sizeMin__201d5, // eg. Add server 'back' buttons
-    &.sizeSmall__201d5,
-    &.sizeMedium__201d5, // eg. Create new server
-    &.sizeLarge__201d5, // eg. Add a keybind
+    &.sizeMin_9OQtot, // eg. Add server 'back' buttons
+    &.sizeSmall_9OQtot,
+    &.sizeMedium_9OQtot, // eg. Create new server
+    &.sizeLarge_9OQtot, // eg. Add a keybind
     &.sizeXlarge__6885c{ // eg. Untrusted link modal
         min-width: 120px;
         min-height: 32px;
@@ -14,10 +14,10 @@
     }
 
     // Filled buttons
-    &.lookFilled__201d5{
+    &.lookFilled_9OQtot{
         // Brand buttons
-        &.colorBrand__201d5,
-        &.colorGreen__201d5, // Join server terms modal
+        &.colorBrand_9OQtot,
+        &.colorGreen_9OQtot, // Join server terms modal
         &.colorBrandNew__8872c{ // eg. User Settings > Accessibility > TTS Rate
             background-color: $AccentFillColorDefault;
             border-width: 1px;
@@ -37,9 +37,9 @@
             }
         }
         // Grey
-        &.colorPrimary__201d5,
-        &.buttonColor_dfbe6b, // "Example Button" in User Settings>Profile
-        &.buttonColor__7b3e8{ // Voice screen invite button
+        &.colorPrimary_9OQtot,
+        &.buttonColor_9U6LUN, // "Example Button" in User Settings>Profile
+        &.buttonColor_9U6LUN{ // Voice screen invite button
             background-color: $ControlFillColorDefault;
             border-width: 1px;
             border-style: outset;
@@ -54,7 +54,7 @@
         }
 
         // Red
-        &.colorRed__201d5{
+        &.colorRed_9OQtot{
             background-color: $SystemFillColorCriticalBackground;
             color: $SystemFillColorCritical;
             &:hover{
@@ -77,8 +77,8 @@
     }
 
     // Outlined
-    &.lookOutlined__201d5{
-        &.colorBrand__201d5{ // eg. Request Data
+    &.lookOutlined_9OQtot{
+        &.colorBrand_9OQtot{ // eg. Request Data
             border-color: $ControlStrokeColorDefault;
             color: $TextFillColorPrimary;
             &:hover{
@@ -88,7 +88,7 @@
                 background-color: $ControlFillColorTertiary;
             }
         }
-        &.colorRed__201d5{
+        &.colorRed_9OQtot{
             border-color: $SystemFillColorCritical;
             color: $SystemFillColorCritical;
             &:hover{
@@ -103,7 +103,7 @@
     }
 
     // Blank
-    &.lookBlank__201d5{ // eg. Add server 'back' buttons
+    &.lookBlank_9OQtot{ // eg. Add server 'back' buttons
         color: $TextFillColorPrimary;
         &.backButton__78f69{
             background-color: $ControlFillColorDefault;
@@ -121,7 +121,7 @@
     }
 
     // Link button
-    &.lookLink__201d5{ // eg. Reveal email button
+    &.lookLink_9OQtot{ // eg. Reveal email button
         background-color: $ControlFillColorDefault;
         border-width: 1px;
         border-style: outset;
@@ -129,7 +129,7 @@
         color: $TextFillColorPrimary;
         &:hover{
             background-color: $ControlFillColorSecondary;
-            .contents__201d5{
+            .contents_9OQtot{
                 background-image: none;
             }
         }
@@ -139,14 +139,14 @@
     }
 
     // Button with loading ellipses (Server Settings > Save changes)
-    &.submitting_e90879{
-        .spinner_e90879{
+    &.submitting_9OQtot{
+        .spinner_V4xidM{
             display: flex;
         }
     }
 
     // Animations
-    .buttonShine_fb742e{
+    .buttonShine_yZrVKb{
         display: none;
     }
 }
@@ -154,14 +154,14 @@
 // Time for redundancy!
 // New buttons
 // These appear on the My Account User Settings page
-.theme-dark .button_a22cb0{
+.theme-dark .button_F7qvhY{
     border-radius: 4px;
     span{
         @include TypeBody;
     }
 
     // Primary - Blue
-    &.primary_a22cb0{
+    &.primary_F7qvhY{
         background-color: $AccentFillColorDefault;
         border-width: 1px;
         border-style: inset;
@@ -180,7 +180,7 @@
         }
     }
     // Secondary - Grey
-    &.secondary_a22cb0{
+    &.secondary_F7qvhY{
         background-color: $ControlFillColorDefault;
         border-width: 1px;
         border-style: outset;

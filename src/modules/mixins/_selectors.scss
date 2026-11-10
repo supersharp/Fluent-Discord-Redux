@@ -14,7 +14,7 @@
 // ============================================================================
 
 @mixin channel-list-wrapper {
-    .wrapper__35981,
+    .wrapper_QQRrAh,
     [class*="channel"] > [class*="wrapper_"] {
         @content;
     }
@@ -39,7 +39,7 @@
 // ============================================================================
 
 @mixin member-list-wrapper {
-    .membersWrap__4bde8,
+    .membersWrap_86es0b,
     [class*="members_"] {
         @content;
     }
@@ -77,8 +77,8 @@
 // ============================================================================
 
 @mixin chatbox-container {
-    .scrollableContainer__7b98c,
-    .scrollableContainer__74017,
+    .scrollableContainer_2x8-Qn,
+    .scrollableContainer_2x8-Qn,
     [class*="scrollableContainer_"] {
         @content;
     }
@@ -86,7 +86,7 @@
 
 @mixin chatbox-textarea {
     .textarea__7b98c,
-    .textArea__74017,
+    .textArea_2x8-Qn,
     textarea[class*="textarea_"],
     [class*="slateTextArea_"] {
         @content;
@@ -98,23 +98,23 @@
 // ============================================================================
 
 @mixin modal-backdrop {
-    .backdrop__8a7fc,
+    .backdrop_Y0eJLL,
     [class*="backdrop_"][data-testid^="layer-backdrop"] {
         @content;
     }
 }
 
 @mixin modal-root {
-    .root__49fc1,
-    .container__8a031,
-    [class*="root_"]:has(.quickswitcher_ac6cb0),
+    .root__KoJTP,
+    .container_dvN-MP,
+    [class*="root_"]:has(.quickswitcher_a1DYes),
     [class*="container_"][role="dialog"] {
         @content;
     }
 }
 
 @mixin modal-header {
-    .header__49fc1,
+    .header__KoJTP,
     .header-1R3myj,
     [class*="header_"][class*="separator_"] {
         @content;
@@ -122,15 +122,15 @@
 }
 
 @mixin modal-content {
-    .content__49fc1,
+    .content__KoJTP,
     [class*="content_"][role="document"] {
         @content;
     }
 }
 
 @mixin modal-footer {
-    .footer__8a031,
-    .footer__49fc1,
+    .footer_dvN-MP,
+    .footer__KoJTP,
     [class*="footer_"][class*="separator_"] {
         @content;
     }
@@ -141,14 +141,14 @@
 // ============================================================================
 
 @mixin settings-container {
-    .container__23e6f,
+    .container_dLgLO2,
     [class*="container_"][role="main"] {
         @content;
     }
 }
 
 @mixin settings-header {
-    .header__23e6f,
+    .header_dLgLO2,
     [class*="header_"][class*="settings_"] {
         @content;
     }
@@ -156,7 +156,7 @@
 
 @mixin settings-sections {
     .sections-1oLLo9,
-    .sectionsContainer__23e6f,
+    .sectionsContainer_0fgkqL,
     [class*="sections_"] {
         @content;
     }
@@ -167,7 +167,7 @@
 // ============================================================================
 
 @mixin toolbar-icon {
-    .iconWrapper__9293f,
+    .iconWrapper_ybUK7Z,
     [class*="iconWrapper_"][role="button"] {
         @content;
     }
@@ -185,8 +185,8 @@
 // ============================================================================
 
 @mixin tab-bar-container {
-    .tabs__354ec,
-    .tabBar__133bf,
+    .tabs_uP9HND,
+    .tabBar_zrUwGA,
     [class*="tabBar_"],
     [class*="tabs_"][role="tablist"] {
         @content;
@@ -194,14 +194,14 @@
 }
 
 @mixin tab-item {
-    .item_aa8da2,
+    .item_6zZYhF,
     [class*="tab_"][role="tab"] {
         @content;
     }
 }
 
 @mixin tab-selected {
-    .selected_aa8da2,
+    .selected_6zZYhF,
     [aria-selected="true"] {
         @content;
     }
@@ -212,8 +212,8 @@
 // ============================================================================
 
 @mixin scrollbar-thin {
-    .scrollerBase__99f8c.thin__99f8c,
-    .thin_d125d2,
+    .scrollerBase_JFqgFB.thin_JFqgFB,
+    .thin_tqapBM,
     [class*="scroller"][class*="thin_"],
     [class*="thin_"] {
         @content;
@@ -221,8 +221,8 @@
 }
 
 @mixin scrollbar-auto {
-    .scrollerBase__99f8c.auto__99f8c,
-    .auto_d125d2,
+    .scrollerBase_JFqgFB.auto_JFqgFB,
+    .auto_tqapBM,
     [class*="scroller"][class*="auto_"],
     [class*="auto_"] {
         @content;
@@ -234,16 +234,16 @@
 // ============================================================================
 
 @mixin context-menu {
-    .menu__58105,
-    .menu_c1e9c4,
+    .menu_Cv_a5E,
+    .menu_M3qk4j,
     [role="menu"][class*="menu_"] {
         @content;
     }
 }
 
 @mixin menu-item {
-    .item__58105,
-    .item_c1e9c4,
+    .item__o8_Xq,
+    .item_M3qk4j,
     [role="menuitem"][class*="item_"] {
         @content;
     }
@@ -254,7 +254,7 @@
 // ============================================================================
 
 @mixin voice-user-panel {
-    .voiceUser__2e283,
+    .voiceUser_YUoOxm,
     [class*="voiceUser_"] {
         @content;
     }
@@ -265,8 +265,8 @@
 // ============================================================================
 
 @mixin emoji-picker-container {
-    .emojiPicker_c0e32c,
-    .wrapper_c0e32c,
+    .emojiPicker_-sZhZn,
+    .wrapper_-sZhZn,
     [class*="emojiPicker_"],
     [class*="picker_"][role="dialog"] {
         @content;
@@ -274,7 +274,7 @@
 }
 
 @mixin emoji-category-list {
-    .categoryList_c0e32c,
+    .categoryList_-sZhZn,
     [class*="categoryList_"] {
         @content;
     }
@@ -285,8 +285,8 @@
 // ============================================================================
 
 @mixin discover-page-wrapper {
-    .pageWrapper_a3a4ce,
-    .page__5e434,
+    .pageWrapper_4Qm5zV,
+    .page_pog62O,
     [class*="pageWrapper_"],
     [class*="page_"][role="main"] {
         @content;
@@ -294,7 +294,7 @@
 }
 
 @mixin shop-view-wrapper {
-    .shopViewWrapper__6db1d,
+    .shopViewWrapper_Mqg79R,
     [class*="shopViewWrapper_"] {
         @content;
     }
@@ -306,14 +306,14 @@
 
 @mixin search-container {
     .container__55c99,
-    .container__16eb0,
+    .container_cbVzxY,
     [class*="search_"][role="search"] {
         @content;
     }
 }
 
 @mixin search-input-wrapper {
-    .wrapper__72c38,
+    .wrapper_UcGqzv,
     .searchBox__56feb,
     [class*="searchBox_"],
     [class*="wrapper_"][class*="input_"] {
@@ -326,7 +326,7 @@
 // ============================================================================
 
 @mixin forum-post-card {
-    .container_f93fc4,
+    .container_aynOSy,
     [class*="container_"][data-list-item-id] {
         @content;
     }
@@ -369,7 +369,7 @@
 // ============================================================================
 
 @mixin loading-screen {
-    .loading__52eef,
+    .loading_2kO-Fc,
     [class*="loading_"][role="progressbar"] {
         @content;
     }
@@ -400,9 +400,9 @@
 // ============================================================================
 
 @mixin text-input-field {
-    .input__0f084,
-    .input__75098,
-    .input__0ed4f,
+    .input_0PLWhS,
+    .input_0PLWhS,
+    .input_b-mzk1,
     input[class*="input_"] {
         @content;
     }
@@ -420,7 +420,7 @@
 // ============================================================================
 
 @mixin card-container {
-    .card__84e3e,
+    .card_1U9V53,
     [class*="card_"][role="article"] {
         @content;
     }
@@ -442,7 +442,7 @@
 // ============================================================================
 
 @mixin titlebar-container {
-    .titleBar__593a0,
+    .titleBar_ngaTpP,
     [class*="titleBar_"] {
         @content;
     }
@@ -453,7 +453,7 @@
 // ============================================================================
 
 @mixin activity-feed {
-    .container__2391b,
+    .container_aynOSy,
     [class*="activityFeed"],
     [class*="container_"][data-tid="activity-feed"] {
         @content;
@@ -465,7 +465,7 @@
 // ============================================================================
 
 @mixin inbox-container {
-    .panels__49fc1,
+    .panels_pog62O,
     [class*="inbox_"],
     [role="main"][aria-label="Inbox"] {
         @content;
@@ -477,7 +477,7 @@
 // ============================================================================
 
 @mixin chat-video-controls {
-    .videoControls_f316dd,
+    .videoControls_FJ99sr,
     [class*="messageAttachment_"] [class*="videoControls_"],
     [class*="chatContent_"] [class*="videoControls_"] {
         @content;
@@ -485,7 +485,7 @@
 }
 
 @mixin chat-audio-controls {
-    .audioControls_f316dd,
+    .audioControls_FJ99sr,
     [class*="audioControls_"] {
         @content;
     }
@@ -493,8 +493,8 @@
 
 @mixin voice-video-controls {
     .videoControls_bfe55a,
-    .wrapper_cb9592 [class*="videoControls_"],
-    .callContainer_cb9592 [class*="videoControls_"] {
+    .wrapper_hbKzX7 [class*="videoControls_"],
+    .callContainer_hbKzX7 [class*="videoControls_"] {
         @content;
     }
 }
@@ -504,7 +504,7 @@
 // ============================================================================
 
 @mixin resize-handle {
-    .resizeHandle__01ae2,
+    .resizeHandle_FrbQJp,
     [class*="resizeHandle_"] {
         @content;
     }
@@ -515,7 +515,7 @@
 // ============================================================================
 
 @mixin inbox-button {
-    .clickable__81391,
+    .clickable_fErCLM,
     [class*="clickable_"][aria-label="Inbox"] {
         @content;
     }

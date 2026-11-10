@@ -1,23 +1,23 @@
 .theme-dark {
-    .guilds__5e434 {
+    .guilds_pog62O {
         width: 60px;
         background-color: transparent;
         // box-shadow: inset 0 0 0 1px $Green;
     }
 
     // Increase bottom margin of guilds list so there is a consistent margin around the account box
-    .wrapper_ef3116 {
+    .wrapper_5dqHTG {
         margin-bottom: calc(var(--custom-app-panels-height, 0) + 16px);
     }
 
     // Reduce gap between guilds
-    .stack_dbd263 {
+    .stack_TWWX0S {
         gap: 4px !important; // Override inline
     }
 
     // Pill
-    .wrapper__58105.overlay__58105 {
-        .item__58105 {
+    .wrapper__o8_Xq.overlay__o8_Xq {
+        .item__o8_Xq {
             width: 3px;
             height: 16px !important; // Override inline
             margin-left: 0;
@@ -41,14 +41,14 @@
     }
 
     // Guild icon
-    .listItem__650eb {
+    .listItem_rwEpIL {
         width: 44px;
         // height: 44px;
         margin-left: 8px;
         // box-shadow: inset 0 0 0 1px $Red;
     }
 
-    .wrapper_cc5dd2 {
+    .wrapper_hqZPsU {
         width: 44px !important; // Override inline
         height: 44px !important; // Override inline
         border-radius: 4px;
@@ -60,7 +60,7 @@
             top: 0;
             left: 0;
 
-            .icon__6e9f8 {
+            .icon_JJ-hgR {
                 width: 36px;
                 height: auto;
                 border-radius: 50%;
@@ -73,7 +73,7 @@
     }
 
     // Guild with no icon
-    .childWrapper__6e9f8 {
+    .childWrapper_JJ-hgR {
         background-color: transparent;
         transform: translate(-2px, -2px) !important; // Nudge left and up
 
@@ -82,33 +82,33 @@
         }
     }
 
-    .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+    .wrapper_JJ-hgR.selected_JJ-hgR .childWrapper_JJ-hgR {
         background-color: transparent;
     }
 
     // Guild interaction states
     // Guild is selected
-    .blobContainer_e5445c.selected_e5445c .wrapper_cc5dd2 {
+    .blobContainer_IaPwK5.selected_IaPwK5 .wrapper_hqZPsU {
         background-color: $ControlFillColorSecondary;
     }
 
     // Guild is selected and hovered
-    .blobContainer_e5445c.selected_e5445c:hover .wrapper_cc5dd2 {
+    .blobContainer_IaPwK5.selected_IaPwK5:hover .wrapper_hqZPsU {
         box-shadow: inset 0 0 0 1px $SubtleFillColorSecondary;
     }
 
     // Guild is hovered
-    .blobContainer_e5445c:hover .wrapper_cc5dd2 {
+    .blobContainer_IaPwK5:hover .wrapper_hqZPsU {
         background-color: $ControlFillColorSecondary;
     }
 
     // Guild is clicked
-    .blobContainer_e5445c:active .wrapper_cc5dd2 {
+    .blobContainer_IaPwK5:active .wrapper_hqZPsU {
         background-color: $ControlFillColorTertiary;
     }
 
     // Guild badges
-    .iconBadge__650eb {
+    .iconBadge_rwEpIL {
         background-color: $SystemFillColorSolidNeutral;
 
         svg {
@@ -117,28 +117,28 @@
             color: $TextOnAccentFillColorPrimary;
         }
 
-        &.isCurrentUserConnected__650eb {
+        &.isCurrentUserConnected_rwEpIL {
             background-color: $SystemFillColorSuccess;
         }
     }
 
-    .upperBadge_cc5dd2,
-    .lowerBadge_cc5dd2 {
+    .upperBadge_hqZPsU,
+    .lowerBadge_hqZPsU {
         right: 2px;
     }
 
-    .upperBadge_cc5dd2 {
+    .upperBadge_hqZPsU {
         top: 2px;
     }
 
-    .lowerBadge_cc5dd2 {
+    .lowerBadge_hqZPsU {
         bottom: 2px;
     }
 
     // Home
-    .wrapper__6e9f8 {
+    .wrapper_JJ-hgR {
         &[data-list-item-id="guildsnav___home"] {
-            .childWrapper__6e9f8 {
+            .childWrapper_JJ-hgR {
                 background-color: transparent;
 
                 &::before {
@@ -156,17 +156,17 @@
     }
 
     // Remove Home :active transform
-    .listItemWrapper__91816:active {
+    .listItemWrapper_tQErD4:active {
         transform: none;
     }
 
     // Separator
-    .guildSeparator__252b6 {
+    .guildSeparator_3WHVfy {
         display: none;
     }
 
     // Add server/Server Discovery icons
-    .circleIconButton__5bc7e {
+    .circleIconButton_g8YUxD {
         background-color: transparent;
         color: #FFF;
 
@@ -183,7 +183,7 @@
     }
 
     // Offline
-    .guildsError_e8d03f {
+    .guildsError_cxjWKs {
         background-color: $SystemFillColorCritical;
         border: 0;
         border-radius: 0;
@@ -192,27 +192,27 @@
     }
 
     // Folders
-    .folderGroup__48112 {
+    .folderGroup_RTMSuZ {
         width: 52px;
     }
 
-    .folderGroupBackground__48112 {
+    .folderGroupBackground_RTMSuZ {
         width: 44px;
         left: 8px;
         border-radius: 4px;
         border: 0;
     }
 
-    .hiddenVisually__27f77,
+    .hiddenVisually_FX8kaC,
     [class*="hiddenVisually_"],
-    .folderPreviewWrapper__48112 {
+    .folderPreviewWrapper_RTMSuZ {
         // width: 44px;
         // height: 44px;
         border-radius: 4px;
     }
 
     // Open folder
-    .folderIcon__48112 {
+    .folderIcon_RTMSuZ {
         &::after {
             content: "\E8D5"; // Folder Fill
             @include FontIconFluent;
@@ -232,8 +232,8 @@
     }
 
     // Closed folder
-    .folderHeader__48112 {
-        .wrapper_cc5dd2 {
+    .folderHeader_RTMSuZ {
+        .wrapper_hqZPsU {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
@@ -249,47 +249,47 @@
         }
     }
 
-    .folderPreviewWrapper__48112 {
+    .folderPreviewWrapper_RTMSuZ {
         // width: 44px;
         // height: 44px;
     }
 
-    .folderPreview__48112 {
+    .folderPreview_RTMSuZ {
         width: 44px;
         height: 44px;
         gap: 1px;
     }
 
-    .folderPreviewGuildIcon__48112 {
+    .folderPreviewGuildIcon_RTMSuZ {
         width: 18px;
         height: 18px;
         border-radius: 50% !important; // Override inline
     }
 
     // Fix folder icon height when folder is expanded
-    .isExpanded__48112 .folderHeader__48112 {
+    .isExpanded_RTMSuZ .folderHeader_RTMSuZ {
         margin-bottom: 0;
 
-        .wrapper_cc5dd2 {
+        .wrapper_hqZPsU {
             width: 44px !important; // Override inline
             height: 44px !important; // Override inline
         }
     }
 
     // Remove the background behind folder icon when hovering
-    .hiddenVisually__27f77,
+    .hiddenVisually_FX8kaC,
     [class*="hiddenVisually_"] {
-        &.hover__48112 .expandedFolderIconWrapper__48112 {
+        &.hover_AFi54G .expandedFolderIconWrapper__48112 {
             background-color: transparent;
         }
     }
 
     // Unread notification bars
-    .unreadMentionsIndicatorBottom_ef3116,
-    .unreadMentionsIndicatorTop_ef3116 {
+    .unreadMentionsIndicatorBottom_5dqHTG,
+    .unreadMentionsIndicatorTop_5dqHTG {
         width: 48px;
 
-        .bar__3b95d {
+        .bar_oJAkDB {
             background-color: $SystemFillColorCriticalBackground;
         }
 
@@ -309,7 +309,7 @@
         }
     }
 
-    .unreadMentionsIndicatorBottom_ef3116 {
+    .unreadMentionsIndicatorBottom_5dqHTG {
         span {
             &::before {
                 content: "\EDDC"; // CaretDownSolid8
@@ -317,7 +317,7 @@
         }
     }
 
-    .unreadMentionsIndicatorTop_ef3116 {
+    .unreadMentionsIndicatorTop_5dqHTG {
         span {
             &::before {
                 content: "\EDDB"; // CaretUpSolid8
