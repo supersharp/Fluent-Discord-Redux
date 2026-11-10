@@ -106,3 +106,35 @@
     }
 }
 
+
+// Apps / Commands drawer (the panel opened from the composer Apps button).
+.theme-dark .contentWrapper_Z0Mo0M,
+.theme-dark [class*="contentWrapper_Z0Mo0M"] {
+    background: rgba(32, 32, 32, 0.9) !important;
+    background-image: none !important;
+    backdrop-filter: blur(24px) saturate(140%);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.theme-dark .searchBarContainer_OfZRPz,
+.theme-dark [class*="searchBarContainer_OfZRPz"] {
+    border-bottom: 1px solid $DividerStrokeColorDefault;
+}
+
+// App cards and command rows inside the drawer.
+.theme-dark .container_LekV6N,
+.theme-dark [class*="container_LekV6N"] {
+    background: $CardBackgroundFillColorDefault !important;
+
+    &:hover {
+        background: $CardBackgroundFillColorSecondary !important;
+    }
+}
+
+.theme-dark .iconCard_LekV6N,
+.theme-dark [class*="iconCard_LekV6N"] {
+    background: $ControlFillColorDefault !important;
+    border: 1px solid $CardStrokeColorDefault;
+}

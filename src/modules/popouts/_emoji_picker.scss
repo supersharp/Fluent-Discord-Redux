@@ -134,10 +134,14 @@
     }
 
     // Emoji
-    // Sidebar (keep it on the same Mica surface as the body)
+    // Sidebar. This rail is an absolute overlay above the emoji grid, so a
+    // transparent background lets the grid icons show through. Use an opaque
+    // WinUI navigation-pane surface while keeping the same dark hue.
     .categoryList_-sZhZn,
     [class*="categoryList_-"]{
-        background: transparent !important;
+        z-index: 1;
+        background-color: #262626 !important;
+        border-right: 1px solid $DividerStrokeColorDefault;
         backdrop-filter: none !important;
     }
 
@@ -362,7 +366,7 @@
 // above the 48px preview/footer so it cannot overlap the bottom bar.
 .theme-dark .wrapper_6AvvhR.categoryList_-sZhZn,
 .theme-dark [class*="wrapper_6AvvhR"][class*="categoryList_-sZhZn"] {
-    bottom: 48px !important;
+    bottom: 0 !important;
     height: auto !important;
     overflow-y: auto !important;
     scrollbar-width: none;
@@ -370,4 +374,38 @@
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+// The "Scroll to Unicode emojis" shortcut is an absolute 48px button pinned to
+// the bottom of the rail. It must be opaque, and the category scroller must
+// stop above it so category icons do not show through/under the button.
+.theme-dark .unicodeShortcut_ufks4w,
+.theme-dark [class*="unicodeShortcut_"] {
+    z-index: 2;
+    background-color: #262626 !important;
+    border-top: 1px solid $DividerStrokeColorDefault;
+}
+
+.theme-dark .listNavigatorRegion_6AvvhR .scroller_EwKtHG,
+.theme-dark [class*="listNavigatorRegion_"] [class*="scroller_EwKtHG"] {
+    height: calc(100% - 48px) !important;
+}
+
+// Sticker category rail (same layout, different classes than emoji).
+.theme-dark .wrapper_6AvvhR.categoryList_40yGEf,
+.theme-dark [class*="wrapper_6AvvhR"][class*="categoryList_40yGEf"] {
+    background-color: #262626 !important;
+    border-right: 1px solid $DividerStrokeColorDefault;
+}
+
+.theme-dark .standardStickerShortcut_40yGEf,
+.theme-dark [class*="standardStickerShortcut_40yGEf"] {
+    z-index: 2;
+    background-color: #262626 !important;
+    border-top: 1px solid $DividerStrokeColorDefault;
+}
+
+.theme-dark .categoryList_40yGEf .scroller_EwKtHG,
+.theme-dark [class*="categoryList_40yGEf"] [class*="scroller_EwKtHG"] {
+    height: calc(100% - 48px) !important;
 }

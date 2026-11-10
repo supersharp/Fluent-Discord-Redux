@@ -1,6 +1,6 @@
 # WinUI 3 Dark Emulation Plan — Fluent Discord Redux
 
-Status: active · Target: Discord Desktop 1.0.9267 / Chromium 152 · Theme: 0.0.29
+Status: active · Target: Discord Desktop 1.0.9267 / Chromium 152 · Theme: 0.0.30
 
 This plan is the source of truth for bringing the theme in line with the
 **Windows 11 / WinUI 3 Dark** visual language. It covers every major surface in
@@ -173,7 +173,9 @@ Legend: **Done** = rebuilt and visually checked; **Fix** = known issue;
 - [x] Emoji/GIF/sticker picker Mica + search.
 - [x] Activity rail / Active Now cards to Mica cards.
 - [x] Emoji/reaction category rail stops above the preview footer.
+- [x] Unicode category shortcut is opaque and no longer overlaps category icons.
 - [x] Discover header/nav Mica and separators removed.
+- [x] Apps/Commands drawer uses a Mica shell, hairline border and card fills.
 - [ ] Audit Shop, Quests, Discover cards for card fill/stroke/radius.
 - [ ] Audit modals and popouts for consistent 8px radius and Mica tint.
 - [ ] Consolidate Mica values into shared variables.
@@ -184,6 +186,7 @@ Legend: **Done** = rebuilt and visually checked; **Fix** = known issue;
 - [x] Native radio/checkbox accent.
 - [ ] Audit all buttons/inputs/selects/toggles for WinUI 16/32/40px sizing.
 - [x] Fix missing channel/DM context-menu icons.
+- [x] Restore the composer attach-menu Schedule Message icon.
 - [ ] Audit all context-menu submenus.
 - [x] Audit guild-view font families (Segoe UI Variable Text/Display; no gg sans).
 - [ ] Audit tooltips, progress rings, scrollbars.

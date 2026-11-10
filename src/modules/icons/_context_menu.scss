@@ -774,3 +774,10 @@
         content: "\E748"; // SwitchUser
     }
 }
+
+// Composer attach menu (Upload a File / Create Poll / Use Apps).
+.theme-dark .menu_M3qk4j .item_M3qk4j{
+    &[id="channel-attach-scheduled_message"]::before{
+        content: "\E787"; // Calendar
+    }
+}

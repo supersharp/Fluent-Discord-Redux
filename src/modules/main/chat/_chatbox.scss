@@ -32,6 +32,39 @@
         border-radius: 4px;
         overflow-y: auto;
     }
+
+    // Inline message editor. It is outside form_, so Discord paints its own
+    // near-black themedBackground. Match the normal composer instead.
+    .contents_2i8Bfm .channelTextArea_2x8-Qn {
+        margin-bottom: 0 !important;
+        background: $ControlFillColorDefault !important;
+        border: 1px solid $ControlStrokeColorDefault !important;
+        border-bottom: 2px solid $ControlStrokeColorDefault !important;
+        border-radius: 4px !important;
+
+        &:focus-within {
+            background-color: $ControlFillColorInputActiveBrush !important;
+            border-color: $ControlStrokeColorDefault !important;
+            border-bottom-color: $AccentBase !important;
+        }
+    }
+
+    .contents_2i8Bfm .themedBackground_2x8-Qn,
+    .contents_2i8Bfm .scrollableContainer_2x8-Qn {
+        background: transparent !important;
+        border-radius: 4px;
+        overflow-y: auto;
+    }
+
+    .contents_2i8Bfm .textArea_2x8-Qn {
+        min-height: 48px;
+    }
+
+    .contents_2i8Bfm [class*="slateTextArea_"] {
+        min-height: 48px;
+        padding: 14px 0 14px 10px;
+        color: $TextFillColorPrimary;
+    }
     .sansAttachButton_2x8-Qn {
         padding-left: 16px;
     }
