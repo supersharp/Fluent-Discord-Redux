@@ -3,11 +3,12 @@
     @include TypeBody;
 
     // Sizes
-    &.sizeMin_9OQtot, // eg. Add server 'back' buttons
+    &.sizeMin_9OQtot,
+// eg. Add server 'back' buttons
     &.sizeSmall_9OQtot,
-    &.sizeMedium_9OQtot, // eg. Create new server
-    &.sizeLarge_9OQtot, // eg. Add a keybind
-    &.sizeXlarge__6885c{ // eg. Untrusted link modal
+&.sizeMedium_9OQtot,
+// eg. Create new server
+    &.sizeLarge_9OQtot{ // eg. Untrusted link modal
         min-width: 120px;
         min-height: 32px;
         height: 32px;
@@ -17,8 +18,7 @@
     &.lookFilled_9OQtot{
         // Brand buttons
         &.colorBrand_9OQtot,
-        &.colorGreen_9OQtot, // Join server terms modal
-        &.colorBrandNew__8872c{ // eg. User Settings > Accessibility > TTS Rate
+&.colorGreen_9OQtot{ // eg. User Settings > Accessibility > TTS Rate
             background-color: $AccentFillColorDefault;
             border-width: 1px;
             border-style: inset;
@@ -105,19 +105,6 @@
     // Blank
     &.lookBlank_9OQtot{ // eg. Add server 'back' buttons
         color: $TextFillColorPrimary;
-        &.backButton__78f69{
-            background-color: $ControlFillColorDefault;
-            border-width: 1px;
-            border-style: outset;
-            border-color: $ControlElevationBorder;
-            color: $TextFillColorPrimary;
-            &:hover{
-                background-color: $ControlFillColorSecondary;
-            }
-            &:active{
-                background-color: $ControlFillColorTertiary;
-            }
-        }
     }
 
     // Link button

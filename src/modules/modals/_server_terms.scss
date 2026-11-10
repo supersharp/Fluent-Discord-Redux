@@ -1,40 +1,13 @@
 .theme-dark{
     .guildSidebar_z_gUBg{
         background: $SolidBackgroundFillColorBase;
-        .guildDescription_b962dc{
-            color: $TextFillColorPrimary;
-        }
     }
     .modal_FmNv9Q{
         background-color: $CardBackgroundFillColorDefault;
         border-radius: 0;
         // Remove waving hand GIF
-        .animationAndSparklesContainer_b962dc{
-            display: none;
-        }
         // Headers
-        .header_b962dc{
-            @include TypeSubtitle;
-            text-align: left;
-        }
-        .subheader_b962dc{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-            text-align: left;
-        }
-        hr.divider_b962dc{
-            display: none;
-        }
 
-        .termsFieldBody_d48a51{
-            background-color: $CardBackgroundFillColorDefault;
-            border: 1px solid $CardStrokeColorDefault;
-            border-radius: 4px;
-        }
-        .termsRowContent_d48a51{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-        }
 
         // Accept checkbox
         .checkboxWrapper_8b5Lkq{

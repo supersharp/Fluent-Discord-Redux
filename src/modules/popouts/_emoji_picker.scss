@@ -23,11 +23,14 @@
         --popout-background: transparent !important;
     }
 
-    // Apply Mica to the main container
+    // Apply Mica to the main container. Discord paints a near-opaque
+    // #202020 gradient here; use a translucent layer plus blur so the acrylic
+    // background shows through consistently with the other Fluent surfaces.
     .contentWrapper_58b0l2,
     #emoji-picker-tab-panel {
-        background: $MicaBackgroundFillColorBase !important;
-        backdrop-filter: blur(16px);
+        background: rgba(32, 32, 32, 0.55) !important;
+        background-image: none !important;
+        backdrop-filter: blur(24px) saturate(140%);
         border: 1px solid $SurfaceStrokeColorDefault;
         border-radius: 8px;
         box-shadow: var(--elevation-stroke), var(--elevation-high);
@@ -85,8 +88,7 @@
     }
     .header_-sZhZn, // Emoji
     .header_WSRqCO, // Stickers
-    .header_rfDq2B, // GIFs
-    .header__81b99{ // Kaomoji
+    .header_rfDq2B { // GIFs
         background-color: transparent !important;
         box-shadow: none !important;
         border-bottom: none !important;
@@ -99,54 +101,9 @@
     .container_UcGqzv{ // Search container
         background-color: transparent;
     }
-    .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]){
-        background-color: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        outline: none !important;
-        position: relative; // For absolute icon positioning
-
-        &:focus-within,
-        &:hover{
-            background-color: transparent !important;
-            border: 0 !important;
-            box-shadow: none !important;
-            outline: none !important;
-        }
-    }
-
-    // Emoji search
-    // Fix inherited height
-    :is(.md_0PLWhS, .md_0PLWhS, [class*="md_"]) :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]){
-        height: 32px;
-    }
-    :is(.input_0PLWhS, .input_0PLWhS, [class*="input_"]){
-        margin: 0;
-        padding-left: 32px; // Space for the icon
-        padding-right: 12px;
-        background-color: $ControlFillColorDefault !important;
-        color: $TextFillColorSecondary !important;
-        border: 1px solid $ControlStrokeColorDefault !important;
-        border-bottom: 2px solid $ControlStrokeColorDefault !important;
-        border-radius: 4px;
-        @include TypeBody;
-        &:hover{
-            border-color: $ControlStrokeColorSecondary !important;
-            background-color: $ControlFillColorSecondary !important;
-        }
-        &:focus{
-            background-color: $ControlFillColorInputActiveBrush !important;
-            color: $TextFillColorPrimary !important;
-            border-color: $ControlStrokeColorDefault !important;
-            border-bottom-color: $AccentBase !important;
-            box-shadow: none !important;
-            outline: none !important;
-        }
-        &::placeholder{
-            @include TypeBody;
-            color: $TextFillColorTertiary;
-        }
-    }
+    // The search box is drawn by common/_search.scss using Discord's current
+    // wrapper_UcGqzv + icon_0PLWhS + input_0PLWhS structure. Do not clear the
+    // wrapper background here or the field shrinks back inside its border.
 
     // Search icon positioning
     :is(.emojiPickerHasTabWrapper_-sZhZn, .wrapper_-sZhZn, [class*="wrapper_"]) .wrapper_UcGqzv:is(.container_0PLWhS, .container_0PLWhS, [class*="container_"]) :is(.icon_0PLWhS, .icon_0PLWhS, [class*="icon_"]) {
@@ -163,15 +120,7 @@
     }
 
     // Kaomoji
-    .kaomojiContainer__81b99{
-        padding-right: 0 !important; // Override inline
-    }
 
-    .categoryLabel__81b99{
-        @include TypeBodyStrong;
-        color: $TextFillColorPrimary !important;
-        text-transform: none;
-    }
 
     .button_F7qvhY.secondary_F7qvhY{
         background-color: $ControlFillColorDefault;
@@ -185,10 +134,18 @@
     }
 
     // Emoji
-    // Sidebar
-    .categoryList_-sZhZn{
-        background: rgba(0, 0, 0, 0.2) !important;
+    // Sidebar (keep it on the same Mica surface as the body)
+    .categoryList_-sZhZn,
+    [class*="categoryList_-"]{
+        background: transparent !important;
         backdrop-filter: none !important;
+    }
+
+    // Footer preview sits on the same Mica surface; Discord paints it pure black.
+    .inspector_-sZhZn,
+    .inspector_1bDrGE,
+    [class*="inspector_"]{
+        background: transparent !important;
     }
 
     // Emoji body wrapper (contains grid)
@@ -309,9 +266,7 @@
     }
 
     // Selected state for categories
-    .categoryItemDefaultCategorySelected_ufks4w,
-    .categoryItemGuildCategorySelected_b9ee0c,
-    .categoryItemRecentEmojiSelected_b9ee0c {
+    .categoryItemDefaultCategorySelected_ufks4w{
         background-color: $AccentFillColorDefault !important;
         border-radius: 4px;
         &::before {
@@ -401,17 +356,18 @@
     }
 
     // Nitro prompt
-    .premiumPromo__3a1b6{
-        background-color: $CardStrokeColorDefaultSolid;
-        .premiumPromoImage__3a1b6{
-            display: none;
-        }
-        .premiumPromoTitle__3a1b6{
-            @include TypeBodyLarge;
-        }
-        .premiumPromoDescription__3a1b6{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-        }
+}
+
+// The category rail is absolutely positioned to the full picker height. Stop it
+// above the 48px preview/footer so it cannot overlap the bottom bar.
+.theme-dark .wrapper_6AvvhR.categoryList_-sZhZn,
+.theme-dark [class*="wrapper_6AvvhR"][class*="categoryList_-sZhZn"] {
+    bottom: 48px !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }

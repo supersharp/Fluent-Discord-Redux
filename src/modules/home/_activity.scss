@@ -90,3 +90,22 @@
         text-align: left;
     }
 }
+
+// Guild activity rail / Active Now cards. Discord paints these with an opaque
+// #252525 surface; use the same Mica layer as the rest of the shell.
+.theme-dark {
+    .container_g7esM5,
+    [class*="container_g7esM5"],
+    .wrapper_o3hXTo,
+    [class*="wrapper_o3hXTo"] {
+        background: rgba(32, 32, 32, 0.55) !important;
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px;
+    }
+
+    .container_86es0b {
+        background: rgba(32, 32, 32, 0.45) !important;
+        backdrop-filter: blur(24px) saturate(140%);
+    }
+}

@@ -12,27 +12,10 @@
         align-items: unset;
 
         // Title/subtitle text - common styles for all sub-page title variants
-        .title_c04f35,
-        .subtitle_c04f35,
-        .title__78f69,
-        .subtitle__78f69,
-        .title_b917ac,
-        .subtitle_b917ac,
-        .title__991a0,
         .text-sm-normal__95a78{
             text-align: left;
             color: $TextFillColorPrimary !important; // Override inline
         }
-        .title_c04f35,
-        .title__78f69,
-        .title_b917ac,
-        .title__991a0{
-            @include TypeSubtitle;
-            margin: 0;
-        }
-        .subtitle_c04f35,
-        .subtitle__78f69,
-        .subtitle_b917ac,
         .text-sm-normal__95a78{
             @include TypeBody;
         }
@@ -46,92 +29,17 @@
     }
 
     // Main page options list
-    .templatesList_c04f35,
-    .optionsList__78f69{
-        margin-top: 0;
-        padding-top: 24px;
-        .optionHeader-27AHfD{
-            color: $TextFillColorPrimary !important; // Override inline
-            @include TypeBodyStrong;
-            text-transform: none;
-        }
-        .container_OlkxSE{
-            height: 32px;
-            margin-bottom: 4px;
-            padding: 0 12px;
-            background-color: $ControlFillColorDefault !important; // Override inline
-            border: 1px solid $ControlStrokeColorDefault !important;
-            border-radius: 4px;
-            .icon_OlkxSE{
-                display: none;
-            }
-            .text_OlkxSE{
-                color: $TextFillColorPrimary;
-                @include TypeBody;
-            }
-            .arrow_OlkxSE{
-                margin-right: 0;
-                filter: brightness(200%);
-            }
-            &:hover{
-                background-color: $ControlFillColorSecondary !important;
-            }
-            &:active{
-                background-color: $ControlFillColorTertiary !important;
-            }
-        }
-    }
 
     // Server name page
-    .nameInput_b917ac{
-        .label_csPsk2{
-            color: $TextFillColorPrimary;
-            @include TypeBody;
-            text-transform: none;
-        }
-    }
-    .createGuild_b917ac{
-        margin-top: 0;
-        padding-top: 24px;
-    }
 
     // Community guidelines
-    .guidelines_b917ac{
-        margin-bottom: 16px;
-        color: $TextFillColorSecondary !important; // Override inline
-        @include TypeCaption;
-    }
 
     // Skip question
-    .skip__78f69{
-        color: $TextFillColorSecondary !important; // Override inline
-        @include TypeCaption;
-        text-align: left;
-    }
 
     // Server link page
-    .input__991a0{
-        background-color: transparent;
-    }
     .input_b-mzk1,
     .input_b-mzk1::placeholder{
         font-weight: normal;
-    }
-    .formTitle__991a0{
-        color: $TextFillColorPrimary;
-        @include TypeBody;
-        text-transform: none;
-    }
-    .sampleLink__991a0{
-        color: $AccentTextFillColorPrimary;
-        &:hover{
-            color: $AccentTextFillColorSecondary;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-    }
-    .examplesForm__991a0 ~ .rowContainer_QFvip1{
-        display: none;
     }
 
     // Server discovery row
@@ -142,19 +50,12 @@
         background-color: transparent;
         border: 1px solid transparent;
         border-radius: 4px;
-        .rowIcon__991a0{
-            display: none;
-        }
         .heading-md-semibold__76ba1{
             display: none;
         }
         .text-xs-normal__46d75{
             color: $TextFillColorPrimary;
             @include TypeBody;
-        }
-        .rowArrow__991a0{
-            margin-right: 0;
-            filter: brightness(200%);
         }
         &:hover{
             background-color: $SubtleFillColorSecondary;

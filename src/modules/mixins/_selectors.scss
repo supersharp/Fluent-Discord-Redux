@@ -21,15 +21,13 @@
 }
 
 @mixin channel-text {
-    .channel__35981,
-    [class*="channel_"][data-list-item-id] {
+    [class*="channel_"][data-list-item-id]{
         @content;
     }
 }
 
 @mixin channel-selected {
-    .channel__35981.selected-2SZiTB,
-    [class*="channel_"][class*="selected_"] {
+    [class*="channel_"][class*="selected_"]{
         @content;
     }
 }
@@ -46,8 +44,7 @@
 }
 
 @mixin member-item {
-    .member__50ffd,
-    [class*="member_"][data-list-item-id] {
+    [class*="member_"][data-list-item-id]{
         @content;
     }
 }
@@ -57,17 +54,14 @@
 // ============================================================================
 
 @mixin chat-content-area {
-    .content__4529f,
-    [class*="content_"][class*="chat_"] {
+    [class*="content_"][class*="chat_"]{
         @content;
     }
 }
 
 @mixin message-group {
-    .groupsWrapper__4529f,
-    .message__4529f,
     [class*="groupsWrapper_"],
-    [class*="message_"][data-list-item-id] {
+[class*="message_"][data-list-item-id]{
         @content;
     }
 }
@@ -85,10 +79,9 @@
 }
 
 @mixin chatbox-textarea {
-    .textarea__7b98c,
     .textArea_2x8-Qn,
-    textarea[class*="textarea_"],
-    [class*="slateTextArea_"] {
+textarea[class*="textarea_"],
+[class*="slateTextArea_"]{
         @content;
     }
 }
@@ -156,8 +149,7 @@
 
 @mixin settings-sections {
     .sections-1oLLo9,
-    .sectionsContainer_0fgkqL,
-    [class*="sections_"] {
+[class*="sections_"]{
         @content;
     }
 }
@@ -174,8 +166,7 @@
 }
 
 @mixin home-icon-wrapper {
-    .wrapper__133bf,
-    [class*="wrapper_"][data-list-item-id] {
+    [class*="wrapper_"][data-list-item-id]{
         @content;
     }
 }
@@ -285,17 +276,15 @@
 // ============================================================================
 
 @mixin discover-page-wrapper {
-    .pageWrapper_4Qm5zV,
     .page_pog62O,
-    [class*="pageWrapper_"],
-    [class*="page_"][role="main"] {
+[class*="pageWrapper_"],
+[class*="page_"][role="main"]{
         @content;
     }
 }
 
 @mixin shop-view-wrapper {
-    .shopViewWrapper_Mqg79R,
-    [class*="shopViewWrapper_"] {
+    [class*="shopViewWrapper_"]{
         @content;
     }
 }
@@ -305,18 +294,16 @@
 // ============================================================================
 
 @mixin search-container {
-    .container__55c99,
     .container_cbVzxY,
-    [class*="search_"][role="search"] {
+[class*="search_"][role="search"]{
         @content;
     }
 }
 
 @mixin search-input-wrapper {
     .wrapper_UcGqzv,
-    .searchBox__56feb,
-    [class*="searchBox_"],
-    [class*="wrapper_"][class*="input_"] {
+[class*="searchBox_"],
+[class*="wrapper_"][class*="input_"]{
         @content;
     }
 }
@@ -337,17 +324,14 @@
 // ============================================================================
 
 @mixin guild-icon-wrapper {
-    .listItem__62d4f,
-    .pill__62d4f,
     [class*="listItem_"][data-list-item-id],
-    [class*="pill_"] {
+[class*="pill_"]{
         @content;
     }
 }
 
 @mixin guild-unread-badge {
-    .mentionBadge__62d4f,
-    [class*="mentionBadge_"] {
+    [class*="mentionBadge_"]{
         @content;
     }
 }
@@ -357,9 +341,7 @@
 // ============================================================================
 
 @mixin user-panel-container {
-    .userPanelOuter__0f481,
-    .userPanelInner__0f481,
-    [class*="userPanel_"] {
+    [class*="userPanel_"]{
         @content;
     }
 }
@@ -409,8 +391,7 @@
 }
 
 @mixin dropdown-select {
-    .select__7e549,
-    [class*="select_"][role="listbox"] {
+    [class*="select_"][role="listbox"]{
         @content;
     }
 }
@@ -492,9 +473,8 @@
 }
 
 @mixin voice-video-controls {
-    .videoControls_bfe55a,
     .wrapper_hbKzX7 [class*="videoControls_"],
-    .callContainer_hbKzX7 [class*="videoControls_"] {
+.callContainer_hbKzX7 [class*="videoControls_"]{
         @content;
     }
 }

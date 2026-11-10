@@ -1,11 +1,6 @@
 .theme-dark .modal_FmNv9Q{
     border: 0 !important; // Removes border that is set for all modals
 
-    .downloadLink_aa8ea9{
-        color: $TextFillColorSecondary;
-        @include TypeBody;
-        opacity: 1;
-    }
 }
 
 .theme-dark [class*="carouselModal_"].root__KoJTP,
@@ -15,11 +10,6 @@
     box-shadow: none !important;
     backdrop-filter: none !important;
 
-    .downloadLink_aa8ea9{
-        color: $TextFillColorSecondary;
-        @include TypeBody;
-        opacity: 1;
-    }
 }
 
 // Media viewer backdrop overlay to block out main UI/wallpaper bleed

@@ -1,137 +1,56 @@
-// Main container
-.theme-dark .container_aynOSy.recentMentionsPopout__95796 {
-    // Use Discord's layer max-height variable to stay within bounds, with fallback
-    max-height: calc(var(--reference-position-layer-max-height, 80vh) - 16px) !important;
-    margin: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
-    border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
-
-    // Inner wrapper that contains the messages
-    .messagesPopoutWrap_6bgemo {
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
-        max-height: none !important; // Override Discord's inline max-height
-        min-height: 0;
-        border: none; // Ensure no double border
-        background: transparent;
+// Inbox / recent mentions popout (current 2026 class names).
+.theme-dark {
+    .messagesPopoutWrap_6bgemo,
+    [class*="messagesPopoutWrap_"] {
+        background: rgba(32, 32, 32, 0.55) !important;
+        backdrop-filter: blur(24px) saturate(140%);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        box-shadow: var(--elevation-stroke), var(--elevation-high);
     }
 
-    // The actual scroller area
-    .scroller__95796 {
-        flex: 1 1 auto;
-        min-height: 0;
-        padding: 0 16px 0 16px;
-    }
-    .header_LSviKk {
-        background-color: transparent;
-        // Tabs
-        .topPill_6zZYhF{
-            .tab_LSviKk {
-                padding-left: 0;
-                padding-right: 0;
-                margin-right: 16px;
-                color: $TextFillColorPrimary;
-                border-radius: 0;
-                &:hover{
-                    background-color: transparent;
-                    color: $TextFillColorSecondary;
-                }
-
-                &.active_5-ruWd {
-                    background-color: transparent;
-                    color: $AccentTextFillColorPrimary;
-                    &::before{
-                        content: "";
-                        position: absolute;
-                        bottom: 0px;
-                        width: 100%;
-                        height: 2px;
-                        background-color: $AccentLight3;
-                        border-radius: 2px;
-                    }
-                    &:hover{
-                        color: $TextFillColorSecondary;
-                    }
-                }
-            }
-        }
+    .header_6bgemo,
+    [class*="header_6bgemo"] {
+        background: transparent !important;
+        border-bottom: 1px solid $DividerStrokeColorDefault;
     }
 
-    // No messages
-    .iconContainer_EkmWN_{
-        display: none;
-    }
-    .header_EkmWN_{
-        margin-bottom: 24px;
-        @include TypeBodyLarge;
+    .messagesPopout_6bgemo,
+    .footer_6bgemo,
+    .scrollingFooterWrap_6bgemo {
+        background: transparent !important;
     }
 
-    // Results
-    // Mentions
-    // NOTE: 2023-01-04 - Mentions tab scroller uses a different class which doesn't have L/R padding
-    
-    .container__95796, // Mentions
-    .channel_zln_tS{ // Unreads
-        padding-right: 16px;
-        padding-bottom: 16px;
-        .channelHeader__35a7e{
-            top: -1px;
-            padding-left: 8px;
-            padding-right: 16px; // Fixes dismiss buttons butting up on right side
-            background-color: $SolidBackgroundFillColorSecondary;
-            border-radius: 4px 4px 0 0;
-            .guildIcon__35a7e,
-            .dmIcon__35a7e {
-                background-color: transparent;
-                border-radius: 50%;
-            }
-        }
-        .messageContainer_CKGXbh, // Mentions
-        .messages_TpS9Es{ // Unreads
-            margin-left: 0;
-            background-color: $CardBackgroundFillColorDefault;
-            border: 1px solid $CardStrokeColorDefault;
-            border-radius: 0 0 4px 4px;
-        }
-    }
-
-    // Unread headers have a collapse button
-    .channel_zln_tS{
-        .channelHeader__35a7e{
-            padding-left: 48px;
-        }
-        .collapseButton__427f0{
-            left: 16px;
-            &::before{
-                content: "\E70D";
-                @include FontIconFluent;
-                font-size: 16px;
-            }
-            svg{
-                display: none;
-            }
-        }
-    }
-
-    // Buttons
-    .button_iSgWOH {
-        background-color: $ControlFillColorDefault;
-        border-width: 1px;
-        border-style: outset;
-        border-color: $ControlElevationBorder;
+    .messageGroupWrapper_6bgemo,
+    [class*="messageGroupWrapper_6bgemo"] {
+        background-color: $CardBackgroundFillColorDefault !important;
+        border: 1px solid $CardStrokeColorDefault !important;
         border-radius: 4px;
-        &:hover{
-            background-color: $ControlFillColorSecondary;
-        }
-        &:active{
-            background-color: $ControlFillColorTertiary;
-        }
     }
 }
 
+// Current inbox/notification-centre popout (container_uTMZTY shell).
+.theme-dark {
+    .container_uTMZTY {
+        background: rgba(32, 32, 32, 0.55) !important;
+        backdrop-filter: blur(24px) saturate(140%);
+        border: 1px solid $SurfaceStrokeColorDefault;
+        border-radius: 8px;
+        box-shadow: var(--elevation-stroke), var(--elevation-high);
+    }
+
+    .header_LSviKk,
+    .headerTabs_LSviKk,
+    .tabBar_LSviKk,
+    .container_FgrH4y {
+        background: transparent !important;
+    }
+
+    .header_LSviKk {
+        border-bottom: 1px solid $DividerStrokeColorDefault;
+    }
+
+    .icon_FgrH4y {
+        background: transparent !important;
+    }
+}

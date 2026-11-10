@@ -14,13 +14,6 @@
         .button_9OQtot{
             line-height: 16px;
         }
-        .text-md\/medium_cf4812{
-            @include TypeBody;
-        }
-    }
-    .subtext_yc3axZ .text-sm\/medium_cf4812{
-        @include TypeBody;
-        color: $TextFillColorPrimary !important; // Override inline
     }
     .voiceUsers_7FtMGA,
     [class*="voiceUsers_"] {

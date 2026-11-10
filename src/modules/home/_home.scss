@@ -50,17 +50,15 @@
     // app-frame / titlebar colour shows through.
     // Each exact hash is paired with a [class*] wildcard for update resilience.
     section[class*="headerBar__"],
-    section[class*="headerBar__"] [class*="container_ybUK7Z"],
-    section[class*="headerBar__"] [class*="tabs__"],
-    section[class*="headerBar__"] + [class*="tabs__"],
-    section[class*="headerBar__"] + .toolbar_ybUK7Z,
-    section[class*="headerBar__"] + [class*="toolbar__"],
-    > .shop_Mqg79R > div,
-    > [class*="shop__"] > div,
-    > .shop_Mqg79R > div > section[class*="headerBar__"],
-    > [class*="shop__"] > div > section[class*="headerBar__"],
-    .container_ZTJWQo,
-    [class*="container_ZTJWQo"] {
+section[class*="headerBar__"] [class*="container_ybUK7Z"],
+section[class*="headerBar__"] [class*="tabs__"],
+section[class*="headerBar__"] + [class*="tabs__"],
+section[class*="headerBar__"] + .toolbar_ybUK7Z,
+section[class*="headerBar__"] + [class*="toolbar__"],
+> [class*="shop__"] > div,
+> [class*="shop__"] > div > section[class*="headerBar__"],
+.container_ZTJWQo,
+[class*="container_ZTJWQo"]{
         border-top: 0 !important;
         border-bottom: 0 !important;
         box-shadow: none !important;
@@ -71,13 +69,10 @@
     // ── Mica content panels ───────────────────────────────────────────────
     // The actual body scrollers / wrappers below the header bar get the
     // semi-transparent mica LayerFillColorDefault colour.
-    > .shop_Mqg79R .shopViewWrapper_Mqg79R,
-    > .shop_Mqg79R .shopScroll__08415,
-    > .container_ZTJWQo > .scroller_jkJlMe,
     > [class*="shop__"] [class*="shopViewWrapper__"],
-    > [class*="shop__"] [class*="shopScroll__"],
-    > :is(.container_ZTJWQo, [class*="container_ZTJWQo"]) > [class*="scroller__"],
-    [class*="shopViewWrapper__"] {
+> [class*="shop__"] [class*="shopScroll__"],
+> :is(.container_ZTJWQo, [class*="container_ZTJWQo"]) > [class*="scroller__"],
+[class*="shopViewWrapper__"]{
         background-color: $LayerFillColorDefault !important;
         border-top-left-radius: 8px !important;
         overflow: hidden;
@@ -85,19 +80,17 @@
 
     // ── Pseudo-element cleanup ────────────────────────────────────────────
     section[class*="headerBar__"]::before,
-    section[class*="headerBar__"]::after,
-    section[class*="headerBar__"] + [class*="tabs__"]::before,
-    section[class*="headerBar__"] + [class*="tabs__"]::after,
-    > .shop_Mqg79R > div::before,
-    > .shop_Mqg79R > div::after,
-    > [class*="shop__"] > div::before,
-    > [class*="shop__"] > div::after,
-    [class*="shopViewWrapper__"]::before,
-    [class*="shopViewWrapper__"]::after,
-    .container_ZTJWQo::before,
-    .container_ZTJWQo::after,
-    [class*="container_ZTJWQo"]::before,
-    [class*="container_ZTJWQo"]::after {
+section[class*="headerBar__"]::after,
+section[class*="headerBar__"] + [class*="tabs__"]::before,
+section[class*="headerBar__"] + [class*="tabs__"]::after,
+> [class*="shop__"] > div::before,
+> [class*="shop__"] > div::after,
+[class*="shopViewWrapper__"]::before,
+[class*="shopViewWrapper__"]::after,
+.container_ZTJWQo::before,
+.container_ZTJWQo::after,
+[class*="container_ZTJWQo"]::before,
+[class*="container_ZTJWQo"]::after{
         display: none !important;
         content: none !important;
     }
@@ -113,7 +106,7 @@
     }
 
     // Remove the white/tinted card background on quest tile text containers.
-    // textContainer_gLR1C5 is scoped via its quest tile ancestor article so the
+    // The quest text container is scoped via its quest tile ancestor article so the
     // partial match cannot leak outside the Quests grid.
     article[class*="questTile_"] :is([class*="textContainer_"], [class*="rewardDescriptionContainer_"], [class*="container_clpvxq"]) {
         background-color: transparent !important;
@@ -199,13 +192,22 @@
         [class*="tabs__"] [class*="tab__"][aria-selected="true"],
         .container_fgRQ5j .tab_fgRQ5j.selected_fgRQ5j,
         [class*="container_fgRQ5j"] [class*="tab__"][aria-selected="true"] {
+            position: relative;
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
-            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+            box-shadow: none !important;
 
             &::before {
-                display: none !important;
-                content: none !important;
+                display: block !important;
+                content: "" !important;
+                width: 3px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $AccentLight1;
+                border-radius: 999px;
             }
         }
 
@@ -214,9 +216,23 @@
         [class*="tabs__"] [class*="tabWrapper__"].selected_6zZYhF,
         .container_fgRQ5j .tabWrapper_fgRQ5j.selected_6zZYhF,
         [class*="container_fgRQ5j"] [class*="tabWrapper__"].selected_6zZYhF {
+            position: relative;
             background-color: transparent !important;
             border-bottom: 0 !important;
-            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+            box-shadow: none !important;
+
+            &::before {
+                display: block !important;
+                content: "" !important;
+                width: 3px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $AccentLight1;
+                border-radius: 999px;
+            }
         }
     }
 }

@@ -296,6 +296,16 @@
 
 // Channel
 .theme-dark .menu_M3qk4j .item_M3qk4j{
+    &[id="channel-context-favorite-channel"]::before,
+    &[id="gdm-context-favorite-channel"]::before{
+        content: "\E734"; // FavoriteStar
+    }
+    &[id="channel-context-pin-channel"]::before{
+        content: "\E840"; // Pinned
+    }
+    &[id="channel-context-move-to"]::before{
+        content: "\E8DE"; // MoveToFolder
+    }
     &[id="channel-context-mark-channel-read"]::before{
         content: "\E166"; // Read
     }

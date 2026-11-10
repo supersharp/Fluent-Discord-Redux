@@ -33,6 +33,7 @@
 }
 
 @mixin TypeSubtitle{
+    font-family: var(--font-display);
     // Varient: Display, Semibold
     font-size: 20px;
     font-weight: 600;
@@ -40,6 +41,7 @@
 }
 
 @mixin TypeTitle{
+    font-family: var(--font-display);
     // Varient: Display, Semibold
     font-size: 28px;
     font-weight: 600;
@@ -47,6 +49,7 @@
 }
 
 @mixin TypeTitleLarge{
+    font-family: var(--font-display);
     // Varient: Display, Semibold
     font-size: 40px;
     font-weight: 600;
@@ -54,6 +57,7 @@
 }
 
 @mixin TypeDisplay{
+    font-family: var(--font-display);
     // Varient: Display, Semibold
     font-size: 68px;
     font-weight: 600;

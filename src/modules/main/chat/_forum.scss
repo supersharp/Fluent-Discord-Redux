@@ -9,26 +9,6 @@
     border-radius: 8px 0 0 0;
 
     // Threads
-    .mainCard_f369db{
-        background-color: $LayerFillColorAlt;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 8px;
-
-        &.container_aynOSy:active,
-        &.container_aynOSy:hover{
-            transform: none;
-            box-shadow: none;
-            border-color: $CardStrokeColorDefaultSolid;
-        }
-
-        .postTitleText_faa96b{
-            color: $TextFillColorPrimary !important; // Override inline
-            @include TypeBodyStrong;
-        }
-        .messageContent_2i8Bfm{
-            @include TypeBody;
-        }
-    }
 
     // No threads
     .container-2nXUah{

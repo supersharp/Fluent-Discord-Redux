@@ -44,5 +44,78 @@
             }
         }
     }
-}
 
+    // Search inputs built from Discord's current text-input component.
+    // The component draws one bordered box (wrapper_UcGqzv) and places a
+    // leading icon and a 32/40px input inside it. Style the wrapper so the
+    // icon and text share the same box, instead of styling the input smaller
+    // than the visible border.
+    :is(.container_VhFsFg, [class*="container_VhFsFg"]){
+        .wrapper_UcGqzv:is(.hasLeading_0PLWhS, [class*="hasLeading_"]),
+        [class*="wrapper_UcGqzv"]:is(.hasLeading_0PLWhS, [class*="hasLeading_"]){
+            position: relative;
+            box-sizing: border-box;
+            height: 100%;
+            padding: 0 !important;
+            background-color: $ControlFillColorDefault !important;
+            border: 1px solid $ControlStrokeColorDefault !important;
+            border-bottom-width: 2px !important;
+            border-radius: 4px !important;
+            box-shadow: none !important;
+            outline: none !important;
+
+            &:hover{
+                background-color: $ControlFillColorSecondary !important;
+                border-color: $ControlStrokeColorSecondary !important;
+            }
+            &:focus-within{
+                background-color: $ControlFillColorInputActiveBrush !important;
+                border-color: $ControlStrokeColorDefault !important;
+                border-bottom-color: $AccentBase !important;
+            }
+        }
+
+        .input_0PLWhS,
+        [class*="input_0PLWhS"]{
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 32px;
+            margin: 0 !important;
+            padding: 0 12px 0 36px !important;
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            color: $TextFillColorPrimary !important;
+
+            &::placeholder{
+                color: $TextFillColorSecondary !important;
+            }
+        }
+
+        .icon_0PLWhS,
+        [class*="icon_0PLWhS"]{
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            z-index: 1;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: $TextFillColorSecondary;
+
+            svg{
+                // Discord marks the decorative glyph hidden by default here.
+                // The theme supplies the visible magnifier, so force it back.
+                display: block !important;
+                width: 16px !important;
+                height: 16px !important;
+                color: currentColor;
+            }
+
+            path{
+                fill: currentColor !important;
+            }
+        }
+    }
+}

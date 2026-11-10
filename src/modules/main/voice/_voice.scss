@@ -48,58 +48,9 @@
     }
 
     // Inactive voice view (No one in voice)
-    // pulseGradient__11664 is a canvas element that renders the purple/blue
+    // The pulse gradient is a canvas element that renders the purple/blue
     // animated background gradient.  We hide it so the dark $SolidBackgroundFillColorBase
     // of callContainer_hbKzX7 (line above) shows through cleanly.
-    .container__5aa3a,
-    [class*="container__5aa3a"] {
-        background-color: transparent;
-
-        // Hide the animated purple gradient canvas
-        .pulseGradient__11664,
-        [class*="pulseGradient__"] {
-            display: none !important;
-        }
-
-        .channelName_hVh8FI,
-        [class*="channelName__"] {
-            @include TypeTitle;
-            color: $TextFillColorPrimary;
-        }
-
-        [data-text-variant="text-sm/normal"] {
-            @include TypeBody;
-            color: $TextFillColorSecondary !important;
-        }
-
-        .joinButton_hVh8FI,
-        [class*="joinButton__"] {
-            // overlay-primary_a22cb0 has black text for use over light/gradient
-            // backgrounds. On the dark mica background we restyle it to match
-            // the Fluent control appearance used elsewhere in the theme.
-            .button_F7qvhY,
-            [class*="button_"] {
-                @include TypeBodyStrong;
-                border-radius: 4px;
-                background-color: $ControlFillColorDefault !important;
-                border: 1px solid $ControlStrokeColorDefault !important;
-                color: $TextFillColorPrimary !important;
-
-                &:hover {
-                    background-color: $ControlFillColorSecondary !important;
-                }
-
-                &:active {
-                    background-color: $ControlFillColorTertiary !important;
-                }
-
-                // Ensure nested text nodes inherit the colour override
-                span, [data-text-variant] {
-                    color: $TextFillColorPrimary !important;
-                }
-            }
-        }
-    }
 
     // Voice controls (bottom control tray) are unthemed per user preference
     // to preserve Discord's native button layout, pill shapes, and animations.
@@ -121,12 +72,6 @@
             background-color: $LayerFillColorAlt;
         }
 
-        .overlayTitle__2f4f7 {
-            background-color: $ControlOnImageFillColorDefault;
-            backdrop-filter: blur(8px);
-            border-radius: 4px;
-            @include TypeCaption;
-        }
 
         // Avatar masks in voice
         .avatarStack_XpIUHy {

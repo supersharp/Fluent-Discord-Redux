@@ -1,8 +1,4 @@
 .theme-dark {
-    .discoverHeader_b992d4 {
-        @include TypeBodyStrong;
-        background: transparent !important;
-    }
 
     // Modern Discover layout stack (covers Apps / Servers / Quests views).
     .page_pog62O .container_aynOSy,
@@ -29,70 +25,14 @@
         display: none !important;
     }
 
-    .pageWrapper_4Qm5zV {
-        background-color: transparent;
-        border-top: 0;
-        border-left: 0;
-        border-radius: 8px 0 0 0;
-        --background-secondary: transparent !important;
-        --background-secondary-alt: transparent !important;
-        --background-tertiary: transparent !important;
-    }
 
-    .pageWrapper_4Qm5zV .scroller_jkJlMe,
-    .pageWrapper_4Qm5zV .contentSection_YXXVAo,
-    .pageWrapper_4Qm5zV .container_-6JdM0,
-    .pageWrapper_4Qm5zV .container_GQJi50,
-    .pageWrapper_4Qm5zV .header_GQJi50,
-    .pageWrapper_4Qm5zV .scroller__551b0 {
-        background-color: transparent;
-        background: transparent !important;
-    }
 
     // Cards
-    .pageWrapper_4Qm5zV .card_1U9V53 {
-        background-color: $LayerFillColorDefault;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 8px;
-
-        &:hover {
-            background-color: $LayerFillColorAlt;
-        }
-    }
 
     // Discover sidebar
-    .pageWrapper_4Qm5zV .sidebarList_pog62O,
-    .pageWrapper_4Qm5zV [class*="sidebarList_"] {
-        background: transparent !important;
-        border-right: 0 !important;
-        box-shadow: none !important;
-        --background-secondary: transparent !important;
-        --background-secondary-alt: transparent !important;
-        --background-tertiary: transparent !important;
-
-        .container_GQJi50,
-        .header_GQJi50,
-        .scroller__551b0,
-        .nav_GQJi50 {
-            background-color: transparent !important;
-        }
-    }
 
     // Hash-agnostic fallback for current/future Discover class rotations.
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] {
-        background: transparent !important;
-        border-right: 0 !important;
-        box-shadow: none !important;
-    }
 
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] > div,
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] > nav,
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] [class*="header"],
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] [class*="scroller"],
-    .pageWrapper_4Qm5zV > [class*="sidebarList"] [class*="nav"] {
-        background: transparent !important;
-        box-shadow: none !important;
-    }
 
     // Discover-specific sidebar fallback based on nav item structure.
     .sidebarList_pog62O:has([class*="navItem__"]),
@@ -116,137 +56,10 @@
     }
 
     // Nav
-    .pageWrapper_4Qm5zV .nav_GQJi50 {
-        padding: 0 8px;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
 
-        .navItem_GQJi50 {
-            width: 100%;
-            min-height: 32px;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            border-radius: 4px;
-            margin-right: 0;
-            margin-bottom: 2px;
-            padding: 0 8px;
-            position: relative;
-
-            .navItemIcon_GQJi50 {
-                color: $TextFillColorSecondary;
-            }
-
-            &.selected_GQJi50 {
-                background-color: $SubtleFillColorSecondary;
-
-                .navItemIcon_GQJi50 {
-                    color: $TextFillColorPrimary;
-                }
-
-                &::before {
-                    content: "";
-                    width: 3px;
-                    height: 16px;
-                    position: absolute;
-                    top: 10px;
-                    left: 0;
-                    background-color: $AccentBase;
-                    border-radius: 2px;
-                }
-            }
-
-            &:hover:not(.selected_GQJi50) {
-                background-color: $SubtleFillColorTertiary;
-            }
-        }
-    }
-
-    .pageWrapper_4Qm5zV .sidebar_pog62O {
-        .container_J1Adu_ {
-            height: 32px;
-            margin-bottom: 2px;
-            position: relative;
-
-            .itemInner_c72b37 {
-                height: 32px;
-                padding: 0 8px;
-            }
-
-            .avatar_J1Adu_ {
-                width: 16px;
-                height: 16px;
-            }
-
-            .name_J1Adu_ {
-                @include TypeBody;
-                color: $TextFillColorPrimary;
-            }
-
-            &.selected_J1Adu_ {
-                .itemInner_c72b37 {
-                    background-color: $SubtleFillColorSecondary;
-                }
-
-                &::before {
-                    content: "";
-                    width: 3px;
-                    height: 16px;
-                    position: absolute;
-                    top: 10px;
-                    left: 0;
-                    background-color: $AccentBase;
-                    border-radius: 2px;
-                }
-            }
-        }
-    }
 
     // Main
     // Search
-    .container_f69601 {
-        .searchBox__56feb {
-            background-color: transparent;
-            box-shadow: none;
-
-            &:focus,
-            &:focus-within {
-                box-shadow: none;
-            }
-
-            .searchBoxInput__56498 {
-                @include TypeBody;
-                color: $TextFillColorPrimary;
-
-                &::placeholder {
-                    @include TypeBody;
-                    color: $TextFillColorSecondary;
-                }
-            }
-
-            padding-right: 0;
-            border: 0;
-
-            .clearIcon__21453,
-            .searchIcon_f69601,
-            .searchIcon_AV6l5m {
-                width: 16px;
-                height: 16px;
-                position: absolute;
-                top: 8px;
-                right: 16px;
-
-                path {
-                    fill: #FFF;
-                }
-            }
-
-            .cta_EaQw3u {
-                display: none;
-            }
-        }
-    }
 
     // Search results
     // Header
@@ -257,27 +70,9 @@
 
 
     // Results
-    .categories_Mqg79R {
-        .categoryPill_f69601 {
-            .categoryLabel-2m4AT- {
-                @include TypeBody;
-                color: $TextFillColorSecondary;
-            }
-
-            &.selected_f69601 {
-                background-color: $AccentBase;
-
-                .categoryLabel__81b99 {
-                    color: $TextFillColorPrimary;
-                }
-            }
-        }
-    }
 
     // Modern Discover Page Overrides
-    .container_-6JdM0,
-    .contentSection_YXXVAo,
-    .scroller_jkJlMe {
+    .container_-6JdM0{
         background-color: transparent !important;
     }
 
@@ -371,14 +166,6 @@
     .page_pog62O {
 
         // Friends-style rounded corner belongs to the content pane, not the toolbar.
-        .outerContainer_GAXaiU .scroller_jkJlMe,
-        .container_aynOSy .scroller_jkJlMe,
-        .container_ZTJWQo .scroller_jkJlMe,
-        .shopViewWrapper_Mqg79R,
-        .shopScroll__08415 {
-            border-top-left-radius: 8px !important;
-            overflow: hidden;
-        }
 
         // Apps/Servers: opaque toolbar matching Quests tone.
         // Uses direct solid color — blend-mode approaches render as transparent.
@@ -463,10 +250,24 @@
 
         .headerBar_Y0eJLL .tabs_uP9HND .tab_uP9HND.item_6zZYhF[aria-selected="true"],
         .headerBar_Y0eJLL .tabs_uP9HND .tab_uP9HND.item_6zZYhF.selected_6zZYhF {
+            position: relative;
             background-color: transparent !important;
             color: $TextFillColorPrimary !important;
             border-bottom: 0 !important;
-            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
+            box-shadow: none !important;
+
+            &::before {
+                display: block !important;
+                content: "" !important;
+                width: 3px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $AccentLight1;
+                border-radius: 999px;
+            }
 
             &::after {
                 display: none !important;
@@ -490,6 +291,51 @@
         background: #202020 !important;
         background-image: none !important;
         background-blend-mode: normal !important;
+        border: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+// Current Discover page shell (2026 classes)
+.theme-dark {
+    .container_GQJi50 {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    .container_I4BhVZ,
+    .container_67Xl1N,
+    .scroller_jkJlMe,
+    .contentSection_YXXVAo,
+    .content_YXXVAo {
+        background: transparent !important;
+    }
+
+    .card_1U9V53.card_BTjcfU {
+        background-color: $CardBackgroundFillColorDefault;
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: 8px;
+    }
+}
+
+// The Discover header/nav is a solid #202020 bar that does not participate in
+// the Mica layer. Make it transparent and remove Discord's separators.
+.theme-dark {
+    .headerBar_Y0eJLL,
+    [class*="headerBar_Y0eJLL"] {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        &::before,
+        &::after {
+            display: none !important;
+        }
+    }
+
+    .tabs_uP9HND,
+    [class*="tabs_uP9HND"] {
+        background: transparent !important;
         border: 0 !important;
         box-shadow: none !important;
     }

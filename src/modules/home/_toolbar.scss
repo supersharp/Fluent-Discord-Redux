@@ -28,15 +28,19 @@
             }
             &.selected_6zZYhF{
                 background-color: transparent;
+                box-shadow: none !important;
+
+                // WinUI NavigationView: leading accent bar only.
                 &::before{
                     content: "";
                     position: absolute;
                     left: 0;
-                    width: 100%;
-                    height: 3px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 3px;
+                    height: 16px;
                     background-color: $AccentLight1;
-                    border-radius: 2px;
-                    bottom: 0;
+                    border-radius: 999px;
                 }
             }
             // Add friend button

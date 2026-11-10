@@ -5,347 +5,6 @@
 // 3. Search bar rendered incorrectly
 
 .theme-dark {
-    .shop_Mqg79R {
-        background-color: transparent !important; // Override inline
-        border-top: 0 !important;
-        box-shadow: none !important;
-        outline: 0 !important;
-
-        > div {
-            position: relative;
-        }
-
-        // Final seam mask removed: header bar is now transparent so no
-        // colour boundary exists between it and the dark app-frame background.
-
-        // Each exact hashed class is paired with a wildcard fallback.
-        .headerBar_ViLURN,
-        [class*="headerBar__"] {
-            overflow: visible;
-            background: transparent !important; // Override inline; header sits flush with dark titlebar
-            border: 0 !important;
-            box-shadow: none !important;
-            filter: none !important;
-            backdrop-filter: none !important;
-            -webkit-backdrop-filter: none !important;
-            mask: none !important;
-            -webkit-mask: none !important;
-            outline: 0 !important;
-
-            .upperContainer_ybUK7Z,
-            [class*="upperContainer__"],
-            .children_ybUK7Z,
-            [class*="children__"] {
-                overflow: visible;
-                border: 0 !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                filter: none !important;
-                backdrop-filter: none !important;
-                -webkit-backdrop-filter: none !important;
-                mask: none !important;
-                -webkit-mask: none !important;
-                outline: 0 !important;
-            }
-
-            // Shop tabs & navigation menu container stack
-            .container_uP9HND,
-            [class*="container_uP9HND"],
-            .measurements_uP9HND,
-            [class*="measurements__"],
-            .tabs_uP9HND,
-            [class*="tabs__"],
-            .tab_uP9HND,
-            [class*="tab__"],
-            .nav_C10mff,
-            [class*="nav_C10mff"],
-            .navigationMenu_ViLURN,
-            [class*="navigationMenu__"],
-            .navigationMenuItemsContainer_C10mff,
-            [class*="navigationMenuItemsContainer__"],
-            .navigationMenuItemsMeasurementContainer_C10mff,
-            [class*="navigationMenuItemsMeasurementContainer__"],
-            .navigationMenuItemContainer_C10mff,
-            [class*="navigationMenuItemContainer__"] {
-                border: 0 !important;
-                box-shadow: none !important;
-                background-color: transparent !important;
-
-                &::before,
-                &::after {
-                    display: none !important;
-                    content: none !important;
-                }
-            }
-
-            .toolbar_ybUK7Z,
-            [class*="toolbar__"] {
-                overflow: visible;
-
-                // Search bar - uses new Mana component input classes
-                .searchBar_AV6l5m,
-                [class*="searchBar__"] {
-                    overflow: visible;
-
-                    > div[role="button"] {
-                        width: auto;
-                        height: auto;
-                        position: relative;
-
-                        > svg {
-                            position: static !important;
-                            top: auto;
-                            left: auto;
-                            width: auto;
-                        }
-                    }
-
-                    // Compact width fallback
-                    [aria-label*="Search" i] {
-                        width: auto !important;
-                        min-width: 32px;
-                        height: 32px !important;
-                        position: relative;
-
-                        > svg {
-                            position: static !important;
-                            top: auto !important;
-                            left: auto !important;
-                            width: 16px;
-                            height: 16px;
-                        }
-                    }
-
-                    .container_0PLWhS,
-                    .container_0PLWhS,
-                    [class*="container_0PLWhS"],
-                    [class*="container_0PLWhS"] {
-                        background-color: $ControlFillColorDefault;
-                        border: 1px solid $ControlStrokeColorDefault;
-                        border-radius: 4px;
-
-                        .icon_0PLWhS,
-                        .icon_0PLWhS,
-                        [class*="icon_0PLWhS"],
-                        [class*="icon_0PLWhS"] {
-                            svg {
-                                color: $TextFillColorSecondary;
-                            }
-                        }
-
-                        .input_0PLWhS,
-                        .input_0PLWhS,
-                        [class*="input_0PLWhS"],
-                        [class*="input_0PLWhS"] {
-                            @include TypeBody;
-                            color: $TextFillColorPrimary;
-                            background-color: transparent;
-
-                            &::placeholder {
-                                color: $TextFillColorSecondary;
-                            }
-                        }
-                    }
-                }
-
-                // Wishlist button - the heart SVG icon is invisible
-                .wishlistButton_ViLURN,
-                [class*="wishlistButton__"] {
-                    width: 32px !important;
-                    min-width: 32px !important;
-                    height: 32px !important;
-                    padding: 0 !important;
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    flex: 0 0 32px;
-                    position: relative;
-
-                    svg {
-                        position: static !important;
-                        top: auto !important;
-                        left: auto !important;
-                        width: 16px;
-                        height: 16px;
-                        display: block;
-                        color: $TextFillColorSecondary;
-                    }
-
-                    &:hover svg {
-                        color: $TextFillColorPrimary;
-                    }
-                }
-            }
-        }
-
-        // Hard boundary fix for header + content seam
-        > div > section[class*="headerBar__"] {
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            margin-bottom: -2px !important;
-            padding-bottom: 2px !important;
-            position: relative;
-            z-index: 2;
-        }
-
-        > .shopViewWrapper_Mqg79R,
-        > [class*="shopViewWrapper__"] {
-            margin-top: -2px !important;
-            padding-top: 2px !important;
-            border-top: 0 !important;
-            box-shadow: none !important;
-            filter: none !important;
-            backdrop-filter: none !important;
-            -webkit-backdrop-filter: none !important;
-            mask: none !important;
-            -webkit-mask: none !important;
-            outline: 0 !important;
-            position: relative;
-            z-index: 1;
-            background-color: $LayerFillColorDefault !important;
-
-            .shopScroll__08415,
-            [class*="shopScroll__"] {
-                background-color: transparent !important;
-            }
-            .shop_XBXDcd,
-            [class*="shop__"]:not(.shop_Mqg79R):not([class*="shop_Mqg79R"]) {
-                background-color: transparent !important;
-            }
-        }
-
-        > div > section[class*="headerBar__"] + .shopViewWrapper_Mqg79R,
-        > div > section[class*="headerBar__"] + [class*="shopViewWrapper__"] {
-            border-top: 0 !important;
-            box-shadow: none !important;
-        }
-
-        // Shop content area seam fixes
-        .tabs_uP9HND.top_6zZYhF,
-        .shopViewWrapper_Mqg79R,
-        .shopScroll__08415,
-        .shop_XBXDcd,
-        .mainContent__08415,
-        [class*="shopViewWrapper__"],
-        [class*="shopScroll__"],
-        [class*="shop__"],
-        [class*="mainContent__"],
-        [class*="blockContainer__"],
-        [class*="feedContent__"],
-        [class*="heroBlock__"],
-        [class*="banner__"] {
-            border-top: 0 !important;
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            background-image: none !important;
-
-            &::before,
-            &::after {
-                display: none !important;
-                content: none !important;
-            }
-        }
-
-        // Shop tabs & navigation menu styling
-        .tabs_uP9HND .tab_uP9HND,
-        [class*="tabs__"] [class*="tab__"],
-        .tabs_uP9HND .item_6zZYhF,
-        [class*="tabs__"] .item_6zZYhF,
-        .navigationMenuButton_C10mff,
-        [class*="navigationMenuButton__"],
-        .navigationMenuItem_C10mff,
-        [class*="navigationMenuItem__"] {
-            height: 36px;
-            margin: 0 0 0 8px;
-            border-radius: 0;
-            position: relative;
-            border-bottom: 0 !important;
-            box-shadow: none !important;
-            color: $TextFillColorPrimary !important;
-            @include TypeBody;
-            font-feature-settings: 'rclt' 0 !important;
-            font-size: 14px !important;
-            font-style: normal !important;
-            font-weight: 400 !important;
-            line-height: 20px !important;
-
-            &:hover {
-                background-color: transparent !important;
-                color: $TextFillColorSecondary !important;
-            }
-
-            // Caret in dropdown items
-            .caret_C10mff,
-            [class*="caret__"] {
-                color: $TextFillColorSecondary;
-            }
-
-            // Nested text variant nodes
-            [class*="text-"],
-            [data-text-variant] {
-                font-feature-settings: 'rclt' 0 !important;
-                font-size: 14px !important;
-                font-style: normal !important;
-                font-weight: 400 !important;
-                line-height: 20px !important;
-            }
-        }
-
-        .tabs_uP9HND .tab_uP9HND[aria-selected="true"],
-        [class*="tabs__"] [class*="tab__"][aria-selected="true"],
-        .tabs_uP9HND .tab_uP9HND.selected_uP9HND,
-        [class*="tabs__"] [class*="tab__"][class*="selected__"],
-        .tabs_uP9HND .item_6zZYhF.selected_6zZYhF,
-        [class*="tabs__"] .item_6zZYhF.selected_6zZYhF,
-        .navigationMenuButton_C10mff.selected_C10mff,
-        [class*="navigationMenuButton__"][class*="selected__"],
-        .navigationMenuButton_C10mff[aria-current="page"],
-        [class*="navigationMenuButton__"][aria-current="page"],
-        .navigationMenuButton_C10mff:has([aria-current="page"]),
-        [class*="navigationMenuButton__"]:has([aria-current="page"]),
-        .navigationMenuButton_C10mff:has([class*="selected__"]),
-        [class*="navigationMenuButton__"]:has([class*="selected__"]),
-        .navigationMenuItemContainer_C10mff > .navigationMenuItem_C10mff.selected_C10mff,
-        [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][class*="selected__"],
-        .navigationMenuItemContainer_C10mff > .navigationMenuItem_C10mff[aria-current="page"],
-        [class*="navigationMenuItemContainer__"] > [class*="navigationMenuItem__"][aria-current="page"] {
-            background-color: transparent !important;
-            color: $TextFillColorPrimary !important;
-            box-shadow: inset 0 -3px 0 $AccentLight1 !important;
-        }
-
-        // Never double-underline inner elements inside compound menu groups (e.g. Browse dropdown)
-        .navigationMenuItemGroup_C10mff [class*="navigationMenuItem__"],
-        [class*="navigationMenuItemGroup__"] [class*="navigationMenuItem__"],
-        .navigationMenuButton_C10mff [class*="navigationMenuItem__"],
-        [class*="navigationMenuButton__"] [class*="navigationMenuItem__"],
-        .navigationMenuCaret_C10mff,
-        [class*="navigationMenuCaret__"] {
-            box-shadow: none !important;
-        }
-
-        // Product card badges (e.g. "NEW" badge on shop items)
-        .productCardBadge_Ruy7qb,
-        [class*="productCardBadge_"],
-        .badge_Fy2P0m[class*="productCardBadge_"],
-        .textBadge_JPK15v[class*="productCardBadge_"],
-        [class*="textBadge__"][class*="productCardBadge_"] {
-            background-color: $AccentLight1 !important;
-            color: #FFFFFF !important;
-            border-radius: 4px;
-            font-weight: 600;
-
-            svg,
-            path {
-                fill: #FFFFFF !important;
-                color: #FFFFFF !important;
-            }
-
-            * {
-                color: #FFFFFF !important;
-            }
-        }
-    }
 
     // Orb balance pill - GLOBAL fix (applies to Shop, Quests, etc.)
     .toolbar_ybUK7Z,
@@ -372,11 +31,6 @@
             }
         }
 
-        .container_CHR0Z4,
-        [class*="container_CHR0Z4"] {
-            overflow: visible;
-            flex-shrink: 0;
-        }
         // NOTE: [class*="clickable_"] intentionally omitted — "clickable_" is a
         // common stem shared with chat toolbar buttons (.clickable_ybUK7Z) and
         // adding a wildcard overrides their width:60px layout.  The exact class
@@ -396,6 +50,25 @@
         .balanceCounterText_yIKdvW,
         [class*="balanceCounterText__"] {
             overflow: visible;
+        }
+    }
+}
+
+// Wishlist heart sits absolutely inside its 32px control in Discord's DOM.
+// Centre it with the button's flexbox instead of Discord's offset.
+.theme-dark {
+    .wishlistButton_ViLURN,
+    [class*="wishlistButton_"] {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        svg {
+            position: static !important;
+            width: 20px !important;
+            height: 20px !important;
+            margin: 0 !important;
+            display: block !important;
         }
     }
 }

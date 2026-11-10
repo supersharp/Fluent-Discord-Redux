@@ -113,26 +113,3 @@
         opacity: 0;
     }
 }
-
-.theme-dark .messageAttachment__5dae1{
-    .wrapperAudio_FJ99sr{
-        background-color: $CardBackgroundFillColorDefault;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 8px;
-    }
-
-    .metadataContent_FJ99sr{
-        .metadataDownload_FJ99sr{
-            @include TypeBody;
-        }
-        .metadataSize_FJ99sr{
-            color: $TextFillColorTertiary;
-            font-weight: normal;
-            opacity: 1;
-        }
-    }
-    // Remove icon
-    .audioMetadata_FJ99sr::before{
-        display: none;
-    }
-}

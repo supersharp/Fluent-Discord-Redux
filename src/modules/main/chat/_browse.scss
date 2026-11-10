@@ -39,9 +39,6 @@
     }
 
     // Browse channels
-    .pageBody__41ed7 {
-        background-color: transparent;
-    }
 
     .channelRow_MU-f9x {
         background-color: $CardBackgroundFillColorDefault;
@@ -49,30 +46,13 @@
         border-style: solid;
         border-color: $CardStrokeColorDefault;
 
-        &.firstChannel_e4503a {
-            border-radius: 4px 4px 0 0;
-        }
 
-        &.lastChannel_e4503a {
-            border-radius: 0 0 4px 4px;
-        }
     }
 
-    .separator_e4503a {
-        display: none;
-    }
 
     // Fix for channel checkboxes not displaying
-    .channelActions_e4503a .checkbox_8b5Lkq {
-        display: block;
-    }
 
     // Category row has some issues
-    .categoryRow_e4503a {
-        .checkbox_8b5Lkq {
-            display: block;
-        }
-    }
 }
 
 // ==========================================================================
@@ -141,8 +121,7 @@
     }
 
     // Member row cards — Fluent contiguous list treatment matching Browse Channels.
-    .memberRowContainer__71c22,
-    [class*="memberRowContainer__"] {
+    [class*="memberRowContainer__"]{
         background-color: $CardBackgroundFillColorDefault !important;
         border-width: 1px 1px 0 1px;
         border-style: solid;
@@ -176,8 +155,7 @@
 // pageButton_0MrDiE = shared base class on all pagination buttons
 // Partial-match on __c15210 suffix; scoped via .pagination_cUz8fW ancestor
 // which is the pagination container unique to this component.
-.theme-dark [class*="pagination_cUz8fW"],
-.theme-dark [class*="paginationContainer_CrBxko"] {
+.theme-dark [class*="pagination_cUz8fW"]{
 
     // All page number buttons — base state
     [class*="roundButton_"][class*="pageButton_"] {

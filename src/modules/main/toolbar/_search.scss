@@ -2,7 +2,7 @@
 .theme-light,
 .theme-midnight,
 .theme-darker {
-    :is(.toolbar_ybUK7Z, [class*="toolbar_"], [class*="toolbar__"]) [class*="search__"]:not([class*="searchBar_"]) {
+    :is(.toolbar_ybUK7Z, [class*="toolbar_"], [class*="toolbar__"]) [class*="search_"]:not([class*="searchBar_"]) {
         margin: 0 4px 0 0;
         width: 60px !important;
         max-width: 60px !important;
@@ -12,6 +12,8 @@
             max-width $AnimationFastInvokeMedium,
             flex $AnimationFastInvokeMedium;
 
+        &[class*="focused_"],
+        &[class*="open_"],
         &:has([class*="search_"][class*="focused_"]),
         &:has([class*="search_"][class*="open_"]),
         &:has([class*="popoutOpen_"]),
@@ -25,7 +27,7 @@
                 flex $AnimationSoftDismiss;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) {
+        [class*="search_"]:not([class*="searchBar_"]) {
             position: relative !important;
             width: 100% !important;
             min-width: 0 !important;
@@ -65,7 +67,7 @@
         }
 
         // Icon when not active
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]):not([class*="focused_"]):not([class*="open_"])::before {
+        [class*="search_"]:not([class*="searchBar_"]):not([class*="focused_"]):not([class*="open_"])::before {
             content: "\e721"; // Search
             width: 60px;
             font-size: 16px;
@@ -78,9 +80,9 @@
             z-index: 1;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]).popout-open [class*="searchBar_"] {
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="searchBar_"],
+        [class*="search_"]:not([class*="searchBar_"]).popout-open [class*="searchBar_"] {
             width: 100% !important;
             height: 32px;
             margin: 0;
@@ -93,14 +95,14 @@
             transition: width $AnimationSoftDismiss;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] {
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"] {
             background-color: $ControlFillColorInputActiveBrush;
             border-color: $ControlStrokeColorDefault;
             border-bottom-color: $AccentBase;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="iconLayout_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="iconLayout_"] {
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="iconLayout_"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="iconLayout_"] {
             position: relative;
             top: unset;
             right: unset;
@@ -114,27 +116,27 @@
             flex-shrink: 0;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"] [class*="editor_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] [class*="editor_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"] [data-slate-editor="true"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] [data-slate-editor="true"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="open_"] [class*="searchBar_"] .DraftEditor-root,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"])[class*="focused_"] [class*="searchBar_"] .DraftEditor-root {
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="searchBar_"] [class*="editor_"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"] [class*="editor_"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="searchBar_"] [data-slate-editor="true"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"] [data-slate-editor="true"],
+        [class*="search_"]:not([class*="searchBar_"])[class*="open_"] [class*="searchBar_"] .DraftEditor-root,
+        [class*="search_"]:not([class*="searchBar_"])[class*="focused_"] [class*="searchBar_"] .DraftEditor-root {
             display: block !important;
             opacity: 1 !important;
             cursor: text;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) .DraftEditor-root .DraftEditor-editorContainer,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="editor_"] {
+        [class*="search_"]:not([class*="searchBar_"]) .DraftEditor-root .DraftEditor-editorContainer,
+        [class*="search_"]:not([class*="searchBar_"]) [class*="editor_"] {
             height: 26px;
         }
 
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] .DraftEditor-root,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] [class*="editor_"],
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] [data-slate-editor="true"] {
+        [class*="search_"]:not([class*="searchBar_"]) [class*="searchBar_"] .DraftEditor-root,
+        [class*="search_"]:not([class*="searchBar_"]) [class*="searchBar_"] [class*="editor_"],
+        [class*="search_"]:not([class*="searchBar_"]) [class*="searchBar_"] [data-slate-editor="true"] {
             width: 100% !important;
             min-width: 0 !important;
             color: $TextFillColorPrimary;
@@ -153,8 +155,8 @@
         }
 
         // Add margin to textarea when open/focused so text doesn't appear over the search/clear icon
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
-        [class*="search_"]:not([class*="searchBar_"]):not([class*="search__"]) [class*="searchBar_"] [data-slate-placeholder="true"] {
+        [class*="search_"]:not([class*="searchBar_"]) [class*="searchBar_"] .public-DraftEditorPlaceholder-root,
+        [class*="search_"]:not([class*="searchBar_"]) [class*="searchBar_"] [data-slate-placeholder="true"] {
             color: $TextFillColorSecondary;
             @include TypeBody;
         }

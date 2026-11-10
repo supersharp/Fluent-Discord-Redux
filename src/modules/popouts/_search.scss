@@ -1,13 +1,11 @@
-.theme-dark .container__55c99,
-.theme-dark .container_cbVzxY {
+.theme-dark .container_cbVzxY{
     background: $MicaBackgroundFillColorBase;
     backdrop-filter: blur(16px);
     border: 1px solid $SurfaceStrokeColorDefault;
     border-radius: 8px;
     padding: 8px 0;
 
-    .header__56fec,
-    .groupHeader_lm2_KW {
+    .groupHeader_lm2_KW{
         @include TypeBodyStrong;
         color: $TextFillColorPrimary;
         padding: 8px 16px;
@@ -28,23 +26,16 @@
         }
 
         .filter_LSN_s0,
-        .answer__56fec,
-        .displayedNick__56fec,
-        .displayUsername__56fec,
-        .nonText_lm2_KW,
-        strong{
+.nonText_lm2_KW,
+strong{
             @include TypeBody;
         }
 
         .filter_LSN_s0,
-        .displayedNick__56fec,
-        .text-sm\/medium_cf4812,
-        strong{
+strong{
             color: $TextFillColorPrimary;
             @include TypeBody;
         }
-        .answer__56fec,
-        .displayUsername__56fec,
         .filterSublabelTextContainer_lm2_KW{
             color: $TextFillColorSecondary;
             @include TypeBody;
@@ -63,24 +54,8 @@
             height: 18px;
         }
     }
-    .resultsGroup__56fec .resultsGroup__56fec,
-    .resultsGroup__56fec .searchLearnMore__56fec{
-        top: 16px;
-    }
 
     // "Search for..." header
-    .queryContainer__55c99{
-        background-color: $CardStrokeColorDefault;
-        queryText__55c99{
-            @include TypeBody;
-            color: $TextFillColorPrimary;
-            text-transform: none;
-            strong::before,
-            strong::after{
-                content: "\"";
-            }
-        }
-    }
 
 
     // Calendar

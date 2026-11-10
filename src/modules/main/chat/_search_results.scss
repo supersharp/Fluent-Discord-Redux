@@ -41,14 +41,6 @@
     }
 
     // Result
-    .searchResult__80bf8{
-        background-color: $CardBackgroundFillColorDefault;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 4px;
-        &:hover{
-            background-color: $CardBackgroundFillColorSecondary;
-        }
-    }
     // Jump button
     :is(.button_iSgWOH, .button_iSgWOH){
         padding: 4px 8px;

@@ -22,13 +22,18 @@
             }
             &.selected_6zZYhF{
                 border: 0;
+                box-shadow: none !important;
+
+                // WinUI NavigationView style: a single accent bar on the
+                // leading edge, never a second underline along the bottom.
                 &::before{
                     content: "";
-                    width: 16px;
-                    height: 3px;
+                    width: 3px;
+                    height: 16px;
                     position: absolute;
-                    bottom: 0;
-                    left: calc(50% - 8px);
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
                     background-color: $AccentTextFillColorPrimary;
                     border-radius: 999px;
                 }
@@ -74,30 +79,37 @@
     }
 
     // Content & Social vertical tabs (new hashes): force Fluent selected highlight
-    .tabBar_eeedb9.vertical_eeedb9{
-        .tab_eeedb9.vertical_eeedb9.item_6zZYhF{
-            color: $TextFillColorPrimary;
-            position: relative;
-            border-left: 0 !important;
-            &:hover{
-                color: $TextFillColorSecondary;
-            }
+}
 
-            &.selected_eeedb9,
-            &.selected_6zZYhF,
-            &.brand_6zZYhF.selected_6zZYhF{
-                color: var(--fluent-selected-ring-color) !important;
-                background-color: $SubtleFillColorTertiary;
-                border-left: 0 !important;
-                box-shadow: inset 3px 0 0 var(--fluent-selected-ring-color);
+// Discord's own selected-tab underline is a box-shadow. When a tab bar is
+// handled above, keep only the leading accent bar.
+.theme-dark [class*="tabBar_"] [class*="item_6zZYhF"][class*="selected_6zZYhF"] {
+    box-shadow: none !important;
+}
 
-                &::before,
-                &::after{
-                    display: none !important;
-                    content: none !important;
-                }
+// Shop/Orbs navigation menu (2026) uses a selected border-bottom.
+.theme-dark .navigationMenuItem_C10mff.selected_C10mff,
+.theme-dark [class*="navigationMenuItem_C10mff"][class*="selected_C10mff"] {
+    position: relative;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
 
-            }
-        }
+    &::before {
+        content: "" !important;
+        display: block !important;
+        width: 3px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $AccentLight1;
+        border-radius: 999px;
     }
+}
+
+// Shop navigation tabs: keep the leading accent bar clear of the label.
+.theme-dark .navigationMenuButton_C10mff {
+    box-sizing: border-box;
+    padding-inline-start: 10px !important;
 }

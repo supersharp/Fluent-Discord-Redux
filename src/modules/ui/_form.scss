@@ -417,3 +417,11 @@
     }
 }
 
+
+// Native radio/checkbox controls used by the current settings forms.
+.theme-dark {
+    input[type="radio"],
+    input[type="checkbox"] {
+        accent-color: $AccentFillColorDefault;
+    }
+}

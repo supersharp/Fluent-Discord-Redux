@@ -18,15 +18,4 @@
     }
 
     // No results
-    .empty__97e86{
-        &::before{
-            content: "\E25B";
-            @include FontIconFluent;
-            font-size: 32px;
-            color: $TextFillColorDisabled;
-        }
-        h4,div{
-            display: none;
-        }
-    }
 }

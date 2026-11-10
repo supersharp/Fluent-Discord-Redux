@@ -16,9 +16,7 @@
     color: $TextFillColorSecondary;
 
     // Sizing
-    &.inputDefault__0f084,
-    &.inputDefault__75098,
-    &[class*="inputDefault_"] {
+    &[class*="inputDefault_"]{
         padding: 0 12px;
         // height: 32px;
     }
@@ -36,7 +34,7 @@
         color: $TextFillColorSecondary;
     }
 
-    &.textarea__9daae, // eg. user popout note textarea
+    // eg. user popout note textarea
     &.textArea_bGZ7Vb{ // eg. channel MOTD textare
         padding: 4px 12px;
     }
@@ -228,7 +226,6 @@
             }
         }
 
-        .buttonInner__878f4,
         .icon_hPmUPu{
             width: 16px;
             height: 16px;

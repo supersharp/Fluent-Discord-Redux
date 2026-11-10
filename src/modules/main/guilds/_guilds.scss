@@ -211,6 +211,19 @@
         border-radius: 4px;
     }
 
+    // Discord renders closed folder icons with currentColor set to blurple.
+    // Use the theme accent so folders match the rest of Fluent.
+    .folderButton_RTMSuZ,
+    .folderIcon_RTMSuZ,
+    [class*="folderButton_"] {
+        color: $AccentFillColorDefault !important;
+
+        svg [fill="currentColor"],
+        svg path {
+            fill: currentColor !important;
+        }
+    }
+
     // Open folder
     .folderIcon_RTMSuZ {
         &::after {
@@ -277,13 +290,6 @@
     }
 
     // Remove the background behind folder icon when hovering
-    .hiddenVisually_FX8kaC,
-    [class*="hiddenVisually_"] {
-        &.hover_AFi54G .expandedFolderIconWrapper__48112 {
-            background-color: transparent;
-        }
-    }
-
     // Unread notification bars
     .unreadMentionsIndicatorBottom_5dqHTG,
     .unreadMentionsIndicatorTop_5dqHTG {
