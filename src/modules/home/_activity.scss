@@ -109,3 +109,10 @@
         backdrop-filter: blur(24px) saturate(140%);
     }
 }
+
+// Active Now nameplate overlay: remove the decorative highlight square while
+// keeping the username readable.
+.theme-dark .nowPlayingColumn_zrUwGA [class*="nameplateItemOverlay_"],
+.theme-dark [class*="nowPlayingColumn"] [class*="nameplateItemOverlay_"] {
+    display: none !important;
+}

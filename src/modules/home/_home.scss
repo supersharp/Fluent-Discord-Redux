@@ -236,3 +236,9 @@ section[class*="headerBar__"] + [class*="tabs__"]::after,
         }
     }
 }
+
+// Quests/Shop Orbs upsell hero. It is a full-width promo, not content.
+.theme-dark .heroWrapper_ZTJWQo:has(.heroGradientOrbs_ZTJWQo),
+.theme-dark .heroWrapper_ZTJWQo:has([class*="heroGradientOrbs_"]) {
+    display: none !important;
+}

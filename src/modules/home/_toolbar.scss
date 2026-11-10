@@ -27,8 +27,12 @@
                 color: $TextFillColorSecondary;
             }
             &.selected_6zZYhF{
-                background-color: transparent;
+                background-color: transparent !important;
                 box-shadow: none !important;
+
+                &:hover{
+                    background-color: transparent !important;
+                }
 
                 // WinUI NavigationView: leading accent bar only.
                 &::before{

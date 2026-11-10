@@ -72,3 +72,9 @@
         }
     }
 }
+
+// Hide the promotional Shop hero/upsell banner.
+.theme-dark .heroBlock_XBXDcd,
+.theme-dark [class*="heroBlock_XBXDcd"] {
+    display: none !important;
+}

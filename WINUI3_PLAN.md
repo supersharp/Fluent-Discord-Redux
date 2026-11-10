@@ -1,6 +1,6 @@
 # WinUI 3 Dark Emulation Plan — Fluent Discord Redux
 
-Status: active · Target: Discord Desktop 1.0.9267 / Chromium 152 · Theme: 0.0.30
+Status: active · Target: Discord Desktop 1.0.9267 / Chromium 152 · Theme: 0.0.31
 
 This plan is the source of truth for bringing the theme in line with the
 **Windows 11 / WinUI 3 Dark** visual language. It covers every major surface in
