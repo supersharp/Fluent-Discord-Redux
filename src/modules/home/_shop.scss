@@ -78,3 +78,19 @@
 .theme-dark [class*="heroBlock_XBXDcd"] {
     display: none !important;
 }
+
+// Shop page shell is painted pure black by Discord. Let the shared Mica
+// background show through, including the navigation toolbar.
+.theme-dark .shop_Mqg79R,
+.theme-dark [class*="shop_Mqg79R"],
+.theme-dark .shopContainer_XBXDcd,
+.theme-dark [class*="shopContainer_XBXDcd"] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+// Discord draws a 1px separator above the Shop navigation bar.
+.theme-dark .shop_Mqg79R,
+.theme-dark [class*="shop_Mqg79R"] {
+    border-top: 0 !important;
+}

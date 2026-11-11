@@ -340,3 +340,9 @@
         box-shadow: none !important;
     }
 }
+
+// Discover Apps/Servers views draw a 1px separator above the page header.
+.theme-dark .container_I4BhVZ,
+.theme-dark [class*="container_I4BhVZ"] {
+    border-top: 0 !important;
+}
