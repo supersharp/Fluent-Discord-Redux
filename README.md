@@ -3,18 +3,12 @@ A Windows 11 theme for Discord - Dark Mode must be on, light mode is not support
 The code is written with the help of AI.
 
 Changes from the original fork:
-* Fixed orbs balance 
-* Fixed search bar in all the views (Shop, Quests, Channel view)
-* Fixed broken theme for settings page
-* Inbox overflow fix - Fixed inbox overflowing the viewport
-* Black outline removal - Removed the black outline on server folders
-* Fixed broken alignments for server icons in the left dock
-* The autoupdate theme now points to this GitHub Repo
+
+* The auto-update theme now points to this GitHub Repo
 * GitHub Actions support for builds
-* Many more changes.
-* Updated elements to match the newest Discord UI (October 2026)
 * Updated CSS module classes for the Discord Chromium 152 client update (November 2026)
 * Rebuilt User, Server and Channel Settings for the current Discord settings DOM
+* Many more changes.
 
 
 ## Download
