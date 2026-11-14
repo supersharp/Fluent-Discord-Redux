@@ -138,13 +138,26 @@
     }
 }
 
-// Time for redundancy!
+// Discord's primary text/link buttons (e.g. Account Info "Reveal") use
+// blurple; use the theme accent text colour instead.
+.theme-dark :is(.textButton_nJgowo.primary_nJgowo, [class*="textButton_nJgowo"][class*="primary_nJgowo"]) {
+    color: $AccentTextFillColorPrimary !important;
+}
+
 // New buttons
 // These appear on the My Account User Settings page
 .theme-dark .button_F7qvhY{
     border-radius: 4px;
     span{
         @include TypeBody;
+    }
+
+    // Discord's settings buttons default to 40px (md_F7qvhY). WinUI standard
+    // buttons are 32px; icon-only buttons already size themselves.
+    &.sm_F7qvhY,
+    &.md_F7qvhY {
+        min-height: 32px;
+        height: 32px;
     }
 
     // Primary - Blue

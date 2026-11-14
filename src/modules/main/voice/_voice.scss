@@ -13,6 +13,15 @@
     [class*="callContainer_"] {
         background-color: $SolidBackgroundFillColorBase;
         border-radius: 8px 0 0 0;
+        border-top: 0 !important;
+    }
+
+    // Discord's call root paints an opaque black layer over the acrylic in the
+    // video/voice view. Clear it so the Mica backdrop shows through at any
+    // window size instead of falling back to black.
+    :is(.root_rTsZa_, [class*="root_rTsZa_"], .root_4lTkMQ, [class*="root_4lTkMQ"]) {
+        background: transparent !important;
+        background-color: transparent !important;
     }
 
     // Inactive view — Discord adds .noChat_hbKzX7 to the wrapper when the
@@ -105,6 +114,23 @@
             display: none;
         }
     }
+}
+
+// Voice side-chat panel sits in its own layer above the call. Use a light
+// frosted-glass veil with heavy blur (no painted blue fill) so the call shows
+// through blurred, and remove the 1px top seam.
+.theme-dark .chatLayerWrapper_FrbQJp.connectedRight_FrbQJp .chatTarget_FrbQJp.container_FrbQJp.floating_FrbQJp {
+    background: rgba(255, 255, 255, 0.10) !important;
+    backdrop-filter: blur(32px) brightness(0.72) saturate(150%) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.10) !important;
+    border-top-left-radius: $SurfaceRadius;
+    overflow: hidden;
+}
+
+.theme-dark .chatLayerWrapper_FrbQJp .chat_fjXxyy::before,
+.theme-dark .chatLayerWrapper_FrbQJp [class*="chat_fjXxyy"]::before {
+    content: none !important;
+    display: none !important;
 }
 
 // Icon replacements

@@ -1,9 +1,9 @@
 // Voice activity
 .theme-dark .container_aynOSy {
-    background: $SolidBackgroundFillColorSecondary;
-    backdrop-filter: blur(16px);
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     @include Elevation32;
 
     // Remove channel icon
@@ -40,10 +40,10 @@
 
 // Active thread
 .popout_j5xNzb{
-    background: $SolidBackgroundFillColorSecondary;
-    backdrop-filter: blur(16px);
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     @include Elevation32;
     .title_j5xNzb{
         @include TypeBodyStrong;
@@ -62,10 +62,10 @@
 
 // Stream preview
 .theme-dark .streamPreview_1v6-1l{
-    background: $SolidBackgroundFillColorSecondary;
-    backdrop-filter: blur(16px);
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     @include Elevation32;
 
     .previewContainer_1v6-1l{

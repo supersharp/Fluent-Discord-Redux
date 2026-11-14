@@ -3,10 +3,10 @@
 .theme-darker {
 
     [class*="accountPopout_"] {
-        background-color: $AcrylicBackgroundFillColorBase;
-        backdrop-filter: blur(20px);
+        background: $FrostGlassFillColor;
+        backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
         border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
+        border-radius: $SurfaceRadius;
         @include Elevation32;
         width: 300px;
 

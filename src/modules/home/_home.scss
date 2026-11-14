@@ -111,6 +111,14 @@ section[class*="headerBar__"] + [class*="tabs__"]::after,
     article[class*="questTile_"] :is([class*="textContainer_"], [class*="rewardDescriptionContainer_"], [class*="container_clpvxq"]) {
         background-color: transparent !important;
     }
+
+    // Quest tiles: Discord uses a 10px radius and a 16% white stroke. WinUI
+    // cards are 8px with a 7% hairline.
+    article[class*="questTile_"],
+    .questTile_e8rJ7m {
+        border-radius: $SurfaceRadius;
+        border-color: $CardStrokeColorDefault;
+    }
 }
 
 // Quests toolbar tabs: match Shop tab size and active indicator weight.

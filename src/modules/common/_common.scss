@@ -15,3 +15,8 @@
 
 // Found in: chat, members list, user profile popout/modal
 @import "bot_tag";
+
+// Verified flower-star badges (games, servers, verified apps)
+.theme-dark :is(.flowerStar_d3vyhc, [class*="flowerStar_d3vyhc"]) path {
+    fill: $AccentFillColorDefault !important;
+}

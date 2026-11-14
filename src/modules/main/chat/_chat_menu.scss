@@ -1,7 +1,8 @@
 .theme-dark :is(.wrapper_Z0MHyc, .popover_DpHsW6, [class*="popover_"]){
-    background-color: $ControlOnImageFillColorDefault;
-    border: 1px solid $ControlStrokeColorDefault;
-    border-radius: 6px;
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+    border: 1px solid $SurfaceStrokeColorDefault;
+    border-radius: $SurfaceRadius;
 
     :is(.button_Z0MHyc, .hoverBarButton_DpHsW6, [class*="hoverBarButton_"]) {
         border-radius: 4px;

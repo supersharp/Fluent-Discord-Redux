@@ -402,10 +402,10 @@
 // Sort-by / Filter popouts (e.g. Quests page)
 .theme-dark .popout__S_k8m,
 .theme-dark [class*="popout__S_k8m"] {
-    background: $MicaBackgroundFillColorBase !important;
-    backdrop-filter: blur(16px);
+    background: $MicaSurfaceFillColor !important;
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     box-shadow: var(--elevation-stroke), var(--elevation-high);
     padding: 8px;
 
@@ -424,4 +424,20 @@
     input[type="checkbox"] {
         accent-color: $AccentFillColorDefault;
     }
+}
+
+// Discord paints active focus rings with blurple. Keep text/select focus on
+// the theme accent instead.
+.theme-dark input:focus,
+.theme-dark textarea:focus {
+    outline-color: $AccentBase !important;
+}
+
+.theme-dark .wrapper_UcGqzv:focus-within {
+    border-color: $AccentBase !important;
+    outline-color: $AccentBase !important;
+}
+
+.theme-dark [class*="selectField_vWC4bk"]:focus-within {
+    border-color: $AccentBase !important;
 }

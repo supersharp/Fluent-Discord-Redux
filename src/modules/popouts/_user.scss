@@ -10,3 +10,15 @@
         background: transparent !important;
     }
 }
+
+// Profile popouts are content-heavy, so use the denser Mica tint (same as a
+// dialog) and round the inner pane to the outer 8px shell.
+.theme-dark .user-profile-popout {
+    background: $MicaDialogFillColor;
+    background-image: none;
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+
+    .inner_P1YEjQ {
+        border-radius: $SurfaceRadius;
+    }
+}

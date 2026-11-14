@@ -2,10 +2,10 @@
 .theme-dark {
     .messagesPopoutWrap_6bgemo,
     [class*="messagesPopoutWrap_"] {
-        background: rgba(32, 32, 32, 0.55) !important;
-        backdrop-filter: blur(24px) saturate(140%);
+        background: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
         border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
+        border-radius: $SurfaceRadius;
         box-shadow: var(--elevation-stroke), var(--elevation-high);
     }
 
@@ -32,10 +32,10 @@
 // Current inbox/notification-centre popout (container_uTMZTY shell).
 .theme-dark {
     .container_uTMZTY {
-        background: rgba(32, 32, 32, 0.55) !important;
-        backdrop-filter: blur(24px) saturate(140%);
+        background: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
         border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
+        border-radius: $SurfaceRadius;
         box-shadow: var(--elevation-stroke), var(--elevation-high);
     }
 
@@ -52,5 +52,35 @@
 
     .icon_FgrH4y {
         background: transparent !important;
+    }
+
+    // Inbox tabs also pick up Discord's bottom accent underline. The leading
+    // 3x16 accent bar is the single WinUI indicator, so drop the underline.
+    .tab_LSviKk::after,
+    [class*="tab_LSviKk"]::after,
+    .tabBar_LSviKk .selected_6zZYhF::after {
+        content: none !important;
+        display: none !important;
+    }
+
+    // Discord leaves 16px bottom padding for its underline; removing it
+    // centres the tab label on the same line as the accent bar.
+    .tab_LSviKk {
+        height: 36px;
+        min-height: 36px;
+        padding: 0 8px !important;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    // Match the settings tab treatment: one 6% pill plus a 20px accent bar.
+    .tab_LSviKk.selected_6zZYhF,
+    [class*="tab_LSviKk"][class*="selected_6zZYhF"] {
+        background-color: $SubtleFillColorSecondary;
+        border-radius: $ControlRadius;
+
+        &::before {
+            height: 20px !important;
+        }
     }
 }

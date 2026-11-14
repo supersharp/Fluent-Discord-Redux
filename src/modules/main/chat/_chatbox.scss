@@ -92,7 +92,7 @@
         height: 32px;
         margin: 8px 0 8px 8px;
         border: 1px solid transparent;
-        border-radius: 2px;
+        border-radius: $ControlRadius;
         &::before{
             content: "\E898"; // Upload
             color: $TextFillColorSecondary;

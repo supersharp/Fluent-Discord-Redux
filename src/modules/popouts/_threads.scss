@@ -1,8 +1,8 @@
 .theme-dark .browser_l-3BKx{
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
+    background: $MicaSurfaceFillColor;
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
 
     // header
     .header_c0tu5x{

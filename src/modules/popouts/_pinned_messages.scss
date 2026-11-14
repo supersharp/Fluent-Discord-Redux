@@ -1,9 +1,9 @@
 .theme-dark .messagesPopoutWrap_6bgemo{
     max-height: calc(100vh - 32px - 48px - 12px) !important; // Fixes window jumping when alt-tabbed
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
+    background: $MicaSurfaceFillColor;
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
 
     .header_6bgemo{
         background-color: transparent;

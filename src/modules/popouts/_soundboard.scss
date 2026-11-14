@@ -22,10 +22,10 @@
         --popout-background: transparent !important;
 
         // Apply Mica to the main container
-        background: $MicaBackgroundFillColorBase !important;
-        backdrop-filter: blur(16px);
+        background: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
         border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
+        border-radius: $SurfaceRadius;
         box-shadow: var(--elevation-stroke), var(--elevation-high);
         overflow: hidden;
 

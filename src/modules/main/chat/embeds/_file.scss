@@ -1,7 +1,6 @@
 .theme-dark .fileWrapper_-9z-XO{
     width: 400px;
     position: relative;
-
     .file_-9z-XO{
         background-color: $CardBackgroundFillColorDefault;
         border: 1px solid $SurfaceStrokeColorFlyout;
@@ -50,5 +49,14 @@
         content: "\e8a5"; // Document
     }
 
+}
+
+// Modern image/video attachments: WinUI media card radius.
+.theme-dark .attachment_oITdBA,
+.theme-dark [class*="attachment_oITdBA"],
+.theme-dark .imageWrapper_W6wEGA,
+.theme-dark [class*="imageWrapper_W6wEGA"]{
+    border-radius: $SurfaceRadius;
+    overflow: hidden;
 }
 

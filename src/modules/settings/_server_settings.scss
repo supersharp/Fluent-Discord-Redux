@@ -28,7 +28,7 @@
         box-shadow: none;
     }
 
-    // Level / perk tier cards — card_nFRzXP is the card variant class;
+    // Level / perk tier cards — target the card variant class;
     // targeting both the specific combo and partial fallback.
     [class*="container_aynOSy"][class*="card__"]{
         background-color: $CardBackgroundFillColorDefault;
@@ -81,24 +81,38 @@
     // Navigation rail
     .side_6zZYhF {
         padding: 20px 0;
-    }
 
-    .item_6zZYhF {
-        margin: 1px 0;
-        padding: 6px 8px;
-        border-radius: 4px;
-        color: $TextFillColorSecondary;
-        transition: background-color $AnimationFadeInOut, color $AnimationFadeInOut;
+        .item_6zZYhF {
+            position: relative;
+            margin: 1px 0;
+            padding: 6px 8px;
+            border-radius: $ControlRadius;
+            color: $TextFillColorSecondary;
+            transition: background-color $AnimationFadeInOut, color $AnimationFadeInOut;
 
-        &:hover {
-            background-color: $SubtleFillColorSecondary;
-            color: $TextFillColorPrimary;
-        }
+            &:hover {
+                background-color: $SubtleFillColorSecondary;
+                color: $TextFillColorPrimary;
+            }
 
-        &.selected_6zZYhF {
-            background-color: $SubtleFillColorSecondary !important;
-            box-shadow: inset 3px 0 0 $AccentFillColorDefault;
-            color: $TextFillColorPrimary;
+            &.selected_6zZYhF {
+                background-color: $SubtleFillColorSecondary !important;
+                box-shadow: none;
+                color: $TextFillColorPrimary;
+
+                // WinUI selection indicator: 3x16 accent pill, leading edge.
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: $IndicatorWidth;
+                    height: $IndicatorHeight;
+                    margin-top: -($IndicatorHeight * 0.5);
+                    border-radius: 999px;
+                    background-color: $AccentFillColorDefault;
+                }
+            }
         }
     }
 

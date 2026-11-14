@@ -94,3 +94,12 @@
 .theme-dark [class*="shop_Mqg79R"] {
     border-top: 0 !important;
 }
+
+// Product tiles: Discord uses a 2px, 16% white ring. WinUI cards use a single
+// 1px hairline, so keep the 8px radius but soften the stroke.
+.theme-dark .productCardContainer_UGbKo5,
+.theme-dark [class*="productCardContainer_UGbKo5"] {
+    border-width: 1px;
+    border-color: $CardStrokeColorDefault;
+    border-radius: $SurfaceRadius;
+}

@@ -40,6 +40,14 @@
         }
     }
 
+    // Current client no longer writes the pill height inline, so the loops
+    // above leave the selected guild/Home pill white. Detect the selected
+    // icon in the same list item instead.
+    .listItem_rwEpIL:has(.wrapper_JJ-hgR.selected_JJ-hgR) .item__o8_Xq,
+    .listItem_rwEpIL:has([class*="selected_"]) .item__o8_Xq {
+        background-color: $AccentFillColorDefault !important;
+    }
+
     // Guild icon
     .listItem_rwEpIL {
         width: 44px;

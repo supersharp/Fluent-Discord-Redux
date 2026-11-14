@@ -1,7 +1,8 @@
 .theme-dark .noiseCancellationPopout_9U6LUN{
-    background-color: $SolidBackgroundFillColorBase;
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
 
     .title_7kL2qz{
         @include TypeBodyLarge;

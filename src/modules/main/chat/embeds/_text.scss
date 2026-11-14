@@ -18,10 +18,19 @@
     color: $TextFillColorPrimary;
 }
 
-// Codeblock
-.theme-dark .markup_ku1OHH code{
+// Inline code: a subtle control, not a card.
+.theme-dark .markup_ku1OHH :not(pre) > code{
+    background-color: $ControlFillColorDefault;
+    border: 1px solid transparent;
+    border-radius: $ControlRadius;
+    padding: 0 4px;
+}
+
+// Fenced code blocks: card surface with the WinUI card radius and hairline.
+.theme-dark .markup_ku1OHH pre code,
+.theme-dark .markup_ku1OHH [class*="codeBlock"]{
     background-color: $CardBackgroundFillColorDefault;
-    border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border: 1px solid $CardStrokeColorDefault;
+    border-radius: $SurfaceRadius;
 }
 

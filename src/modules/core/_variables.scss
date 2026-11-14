@@ -128,6 +128,26 @@ $AcrylicBackgroundFillColorDefault:             linear-gradient(0deg, rgba(#2C2C
 $AccentAcrylicBackgroundFillColorBase:          $AccentDark3;
 $AccentAcrylicBackgroundFillColorDefault:       $AccentDark2;
 
+// Surface Materials
+// The theme emulates WinUI materials over the user's acrylic backdrop. Keep
+// every surface on one of these tokens so tints and blur radii cannot drift.
+//   Mica   - large popouts (inbox, emoji picker, search/threads) and cards
+//   Dialog - modal dialogs; slightly denser so body text stays legible
+//   Frost  - popup menus, select popouts, tooltips and flyouts
+$MicaSurfaceFillColor:                          rgba(32, 32, 32, 0.55);
+$MicaSurfaceFillColorSecondary:                 rgba(32, 32, 32, 0.45);  // Rail behind Mica cards
+$MicaDialogFillColor:                           rgba(32, 32, 32, 0.72);
+$MicaSurfaceBlur:                               24px;
+$MicaSurfaceSaturate:                           140%;
+$FrostGlassFillColor:                           rgba(32, 32, 32, 0.82);
+$FrostGlassBlur:                                28px;
+$FrostGlassSaturate:                            150%;
+$FrostGlassBrightness:                          0.85;
+$SurfaceRadius:                                 8px;   // Flyouts, cards, dialogs
+$ControlRadius:                                 4px;   // Buttons, inputs, list rows
+$IndicatorWidth:                                3px;
+$IndicatorHeight:                               16px;
+
 // System
 $SystemFillColorAttention:                      $AccentLight2;                                      // Badge
 $SystemFillColorSuccess:                        #6CCB5F;                                            // Badge

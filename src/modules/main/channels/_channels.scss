@@ -191,6 +191,12 @@
                 width: 16px;
             }
 
+            // Discord leaves the resting row at 8px while hover/selected use
+            // 4px; pin every state to the WinUI list-row radius.
+            .link_TNyK-N{
+                border-radius: $ControlRadius;
+            }
+
             // Hide channel buttons when not hovered
             .children_TNyK-N .iconItem_Wx6SnQ{
                 visibility: hidden;

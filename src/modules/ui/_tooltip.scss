@@ -1,8 +1,9 @@
 .theme-dark .tooltip_3_v8qp{
     padding: 8px 12px;
-    background: $AcrylicBackgroundFillColorBase;
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 4px;
+    border-radius: $ControlRadius;
     color: $TextFillColorPrimary;
     @include Elevation16;
     // box-sizing: unset;

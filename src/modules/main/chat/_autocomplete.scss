@@ -110,11 +110,11 @@
 // Apps / Commands drawer (the panel opened from the composer Apps button).
 .theme-dark .contentWrapper_Z0Mo0M,
 .theme-dark [class*="contentWrapper_Z0Mo0M"] {
-    background: rgba(32, 32, 32, 0.9) !important;
+    background: $MicaSurfaceFillColor !important;
     background-image: none !important;
-    backdrop-filter: blur(24px) saturate(140%);
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px !important;
+    border-radius: $SurfaceRadius !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 

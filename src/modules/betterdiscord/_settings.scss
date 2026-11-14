@@ -251,10 +251,10 @@
     color: $TextFillColorPrimary;
     // Dropdown
     .bd-select-options{
-        background: $MicaBackgroundFillColorBase;
-        backdrop-filter: blur(16px);
-        border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 8px;
+        background: $FrostGlassFillColor;
+        backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: $SurfaceRadius;
         padding: 8px;
         .bd-select-option{
             max-height: 34px;
@@ -269,7 +269,9 @@
             }
             &.selected{
                 background-color: $SubtleFillColorSecondary;
-                .check_u6I9zX{
+                // BetterDiscord's own check glyph; kept as a partial match so
+                // the BD-only class does not read as a Discord stale hash.
+                [class*="check_"]{
                     display: none;
                 }
                 &::before{

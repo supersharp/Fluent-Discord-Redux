@@ -61,9 +61,14 @@
     }
 
     // Options popout
-    .popout_uFkqU2{
-        background: $SolidbackgroundFillColorQuarternary;
-        border: 1px solid $SurfaceStrokeColorFlyout;
+    .popout_uFkqU2,
+    .popout_uFkqU2.popoutPositionTop_uFkqU2,
+    .lookFilled_uFkqU2.popout_uFkqU2 {
+        background: $FrostGlassFillColor !important;
+        backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+        border: 1px solid $CardStrokeColorDefault !important;
+        border-radius: $SurfaceRadius;
+        box-shadow: var(--elevation-stroke), var(--elevation-low);
         .option_o2hjBM{
             min-height: 32px;
             margin: 4px;
@@ -195,14 +200,37 @@
     }
 }
 
+// Current slider component (settings redesign)
+.slider_OnqacX{
+    .bar_OnqacX{
+        height: 4px;
+        background-color: $ControlStrongFillColorDefault;
+        border-radius: 2px;
+    }
+    .barFill_OnqacX{
+        height: 4px;
+        background-color: $AccentFillColorDefault !important;
+        border: 0 !important;
+        border-radius: 2px;
+    }
+    .grabber_OnqacX{
+        width: 18px;
+        height: 18px;
+        background-color: $AccentFillColorDefault;
+        border: 4px solid #454545;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+}
+
 // Text formatting toolbar
 // Highlight text in the chat box to open the formatting bar
 .theme-dark .toolbar_hPmUPu{
     padding: 4px;
-    background: $AcrylicBackgroundFillColorDefault;
-    backdrop-filter: blur(10px);
+    background: $FrostGlassFillColor;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
     border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     // Remove arrow
     &::before{
         display: none;

@@ -8,10 +8,10 @@
     // Body
     @include modal-root {
         &:not([class*="userProfile"]):not([class*="user-profile"]):not([class*="userPopout"]):not([class*="outer_"]):not([class*="profile"]):not([class*="carouselModal"]):not([class*="lightbox"]) {
-            background-color: $MicaBackgroundFillColorBase;
-            backdrop-filter: blur(16px);
+            background-color: $MicaDialogFillColor;
+            backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
             border: 1px solid $SurfaceStrokeColorDefault;
-            border-radius: 8px;
+            border-radius: $SurfaceRadius;
             @include Elevation128;
             overflow: hidden;
         }

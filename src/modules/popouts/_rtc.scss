@@ -1,5 +1,34 @@
 .theme-dark .container_aynOSy{
     background-color: $SolidBackgroundFillColorBase;
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
+}
+
+// Voice details popout tabs (Connection / Debug). The shared leading-bar
+// treatment lands at the tab's vertical centre and reads as a stray mark next
+// to the title; use a Pivot-style bottom indicator here instead.
+.theme-dark .tabs_TP1WMf {
+    .tabBarItem_TP1WMf,
+    [class*="tabBarItem_TP1WMf"] {
+        position: relative;
+
+        &.selected_6zZYhF,
+        &[class*="selected_6zZYhF"] {
+            &::before {
+                content: none !important;
+                display: none !important;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 2px;
+                border-radius: 2px;
+                background-color: $AccentFillColorDefault;
+            }
+        }
+    }
 }

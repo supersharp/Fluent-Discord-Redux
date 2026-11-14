@@ -1,8 +1,8 @@
 .theme-dark .container_cbVzxY{
-    background: $MicaBackgroundFillColorBase;
-    backdrop-filter: blur(16px);
+    background: $MicaSurfaceFillColor;
+    backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
     border: 1px solid $SurfaceStrokeColorDefault;
-    border-radius: 8px;
+    border-radius: $SurfaceRadius;
     padding: 8px 0;
 
     .groupHeader_lm2_KW{

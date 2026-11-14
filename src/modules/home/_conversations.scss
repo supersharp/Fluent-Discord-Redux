@@ -91,6 +91,31 @@
             background-color: $SubtleFillColorSecondary;
         }
 
+        // Friends / Shop / Quests are navigation rows, not conversations: use
+        // the WinUI 4px row radius and a single leading 3x16 accent pill.
+        &:is(:has([data-list-item-id*="___friends"]),
+            :has([data-list-item-id*="___shop"]),
+            :has([data-list-item-id*="___quests"])) {
+            position: relative;
+            border-radius: $ControlRadius;
+
+            > .link_zln_tS {
+                border-radius: $ControlRadius;
+            }
+
+            &.selected_nl_k3a::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: $IndicatorWidth;
+                height: $IndicatorHeight;
+                margin-top: -($IndicatorHeight * 0.5);
+                border-radius: 999px;
+                background-color: $AccentFillColorDefault;
+            }
+        }
+
         .layout_TBNqol {
             padding: 0 8px;
         }

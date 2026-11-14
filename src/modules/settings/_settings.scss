@@ -71,7 +71,10 @@
 
 // Redux fixes - Settings Page Redesign Modal
 .theme-dark {
-    .container_dvN-MP,
+    // Scope the shell transparency to the settings dialog. container_dvN-MP is
+    // also the quick-switcher root; clearing it globally left that panel with
+    // no fill at all.
+    .container_dvN-MP:has(.modalContentInner__F9ieB),
     .modal_FmNv9Q,
     .modalContent_FmNv9Q,
     .container_aynOSy,
@@ -79,7 +82,7 @@
         background: transparent !important;
     }
 
-    .container_dvN-MP {
+    .container_dvN-MP:has(.modalContentInner__F9ieB) {
         backdrop-filter: blur(var(--fluent-acrylic-background-blur));
     }
 
@@ -154,10 +157,10 @@
     // Main modal surface. Discord paints this layer opaque black; use Mica so
     // the acrylic background reads through the dialog.
     .modalContentInner__F9ieB {
-        background: rgba(32, 32, 32, 0.72) !important;
-        backdrop-filter: blur(24px) saturate(140%);
+        background: $MicaDialogFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
         border: 1px solid $SurfaceStrokeColorDefault;
-        border-radius: 10px;
+        border-radius: $SurfaceRadius;
         overflow: hidden;
     }
 
@@ -170,10 +173,61 @@
         background: rgba(24, 24, 24, 0.28) !important;
         border-right: 1px solid $DividerStrokeColorDefault;
 
-        .item_8qMUr2 {
+        // Top-level section rows. Discord uses 16px labels and an 8px radius;
+        // WinUI NavigationView items are 14/20 with a 4px radius. Scope to the
+        // nav so the profile header (also item_xyJHva) keeps its native size.
+        .nav_cR4ic2 .item_xyJHva {
+            position: relative;
             margin: 1px 0;
             padding: 6px 8px;
-            border-radius: 4px;
+            border-radius: $ControlRadius;
+            @include TypeBody;
+            color: $TextFillColorSecondary;
+            transition: background-color $AnimationFadeInOut, color $AnimationFadeInOut;
+
+            &:hover {
+                background-color: $SubtleFillColorSecondary;
+                color: $TextFillColorPrimary;
+            }
+
+            // Leaf pages and sections without a selected child get one fill
+            // and one leading pill. Sections with a selected child clear this
+            // in the rule below, leaving only the child indicator.
+            &.active_xyJHva {
+                background-color: $SubtleFillColorSecondary !important;
+                color: $TextFillColorPrimary;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: $IndicatorWidth;
+                    height: $IndicatorHeight;
+                    margin-top: -($IndicatorHeight * 0.5);
+                    border-radius: 999px;
+                    background-color: $AccentFillColorDefault;
+                }
+            }
+        }
+
+        // A selected child page already carries the indicator; do not paint a
+        // second pill on its section row.
+        .nav_cR4ic2 .itemContainer_xyJHva:has(.subnav_8qMUr2 [class*="active_"]) .item_xyJHva.active_xyJHva {
+            background-color: transparent !important;
+
+            &::before {
+                content: none !important;
+                display: none !important;
+            }
+        }
+
+        .nav_cR4ic2 .item_8qMUr2 {
+            position: relative;
+            margin: 1px 0;
+            padding: 6px 8px;
+            border-radius: $ControlRadius;
+            @include TypeBody;
             color: $TextFillColorSecondary;
             transition: background-color $AnimationFadeInOut, color $AnimationFadeInOut;
 
@@ -184,8 +238,21 @@
 
             &.active_8qMUr2 {
                 background-color: $SubtleFillColorSecondary;
-                box-shadow: inset 3px 0 0 $AccentFillColorDefault;
+                box-shadow: none;
                 color: $TextFillColorPrimary;
+
+                // WinUI selection indicator: 3x16 accent pill, leading edge.
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: $IndicatorWidth;
+                    height: $IndicatorHeight;
+                    margin-top: -($IndicatorHeight * 0.5);
+                    border-radius: 999px;
+                    background-color: $AccentFillColorDefault;
+                }
             }
         }
 
@@ -193,6 +260,67 @@
             padding: 10px 8px 4px;
             @include TypeCaption;
             color: $TextFillColorSecondary;
+        }
+
+        // Discord draws a scroll track + white thumb down the subnav. Remove
+        // the decoration from layout (it forces 48px grid rows) and explicitly
+        // keep every page row in the 186px second column.
+        .subnav_8qMUr2 {
+            row-gap: 0 !important;
+
+            .track_8qMUr2,
+            [class*="track_8qMUr2"],
+            .thumb_8qMUr2,
+            .thumbAnchor_8qMUr2,
+            [class*="thumb_8qMUr2"],
+            [class*="thumbAnchor_8qMUr2"] {
+                display: none !important;
+            }
+
+            > div:not([class*="track_"]):not([class*="thumb"]) {
+                grid-column: 2 !important;
+            }
+        }
+    }
+
+    // Settings search uses a 40px field; WinUI inputs are 32px. This search
+    // puts the visible border on the input itself (no wrapper_UcGqzv), so
+    // size and paint the input directly.
+    .searchBarContainer_eCEVGd,
+    [class*="searchBarContainer_eCEVGd"] {
+        height: 32px;
+        min-height: 32px;
+
+        // Discord/theme search wrapper is 40px and paints its own 6% fill
+        // behind the input, leaving a visible rectangle around the field.
+        // It needs a higher-specificity override than the shared search rule.
+        .container_VhFsFg :is(.wrapper_UcGqzv.hasLeading_0PLWhS, [class*="wrapper_UcGqzv"][class*="hasLeading_"]) {
+            height: 32px !important;
+            min-height: 0 !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            background-image: none !important;
+            border: 0 !important;
+            box-shadow: none !important;
+        }
+
+        [class*="input_0PLWhS"] {
+            height: 30px !important;
+            min-height: 0 !important;
+            border: 1px solid $ControlStrokeColorDefault !important;
+            border-bottom-width: 2px !important;
+            border-radius: $ControlRadius !important;
+            background-color: $ControlFillColorDefault !important;
+
+            &:hover {
+                border-color: $ControlStrokeColorSecondary !important;
+            }
+
+            &:focus {
+                background-color: $ControlFillColorInputActiveBrush !important;
+                border-color: $ControlStrokeColorDefault !important;
+                border-bottom-color: $AccentBase !important;
+            }
         }
     }
 
@@ -216,8 +344,16 @@
             margin-bottom: 8px;
             background-color: $CardBackgroundFillColorDefault;
             border: 1px solid $CardStrokeColorDefault;
-            border-radius: 6px;
+            border-radius: $SurfaceRadius;
             overflow: hidden;
+        }
+
+        // Nested cards (microphone/speaker, volume, mic test groups) only add
+        // another translucent layer over the parent card; flatten them.
+        .container_Gl6U0S .container_Gl6U0S {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            box-shadow: none !important;
         }
 
         // Section headings use heading-xl; per-row labels use heading-sm.
@@ -247,4 +383,24 @@
             gap: 4px;
         }
     }
+}
+
+// Vertical tab lists inside settings (e.g. Content Filters) are taller than
+// the nav rows, so give their accent pill a matching 20px length.
+.theme-dark .tabBar_9mZA96 .tab_9mZA96.selected_9mZA96::before,
+.theme-dark [class*="tabBar_9mZA96"] [class*="tab_9mZA96"][class*="selected_9mZA96"]::before {
+    height: 20px !important;
+}
+
+// Registered Games "Add a game" flyout and the DM-permissions server
+// combobox use Discord's own popout surfaces; bring them onto the frost glass.
+.theme-dark .addGamePopout_HLMBUf,
+.theme-dark [class*="addGamePopout_HLMBUf"],
+.theme-dark .selectDropdown_vWC4bk,
+.theme-dark [class*="selectDropdown_vWC4bk"] {
+    background: $FrostGlassFillColor !important;
+    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+    border: 1px solid $CardStrokeColorDefault !important;
+    border-radius: $SurfaceRadius !important;
+    box-shadow: var(--elevation-stroke), var(--elevation-low);
 }

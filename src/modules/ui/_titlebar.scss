@@ -4,6 +4,10 @@
         left: 8px;
         &::before{
             content: "Discord";
+            // WinUI caption text is CaptionTextBlockStyle: 12/16.
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
             color: $TextFillColorSecondary;
         }
         .title_LnjVAX{
@@ -69,6 +73,9 @@
         width: 46px;
         &:hover{
             background-color: $ControlFillColorSecondary;
+        }
+        &:active{
+            background-color: $ControlFillColorTertiary;
         }
 
         // Close button

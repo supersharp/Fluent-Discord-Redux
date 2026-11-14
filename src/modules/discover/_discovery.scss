@@ -56,7 +56,33 @@
     }
 
     // Nav
+    // NavigationView items: a subtle selection fill plus exactly one leading
+    // 3x16 accent pill. Discord paints a 20% white pill with no indicator.
+    .nav_GQJi50,
+    [class*="nav_GQJi50"] {
+        .navItem_GQJi50,
+        [class*="navItem_GQJi50"] {
+            position: relative;
+            border-radius: $ControlRadius;
 
+            &.selected_GQJi50,
+            &[class*="selected_GQJi50"] {
+                background-color: $SubtleFillColorSecondary;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: $IndicatorWidth;
+                    height: $IndicatorHeight;
+                    margin-top: -($IndicatorHeight * 0.5);
+                    border-radius: 999px;
+                    background-color: $AccentFillColorDefault;
+                }
+            }
+        }
+    }
 
     // Main
     // Search
