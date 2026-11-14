@@ -48,6 +48,26 @@
         background-color: $AccentFillColorDefault !important;
     }
 
+    // Questify keeps its fake server-list pill visible permanently. Only show
+    // it while the Quests view is actually selected, and use the accent colour
+    // instead of Discord's white.
+    .questify-quest-button-container .item__o8_Xq:not(.selected__o8_Xq),
+    [class*="questify-quest-button-container"] [class*="item__o8_Xq"]:not([class*="selected__o8_Xq"]) {
+        display: none !important;
+    }
+
+    .questify-quest-button-container .item__o8_Xq.selected__o8_Xq,
+    [class*="questify-quest-button-container"] [class*="item__o8_Xq"][class*="selected__o8_Xq"] {
+        display: block !important;
+        background-color: $AccentFillColorDefault !important;
+    }
+
+    // Match the Suggestions tab badge: dark text on the same pink fill.
+    .questify-quest-button-container .numberBadge_lMvXrQ,
+    [class*="questify-quest-button-container"] [class*="numberBadge_lMvXrQ"] {
+        color: #000 !important;
+    }
+
     // Guild icon
     .listItem_rwEpIL {
         width: 44px;

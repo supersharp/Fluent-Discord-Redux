@@ -264,7 +264,7 @@ Legend: **Done** = rebuilt and visually checked; **Fix** = known issue;
 > * Dark-only selectors audited: the remaining `.theme-light` entries only
 >   clear scrims/media shells; no light palette leaks.
 > * Static build is warning-free; installed hash matches `dist`
->   (`E650BDBA…`). The auto file only imports the remote static theme.
+>   (`5B0F695F…`). The auto file only imports the remote static theme.
 > * Captured at 125%: guild shell, Friends, Shop, Quests, Discover, Inbox,
 >   emoji picker, context menu, user popout, User Settings, Server Settings and
 >   Channel Settings; corresponding 100% captures exist from this pass. No
@@ -342,6 +342,12 @@ Legend: **Done** = rebuilt and visually checked; **Fix** = known issue;
 > * Content Filters vertical tabs keep a 20px centred indicator.
 > * Focus rings on text inputs, select fields and search wrappers now use the
 >   theme accent instead of Discord blurple.
+
+> 0.0.34 patch (2026-11-14):
+> * Questify's injected server-list tile shows its accent selection pill only
+>   while the Quests view is active.
+> * The Questify quest-count badge uses the same dark-on-pink colours as the
+>   Discord Suggestions badge.
 
 ---
 
