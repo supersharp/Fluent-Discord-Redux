@@ -8,7 +8,7 @@ Changes from the original fork:
 * GitHub Actions support for builds
 * Updated CSS module classes for the Discord Chromium 152 client update (November 2026)
 * Rebuilt User, Server and Channel Settings and other elements of theme for a frosted glass look.
-* This fork style deviates from the original based on personal preference.
+* This fork's style deviates from the original based on personal preference.
 * Many more changes.
 
 
