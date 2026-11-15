@@ -283,6 +283,9 @@
     &[id="guild-header-popout-change-nickname"]::before{
         content: "\E13E"; // Rename
     }
+    &[id="guild-header-popout-opt-in"]::before{
+        content: "\E890"; // View
+    }
     &[id="guild-header-popout-hide-muted-channels"]::before{
         content: "\ED1A"; // Hide
     }
@@ -654,13 +657,22 @@
     &[id="thread-context-mark-channel-read"]::before{
         content: "\E166"; // Read
     }
+    &[id="thread-context-favorite-channel"]::before{
+        content: "\E734"; // FavoriteStar
+    }
     &[id="thread-context-channel-copy-link"]::before{
         content: "\E167"; // Link
     }
     &[id="thread-context-mute-channel"]::before{
         content: "\EE79"; // ActionCenterQuiet
     }
+    &[id="thread-context-mute-disabled"]::before{
+        content: "\EE79"; // ActionCenterQuiet
+    }
     &[id="thread-context-thread-notifications"]::before{
+        content: "\E91C"; // ActionCenter
+    }
+    &[id="thread-context-notifications-disabled"]::before{
         content: "\E91C"; // ActionCenter
     }
     &[id="thread-context-edit-thread"]::before{

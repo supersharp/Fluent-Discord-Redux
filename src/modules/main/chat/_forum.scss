@@ -2,19 +2,100 @@
     background-color: transparent;
 }
 
-.theme-dark .container_aynOSy{
-    background-color: $LayerFillColorDefault;
-    border-top: 0;
-    border-left: 0;
-    border-radius: 8px 0 0 0;
+// Forum channel surface ("threads"). Discord paints the grid with
+// --background-gradient-chat, which resolves to solid black on the stock
+// midnight palette and covers the theme's content layer. Let the shared chat
+// layer show through instead.
+.theme-dark :is(.container_BkGrJJ, [class*="container_BkGrJJ"]){
+    background: transparent !important;
 
-    // Threads
+    // Search / new-post header
+    :is(.header_BkGrJJ, [class*="header_BkGrJJ"]){
+        background: $ControlFillColorDefault !important;
+        border: 1px solid $ControlStrokeColorDefault;
+        border-radius: $SurfaceRadius;
 
-    // No threads
-    .container-2nXUah{
-        background-color: $LayerFillColorAlt;
-        border: 1px solid $CardStrokeColorDefault;
-        border-radius: 4px;
+        &:focus-within{
+            background: $ControlFillColorInputActiveBrush !important;
+            border-bottom-color: $AccentBase;
+        }
+
+        // The shared icon rule in _search.scss absolutely positions this icon
+        // for the channel search. In the forum form it belongs in the leading
+        // icon slot, so return it to normal flow instead of letting it sit
+        // outside the rounded field.
+        :is(.iconLayout_v966Ys, [class*="iconLayout_v966Ys"]){
+            position: static;
+            top: auto;
+            right: auto;
+        }
+    }
+
+    // Forum post cards. Gallery cards use container_x1LvFB, list rows use
+    // container_SOY5H6; both carry mainCard_BkGrJJ. Stock cards use
+    // --background-gradient-high, also black on the default palette, and
+    // Discord's hover/active fills are built for its own opaque background.
+    :is(.container_x1LvFB, [class*="container_x1LvFB"], .container_SOY5H6, [class*="container_SOY5H6"]){
+        &:is(.mainCard_BkGrJJ, [class*="mainCard_BkGrJJ"]){
+            background: $CardBackgroundFillColorDefault !important;
+            border: 1px solid $CardStrokeColorDefault;
+            border-radius: $SurfaceRadius;
+        }
+
+        &:hover{
+            background: $CardBackgroundFillColorTertiary !important;
+            border-color: $CardStrokeColorDefault !important;
+            box-shadow: none !important;
+        }
+
+        &:active{
+            background: $SubtleFillColorSecondary !important;
+            box-shadow: none !important;
+        }
+
+        &:is(.isOpen_x1LvFB, .isOpen_SOY5H6, [class*="isOpen_"]){
+            background: $SubtleFillColorSecondary !important;
+            border-color: $AccentBase !important;
+            box-shadow: none !important;
+        }
+    }
+
+    // Post guidelines card
+    :is(.container_hbPaoT, [class*="container_hbPaoT"]){
+        background: $CardBackgroundFillColorDefault !important;
+        border-color: $CardStrokeColorDefault !important;
+        border-radius: $SurfaceRadius;
+    }
+
+    :is(.descriptionContainer_hbPaoT, [class*="descriptionContainer_hbPaoT"]){
+        background: $CardBackgroundFillColorSecondary !important;
+        border-radius: $ControlRadius;
+    }
+
+    :is(.gradient_hbPaoT, [class*="gradient_hbPaoT"]){
+        background: linear-gradient(to top, $CardBackgroundFillColorSecondary, transparent) !important;
+    }
+
+    :is(.linkContainer_hbPaoT, [class*="linkContainer_hbPaoT"]){
+        background-color: $CardBackgroundFillColorSecondary !important;
+    }
+
+    // Message preview inside a post card
+    :is(.contentPreview_x1LvFB, [class*="contentPreview_x1LvFB"]){
+        background-color: $CardBackgroundFillColorSecondary !important;
+        border-color: $CardStrokeColorDefault !important;
+        border-radius: $ControlRadius;
+    }
+
+    // Bottom fade behind the post tags. Stock uses --background-base-low, which
+    // is black and doubles as the mask colour.
+    :is(.textContentFooter_x1LvFB, [class*="textContentFooter_x1LvFB"]){
+        background: linear-gradient(to top, $CardBackgroundFillColorSecondary, transparent) !important;
+        mask-image: none !important;
+    }
+
+    // Loading placeholders
+    :is(.loadingCard_BkGrJJ, [class*="loadingCard_BkGrJJ"]){
+        background-color: $CardBackgroundFillColorDefault !important;
     }
 }
-

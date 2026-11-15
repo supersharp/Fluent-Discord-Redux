@@ -49,6 +49,14 @@
         &.disabled_M3qk4j {
             color: $TextFillColorDisabled;
             opacity: 1;
+            cursor: default;
+
+            // The label span carries its own text colour, so the item's
+            // disabled colour never reaches it.
+            .label_M3qk4j,
+            [class*="text_cmkR8z"] {
+                color: $TextFillColorDisabled !important;
+            }
         }
 
         // Icons
