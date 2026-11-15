@@ -96,10 +96,135 @@
 }
 
 // Product tiles: Discord uses a 2px, 16% white ring. WinUI cards use a single
-// 1px hairline, so keep the 8px radius but soften the stroke.
+// 1px hairline, so keep the 8px radius but soften the stroke. The tile fill is
+// Discord's --background-base-low (pure black); use the Fluent card fill so
+// tiles sit on the Mica page instead of reading as holes in it.
 .theme-dark .productCardContainer_UGbKo5,
 .theme-dark [class*="productCardContainer_UGbKo5"] {
+    background: $CardBackgroundFillColorDefault !important;
     border-width: 1px;
     border-color: $CardStrokeColorDefault;
     border-radius: $SurfaceRadius;
+
+    &:hover,
+    &[class*="hovered_"] {
+        background-color: $CardBackgroundFillColorTertiary !important;
+    }
+}
+
+// The card footer keeps text legible over artwork with a black scrim. Re-tint
+// that scrim to the card/theme grey so it does not paint a black band across
+// the lighter card fill.
+.theme-dark [class*="footerGradient_UGbKo5"] {
+    background-image: linear-gradient(
+        to top,
+        rgba(32, 32, 32, 0.92) 0%,
+        rgba(32, 32, 32, 0.68) 45%,
+        rgba(32, 32, 32, 0) 100%
+    ) !important;
+}
+
+// ── Shop Browse / catalog (2026) ─────────────────────────────────────────────
+// The catalog is a distinct view from Featured and paints its own shell with
+// --background-base-lower (pure black) on the page, the scroller and the filter
+// rail. The Shop view wrapper already carries the shared Mica layer, so strip
+// every inner black surface and let that one layer show through.
+.theme-dark {
+    .page_4Qm5zV,
+    [class*="page_4Qm5zV"],
+    .shopScroll_4Qm5zV,
+    [class*="shopScroll_4Qm5zV"] {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    // Docked filter rail (viewport wider than 1400px). Discord fills the inner
+    // FilterBar with the same opaque black; keep it flat on the Mica page and
+    // use a hairline divider to separate it from the results grid.
+    .filterBar_sO1rm5,
+    [class*="filterBar_sO1rm5"] {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+
+    .page_4Qm5zV > .filterBar_4Qm5zV,
+    [class*="page_4Qm5zV"] > [class*="filterBar_4Qm5zV"] {
+        border-left: 1px solid $DividerStrokeColorDefault;
+    }
+
+    // Filter flyout (viewport 1400px and narrower). It floats over the product
+    // grid, so it keeps a frosted flyout material instead of becoming
+    // transparent — same recipe as context menus and search popouts.
+    .filterOverlay_4Qm5zV,
+    [class*="filterOverlay_4Qm5zV"] {
+        background: $FrostGlassFillColor !important;
+        background-image: none !important;
+        backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: $SurfaceRadius;
+        @include Elevation32;
+    }
+
+    // Results pagination: Discord uses --border-subtle (about 20% white) for
+    // the rule above the page controls. Fluent dividers are a 8% hairline.
+    .paginationContainer_Mqg79R,
+    [class*="paginationContainer_Mqg79R"] {
+        border-top-color: $DividerStrokeColorDefault;
+    }
+
+    // Game Shops navigation flyout. The generic menu recipe leaves it as an
+    // opaque black slab over the Shop header; use the Mica popout material and
+    // Fluent row metrics so it matches the rest of the shop surfaces.
+    [id^="collectibles-shop-navigation-menu"][role="menu"] {
+        background: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: $SurfaceRadius;
+        @include Elevation32;
+
+        [role="menuitem"] {
+            height: 32px;
+            min-height: 32px;
+            margin: 2px 0;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+    }
+
+    // Orbs Shop "Sort by" dropdown. It is nested inside the sort control, so
+    // scope the Mica surface and Fluent rows to that select rather than every
+    // select popout in the client.
+    [class*="sortSelect_XBXDcd"] [class*="selectDropdown_vWC4bk"] {
+        background: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+        border: 1px solid $CardStrokeColorDefault;
+        border-radius: $SurfaceRadius;
+        @include Elevation32;
+
+        [class*="listBox_b5PEJH"] {
+            padding: 4px;
+        }
+
+        [class*="listBoxItem_b5PEJH"] {
+            height: 32px;
+            min-height: 32px;
+            margin: 2px 4px;
+            padding: 0 8px;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: $SubtleFillColorSecondary !important;
+            }
+
+            &[aria-selected="true"] {
+                background-color: $SubtleFillColorTertiary !important;
+            }
+        }
+    }
+
+    // Orbs Shop promotional banner ("What can I get with Orbs?"). Hide the
+    // whole block, including its padding, so the first shelf moves up.
+    [class*="blockContainer_XBXDcd"]:has([class*="wideBannerOrbsHeading_"]) {
+        display: none !important;
+    }
 }

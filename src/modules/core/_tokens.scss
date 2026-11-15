@@ -1,0 +1,66 @@
+// Discord semantic token bridge
+//
+// Discord components resolve interactive colours from the blurple brand scale
+// (--brand-*) and the selected-control tokens (--blurple-*). Those tokens are
+// shared by nav tabs, checkboxes, radios, switches, pagination, sliders and
+// badges, so views should never need their own accent overrides. Remap the
+// scale onto the Fluent accent once here.
+//
+// The -hsl aliases (--brand-500-hsl and friends) are deliberately left alone:
+// they are pre-computed on <html> from Discord's palette. The tint tokens and
+// the few semantic tokens derived from them are overridden explicitly below,
+// so a user's custom --fluent-accent-* values still flow through everything
+// this file remaps.
+
+.theme-dark {
+    // Brand scale. Lightness offsets preserve Discord's light-to-dark ordering
+    // while adopting the Fluent accent hue and saturation.
+    --brand-330: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 17%)); // --icon-brand
+    --brand-360: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 13%));
+    --brand-400: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 7%));
+    --brand-430: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 5%)); // send button hover
+    --brand-460: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 3%));
+    --brand-500: hsl(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness));
+    --brand-530: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) - 6%));
+    --brand-560: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) - 12%));
+    --brand-600: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) - 21%));
+    --brand-630: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) - 26%));
+    --brand-700: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) - 36%));
+    --brand-experiment: var(--brand-500);
+
+    // Blurple stops used as the base for selected controls.
+    --blurple-50: var(--brand-500);
+    --blurple-60: var(--brand-560);
+
+    // Shared semantic fills.
+    --background-brand: var(--brand-500);
+    --text-brand: hsl(var(--fluent-accent-hue-sat), calc(var(--fluent-accent-lightness) + 25%));
+    --interactive-accent-background-selected: var(--brand-500);
+
+    // Selected-state controls. These are declared separately by Discord so a
+    // blurple -> accent remap has to name them explicitly.
+    --checkbox-background-selected-default: var(--brand-500);
+    --checkbox-background-selected-hover: var(--brand-560);
+    --switch-background-selected-default: var(--brand-500);
+    --switch-background-selected-hover: var(--brand-560);
+    --togglebutton-border-selected: var(--brand-500);
+
+    // Tinted brand surfaces. Discord computes these once on <html> from
+    // --brand-500-hsl, so they inherit the blurple hue unless redeclared.
+    @for $i from 1 through 19 {
+        $step: $i * 5;
+        $suffix: "#{$step}";
+
+        @if $step < 10 {
+            $suffix: "0#{$step}";
+        }
+
+        --brand-#{$suffix}a: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness), #{$i * 0.05});
+    }
+
+    // Remaining direct consumers of the pre-computed HSL aliases.
+    --polls-voted-fill: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness), 0.2);
+    --quest-home-tab-gradient-blurple-center: var(--brand-500);
+    --quest-home-tab-gradient-blurple-inner: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness), 0.5);
+    --quest-home-tab-gradient-blurple-outer: hsla(var(--fluent-accent-hue-sat), var(--fluent-accent-lightness), 0);
+}

@@ -88,8 +88,13 @@
 }
 
 // Shop/Orbs navigation menu (2026) uses a selected border-bottom.
+// Dropdown-style tabs ("Browse", "Game Shops") mark selection on a
+// navigationMenuItemGroup span rather than the anchor itself, so both nodes
+// need the Fluent leading accent bar and no underline.
 .theme-dark .navigationMenuItem_C10mff.selected_C10mff,
-.theme-dark [class*="navigationMenuItem_C10mff"][class*="selected_C10mff"] {
+.theme-dark [class*="navigationMenuItem_C10mff"][class*="selected_C10mff"],
+.theme-dark .navigationMenuItemGroup_C10mff.selected_C10mff,
+.theme-dark [class*="navigationMenuItemGroup_C10mff"][class*="selected_C10mff"] {
     position: relative;
     border-bottom: 0 !important;
     box-shadow: none !important;
@@ -108,8 +113,17 @@
     }
 }
 
-// Shop navigation tabs: keep the leading accent bar clear of the label.
+// Shop navigation tabs: clear the leading accent bar from the label and keep
+// the label centred, so the hover underline is symmetrical under the tab.
 .theme-dark .navigationMenuButton_C10mff {
     box-sizing: border-box;
-    padding-inline-start: 10px !important;
+    padding-inline: 10px !important;
+}
+
+// Discord paints the tab hover underline with --brand-500. The core token
+// bridge already makes that the accent base; use the same tint as the selected
+// indicator so hover and selection read as one control rather than two blues.
+.theme-dark .navigationMenuButton_C10mff:hover,
+.theme-dark [class*="navigationMenuButton_C10mff"]:hover {
+    border-bottom-color: $AccentLight1 !important;
 }

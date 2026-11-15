@@ -67,12 +67,26 @@ section[class*="headerBar__"] + [class*="toolbar__"],
     }
 
     // ── Mica content panels ───────────────────────────────────────────────
-    // The actual body scrollers / wrappers below the header bar get the
-    // semi-transparent mica LayerFillColorDefault colour.
-    > [class*="shop__"] [class*="shopViewWrapper__"],
-> [class*="shop__"] [class*="shopScroll__"],
-> :is(.container_ZTJWQo, [class*="container_ZTJWQo"]) > [class*="scroller__"],
-[class*="shopViewWrapper__"]{
+    // The shop view wrapper is the single Mica surface below the header bar.
+    // Discord's current class names use one underscore (shopViewWrapper_Mqg79R),
+    // so match the base name rather than a stale "__hash" pattern.
+    > [class*="shop__"] [class*="shopViewWrapper_"],
+    [class*="shopViewWrapper_"]{
+        background-color: $LayerFillColorDefault !important;
+        border-top-left-radius: 8px !important;
+        overflow: hidden;
+    }
+
+    // Inner shop scrollers must stay transparent: stacking a second 30% layer
+    // over the wrapper would double the tint. The Browse catalog paints these
+    // with --background-base-lower (pure black), which hid the Mica surface.
+    > [class*="shop__"] [class*="shopScroll_"],
+    [class*="shopScroll_"]{
+        background-color: transparent !important;
+    }
+
+    // Quests body scroller
+    > :is(.container_ZTJWQo, [class*="container_ZTJWQo"]) > [class*="scroller__"]{
         background-color: $LayerFillColorDefault !important;
         border-top-left-radius: 8px !important;
         overflow: hidden;
@@ -85,8 +99,8 @@ section[class*="headerBar__"] + [class*="tabs__"]::before,
 section[class*="headerBar__"] + [class*="tabs__"]::after,
 > [class*="shop__"] > div::before,
 > [class*="shop__"] > div::after,
-[class*="shopViewWrapper__"]::before,
-[class*="shopViewWrapper__"]::after,
+[class*="shopViewWrapper_"]::before,
+[class*="shopViewWrapper_"]::after,
 .container_ZTJWQo::before,
 .container_ZTJWQo::after,
 [class*="container_ZTJWQo"]::before,
