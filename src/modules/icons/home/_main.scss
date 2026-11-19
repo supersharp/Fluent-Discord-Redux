@@ -1,23 +1,26 @@
 html[lang^="en-"].theme-dark .peopleList_wVFOQW {
-    [aria-label="Message"]::before{
+    // Discord appends the target name to these labels ("Message Alice",
+    // "More options for Alice", "Accept friend request from Alice"), so match
+    // the stable prefix instead of the whole string.
+    [aria-label^="Message"]::before{
         content: "\e8bd"; // Message
     }
-    [aria-label="More"]::before{
+    [aria-label^="More"]::before{
         content: "\e712"; // More
     }
 
-    [aria-label="Unblock"]::before{
+    [aria-label^="Unblock"]::before{
         content: "\e8f8"; // BlockContact
     }
 
-    [aria-label="Accept"]::before{
+    [aria-label^="Accept"]::before{
         content: "\e8fb"; // Accept
     }
-    [aria-label="Ignore"]::before{
+    [aria-label^="Ignore"]::before{
         content: "\e711"; // Cancel
     }
     // Pending friend requests Cancel button
-    [aria-label="Cancel"]::before{
+    [aria-label^="Cancel"]::before{
         content: "\E711"; // Cancel
     }
 }

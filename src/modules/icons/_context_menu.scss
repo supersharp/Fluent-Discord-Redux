@@ -237,6 +237,19 @@
     }
 }
 
+// Friends list row > More options
+.theme-dark .menu_M3qk4j .item_M3qk4j{
+    &[id="friend-row-start-video-call"]::before{
+        content: "\E8AA"; // VideoChat
+    }
+    &[id="friend-row-start-voice-call"]::before{
+        content: "\E717"; // Phone
+    }
+    &[id="friend-row-remove-friend"]::before{
+        content: "\E107"; // Delete
+    }
+}
+
 // Server
 .theme-dark .menu_M3qk4j .item_M3qk4j{
     &[id="guild-header-popout-premium-subscribe"]::before{

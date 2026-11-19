@@ -51,6 +51,12 @@
         .peopleListItem_y75PxA:hover .actionButton_5GqXgh{
             visibility: visible;
         }
+
+        // Accept / Ignore are primary actions on pending requests and
+        // suggestions, so they stay visible instead of being hover-only.
+        .actionButton_5GqXgh:is(.actionAccept_5GqXgh, .actionDeny_5GqXgh){
+            visibility: visible;
+        }
     }
 
     // Empty
