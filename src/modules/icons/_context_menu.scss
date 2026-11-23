@@ -361,6 +361,15 @@
     &[id="channel-context-opt-into-channel"]::before{
         content: "\E738"; // Remove
     }
+    // Custom channel list (Channels & Roles) toggle items. These IDs are not
+    // prefixed with channel-context- and were previously left without icons.
+    &[id="opt-into-category"]::before,
+    &[id="opt-into-channel"]::before{
+        content: "\E8FD"; // BulletedList
+    }
+    &[id="opt-out-category"]::before{
+        content: "\E195"; // UnFavorite
+    }
     &[id="channel-context-invite-to-listen"]::before{
         content: "\F623"; // MusicSharing
     }

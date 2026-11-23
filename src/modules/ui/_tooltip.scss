@@ -1,17 +1,49 @@
-.theme-dark .tooltip_3_v8qp{
-    padding: 8px 12px;
-    background: $FrostGlassFillColor;
-    backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
-    border: 1px solid $SurfaceStrokeColorFlyout;
-    border-radius: $ControlRadius;
-    color: $TextFillColorPrimary;
-    @include Elevation16;
-    // box-sizing: unset;
-    @include TypeBody;
-    .tooltipPointer_3_v8qp{
-        display: none;
+// Discord has two tooltip implementations in the current client:
+//   * tooltip_3_v8qp    - legacy portal tooltip (no role attribute)
+//   * [role="tooltip"]  - design-system tooltip (tooltip_ZDdyhE), which also
+//                         renders its own caret and uses a larger type scale.
+// Give both the same Fluent Frost surface so guilds, badges, shortcuts and the
+// unavailable-servers notice all match.
+.theme-dark {
+    :is(.tooltip_3_v8qp, [class*="tooltip_"][data-migration-pending]),
+    [role="tooltip"] {
+        padding: 8px 12px;
+        background: $FrostGlassFillColor;
+        backdrop-filter: blur($FrostGlassBlur) brightness($FrostGlassBrightness) saturate($FrostGlassSaturate);
+        border: 1px solid $SurfaceStrokeColorFlyout;
+        border-radius: $ControlRadius;
+        color: $TextFillColorPrimary;
+        @include Elevation16;
+        @include TypeBody;
+
+        // Legacy tooltip pointer/content
+        .tooltipPointer_3_v8qp {
+            display: none;
+        }
+
+        .tooltipContent_3_v8qp {
+            padding: 0;
+        }
+
+        // The design-system tooltip draws its own caret. Fluent tooltips are
+        // clean rounded surfaces, so hide it just like the legacy pointer.
+        > [class*="caret_"] {
+            display: none;
+        }
+
+        // The design-system tooltip defaults to 16px semibold; match the
+        // legacy tooltip's 14px body text so every tooltip reads the same.
+        &:not([class*="richTooltip_"]) .tooltipContent_ZDdyhE > * {
+            color: inherit;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
     }
-    .tooltipContent_3_v8qp{
+
+    // Rich tooltips own their internal layout (images, previews, etc.); keep
+    // their padding zero while still giving them the Frost surface above.
+    [role="tooltip"][class*="richTooltip_"] {
         padding: 0;
     }
 }

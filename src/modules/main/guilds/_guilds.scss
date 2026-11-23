@@ -210,13 +210,23 @@
         }
     }
 
-    // Offline
-    .guildsError_cxjWKs {
-        background-color: $SystemFillColorCritical;
-        border: 0;
-        border-radius: 0;
-        transition: none;
+    // Unavailable servers notice. Discord renders this as a critical status
+    // tile in the guild rail; use Fluent's critical surface/foreground pair
+    // instead of the old solid pastel block, and match the guild tiles' radius.
+    .guildsError_cxjWKs,
+    [class*="guildsError_"] {
+        background-color: $SystemFillColorCriticalBackground;
+        border: 1px solid rgba($SystemFillColorCritical, 0.32);
+        border-radius: $ControlRadius;
+        color: $SystemFillColorCritical;
         font-weight: 400;
+        transition: background-color 0.15s ease-out, border-color 0.15s ease-out, color 0.15s ease-out;
+
+        &:hover {
+            background-color: lighten($SystemFillColorCriticalBackground, 20%);
+            border-color: $SystemFillColorCritical;
+            color: $TextFillColorPrimary;
+        }
     }
 
     // Folders

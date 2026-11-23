@@ -28,6 +28,21 @@
         overflow: hidden;
     }
 
+    // Channel-list opt-in notice ("This channel is not on your channel list.").
+    // Discord paints this strip with the opaque surface-high colour; use the
+    // same Mica bar as the rest of the chat chrome instead.
+    .chatHeaderBar_rsucr8,
+    [class*="chatHeaderBar_"] {
+        background-color: $MicaSurfaceFillColor !important;
+        border-bottom: 1px solid $DividerStrokeColorDefault;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+        color: $TextFillColorPrimary;
+
+        &::after {
+            display: none !important;
+        }
+    }
+
     // New/old messages bars
     .barBase_j9Vvzj{
         margin: 0 auto;

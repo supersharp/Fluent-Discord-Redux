@@ -111,11 +111,22 @@ section[class*="headerBar__"] + [class*="tabs__"]::after,
 }
 
 // Quests dedicated view
-// Hide the hero banner ("Introducing Discord Orbs") - heroWrapper_ZTJWQo.
+// Promotional hero and footer takeovers are ad slots, not quest content.
 // Partial-match is scoped to the Quests container (__955a3) so it won't
-// affect other views. Avoids targeting heroGradient_ which was never present.
+// affect other views. The Orbs hero is handled by the rule at the bottom.
 .theme-dark .page_pog62O :is(.container_ZTJWQo, [class*="container_ZTJWQo"], [class*="__955a3"]) {
-    [class*="heroWrapper__"] {
+    // The original selector expected a double underscore ("heroWrapper__"),
+    // but the live class is heroWrapper_ZTJWQo; match anything with a
+    // Sponsored tag so takeovers (e.g. the GTA VI banner) disappear without
+    // hiding real quest content.
+    [class*="heroWrapper_"]:has([class*="sponsoredTag_"]) {
+        display: none !important;
+    }
+
+    // Full-width takeovers at the end of the quest grid use a plain "footer"
+    // wrapper with a brand logo and no quest content.
+    [class*="footer_snIQ1H"],
+    [class*="contentWrapper_"] > [class*="footer_"]:has(img[class*="logo_"]) {
         display: none !important;
     }
 

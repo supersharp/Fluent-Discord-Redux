@@ -1,1 +1,25 @@
+// DM user profile sidebar (the panel that opens from a DM header).
+//
+// Discord paints the surrounding aside solid black and layers the profile-theme
+// gradient under a 60% black wash. The small profile popout already uses the
+// Mica dialog surface; extend that treatment to the DM sidebar so the panel
+// matches the rest of the theme instead of reading as a black slab.
+.theme-dark {
+    .aside_HbUF2J,
+    [class*="aside_"]:has(.user-profile-sidebar) {
+        background-color: $MicaSurfaceFillColor !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+    }
 
+    .user-profile-sidebar {
+        background-color: $MicaDialogFillColor !important;
+        background-image: none !important;
+        backdrop-filter: blur($MicaSurfaceBlur) saturate($MicaSurfaceSaturate);
+    }
+
+    // Remove the black readability wash over the profile surface.
+    .user-profile-sidebar .inner_P1YEjQ {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+}
